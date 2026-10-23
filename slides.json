@@ -1,0 +1,16 @@
+[
+  {
+    "id": "cover",
+    "title": "SynQ: Synchronous System Design with Quantitative Types",
+    "source": "slides/cover.html",
+    "steps": 1,
+    "notes": "Rui Chen. PhD Defense, 9 November 2026, Stockholm.\n\nCover copied directly from slide 1 of defense-draft.pptx."
+  },
+  {
+    "id": "page2",
+    "title": "Embedded System Design",
+    "source": "slides/page2.html",
+    "controller": "slides/page2.js",
+    "steps": 9
+  }
+]
