@@ -7,6 +7,13 @@
     "notes": "Rui Chen. PhD Defense, 9 November 2026, Stockholm.\n\nCover copied directly from slide 1 of defense-draft.pptx."
   },
   {
+    "id": "page1",
+    "title": "Embedded Systems",
+    "source": "slides/page1.html",
+    "controller": "slides/page1.js",
+    "steps": 9
+  },
+  {
     "id": "page2",
     "title": "Embedded System Design",
     "source": "slides/page2.html",

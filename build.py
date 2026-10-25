@@ -14,6 +14,7 @@ E.register_namespace('xlink', 'http://www.w3.org/1999/xlink')
 def data(path, mime):
     return f'data:{mime};base64,' + b64encode(path.read_bytes()).decode()
 
+
 def pyramid_art():
     pyramid = E.parse(ROOT / 'figures/svg/abst-pyramid-trace.svg').getroot()
     for parent in list(pyramid.iter()):
@@ -73,12 +74,19 @@ def main():
         '@@LOGO@@': data(HERE / 'assets/kth-logo.svg', 'image/svg+xml'),
         '@@PYRAMID@@': pyramid_art(),
         '@@ANIMATION@@': receiver_art(),
+        '@@ES_CAR@@': data(HERE / 'assets/embedded-systems/braking-system.png', 'image/png'),
+        '@@ES_ROBOT@@': data(HERE / 'assets/embedded-systems/robot-controller.png', 'image/png'),
+        '@@ES_AIRCRAFT@@': data(HERE / 'assets/embedded-systems/aircraft-attitude-control.png', 'image/png'),
     }
     slides, controllers = {}, {}
     for entry in entries:
         content = (HERE / entry['source']).read_text(encoding='utf8')
         for key, value in replacements.items():
             content = content.replace(key, value)
+        position = entries.index(entry) + 1
+        content = content.replace('class="footer-page">2</span>', f'class="footer-page">{position}</span>')
+        if 'aria-label="Slide ' in content:
+            content = content.replace('aria-label="Slide 2:', f'aria-label="Slide {position}:')
         slides[entry['id']] = content
         if entry.get('controller'):
             controllers[entry['id']] = (HERE / entry['controller']).read_text(encoding='utf8')
