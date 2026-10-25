@@ -16,10 +16,19 @@ def data(path, mime):
 
 
 def pyramid_art():
-    pyramid = E.parse(ROOT / 'figures/svg/abst-pyramid-trace.svg').getroot()
+    source = next(path for path in [
+        ROOT / 'figures/svg/abst-pyramid-w-trace.svg',
+        ROOT / 'figures/svg/abst-pyramid-trace.svg',
+    ] if path.exists())
+    pyramid = E.parse(source).getroot()
     for parent in list(pyramid.iter()):
         for child in list(parent):
             if child.tag.split('}')[-1] in ['style', 'script', 'namedview', 'title', 'desc']:
+                parent.remove(child)
+    # Omit the inner cone from the slide while preserving the source artwork.
+    for parent in list(pyramid.iter()):
+        for child in list(parent):
+            if child.get('id') in ['path4-6', 'g4-0-7']:
                 parent.remove(child)
     ids = {n.get('id'): 'pyramid-' + n.get('id') for n in pyramid.iter() if n.get('id')}
     for n in pyramid.iter():
@@ -67,12 +76,51 @@ def receiver_art():
         animation.attrib.pop(attr, None)
     return E.tostring(animation, encoding='unicode')
 
+
+def requirements_pyramid_art():
+    # Reuse page 3's exact geometry and trace, with independent IDs/controllers.
+    pyramid = E.fromstring(pyramid_art())
+    for node in pyramid.iter():
+        for key, value in list(node.attrib.items()):
+            node.set(key, value.replace('pyramid', 'requirements-pyramid'))
+    pyramid.set('aria-label', 'Completed design trace from specification through modelling to implementation, with a schematic specification-satisfaction region')
+    layer = next(n for n in pyramid.iter() if n.get('id') == 'requirements-pyramid-layer1')
+    for node in list(layer):
+        if node.get('id') == 'requirements-pyramid-path2':
+            layer.remove(node)
+    for name in ['g2', 'g3', 'g1', 'g5', 'g6', 'g7']:
+        next(n for n in pyramid.iter() if n.get('id') == 'requirements-pyramid-' + name).set('opacity', '1')
+
+    # Preserve the reference geometry and sibling paint order. The lower rim
+    # paints after the modelling floor, while the sides retain their own slot.
+    reference = E.parse(ROOT / 'figures/svg/abst-pyramid-w-range.svg').getroot()
+    reference_layer = next(n for n in reference.iter() if n.get('id') == 'layer1')
+    reference_order = [n.get('id') for n in reference_layer]
+    for source_id, target_id, reveal_id in [
+        ('g4-0-7', 'specification-cone-rim', 'specification-cone'),
+        ('path4-6', 'specification-cone-sides', 'specification-cone-outline'),
+    ]:
+        artwork = next(n for n in reference.iter() if n.get('id') == source_id)
+        reveal = E.Element(SVG + 'g', {
+            'id': reveal_id, 'data-requirements-reveal': '2',
+            'opacity': '0', 'visibility': 'hidden', 'aria-hidden': 'true',
+        })
+        for i, node in enumerate(artwork.iter()):
+            node.set('id', target_id if i == 0 else f'{target_id}-{i}')
+        reveal.append(artwork)
+        following = reference_order[reference_order.index(source_id) + 1:]
+        anchor = next(n for source in following for n in layer
+                      if n.get('id') == 'requirements-pyramid-' + source)
+        layer.insert(list(layer).index(anchor), reveal)
+    return E.tostring(pyramid, encoding='unicode')
+
 def main():
     entries = json.loads((HERE / 'slides.json').read_text(encoding='utf8'))
     replacements = {
         '@@COVER@@': data(HERE / 'assets/cover.svg', 'image/svg+xml'),
         '@@LOGO@@': data(HERE / 'assets/kth-logo.svg', 'image/svg+xml'),
         '@@PYRAMID@@': pyramid_art(),
+        '@@REQUIREMENTS_PYRAMID@@': requirements_pyramid_art(),
         '@@ANIMATION@@': receiver_art(),
         '@@ES_CAR@@': data(HERE / 'assets/embedded-systems/braking-system.png', 'image/png'),
         '@@ES_ROBOT@@': data(HERE / 'assets/embedded-systems/robot-controller.png', 'image/png'),

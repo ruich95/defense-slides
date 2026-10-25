@@ -1,6 +1,6 @@
 # HTML defence presentation
 
-Open **index.html** in Edge or Chrome to present the complete deck. It currently contains the cover, the Embedded Systems introduction, and the animated Embedded System Design slide. The generated presentation is self-contained and works offline or on GitHub Pages.
+Open **index.html** in Edge or Chrome to present the complete deck. It currently contains the cover, the Embedded Systems introduction, the animated Embedded System Design slide, and Requirements for a Design Framework. The generated presentation is self-contained and works offline or on GitHub Pages.
 
 ## Structure
 
@@ -10,6 +10,7 @@ defense-html/
   cover.html             Generated cover preview
   page1.html             Generated Embedded Systems preview
   page2.html             Generated animated-slide preview
+  page4.html             Generated Requirements for a Design Framework preview
   slides.json            Slide order, titles, source paths and reveal counts
   slides/
     cover.html           Cover source fragment
@@ -17,6 +18,8 @@ defense-html/
     page1.js             Example and characteristic reveals with speaker notes
     page2.html           Embedded System Design source fragment
     page2.js             FM animation and pyramid reveal controller
+    page4.html           Requirements for a Design Framework source fragment
+    page4.js             Five cumulative states with speaker notes
   shared/
     styles.css           Common layout, typography and slide styling
     navigation.js        Deck navigation, full screen and notes
@@ -55,6 +58,8 @@ The introduction slides retain the PowerPoint master's original logo position an
 
 On Embedded System Design, main PLL and quadrature labels use 28 px on the canvas. The receiver remains centered between the definition and lower content edge, with the most recent smaller diagram size and fixed external ports.
 
-The abstraction pyramid and trace come from `../figures/svg/abst-pyramid-trace.svg`. The rendered phase labels follow `../slides-detail/page2.md`: Specification, Modelling and Implementation. The FM animation is embedded from `../figures/radio-to-fm/radio-to-fm.svg`; rebuild that illustration first when its source artwork changes. External waveforms and arrows fade from the PLL frame onward. Only the feasible-implementations caption remains below the figures, with a leader pointing to its circle.
+The abstraction pyramid and trace come from `../figures/svg/abst-pyramid-w-trace.svg` when present, otherwise from the current `../figures/svg/abst-pyramid-trace.svg`. The inner cone is omitted from the slide; the PLL branch follows its updated source position. The rendered phase labels follow `../slides-detail/page2.md`: Specification, Modelling and Implementation. The FM animation is embedded from `../figures/radio-to-fm/radio-to-fm.svg`; rebuild that illustration first when its source artwork changes. External waveforms and arrows fade from the PLL frame onward. Only the feasible-implementations caption remains below the figures, with a leader pointing to its circle.
 
 The speaker notes distinguish the illustrative multiplier constraint from a demonstrated FPGA implementation result. FIR scheduling and valid-sample timing remain implicit.
+
+Displayed page 4 follows `../slides-detail/page4.md` and uses `slides/page4.html` and `slides/page4.js`. Its five cumulative states reveal Automation, Correctness with the specification cone, Practical support, then Formal support. The opening and completed trace remain visible. The completed left text block is vertically centred on the page. That final composition determines its fixed top position for every state, keeping the opening sentence and Automation stationary. Correctness appears with normal bullet spacing in state 3. In state 4, the space beneath Automation expands over 0.25 seconds, moving Correctness down as Practical support fades in. Reverse navigation collapses that space again. The pyramid reuses page 3's geometry at the same position and scale, with separately namespaced artwork IDs. The inner cone preserves the geometry, transforms, unfilled black outline and dashed rear rim from `../figures/svg/abst-pyramid-w-range.svg`. Its rim and sides retain their separate positions in the reference SVG’s paint order, so the lower rim paints in front of the modelling floor. The caption leader begins 8 canvas pixels below the caption’s bottom centre and points to the left end of the inner cone’s lower rim, stopping 6 canvas pixels outside the outline to avoid overlap. It uses page 3’s open arrowhead style and tracks the slide scale. Following the explicit layout instruction, page 4 omits the multiplier-budget ellipse, caption and leader; the Step 3 presenter guidance refers back to the preceding page's example. The cone denotes specification satisfaction schematically, not a proof or a quantitative region. Oral passages, presenter guidance and attribution appear in the speaker notes. Use `index.html#4.1` through `#4.5`, or `page4.html#1` through `#5`. Reveals fade over 0.25 seconds and respect reduced-motion preferences. Adding a later slide to `slides.json` automatically enables advancing to it after page 4's final state.

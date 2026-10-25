@@ -19,5 +19,12 @@
     "source": "slides/page2.html",
     "controller": "slides/page2.js",
     "steps": 9
+  },
+  {
+    "id": "page4",
+    "title": "Requirements for a Design Framework",
+    "source": "slides/page4.html",
+    "controller": "slides/page4.js",
+    "steps": 5
   }
 ]
