@@ -64,3 +64,58 @@ body.full #viewport{inset:0}body.full .controlbar{display:none}#stage{cursor:poi
 #page4 .specification-pointer{position:absolute;inset:0;width:1600px;height:900px;pointer-events:none}
 #page4 [data-requirements-reveal]{opacity:0;visibility:hidden}
 @media (prefers-reduced-motion:reduce){#page4 [data-requirements-reveal]{transition:none!important}}
+
+/* Page 5 imports the approved draft at exactly 5/6 of its 1920x1080 canvas. */
+#page5 .page5-artwork{position:absolute;inset:0;width:1600px;height:900px;pointer-events:none}
+#page5-art{display:block;width:1600px;height:900px;overflow:visible}
+#page5 .page5-start-pyramid{position:absolute;left:0;top:0;width:455px;height:516px;transform:translate(1058px,203px);transform-origin:0 0;pointer-events:none}
+#page5-start-pyramid-svg{display:block;width:100%;height:100%;overflow:visible}
+#page5 .page5-text{position:absolute;left:91px;top:210px;width:724px;pointer-events:none;font-size:32px;line-height:1.28}
+#page5 .page5-opening{margin:0;opacity:0;visibility:hidden}
+#page5 .page5-bullets{margin:43px 0 0;padding-left:37px;list-style-type:disclosure-closed}
+#page5 .page5-bullets li{padding-left:4px;margin:0 0 18px;font-weight:400}
+#page5 .page5-bullets li:last-child{margin-bottom:0}
+#page5 .page5-bullets li::marker{font-size:25px}
+#page5 .page5-question{margin:86px 0 0}
+#page5 strong{font-weight:700}
+#page5 [data-page5-reveal],#page5 [data-page5-phase-bar]{opacity:0;visibility:hidden}
+
+/* Preserve the AEiC paper composition in the original slide coordinate system. */
+#page6 .page6-paper-art{position:absolute;inset:0;width:1600px;height:900px;pointer-events:none}
+#page6-papers{display:block;width:1600px;height:900px;overflow:visible}
+#page6 .page6-text{position:absolute;left:91px;top:210px;width:680px;font-size:32px;line-height:1.28;pointer-events:none}
+#page6 .page6-opening{margin:0}
+#page6 .page6-bullets{margin:18px 0 0;padding-left:37px;list-style-type:disclosure-closed}
+#page6 .page6-bullets li{margin:0 0 18px;padding-left:4px}
+#page6 .page6-bullets li:last-child{margin-bottom:0}
+#page6 .page6-bullets li::marker{font-size:25px}
+#page6 .page6-candidate{margin:86px 0 0}
+#page6 strong{font-weight:700}
+#page6 [data-page6-reveal]{opacity:0;visibility:hidden}
+
+/* Page 7: one selectable, full-width question/objectives region. */
+#page7 .page7-text{position:absolute;left:91px;top:200px;width:1419px;font-size:32px;line-height:1.28;font-weight:400;color:#000}
+#page7 .page7-upper{display:grid;grid-template-columns:1fr;align-items:start}
+#page7 .page7-summary,#page7 .page7-question{grid-area:1/1}
+#page7 .page7-summary{margin:0}
+#page7 .page7-summary-intro{margin:0 0 18px;font-weight:400;color:#000}
+#page7 .page7-summary-bullets{margin:0;padding-left:37px;list-style-type:disclosure-closed}
+#page7 .page7-summary li,#page7 .page7-question-clauses li{padding-left:4px;margin:0 0 18px}
+#page7 .page7-summary li:last-child,#page7 .page7-question-clauses li:last-child{margin-bottom:0}
+#page7 .page7-summary li::marker,#page7 .page7-question-clauses li::marker{font-size:25px}
+#page7 .page7-summary strong{font-weight:700}
+#page7 .page7-question{margin:0;font-weight:400}
+#page7 .page7-question-intro{margin:0 0 18px;font-weight:700;color:#000}
+#page7 .page7-question-lead{margin:0}
+#page7 .page7-question-clauses{margin:18px 0 0;padding-left:37px;list-style-type:disclosure-closed}
+#page7 .page7-question-tail{white-space:nowrap}
+#page7 [data-question-objective]{font-weight:700;color:#000}
+#page7 .page7-objectives{display:flex;flex-direction:column;gap:22px;margin-top:50px}
+#page7 .page7-objective{display:grid;grid-template-columns:48px 1fr;font-weight:400;color:#000}
+#page7 .page7-objective-label{font-weight:700}
+#page7 .page7-objective-description{font-weight:400;color:#000}
+#page7 [data-objective-label="1"]{color:#78001A}
+#page7 [data-objective-label="2"]{color:#0029ED}
+#page7 [data-objective-label="3"]{color:#A65900}
+#page7 [data-page7-reveal]{opacity:0;visibility:hidden}
+#page7 .page7-question{opacity:0;visibility:hidden}

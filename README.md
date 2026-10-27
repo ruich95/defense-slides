@@ -1,6 +1,6 @@
 # HTML defence presentation
 
-Open **index.html** in Edge or Chrome to present the complete deck. It currently contains the cover, the Embedded Systems introduction, the animated Embedded System Design slide, and Requirements for a Design Framework. The generated presentation is self-contained and works offline or on GitHub Pages.
+Open **index.html** in Edge or Chrome to present the complete deck. It currently contains the cover, the Embedded Systems introduction, the animated Embedded System Design slide, Requirements for a Design Framework, A Key Challenge: Connecting Abstraction Levels, Type Theory as a Programming Language, and Research Question and Objectives. The generated presentation is self-contained and works offline or on GitHub Pages.
 
 ## Structure
 
@@ -11,6 +11,9 @@ defense-html/
   page1.html             Generated Embedded Systems preview
   page2.html             Generated animated-slide preview
   page4.html             Generated Requirements for a Design Framework preview
+  page5.html             Generated Connecting Abstraction Levels preview
+  page6.html             Generated Type Theory as a Programming Language preview
+  page7.html             Generated Research Question and Objectives preview
   slides.json            Slide order, titles, source paths and reveal counts
   slides/
     cover.html           Cover source fragment
@@ -20,6 +23,12 @@ defense-html/
     page2.js             FM animation and pyramid reveal controller
     page4.html           Requirements for a Design Framework source fragment
     page4.js             Five cumulative states with speaker notes
+    page5.html           Connecting Abstraction Levels source fragment
+    page5.js             Automatic entrance and eight cumulative reveal states
+    page6.html           Type Theory as a Programming Language source fragment
+    page6.js             Eight cumulative paper/capability reveal states
+    page7.html           Full-width research question and objectives
+    page7.js             Four states with synchronised colour associations
   shared/
     styles.css           Common layout, typography and slide styling
     navigation.js        Deck navigation, full screen and notes
@@ -28,7 +37,8 @@ defense-html/
     cover.svg            Cover imported from PowerPoint as vector artwork
     kth-logo.svg         Original KTH logo from the slide master
     Figtree.ttf          Embedded font source
-    embedded-systems/    Sourced SVG example icons and their licence
+    embedded-systems/    Approved application PNG illustrations
+    type-theory-papers/  Unchanged PNG paper images extracted from AEiC
   build.py               Builds the deck and standalone previews
   .nojekyll              Static GitHub Pages publishing
 ```
@@ -48,7 +58,7 @@ All required assets, styles and controllers are embedded into `index.html` at bu
 - Home: beginning of the deck. End: final reveal of the deck.
 - R: restart the current slide. The Restart button restarts the deck.
 
-The cover has one state. Slide 2 (Embedded Systems) has nine states: its opening statement, three example reveals, the question, and four characteristic reveals. Its transitions take 0.2 seconds and respect reduced-motion preferences. Slide 3 (Embedded System Design) has nine states and 0.25-second transitions. Full screen hides the bottom controls. Deck links use `#1` for the cover, `#2.9` for the completed Embedded Systems slide, and `#3.7` for slide 3, reveal 7. Standalone links such as `page1.html#9` and the existing `page2.html#7` remain supported. Source names follow `slides-detail/page1.md` and `page2.md`; generated page numbers follow their position in the complete deck.
+The cover has one state. Slide 2 (Embedded Systems) has nine states: its opening statement, three example reveals, the question, and four characteristic reveals. Its transitions take 0.2 seconds and respect reduced-motion preferences. Slide 3 (Embedded System Design) has nine states and 0.25-second transitions. Full screen hides the bottom controls. Deck links use `#1` for the cover, `#2.9` for the completed Embedded Systems slide, and `#3.7` for slide 3, reveal 7. Standalone links such as `page1.html#9` and the existing `page2.html#7` remain supported. Detailed specifications now use `slides-detail/page2.md` and `page3.md`; HTML source IDs remain `page1` and `page2`. Generated page numbers follow their position in the complete deck.
 
 ## Reference fidelity
 
@@ -58,8 +68,43 @@ The introduction slides retain the PowerPoint master's original logo position an
 
 On Embedded System Design, main PLL and quadrature labels use 28 px on the canvas. The receiver remains centered between the definition and lower content edge, with the most recent smaller diagram size and fixed external ports.
 
-The abstraction pyramid and trace come from `../figures/svg/abst-pyramid-w-trace.svg` when present, otherwise from the current `../figures/svg/abst-pyramid-trace.svg`. The inner cone is omitted from the slide; the PLL branch follows its updated source position. The rendered phase labels follow `../slides-detail/page2.md`: Specification, Modelling and Implementation. The FM animation is embedded from `../figures/radio-to-fm/radio-to-fm.svg`; rebuild that illustration first when its source artwork changes. External waveforms and arrows fade from the PLL frame onward. Only the feasible-implementations caption remains below the figures, with a leader pointing to its circle.
+The abstraction pyramid and trace come from `../figures/svg/abst-pyramid-w-trace.svg` when present, otherwise from the current `../figures/svg/abst-pyramid-trace.svg`. The inner cone is omitted from the slide; the PLL branch follows its updated source position. The rendered phase labels follow `../slides-detail/page3.md`: Specification, Modelling and Implementation. The FM animation is embedded from `../figures/radio-to-fm/radio-to-fm.svg`; rebuild that illustration first when its source artwork changes. External waveforms and arrows fade from the PLL frame onward. Only the feasible-implementations caption remains below the figures, with a leader pointing to its circle.
 
 The speaker notes distinguish the illustrative multiplier constraint from a demonstrated FPGA implementation result. FIR scheduling and valid-sample timing remain implicit.
 
 Displayed page 4 follows `../slides-detail/page4.md` and uses `slides/page4.html` and `slides/page4.js`. Its five cumulative states reveal Automation, Correctness with the specification cone, Practical support, then Formal support. The opening and completed trace remain visible. The completed left text block is vertically centred on the page. That final composition determines its fixed top position for every state, keeping the opening sentence and Automation stationary. Correctness appears with normal bullet spacing in state 3. In state 4, the space beneath Automation expands over 0.25 seconds, moving Correctness down as Practical support fades in. Reverse navigation collapses that space again. The pyramid reuses page 3's geometry at the same position and scale, with separately namespaced artwork IDs. The inner cone preserves the geometry, transforms, unfilled black outline and dashed rear rim from `../figures/svg/abst-pyramid-w-range.svg`. Its rim and sides retain their separate positions in the reference SVG’s paint order, so the lower rim paints in front of the modelling floor. The caption leader begins 8 canvas pixels below the caption’s bottom centre and points to the left end of the inner cone’s lower rim, stopping 6 canvas pixels outside the outline to avoid overlap. It uses page 3’s open arrowhead style and tracks the slide scale. Following the explicit layout instruction, page 4 omits the multiplier-budget ellipse, caption and leader; the Step 3 presenter guidance refers back to the preceding page's example. The cone denotes specification satisfaction schematically, not a proof or a quantitative region. Oral passages, presenter guidance and attribution appear in the speaker notes. Use `index.html#4.1` through `#4.5`, or `page4.html#1` through `#5`. Reveals fade over 0.25 seconds and respect reduced-motion preferences. Adding a later slide to `slides.json` automatically enables advancing to it after page 4's final state.
+
+
+## Displayed page 5
+
+Page 5 follows `../slides-detail/page5.md`. It has eight cumulative states. The initial state includes an automatic 250 ms entrance: the preceding slide's empty base pyramid holds briefly, compresses and moves to the right, crossfades into the draft's narrow phase bar, then reveals the opening statement. The entrance does not consume a click. Seven clicks reveal the equation, FIR model, specification bullet, C panel, Verilog panel, implementation bullet, and final question in that order, with 225 ms fades.
+
+The approved artwork comes from `../figures/svg/page5-draft.svg`, with its 1920 by 1080 viewBox displayed at 1600 by 900 exactly once. Its edited panels, headings, overlap, colours and rotated phase labels remain intact. Imported IDs are prefixed and imported styles are scoped to the artwork. The temporary starting pyramid is cloned from the same current source as the preceding slides, with trace, cone and budget annotations removed.
+
+Shared navigation supports an optional awaited `enter({playEntrance})` operation. It plays on normal forward entry, initial-state links, and R restart. Later-state links, reverse navigation, and programmatic `defenseDeck.go(4, state, false)` show settled states. Reduced-motion preference skips the entrance and fades. Pending page 5 motion is cancelled when leaving or superseded by programmatic navigation; extra ordinary advances during entry are ignored. Resizing and full screen preserve the current state. `#5` opens the automatic entrance, while `#5.8` opens the completed slide directly. The standalone preview uses `page5.html` and `#1` through `#8`.
+
+Page 5 uses the preceding pages’ 1.28 line height and 18 px bullet spacing, with regular-weight bullets. Its concluding question remains bold.
+
+
+## Displayed page 6
+
+Page 6 follows `../slides-detail/page6.md`. It has eight cumulative states, with no automatic entrance: opening statement, Agda, Idris, Lean 4, Idris2, Programming bullet, Formal reasoning bullet, and the candidate-foundation statement. Each picture and its red highlight appear together. The two capability labels are bold and their explanations remain regular weight. Reveals use 225 ms fades and respect reduced motion.
+
+`build.py` extracts the actual picture groups from slide 3 of `../final/AEiC-26.pptx`. It retains the group's placement, scale and child coordinate system, the original PNG bytes and source crops, the highlight rectangles and their theme-derived line widths, and source stacking order. The entire composition uses the source slide's proportional mapping onto 1600 by 900. No individual paper is rearranged, recropped, or replaced. In particular, all of the Idris2 abstract visible in AEiC remains visible here. The extracted images are stored under `assets/type-theory-papers/` and embedded into the generated HTML.
+
+The left text reserves space for every reveal, preserving fixed positions. Speaker notes contain the supplied oral passages, presenter guidance and source attribution. The page has no pyramid, phase bar, FIR artwork, or boxed research question. Use `index.html#6` to start or `#6.8` for the final state. The standalone preview uses `page6.html#1` through `#8`. Returning to page 5 restores its final state without replaying its entrance.
+
+## Planning status
+
+Synchronized 27 October 2026. The deck contains six pages and 40 reveal states in total. The eight-page introduction plan reserves page 7 for the research question and objectives, and page 8 for the Figure 1.5 framework roadmap. Neither is implemented yet. The revised approximately eight-minute introduction remains a rehearsal target within the 45-minute defense.
+
+
+## Displayed page 7
+
+Page 7 follows `../slides-detail/page7.md` and the page 7 section of `../defense-introduction-plan.md`. It has five states in one full-width Text Region: challenge summary; complete structured question replacing the summary; O1; O2; O3. The regular black leading sentence “The design process presents two challenges:” appears with the summary bullets and disappears with them. The bold black sentence “This leads to the research question:” appears with the question and stays through objective reveals, outside the verbatim thesis question. These replacing groups share a grid area that reserves the full question-group height, so subsequent reveals cannot move the objectives. The question retains every word and punctuation of the thesis question, grouped into a lead-in and three hanging-indented clauses.
+
+All four question emphasis spans are bold from the start and black when the question first appears. O1 colours its label and framework phrase KTH Dark brick (#78001A, RGB 120, 0, 26), matching the controller's transition target. O2 colours its label and both logical/computational and accountability phrases digital blue (#0029ED). O3 colours its label and general-purpose-language phrase dark yellow (#A65900). Every objective colon and description remains regular-weight black. Objective labels have no preceding bullet markers. Prior objectives and colours remain visible.
+
+Transitions last 225 ms. The summary fades out before the question fades in; reverse navigation restores the summary. Objective opacity and corresponding question colours change together. Reduced motion makes changes immediately, and direct links show their requested settled state. There is no automatic entrance or placeholder page 8. Speaker notes include the requested summary, complete question, objective explanations, qualifications and references.
+
+Use `index.html#7.1` through `#7.5`, or the standalone `page7.html#1` through `#5`. Edit sources and rebuild with `build.py`; do not edit generated HTML directly.

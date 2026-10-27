@@ -1,7 +1,7 @@
 window.slideFactories.page2=()=>{
 const $=id=>document.getElementById(id),art=$('receiver-animation'),region=$('receiver-region');
 const states=[
- {name:'Embedded system design',frame:0,caption:'',note:'At a high level, we can view embedded-system design as a top-down process with three phases: specification, modelling, and implementation. As we move through these phases, we progressively make design decisions and introduce implementation detail.'},
+ {name:'Embedded system design',frame:0,caption:'',note:'At a high level, we can view embedded-system design as a top-down process with three phases: specification, modelling, and implementation. As we move through these phases, we progressively make design decisions and introduce implementation detail. Refinement introduces implementation detail, while transformation changes a model at the same abstraction level, which will be shown by blue and red arrows respectively.'},
  {name:'An FM radio',frame:0,caption:'An FM radio',note:'Let us take a familiar example: we want to listen to an FM radio broadcast.\n\nDelivery comment: If the childhood connection has not already been mentioned, add a brief personal sentence here using Rui’s actual experience.'},
  {name:'Specification',frame:1,caption:'Specify the required behaviour',note:'We first make the required behaviour explicit. The receiver must accept an FM signal and recover the audio carried by that signal.'},
  {name:'A PLL model',frame:2,caption:'A PLL-based demodulator',note:'We then construct a model describing how to obtain that behaviour. One possibility is a demodulator based on a phase-locked loop, or PLL.'},

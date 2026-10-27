@@ -26,5 +26,26 @@
     "source": "slides/page4.html",
     "controller": "slides/page4.js",
     "steps": 5
+  },
+  {
+    "id": "page5",
+    "title": "A Key Challenge: Connecting Abstraction Levels",
+    "source": "slides/page5.html",
+    "controller": "slides/page5.js",
+    "steps": 8
+  },
+  {
+    "id": "page6",
+    "title": "Type Theory as a Programming Language",
+    "source": "slides/page6.html",
+    "controller": "slides/page6.js",
+    "steps": 8
+  },
+  {
+    "id": "page7",
+    "title": "Research Question and Objectives",
+    "source": "slides/page7.html",
+    "controller": "slides/page7.js",
+    "steps": 5
   }
 ]
