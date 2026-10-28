@@ -1,0 +1,2297 @@
+{
+  "source": "AEiC-26.pptx / slide6.xml",
+  "clickGroups": [
+    {
+      "events": [
+        {
+          "id": 49,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "clickEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "5",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 50,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "7",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 53,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "9",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 54,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "11",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 69,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "13",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 23,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "15",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 24,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "17",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 25,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "19",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 29,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "21",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 30,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "23",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 31,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "25",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 32,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "27",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 33,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "29",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 41,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "31",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 13,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "33",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 44,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "35",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 9,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "37",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 11,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "39",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 14,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "41",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        }
+      ],
+      "duration": 1
+    },
+    {
+      "events": [
+        {
+          "id": 49,
+          "kind": "path",
+          "start": 0,
+          "duration": 500,
+          "relation": "clickEffect",
+          "accel": 0.16,
+          "decel": 0.16,
+          "sourceTimingId": "45",
+          "path": "M -4.16667E-7 1.11111E-6 L 0.05273 -0.00046 ",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 50,
+          "kind": "path",
+          "start": 0,
+          "duration": 500,
+          "relation": "withEffect",
+          "accel": 0.16,
+          "decel": 0.16,
+          "sourceTimingId": "47",
+          "path": "M 6.25E-7 3.33333E-6 L 0.05352 3.33333E-6 ",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 15,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "49",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 49,
+          "kind": "exit",
+          "start": 500,
+          "duration": 1,
+          "relation": "afterEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "52",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 50,
+          "kind": "exit",
+          "start": 500,
+          "duration": 1,
+          "relation": "afterEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "55",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 52,
+          "kind": "entr",
+          "start": 500,
+          "duration": 1,
+          "relation": "afterEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "58",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 51,
+          "kind": "entr",
+          "start": 500,
+          "duration": 1,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "60",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 52,
+          "kind": "path",
+          "start": 500,
+          "duration": 500,
+          "relation": "afterEffect",
+          "accel": 0.5,
+          "decel": 0.5,
+          "sourceTimingId": "63",
+          "path": "M 6.25E-7 -2.96296E-6 L 0.0543 0.00047 ",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 51,
+          "kind": "path",
+          "start": 500,
+          "duration": 500,
+          "relation": "withEffect",
+          "accel": 0.5,
+          "decel": 0.5,
+          "sourceTimingId": "65",
+          "path": "M 6.25E-7 1.85185E-6 L 0.0543 1.85185E-6 ",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 18,
+          "kind": "entr",
+          "start": 1000,
+          "duration": 1,
+          "relation": "afterEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "68",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 61,
+          "kind": "entr",
+          "start": 1000,
+          "duration": 1,
+          "relation": "afterEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "71",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        }
+      ],
+      "duration": 1001
+    },
+    {
+      "events": [
+        {
+          "id": 53,
+          "kind": "path",
+          "start": 250,
+          "duration": 500,
+          "relation": "clickEffect",
+          "accel": 0.16,
+          "decel": 0.16,
+          "sourceTimingId": "75",
+          "path": "M -0.00013 2.59259E-6 L 0.05234 -0.00023 ",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 54,
+          "kind": "path",
+          "start": 0,
+          "duration": 750,
+          "relation": "withEffect",
+          "accel": 0.50667,
+          "decel": 0.49333,
+          "sourceTimingId": "77",
+          "path": "M 0.00039 -0.0007 L 0.02565 -0.0007 L 0.02565 0.03449 L 0.05286 0.03449 ",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 17,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "79",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 53,
+          "kind": "exit",
+          "start": 750,
+          "duration": 1,
+          "relation": "afterEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "82",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 54,
+          "kind": "exit",
+          "start": 750,
+          "duration": 1,
+          "relation": "afterEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "85",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 57,
+          "kind": "entr",
+          "start": 750,
+          "duration": 1,
+          "relation": "afterEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "88",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 56,
+          "kind": "entr",
+          "start": 750,
+          "duration": 1,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "90",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 57,
+          "kind": "path",
+          "start": 750,
+          "duration": 500,
+          "relation": "afterEffect",
+          "accel": 0.5,
+          "decel": 0.5,
+          "sourceTimingId": "93",
+          "path": "M 0.00013 -2.96296E-6 L 0.02409 -2.96296E-6 L 0.02409 0.07408 L 0.0543 0.07408 ",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 56,
+          "kind": "path",
+          "start": 750,
+          "duration": 500,
+          "relation": "withEffect",
+          "accel": 0.5,
+          "decel": 0.5,
+          "sourceTimingId": "95",
+          "path": "M -0.00013 -0.00023 L 0.02422 -0.00023 L 0.02422 0.07407 L 0.05417 0.07361 ",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 21,
+          "kind": "entr",
+          "start": 1250,
+          "duration": 1,
+          "relation": "afterEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "98",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 59,
+          "kind": "entr",
+          "start": 1250,
+          "duration": 1,
+          "relation": "afterEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "101",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        }
+      ],
+      "duration": 1251
+    },
+    {
+      "events": [
+        {
+          "id": 69,
+          "kind": "path",
+          "start": 500,
+          "duration": 500,
+          "relation": "clickEffect",
+          "accel": 0.16,
+          "decel": 0.16,
+          "sourceTimingId": "105",
+          "path": "M 8.33333E-7 3.33333E-6 L 0.05351 3.33333E-6 ",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 19,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "107",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 75,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "109",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 75,
+          "kind": "path",
+          "start": 0,
+          "duration": 1000,
+          "relation": "withEffect",
+          "accel": 0.5,
+          "decel": 0.5,
+          "sourceTimingId": "111",
+          "path": "M 0.00078 0.00023 L -0.03412 0.00023 L -0.03412 0.07385 L -0.27227 0.07385 L -0.27227 0.0007 L -0.24428 0.0007 L -0.24428 0.0007 ",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 69,
+          "kind": "exit",
+          "start": 1000,
+          "duration": 1,
+          "relation": "afterEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "114",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 75,
+          "kind": "exit",
+          "start": 1000,
+          "duration": 1,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "116",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 73,
+          "kind": "entr",
+          "start": 1000,
+          "duration": 1,
+          "relation": "afterEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "119",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 74,
+          "kind": "entr",
+          "start": 1000,
+          "duration": 1,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "121",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 73,
+          "kind": "path",
+          "start": 1000,
+          "duration": 500,
+          "relation": "afterEffect",
+          "accel": 0.5,
+          "decel": 0.5,
+          "sourceTimingId": "124",
+          "path": "M 0.00013 -0.00023 L 0.02422 -0.00023 L 0.02422 -0.07153 L 0.05404 -0.07153 ",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 74,
+          "kind": "path",
+          "start": 1000,
+          "duration": 500,
+          "relation": "withEffect",
+          "accel": 0.5,
+          "decel": 0.5,
+          "sourceTimingId": "126",
+          "path": "M 0.00013 0.00047 L 0.02318 0.00047 L 0.02318 -0.07199 L 0.0543 -0.07199 ",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 26,
+          "kind": "entr",
+          "start": 1500,
+          "duration": 500,
+          "relation": "afterEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "129",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 27,
+          "kind": "entr",
+          "start": 1500,
+          "duration": 1,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "132",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 55,
+          "kind": "entr",
+          "start": 1500,
+          "duration": 1,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "134",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        }
+      ],
+      "duration": 2000
+    },
+    {
+      "events": [
+        {
+          "id": 92,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "clickEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "138",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 93,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "140",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 79,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "142",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 80,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "144",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 81,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "146",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 82,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "148",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 83,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "150",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 91,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "152",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 78,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "154",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 97,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "156",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 28,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "158",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 45,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "160",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 62,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "162",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 63,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "164",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 64,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "166",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        }
+      ],
+      "duration": 1
+    },
+    {
+      "events": [
+        {
+          "id": 92,
+          "kind": "path",
+          "start": 0,
+          "duration": 500,
+          "relation": "clickEffect",
+          "accel": 0.16,
+          "decel": 0.16,
+          "sourceTimingId": "170",
+          "path": "M -4.16667E-7 1.11111E-6 L 0.05273 -0.00046 ",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 93,
+          "kind": "path",
+          "start": 0,
+          "duration": 500,
+          "relation": "withEffect",
+          "accel": 0.16,
+          "decel": 0.16,
+          "sourceTimingId": "172",
+          "path": "M 6.25E-7 3.33333E-6 L 0.05352 3.33333E-6 ",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 43,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "174",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 92,
+          "kind": "exit",
+          "start": 500,
+          "duration": 1,
+          "relation": "afterEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "177",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 93,
+          "kind": "exit",
+          "start": 500,
+          "duration": 1,
+          "relation": "afterEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "180",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 95,
+          "kind": "entr",
+          "start": 500,
+          "duration": 1,
+          "relation": "afterEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "183",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 94,
+          "kind": "entr",
+          "start": 500,
+          "duration": 1,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "185",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 95,
+          "kind": "path",
+          "start": 500,
+          "duration": 500,
+          "relation": "afterEffect",
+          "accel": 0.5,
+          "decel": 0.5,
+          "sourceTimingId": "188",
+          "path": "M 6.25E-7 -2.96296E-6 L 0.0543 0.00047 ",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 94,
+          "kind": "path",
+          "start": 500,
+          "duration": 500,
+          "relation": "withEffect",
+          "accel": 0.5,
+          "decel": 0.5,
+          "sourceTimingId": "190",
+          "path": "M 6.25E-7 1.85185E-6 L 0.0543 1.85185E-6 ",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 65,
+          "kind": "entr",
+          "start": 1000,
+          "duration": 1,
+          "relation": "afterEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "193",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 66,
+          "kind": "entr",
+          "start": 1000,
+          "duration": 1,
+          "relation": "afterEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "196",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 79,
+          "kind": "exit",
+          "start": 1000,
+          "duration": 1,
+          "relation": "afterEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "199",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 80,
+          "kind": "exit",
+          "start": 1000,
+          "duration": 1,
+          "relation": "afterEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "202",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 81,
+          "kind": "exit",
+          "start": 1000,
+          "duration": 1,
+          "relation": "afterEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "205",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 82,
+          "kind": "exit",
+          "start": 1000,
+          "duration": 1,
+          "relation": "afterEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "208",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 83,
+          "kind": "exit",
+          "start": 1000,
+          "duration": 1,
+          "relation": "afterEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "211",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 91,
+          "kind": "exit",
+          "start": 1000,
+          "duration": 1,
+          "relation": "afterEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "214",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 63,
+          "kind": "exit",
+          "start": 1000,
+          "duration": 1,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "216",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 64,
+          "kind": "exit",
+          "start": 1000,
+          "duration": 1,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "218",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        }
+      ],
+      "duration": 1001
+    },
+    {
+      "events": [
+        {
+          "id": 46,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "clickEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "222",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        }
+      ],
+      "duration": 1
+    }
+  ],
+  "shapes": [
+    {
+      "width": 28.750000000000004,
+      "id": 23,
+      "x": 966.2500000000002,
+      "y": 291.25000000000006,
+      "name": "Oval 22",
+      "height": 28.750000000000004,
+      "visible": false,
+      "row": "upper",
+      "role": "diagram",
+      "scale": 0.88,
+      "left": 981.3000000000002,
+      "top": 266.34000000000003
+    },
+    {
+      "width": 28.750000000000004,
+      "id": 24,
+      "x": 965.0000000000002,
+      "y": 257.50000000000006,
+      "name": "Freeform 23",
+      "height": 32.50000000000001,
+      "visible": false,
+      "row": "upper",
+      "role": "diagram",
+      "scale": 0.88,
+      "left": 980.2000000000002,
+      "top": 236.64000000000004
+    },
+    {
+      "width": 28.750000000000004,
+      "id": 25,
+      "x": 965.0000000000002,
+      "y": 227.50000000000003,
+      "name": "Freeform 24",
+      "height": 31.250000000000007,
+      "visible": false,
+      "row": "upper",
+      "role": "diagram",
+      "scale": 0.88,
+      "left": 980.2000000000002,
+      "top": 210.24
+    },
+    {
+      "width": 92.50000000000001,
+      "id": 29,
+      "x": 1078.7500000000002,
+      "y": 287.50000000000006,
+      "name": "Freeform 28",
+      "height": 35.00000000000001,
+      "visible": false,
+      "row": "upper",
+      "role": "diagram",
+      "scale": 0.88,
+      "left": 1080.3000000000002,
+      "top": 263.0400000000001
+    },
+    {
+      "width": 93.75000000000001,
+      "id": 30,
+      "x": 1280.0000000000002,
+      "y": 287.50000000000006,
+      "name": "Freeform 29",
+      "height": 35.00000000000001,
+      "visible": false,
+      "row": "upper",
+      "role": "diagram",
+      "scale": 0.88,
+      "left": 1257.4,
+      "top": 263.0400000000001
+    },
+    {
+      "width": 93.75000000000001,
+      "id": 31,
+      "x": 1280.0000000000002,
+      "y": 256.25000000000006,
+      "name": "Freeform 30",
+      "height": 36.25000000000001,
+      "visible": false,
+      "row": "upper",
+      "role": "diagram",
+      "scale": 0.88,
+      "left": 1257.4,
+      "top": 235.54000000000005
+    },
+    {
+      "width": 92.50000000000001,
+      "id": 32,
+      "x": 1078.7500000000002,
+      "y": 256.25000000000006,
+      "name": "Freeform 31",
+      "height": 36.25000000000001,
+      "visible": false,
+      "row": "upper",
+      "role": "diagram",
+      "scale": 0.88,
+      "left": 1080.3000000000002,
+      "top": 235.54000000000005
+    },
+    {
+      "width": 130.00000000000003,
+      "id": 33,
+      "x": 1152.5000000000002,
+      "y": 246.25000000000006,
+      "name": "Graphic 26",
+      "height": 86.25000000000001,
+      "visible": false,
+      "row": "upper",
+      "role": "diagram",
+      "scale": 0.88,
+      "left": 1145.2000000000003,
+      "top": 226.74000000000004
+    },
+    {
+      "width": 32.50000000000001,
+      "id": 41,
+      "x": 1201.2500000000002,
+      "y": 261.25000000000006,
+      "name": "Freeform 40",
+      "height": 56.25000000000001,
+      "visible": false,
+      "row": "upper",
+      "role": "diagram",
+      "scale": 0.88,
+      "left": 1188.1000000000001,
+      "top": 239.94000000000005
+    },
+    {
+      "width": 28.750000000000004,
+      "id": 49,
+      "x": 966.2500000000002,
+      "y": 291.25000000000006,
+      "name": "Oval 48",
+      "height": 28.750000000000004,
+      "visible": false,
+      "row": "upper",
+      "role": "diagram",
+      "scale": 0.88,
+      "left": 981.3000000000002,
+      "top": 266.34000000000003
+    },
+    {
+      "width": 28.750000000000004,
+      "id": 50,
+      "x": 965.0000000000002,
+      "y": 257.50000000000006,
+      "name": "Freeform 49",
+      "height": 32.50000000000001,
+      "visible": false,
+      "row": "upper",
+      "role": "diagram",
+      "scale": 0.88,
+      "left": 980.2000000000002,
+      "top": 236.64000000000004
+    },
+    {
+      "width": 28.750000000000004,
+      "id": 51,
+      "x": 1355.0000000000002,
+      "y": 260.00000000000006,
+      "name": "Rectangle 50",
+      "height": 28.750000000000004,
+      "visible": false,
+      "row": "upper",
+      "role": "diagram",
+      "scale": 0.88,
+      "left": 1323.4,
+      "top": 238.84000000000006
+    },
+    {
+      "width": 28.750000000000004,
+      "id": 52,
+      "x": 1355.0000000000002,
+      "y": 290.00000000000006,
+      "name": "Oval 51",
+      "height": 28.750000000000004,
+      "visible": false,
+      "row": "upper",
+      "role": "diagram",
+      "scale": 0.88,
+      "left": 1323.4,
+      "top": 265.24000000000007
+    },
+    {
+      "width": 28.750000000000004,
+      "id": 53,
+      "x": 966.2500000000002,
+      "y": 291.25000000000006,
+      "name": "Oval 52",
+      "height": 28.750000000000004,
+      "visible": false,
+      "row": "upper",
+      "role": "diagram",
+      "scale": 0.88,
+      "left": 981.3000000000002,
+      "top": 266.34000000000003
+    },
+    {
+      "width": 28.750000000000004,
+      "id": 54,
+      "x": 965.0000000000002,
+      "y": 227.50000000000003,
+      "name": "Freeform 53",
+      "height": 31.250000000000007,
+      "visible": false,
+      "row": "upper",
+      "role": "diagram",
+      "scale": 0.88,
+      "left": 980.2000000000002,
+      "top": 210.24
+    },
+    {
+      "width": 28.750000000000004,
+      "id": 56,
+      "x": 1355.0000000000002,
+      "y": 260.00000000000006,
+      "name": "Rectangle 55",
+      "height": 28.750000000000004,
+      "visible": false,
+      "row": "upper",
+      "role": "diagram",
+      "scale": 0.88,
+      "left": 1323.4,
+      "top": 238.84000000000006
+    },
+    {
+      "width": 28.750000000000004,
+      "id": 57,
+      "x": 1355.0000000000002,
+      "y": 290.00000000000006,
+      "name": "Oval 56",
+      "height": 28.750000000000004,
+      "visible": false,
+      "row": "upper",
+      "role": "diagram",
+      "scale": 0.88,
+      "left": 1323.4,
+      "top": 265.24000000000007
+    },
+    {
+      "width": 28.750000000000004,
+      "id": 69,
+      "x": 965.0000000000002,
+      "y": 257.50000000000006,
+      "name": "Freeform 68",
+      "height": 32.50000000000001,
+      "visible": false,
+      "row": "upper",
+      "role": "diagram",
+      "scale": 0.88,
+      "left": 980.2000000000002,
+      "top": 236.64000000000004
+    },
+    {
+      "width": 30.000000000000007,
+      "id": 73,
+      "x": 1355.0000000000002,
+      "y": 260.00000000000006,
+      "name": "Rectangle 72",
+      "height": 28.750000000000004,
+      "visible": false,
+      "row": "upper",
+      "role": "diagram",
+      "scale": 0.88,
+      "left": 1323.4,
+      "top": 238.84000000000006
+    },
+    {
+      "width": 30.000000000000007,
+      "id": 74,
+      "x": 1355.0000000000002,
+      "y": 290.00000000000006,
+      "name": "Oval 73",
+      "height": 28.750000000000004,
+      "visible": false,
+      "row": "upper",
+      "role": "diagram",
+      "scale": 0.88,
+      "left": 1323.4,
+      "top": 265.24000000000007
+    },
+    {
+      "width": 28.750000000000004,
+      "id": 75,
+      "x": 1441.2500000000002,
+      "y": 290.00000000000006,
+      "name": "Oval 74",
+      "height": 28.750000000000004,
+      "visible": false,
+      "row": "upper",
+      "role": "diagram",
+      "scale": 0.88,
+      "left": 1399.3000000000002,
+      "top": 265.24000000000007
+    },
+    {
+      "width": 2.5000000000000004,
+      "id": 76,
+      "x": -1.2500000000000002,
+      "y": -1.2500000000000002,
+      "name": "Oval 75",
+      "height": 2.5000000000000004,
+      "visible": false,
+      "row": "upper",
+      "role": "code",
+      "scale": 1.12,
+      "left": -85.12,
+      "top": -55.440000000000055
+    },
+    {
+      "width": 2.5000000000000004,
+      "id": 77,
+      "x": -1.2500000000000002,
+      "y": -1.2500000000000002,
+      "name": "Freeform 76",
+      "height": 2.5000000000000004,
+      "visible": false,
+      "row": "upper",
+      "role": "code",
+      "scale": 1.12,
+      "left": -85.12,
+      "top": -55.440000000000055
+    },
+    {
+      "width": 28.750000000000004,
+      "id": 78,
+      "x": 965.0000000000002,
+      "y": 531.2500000000001,
+      "name": "Freeform 77",
+      "height": 31.250000000000007,
+      "visible": false,
+      "row": "lower",
+      "role": "diagram",
+      "scale": 0.88,
+      "left": 980.2000000000002,
+      "top": 533.2600000000001
+    },
+    {
+      "width": 92.50000000000001,
+      "id": 79,
+      "x": 1078.7500000000002,
+      "y": 591.2500000000001,
+      "name": "Freeform 78",
+      "height": 35.00000000000001,
+      "visible": false,
+      "row": "lower",
+      "role": "diagram",
+      "scale": 0.88,
+      "left": 1080.3000000000002,
+      "top": 586.0600000000001
+    },
+    {
+      "width": 93.75000000000001,
+      "id": 80,
+      "x": 1280.0000000000002,
+      "y": 591.2500000000001,
+      "name": "Freeform 79",
+      "height": 35.00000000000001,
+      "visible": false,
+      "row": "lower",
+      "role": "diagram",
+      "scale": 0.88,
+      "left": 1257.4,
+      "top": 586.0600000000001
+    },
+    {
+      "width": 93.75000000000001,
+      "id": 81,
+      "x": 1280.0000000000002,
+      "y": 560.0000000000001,
+      "name": "Freeform 80",
+      "height": 36.25000000000001,
+      "visible": false,
+      "row": "lower",
+      "role": "diagram",
+      "scale": 0.88,
+      "left": 1257.4,
+      "top": 558.5600000000001
+    },
+    {
+      "width": 92.50000000000001,
+      "id": 82,
+      "x": 1078.7500000000002,
+      "y": 560.0000000000001,
+      "name": "Freeform 81",
+      "height": 36.25000000000001,
+      "visible": false,
+      "row": "lower",
+      "role": "diagram",
+      "scale": 0.88,
+      "left": 1080.3000000000002,
+      "top": 558.5600000000001
+    },
+    {
+      "width": 130.00000000000003,
+      "id": 83,
+      "x": 1152.5000000000002,
+      "y": 550.0000000000001,
+      "name": "Graphic 26",
+      "height": 86.25000000000001,
+      "visible": false,
+      "row": "lower",
+      "role": "diagram",
+      "scale": 0.88,
+      "left": 1145.2000000000003,
+      "top": 549.7600000000001
+    },
+    {
+      "width": 32.50000000000001,
+      "id": 91,
+      "x": 1201.2500000000002,
+      "y": 565.0000000000001,
+      "name": "Freeform 90",
+      "height": 56.25000000000001,
+      "visible": false,
+      "row": "lower",
+      "role": "diagram",
+      "scale": 0.88,
+      "left": 1188.1000000000001,
+      "top": 562.9600000000002
+    },
+    {
+      "width": 28.750000000000004,
+      "id": 92,
+      "x": 966.2500000000002,
+      "y": 595.0000000000001,
+      "name": "Oval 91",
+      "height": 28.750000000000004,
+      "visible": false,
+      "row": "lower",
+      "role": "diagram",
+      "scale": 0.88,
+      "left": 981.3000000000002,
+      "top": 589.3600000000001
+    },
+    {
+      "width": 28.750000000000004,
+      "id": 93,
+      "x": 965.0000000000002,
+      "y": 561.2500000000001,
+      "name": "Freeform 92",
+      "height": 32.50000000000001,
+      "visible": false,
+      "row": "lower",
+      "role": "diagram",
+      "scale": 0.88,
+      "left": 980.2000000000002,
+      "top": 559.6600000000001
+    },
+    {
+      "width": 28.750000000000004,
+      "id": 94,
+      "x": 1355.0000000000002,
+      "y": 563.7500000000001,
+      "name": "Rectangle 93",
+      "height": 28.750000000000004,
+      "visible": false,
+      "row": "lower",
+      "role": "diagram",
+      "scale": 0.88,
+      "left": 1323.4,
+      "top": 561.8600000000001
+    },
+    {
+      "width": 28.750000000000004,
+      "id": 95,
+      "x": 1355.0000000000002,
+      "y": 593.7500000000001,
+      "name": "Oval 94",
+      "height": 28.750000000000004,
+      "visible": false,
+      "row": "lower",
+      "role": "diagram",
+      "scale": 0.88,
+      "left": 1323.4,
+      "top": 588.2600000000001
+    },
+    {
+      "width": 2.5000000000000004,
+      "id": 96,
+      "x": -1.2500000000000002,
+      "y": -1.2500000000000002,
+      "name": "Oval 95",
+      "height": 2.5000000000000004,
+      "visible": false,
+      "row": "upper",
+      "role": "code",
+      "scale": 1.12,
+      "left": -85.12,
+      "top": -55.440000000000055
+    },
+    {
+      "width": 28.750000000000004,
+      "id": 97,
+      "x": 965.0000000000002,
+      "y": 531.2500000000001,
+      "name": "Freeform 96",
+      "height": 31.250000000000007,
+      "visible": false,
+      "row": "lower",
+      "role": "diagram",
+      "scale": 0.88,
+      "left": 980.2000000000002,
+      "top": 533.2600000000001
+    },
+    {
+      "width": 2.5000000000000004,
+      "id": 98,
+      "x": -1.2500000000000002,
+      "y": -1.2500000000000002,
+      "name": "Rectangle 97",
+      "height": 2.5000000000000004,
+      "visible": false,
+      "row": "upper",
+      "role": "code",
+      "scale": 1.12,
+      "left": -85.12,
+      "top": -55.440000000000055
+    },
+    {
+      "width": 2.5000000000000004,
+      "id": 99,
+      "x": -1.2500000000000002,
+      "y": -1.2500000000000002,
+      "name": "Oval 98",
+      "height": 2.5000000000000004,
+      "visible": false,
+      "row": "upper",
+      "role": "code",
+      "scale": 1.12,
+      "left": -85.12,
+      "top": -55.440000000000055
+    },
+    {
+      "width": 2.5000000000000004,
+      "id": 100,
+      "x": -1.2500000000000002,
+      "y": -1.2500000000000002,
+      "name": "Freeform 99",
+      "height": 2.5000000000000004,
+      "visible": false,
+      "row": "upper",
+      "role": "code",
+      "scale": 1.12,
+      "left": -85.12,
+      "top": -55.440000000000055
+    },
+    {
+      "width": 2.5000000000000004,
+      "id": 101,
+      "x": -1.2500000000000002,
+      "y": -1.2500000000000002,
+      "name": "Rectangle 100",
+      "height": 2.5000000000000004,
+      "visible": false,
+      "row": "upper",
+      "role": "code",
+      "scale": 1.12,
+      "left": -85.12,
+      "top": -55.440000000000055
+    },
+    {
+      "width": 2.5000000000000004,
+      "id": 102,
+      "x": -1.2500000000000002,
+      "y": -1.2500000000000002,
+      "name": "Oval 101",
+      "height": 2.5000000000000004,
+      "visible": false,
+      "row": "upper",
+      "role": "code",
+      "scale": 1.12,
+      "left": -85.12,
+      "top": -55.440000000000055
+    },
+    {
+      "width": 456.27008333333333,
+      "id": 13,
+      "x": 157.70826666666667,
+      "y": 263.60445,
+      "name": "Graphic 12",
+      "height": 80.4,
+      "visible": false,
+      "row": "upper",
+      "role": "code",
+      "scale": 1.12,
+      "left": 92.91325866666668,
+      "top": 241.196984
+    },
+    {
+      "width": 243.6,
+      "id": 15,
+      "x": 439.68175,
+      "y": 325.46405,
+      "name": "Graphic 14",
+      "height": 25.2,
+      "visible": false,
+      "row": "upper",
+      "role": "code",
+      "scale": 1.12,
+      "left": 408.7235600000001,
+      "top": 310.479736
+    },
+    {
+      "width": 243.6,
+      "id": 17,
+      "x": 439.68175,
+      "y": 356.82911666666666,
+      "name": "Graphic 16",
+      "height": 25.2,
+      "visible": false,
+      "row": "upper",
+      "role": "code",
+      "scale": 1.12,
+      "left": 408.7235600000001,
+      "top": 345.60861066666666
+    },
+    {
+      "width": 256.2,
+      "id": 19,
+      "x": 439.68175,
+      "y": 388.19421666666665,
+      "name": "Graphic 18",
+      "height": 25.2,
+      "visible": false,
+      "row": "upper",
+      "role": "code",
+      "scale": 1.12,
+      "left": 408.7235600000001,
+      "top": 380.7375226666667
+    },
+    {
+      "width": 28.800000000000004,
+      "id": 26,
+      "x": 439.68175,
+      "y": 428.09686666666664,
+      "name": "Graphic 25",
+      "height": 3.6000000000000005,
+      "visible": false,
+      "row": "upper",
+      "role": "code",
+      "scale": 1.12,
+      "left": 408.7235600000001,
+      "top": 425.4284906666667
+    },
+    {
+      "width": 684.6145666666666,
+      "id": 28,
+      "x": 157.70826666666667,
+      "y": 547.3253333333333,
+      "name": "Graphic 27",
+      "height": 82.8,
+      "visible": false,
+      "row": "lower",
+      "role": "code",
+      "scale": 1.12,
+      "left": 92.91325866666668,
+      "top": 547.2443733333333
+    },
+    {
+      "width": 243.6,
+      "id": 43,
+      "x": 439.68175,
+      "y": 610.5383333333333,
+      "name": "Graphic 42",
+      "height": 25.2,
+      "visible": false,
+      "row": "lower",
+      "role": "code",
+      "scale": 1.12,
+      "left": 408.7235600000001,
+      "top": 618.0429333333333
+    },
+    {
+      "width": 32.5,
+      "id": 9,
+      "x": 926.2741166666666,
+      "y": 231.80458333333334,
+      "name": "Graphic 8",
+      "height": 25.0,
+      "visible": false,
+      "row": "upper",
+      "role": "diagram",
+      "scale": 0.88,
+      "left": 946.1212226666667,
+      "top": 214.02803333333333
+    },
+    {
+      "width": 33.75,
+      "id": 11,
+      "x": 925.6491666666667,
+      "y": 263.1170666666667,
+      "name": "Graphic 10",
+      "height": 25.0,
+      "visible": false,
+      "row": "upper",
+      "role": "diagram",
+      "scale": 0.88,
+      "left": 945.5712666666667,
+      "top": 241.58301866666667
+    },
+    {
+      "width": 17.5,
+      "id": 14,
+      "x": 933.7741166666666,
+      "y": 294.4294,
+      "name": "Graphic 13",
+      "height": 18.75,
+      "visible": false,
+      "row": "upper",
+      "role": "diagram",
+      "scale": 0.88,
+      "left": 952.7212226666666,
+      "top": 269.137872
+    },
+    {
+      "width": 27.5,
+      "id": 18,
+      "x": 1478.3302833333332,
+      "y": 294.2156166666667,
+      "name": "Graphic 17",
+      "height": 25.0,
+      "visible": false,
+      "row": "upper",
+      "role": "diagram",
+      "scale": 0.88,
+      "left": 1431.9306493333333,
+      "top": 268.9497426666667
+    },
+    {
+      "width": 28.75,
+      "id": 21,
+      "x": 1477.7053333333333,
+      "y": 361.0952833333334,
+      "name": "Graphic 20",
+      "height": 25.0,
+      "visible": false,
+      "row": "upper",
+      "role": "diagram",
+      "scale": 0.88,
+      "left": 1431.3806933333333,
+      "top": 327.80384933333335
+    },
+    {
+      "width": 28.75,
+      "id": 27,
+      "x": 1477.7053333333333,
+      "y": 227.33621666666664,
+      "name": "Graphic 26",
+      "height": 25.0,
+      "visible": false,
+      "row": "upper",
+      "role": "diagram",
+      "scale": 0.88,
+      "left": 1431.3806933333333,
+      "top": 210.09587066666666
+    },
+    {
+      "width": 31.25,
+      "id": 55,
+      "x": 1476.4553333333333,
+      "y": 193.27151666666666,
+      "name": "Graphic 54",
+      "height": 26.25,
+      "visible": false,
+      "row": "upper",
+      "role": "diagram",
+      "scale": 0.88,
+      "left": 1430.2806933333334,
+      "top": 180.11893466666666
+    },
+    {
+      "width": 30.0,
+      "id": 59,
+      "x": 1477.0802833333332,
+      "y": 327.0303166666667,
+      "name": "Graphic 58",
+      "height": 26.25,
+      "visible": false,
+      "row": "upper",
+      "role": "diagram",
+      "scale": 0.88,
+      "left": 1430.8306493333332,
+      "top": 297.8266786666667
+    },
+    {
+      "width": 30.0,
+      "id": 61,
+      "x": 1477.0802833333332,
+      "y": 260.1509166666667,
+      "name": "Graphic 60",
+      "height": 26.25,
+      "visible": false,
+      "row": "upper",
+      "role": "diagram",
+      "scale": 0.88,
+      "left": 1430.8306493333332,
+      "top": 238.9728066666667
+    },
+    {
+      "width": 32.5,
+      "id": 62,
+      "x": 926.2741166666666,
+      "y": 535.5521166666667,
+      "name": "Graphic 61",
+      "height": 25.0,
+      "visible": false,
+      "row": "lower",
+      "role": "diagram",
+      "scale": 0.88,
+      "left": 946.1212226666667,
+      "top": 537.0458626666667
+    },
+    {
+      "width": 33.75,
+      "id": 63,
+      "x": 925.6491666666667,
+      "y": 566.8645666666667,
+      "name": "Graphic 62",
+      "height": 25.0,
+      "visible": false,
+      "row": "lower",
+      "role": "diagram",
+      "scale": 0.88,
+      "left": 945.5712666666667,
+      "top": 564.6008186666668
+    },
+    {
+      "width": 17.5,
+      "id": 64,
+      "x": 933.7741166666666,
+      "y": 598.1768833333334,
+      "name": "Graphic 63",
+      "height": 18.75,
+      "visible": false,
+      "row": "lower",
+      "role": "diagram",
+      "scale": 0.88,
+      "left": 952.7212226666666,
+      "top": 592.1556573333335
+    },
+    {
+      "width": 27.5,
+      "id": 65,
+      "x": 1483.0723333333333,
+      "y": 602.9730666666667,
+      "name": "Graphic 64",
+      "height": 25.0,
+      "visible": false,
+      "row": "lower",
+      "role": "diagram",
+      "scale": 0.88,
+      "left": 1436.1036533333333,
+      "top": 596.3762986666667
+    },
+    {
+      "width": 30.0,
+      "id": 66,
+      "x": 1481.8223333333333,
+      "y": 568.9083833333334,
+      "name": "Graphic 65",
+      "height": 26.25,
+      "visible": false,
+      "row": "lower",
+      "role": "diagram",
+      "scale": 0.88,
+      "left": 1435.0036533333332,
+      "top": 566.3993773333334
+    },
+    {
+      "id": 44,
+      "left": 91,
+      "top": 175,
+      "width": 1419,
+      "height": 50,
+      "scale": 1,
+      "visible": false,
+      "html": "<strong>Unrestricted terms</strong> can be reused.",
+      "role": "explanation",
+      "row": "upper"
+    },
+    {
+      "id": 45,
+      "left": 91,
+      "top": 480,
+      "width": 1419,
+      "height": 50,
+      "scale": 1,
+      "visible": false,
+      "html": "<strong>Linear terms</strong> must be used exactly once and can represent resources.",
+      "role": "explanation",
+      "row": "lower"
+    },
+    {
+      "id": 46,
+      "left": 91,
+      "top": 775,
+      "width": 1419,
+      "height": 50,
+      "scale": 1,
+      "visible": false,
+      "html": "<strong>Linearity constrains how stateful components are used and composed.</strong>",
+      "role": "explanation",
+      "row": "lower"
+    }
+  ]
+}

@@ -1,0 +1,1148 @@
+{
+  "source": "AEiC-26.pptx / slide12.xml",
+  "clickGroups": [
+    {
+      "events": [
+        {
+          "id": 159,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "clickEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "5",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 157,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "7",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        }
+      ],
+      "duration": 1
+    },
+    {
+      "events": [
+        {
+          "id": 159,
+          "kind": "exit",
+          "start": 0,
+          "duration": 1,
+          "relation": "clickEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "11",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 157,
+          "kind": "exit",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "13",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 160,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "15",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 158,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "17",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        }
+      ],
+      "duration": 1
+    },
+    {
+      "events": [
+        {
+          "id": 160,
+          "kind": "exit",
+          "start": 0,
+          "duration": 1,
+          "relation": "clickEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "21",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 158,
+          "kind": "exit",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "23",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 162,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "25",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 163,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "27",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        }
+      ],
+      "duration": 1
+    },
+    {
+      "events": [
+        {
+          "id": 162,
+          "kind": "exit",
+          "start": 0,
+          "duration": 1,
+          "relation": "clickEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "31",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 163,
+          "kind": "exit",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "33",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        }
+      ],
+      "duration": 1
+    }
+  ],
+  "shapes": [
+    {
+      "x": -1.2500000000000002,
+      "height": 2.5000000000000004,
+      "width": 2.5000000000000004,
+      "name": "Oval 75",
+      "id": 76,
+      "y": -1.2500000000000002,
+      "visible": false,
+      "role": "diagram",
+      "scale": 0.8,
+      "left": 76.19999999999999,
+      "top": 63.0
+    },
+    {
+      "x": -1.2500000000000002,
+      "height": 2.5000000000000004,
+      "width": 2.5000000000000004,
+      "name": "Freeform 76",
+      "id": 77,
+      "y": -1.2500000000000002,
+      "visible": false,
+      "role": "diagram",
+      "scale": 0.8,
+      "left": 76.19999999999999,
+      "top": 63.0
+    },
+    {
+      "x": -1.2500000000000002,
+      "height": 2.5000000000000004,
+      "width": 2.5000000000000004,
+      "name": "Oval 95",
+      "id": 96,
+      "y": -1.2500000000000002,
+      "visible": false,
+      "role": "diagram",
+      "scale": 0.8,
+      "left": 76.19999999999999,
+      "top": 63.0
+    },
+    {
+      "x": -1.2500000000000002,
+      "height": 2.5000000000000004,
+      "width": 2.5000000000000004,
+      "name": "Rectangle 97",
+      "id": 98,
+      "y": -1.2500000000000002,
+      "visible": false,
+      "role": "diagram",
+      "scale": 0.8,
+      "left": 76.19999999999999,
+      "top": 63.0
+    },
+    {
+      "x": -1.2500000000000002,
+      "height": 2.5000000000000004,
+      "width": 2.5000000000000004,
+      "name": "Oval 98",
+      "id": 99,
+      "y": -1.2500000000000002,
+      "visible": false,
+      "role": "diagram",
+      "scale": 0.8,
+      "left": 76.19999999999999,
+      "top": 63.0
+    },
+    {
+      "x": -1.2500000000000002,
+      "height": 2.5000000000000004,
+      "width": 2.5000000000000004,
+      "name": "Freeform 99",
+      "id": 100,
+      "y": -1.2500000000000002,
+      "visible": false,
+      "role": "diagram",
+      "scale": 0.8,
+      "left": 76.19999999999999,
+      "top": 63.0
+    },
+    {
+      "x": -1.2500000000000002,
+      "height": 2.5000000000000004,
+      "width": 2.5000000000000004,
+      "name": "Rectangle 100",
+      "id": 101,
+      "y": -1.2500000000000002,
+      "visible": false,
+      "role": "diagram",
+      "scale": 0.8,
+      "left": 76.19999999999999,
+      "top": 63.0
+    },
+    {
+      "x": -1.2500000000000002,
+      "height": 2.5000000000000004,
+      "width": 2.5000000000000004,
+      "name": "Oval 101",
+      "id": 102,
+      "y": -1.2500000000000002,
+      "visible": false,
+      "role": "diagram",
+      "scale": 0.8,
+      "left": 76.19999999999999,
+      "top": 63.0
+    },
+    {
+      "x": 620.0000000000001,
+      "height": 73.75000000000001,
+      "width": 268.75000000000006,
+      "name": "Freeform 10",
+      "id": 11,
+      "y": 285.00000000000006,
+      "visible": true,
+      "role": "diagram",
+      "scale": 0.8,
+      "left": 573.2,
+      "top": 292.00000000000006
+    },
+    {
+      "x": 732.5000000000001,
+      "height": 22.500000000000004,
+      "width": 52.50000000000001,
+      "name": "!!InSeqG",
+      "id": 246,
+      "y": 295.00000000000006,
+      "visible": true,
+      "role": "diagram",
+      "scale": 0.8,
+      "left": 663.2,
+      "top": 300.00000000000006
+    },
+    {
+      "x": 838.7500000000001,
+      "height": 22.500000000000004,
+      "width": 53.75000000000001,
+      "name": "!!OutSeqG",
+      "id": 247,
+      "y": 295.00000000000006,
+      "visible": true,
+      "role": "diagram",
+      "scale": 0.8,
+      "left": 748.2,
+      "top": 300.00000000000006
+    },
+    {
+      "x": 880.0000000000001,
+      "height": 43.75000000000001,
+      "width": 12.500000000000002,
+      "name": "Graphic 7",
+      "id": 12,
+      "y": 300.00000000000006,
+      "visible": true,
+      "role": "diagram",
+      "scale": 0.8,
+      "left": 781.2,
+      "top": 304.00000000000006
+    },
+    {
+      "x": 625.0000000000001,
+      "height": 22.500000000000004,
+      "width": 53.75000000000001,
+      "name": "Freeform 15",
+      "id": 16,
+      "y": 311.25000000000006,
+      "visible": true,
+      "role": "diagram",
+      "scale": 0.8,
+      "left": 577.2,
+      "top": 313.00000000000006
+    },
+    {
+      "x": 728.7500000000001,
+      "height": 36.25000000000001,
+      "width": 163.75000000000003,
+      "name": "Freeform 16",
+      "id": 17,
+      "y": 311.25000000000006,
+      "visible": true,
+      "role": "diagram",
+      "scale": 0.8,
+      "left": 660.2,
+      "top": 313.00000000000006
+    },
+    {
+      "x": 621.2500000000001,
+      "height": 36.25000000000001,
+      "width": 163.75000000000003,
+      "name": "Freeform 17",
+      "id": 18,
+      "y": 311.25000000000006,
+      "visible": true,
+      "role": "diagram",
+      "scale": 0.8,
+      "left": 574.2,
+      "top": 313.00000000000006
+    },
+    {
+      "x": 835.0000000000001,
+      "height": 28.750000000000004,
+      "width": 57.50000000000001,
+      "name": "Freeform 18",
+      "id": 19,
+      "y": 320.00000000000006,
+      "visible": true,
+      "role": "diagram",
+      "scale": 0.8,
+      "left": 745.2,
+      "top": 320.00000000000006
+    },
+    {
+      "x": 616.2500000000001,
+      "height": 43.75000000000001,
+      "width": 12.500000000000002,
+      "name": "Graphic 7",
+      "id": 36,
+      "y": 300.00000000000006,
+      "visible": true,
+      "role": "diagram",
+      "scale": 0.8,
+      "left": 570.2,
+      "top": 304.00000000000006
+    },
+    {
+      "x": 666.2500000000001,
+      "height": 46.25000000000001,
+      "width": 68.75000000000001,
+      "name": "!!ProcessF",
+      "id": 64,
+      "y": 291.25000000000006,
+      "visible": true,
+      "role": "diagram",
+      "scale": 0.8,
+      "left": 610.2,
+      "top": 297.00000000000006
+    },
+    {
+      "x": 772.5000000000001,
+      "height": 46.25000000000001,
+      "width": 70.00000000000001,
+      "name": "!!ProcessG",
+      "id": 65,
+      "y": 291.25000000000006,
+      "visible": true,
+      "role": "diagram",
+      "scale": 0.8,
+      "left": 695.2,
+      "top": 297.00000000000006
+    },
+    {
+      "x": 626.2500000000001,
+      "height": 22.500000000000004,
+      "width": 51.25000000000001,
+      "name": "!!InSeqF",
+      "id": 60,
+      "y": 295.00000000000006,
+      "visible": true,
+      "role": "diagram",
+      "scale": 0.8,
+      "left": 578.2,
+      "top": 300.00000000000006
+    },
+    {
+      "x": 618.7500000000001,
+      "height": 86.25000000000001,
+      "width": 271.25000000000006,
+      "name": "Freeform 424",
+      "id": 425,
+      "y": 671.2500000000001,
+      "visible": true,
+      "role": "diagram",
+      "scale": 0.8,
+      "left": 572.2,
+      "top": 680.0000000000001
+    },
+    {
+      "x": 881.2500000000001,
+      "height": 12.500000000000002,
+      "width": 12.500000000000002,
+      "name": "Rectangle 425",
+      "id": 426,
+      "y": 686.2500000000001,
+      "visible": true,
+      "role": "diagram",
+      "scale": 0.8,
+      "left": 782.2,
+      "top": 692.0000000000001
+    },
+    {
+      "x": 615.0000000000001,
+      "height": 12.500000000000002,
+      "width": 12.500000000000002,
+      "name": "Rectangle 426",
+      "id": 427,
+      "y": 686.2500000000001,
+      "visible": true,
+      "role": "diagram",
+      "scale": 0.8,
+      "left": 569.2,
+      "top": 692.0000000000001
+    },
+    {
+      "x": 881.2500000000001,
+      "height": 45.00000000000001,
+      "width": 12.500000000000002,
+      "name": "Graphic 421",
+      "id": 428,
+      "y": 702.5000000000001,
+      "visible": true,
+      "role": "diagram",
+      "scale": 0.8,
+      "left": 782.2,
+      "top": 705.0000000000001
+    },
+    {
+      "x": 615.0000000000001,
+      "height": 45.00000000000001,
+      "width": 12.500000000000002,
+      "name": "Graphic 421",
+      "id": 432,
+      "y": 702.5000000000001,
+      "visible": true,
+      "role": "diagram",
+      "scale": 0.8,
+      "left": 569.2,
+      "top": 705.0000000000001
+    },
+    {
+      "x": 623.7500000000001,
+      "height": 30.000000000000007,
+      "width": 61.250000000000014,
+      "name": "!!InParF",
+      "id": 384,
+      "y": 690.0000000000001,
+      "visible": true,
+      "role": "diagram",
+      "scale": 0.8,
+      "left": 576.2,
+      "top": 695.0000000000001
+    },
+    {
+      "x": 672.5000000000001,
+      "height": 46.25000000000001,
+      "width": 70.00000000000001,
+      "name": "!!ProcessF3",
+      "id": 387,
+      "y": 693.7500000000001,
+      "visible": true,
+      "role": "diagram",
+      "scale": 0.8,
+      "left": 615.2,
+      "top": 698.0000000000001
+    },
+    {
+      "x": 778.7500000000001,
+      "height": 46.25000000000001,
+      "width": 70.00000000000001,
+      "name": "!!ProcessG3",
+      "id": 402,
+      "y": 693.7500000000001,
+      "visible": true,
+      "role": "diagram",
+      "scale": 0.8,
+      "left": 700.2,
+      "top": 698.0000000000001
+    },
+    {
+      "x": 623.7500000000001,
+      "height": 37.50000000000001,
+      "width": 167.50000000000003,
+      "name": "!!InParG",
+      "id": 412,
+      "y": 682.5000000000001,
+      "visible": true,
+      "role": "diagram",
+      "scale": 0.8,
+      "left": 576.2,
+      "top": 689.0000000000001
+    },
+    {
+      "x": 738.7500000000001,
+      "height": 30.000000000000007,
+      "width": 155.00000000000003,
+      "name": "!!OutParF",
+      "id": 413,
+      "y": 681.2500000000001,
+      "visible": true,
+      "role": "diagram",
+      "scale": 0.8,
+      "left": 668.2,
+      "top": 688.0000000000001
+    },
+    {
+      "x": 846.2500000000001,
+      "height": 22.500000000000004,
+      "width": 47.50000000000001,
+      "name": "!!OutParG",
+      "id": 416,
+      "y": 697.5000000000001,
+      "visible": true,
+      "role": "diagram",
+      "scale": 0.8,
+      "left": 754.2,
+      "top": 701.0000000000001
+    },
+    {
+      "x": 733.7500000000001,
+      "height": 35.00000000000001,
+      "width": 160.00000000000003,
+      "name": "!!SetF31",
+      "id": 442,
+      "y": 715.0000000000001,
+      "visible": true,
+      "role": "diagram",
+      "scale": 0.8,
+      "left": 664.2,
+      "top": 715.0000000000001
+    },
+    {
+      "x": 623.7500000000001,
+      "height": 36.25000000000001,
+      "width": 166.25000000000003,
+      "name": "GetG31",
+      "id": 443,
+      "y": 713.7500000000001,
+      "visible": true,
+      "role": "diagram",
+      "scale": 0.8,
+      "left": 576.2,
+      "top": 714.0000000000001
+    },
+    {
+      "x": 623.7500000000001,
+      "height": 22.500000000000004,
+      "width": 61.250000000000014,
+      "name": "!!InPar2",
+      "id": 457,
+      "y": 713.7500000000001,
+      "visible": true,
+      "role": "diagram",
+      "scale": 0.8,
+      "left": 576.2,
+      "top": 714.0000000000001
+    },
+    {
+      "x": 840.0000000000001,
+      "height": 27.500000000000004,
+      "width": 53.75000000000001,
+      "name": "Graphic 460",
+      "id": 462,
+      "y": 723.7500000000001,
+      "visible": true,
+      "role": "diagram",
+      "scale": 0.8,
+      "left": 749.2,
+      "top": 722.0000000000001
+    },
+    {
+      "x": 476.25000000000006,
+      "height": 28,
+      "width": 70,
+      "name": "!!Arrow: Left-Right 594",
+      "id": 453,
+      "y": 455.00000000000006,
+      "visible": true,
+      "role": "diagram",
+      "scale": 1,
+      "left": 500,
+      "top": 475
+    },
+    {
+      "x": 506.2500000000001,
+      "height": 65.00000000000001,
+      "width": 93.75000000000001,
+      "name": "TextBox 457",
+      "id": 458,
+      "y": 421.25000000000006,
+      "visible": true,
+      "role": "diagram",
+      "scale": 1,
+      "left": 494,
+      "top": 439
+    },
+    {
+      "x": 82.50000000000001,
+      "height": 103.75000000000001,
+      "width": 433.75000000000006,
+      "name": "SeqCpy",
+      "id": 459,
+      "y": 270.00000000000006,
+      "visible": true,
+      "role": "diagram",
+      "scale": 0.8,
+      "left": 110.89062499999997,
+      "top": 280.00000000000006
+    },
+    {
+      "x": 173.75000000000003,
+      "height": 132.50000000000003,
+      "width": 237.50000000000003,
+      "name": "Group 499",
+      "id": 500,
+      "y": 421.25000000000006,
+      "visible": true,
+      "role": "diagram",
+      "scale": 0.8,
+      "left": 189.390625,
+      "top": 435.00000000000006
+    },
+    {
+      "x": 173.75000000000003,
+      "height": 210.00000000000003,
+      "width": 237.50000000000003,
+      "name": "Group 78",
+      "id": 79,
+      "y": 610.0000000000001,
+      "visible": true,
+      "role": "diagram",
+      "scale": 0.8,
+      "left": 189.390625,
+      "top": 631.0000000000001
+    },
+    {
+      "x": 667.5000000000001,
+      "height": 76.25000000000001,
+      "width": 172.50000000000003,
+      "name": "Group 253",
+      "id": 254,
+      "y": 413.75000000000006,
+      "visible": true,
+      "role": "diagram",
+      "scale": 0.8,
+      "left": 611.2,
+      "top": 429.00000000000006
+    },
+    {
+      "x": 677.5000000000001,
+      "height": 21.250000000000004,
+      "width": 161.25000000000003,
+      "name": "!!InPTId",
+      "id": 175,
+      "y": 425.00000000000006,
+      "visible": true,
+      "role": "diagram",
+      "scale": 0.8,
+      "left": 619.2,
+      "top": 438.00000000000006
+    },
+    {
+      "x": 718.7500000000001,
+      "height": 47.50000000000001,
+      "width": 71.25000000000001,
+      "name": "!!ProcessF2",
+      "id": 176,
+      "y": 436.25000000000006,
+      "visible": true,
+      "role": "diagram",
+      "scale": 0.8,
+      "left": 652.2,
+      "top": 447.00000000000006
+    },
+    {
+      "x": 677.5000000000001,
+      "height": 21.250000000000004,
+      "width": 52.50000000000001,
+      "name": "!!InPTF2",
+      "id": 229,
+      "y": 441.25000000000006,
+      "visible": true,
+      "role": "diagram",
+      "scale": 0.8,
+      "left": 619.2,
+      "top": 451.00000000000006
+    },
+    {
+      "x": 787.5000000000001,
+      "height": 21.250000000000004,
+      "width": 52.50000000000001,
+      "name": "!!OutPTF2",
+      "id": 230,
+      "y": 441.25000000000006,
+      "visible": true,
+      "role": "diagram",
+      "scale": 0.8,
+      "left": 707.2,
+      "top": 451.00000000000006
+    },
+    {
+      "x": 677.5000000000001,
+      "height": 21.250000000000004,
+      "width": 52.50000000000001,
+      "name": "!!InPTF2",
+      "id": 267,
+      "y": 457.50000000000006,
+      "visible": true,
+      "role": "diagram",
+      "scale": 0.8,
+      "left": 619.2,
+      "top": 464.00000000000006
+    },
+    {
+      "x": 787.5000000000001,
+      "height": 21.250000000000004,
+      "width": 52.50000000000001,
+      "name": "!!InPTF2",
+      "id": 268,
+      "y": 457.50000000000006,
+      "visible": true,
+      "role": "diagram",
+      "scale": 0.8,
+      "left": 707.2,
+      "top": 464.00000000000006
+    },
+    {
+      "x": 673.7500000000001,
+      "height": 75.00000000000001,
+      "width": 163.75000000000003,
+      "name": "Freeform 453",
+      "id": 454,
+      "y": 497.5000000000001,
+      "visible": true,
+      "role": "diagram",
+      "scale": 0.8,
+      "left": 616.2,
+      "top": 496.0000000000001
+    },
+    {
+      "x": 828.7500000000001,
+      "height": 45.00000000000001,
+      "width": 12.500000000000002,
+      "name": "Graphic 7",
+      "id": 455,
+      "y": 512.5000000000001,
+      "visible": true,
+      "role": "diagram",
+      "scale": 0.8,
+      "left": 740.2,
+      "top": 508.0000000000001
+    },
+    {
+      "x": 680.0000000000001,
+      "height": 22.500000000000004,
+      "width": 52.50000000000001,
+      "name": "Freeform 129",
+      "id": 130,
+      "y": 507.5000000000001,
+      "visible": true,
+      "role": "diagram",
+      "scale": 0.8,
+      "left": 621.2,
+      "top": 504.0000000000001
+    },
+    {
+      "x": 788.7500000000001,
+      "height": 22.500000000000004,
+      "width": 52.50000000000001,
+      "name": "Freeform 130",
+      "id": 131,
+      "y": 507.5000000000001,
+      "visible": true,
+      "role": "diagram",
+      "scale": 0.8,
+      "left": 708.2,
+      "top": 504.0000000000001
+    },
+    {
+      "x": 678.7500000000001,
+      "height": 33.75000000000001,
+      "width": 162.50000000000003,
+      "name": "Freeform 131",
+      "id": 132,
+      "y": 523.7500000000001,
+      "visible": true,
+      "role": "diagram",
+      "scale": 0.8,
+      "left": 620.2,
+      "top": 517.0000000000001
+    },
+    {
+      "x": 723.7500000000001,
+      "height": 46.25000000000001,
+      "width": 62.500000000000014,
+      "name": "Rounded Rectangle 132",
+      "id": 133,
+      "y": 503.7500000000001,
+      "visible": true,
+      "role": "diagram",
+      "scale": 0.8,
+      "left": 656.2,
+      "top": 501.0000000000001
+    },
+    {
+      "x": 777.5000000000001,
+      "height": 28.750000000000004,
+      "width": 12.500000000000002,
+      "name": "Graphic 7",
+      "id": 134,
+      "y": 512.5000000000001,
+      "visible": true,
+      "role": "diagram",
+      "scale": 0.8,
+      "left": 699.2,
+      "top": 508.0000000000001
+    },
+    {
+      "x": 720.0000000000001,
+      "height": 28.750000000000004,
+      "width": 12.500000000000002,
+      "name": "Graphic 7",
+      "id": 137,
+      "y": 512.5000000000001,
+      "visible": true,
+      "role": "diagram",
+      "scale": 0.8,
+      "left": 653.2,
+      "top": 508.0000000000001
+    },
+    {
+      "x": 670.0000000000001,
+      "height": 45.00000000000001,
+      "width": 12.500000000000002,
+      "name": "Graphic 7",
+      "id": 140,
+      "y": 512.5000000000001,
+      "visible": true,
+      "role": "diagram",
+      "scale": 0.8,
+      "left": 613.2,
+      "top": 508.0000000000001
+    },
+    {
+      "x": 746.2500000000001,
+      "height": 31.250000000000007,
+      "width": 17.500000000000004,
+      "name": "Freeform 143",
+      "id": 144,
+      "y": 511.2500000000001,
+      "visible": true,
+      "role": "diagram",
+      "scale": 0.8,
+      "left": 674.2,
+      "top": 507.0000000000001
+    },
+    {
+      "x": 788.7500000000001,
+      "height": 30.000000000000007,
+      "width": 52.50000000000001,
+      "name": "Freeform 144",
+      "id": 145,
+      "y": 532.5000000000001,
+      "visible": true,
+      "role": "diagram",
+      "scale": 0.8,
+      "left": 708.2,
+      "top": 524.0000000000001
+    },
+    {
+      "x": 680.0000000000001,
+      "height": 30.000000000000007,
+      "width": 52.50000000000001,
+      "name": "Freeform 145",
+      "id": 146,
+      "y": 523.7500000000001,
+      "visible": true,
+      "role": "diagram",
+      "scale": 0.8,
+      "left": 621.2,
+      "top": 517.0000000000001
+    },
+    {
+      "x": 913.9819333333332,
+      "height": 68.4,
+      "width": 571.6286166666667,
+      "name": "Graphic 149",
+      "id": 150,
+      "y": 288.12413333333336,
+      "visible": true,
+      "role": "code",
+      "scale": 1.25,
+      "left": 810,
+      "top": 275
+    },
+    {
+      "x": 913.9819333333332,
+      "height": 43.2,
+      "width": 505.6,
+      "name": "Graphic 151",
+      "id": 152,
+      "y": 434.1421666666667,
+      "visible": true,
+      "role": "code",
+      "scale": 1.25,
+      "left": 810,
+      "top": 432
+    },
+    {
+      "x": 913.9819333333332,
+      "height": 43.2,
+      "width": 505.6,
+      "name": "Graphic 153",
+      "id": 154,
+      "y": 512.0944666666667,
+      "visible": true,
+      "role": "code",
+      "scale": 1.25,
+      "left": 810,
+      "top": 512
+    },
+    {
+      "x": 913.9819333333332,
+      "height": 94.94744433714648,
+      "width": 571.9681985411954,
+      "name": "Graphic 155",
+      "id": 156,
+      "y": 679.9638833333335,
+      "visible": true,
+      "role": "code",
+      "scale": 1.25,
+      "left": 810,
+      "top": 650
+    },
+    {
+      "x": 978.7500000000002,
+      "height": 27.500000000000004,
+      "width": 458.75000000000006,
+      "name": "Rectangle 156",
+      "id": 157,
+      "y": 282.50000000000006,
+      "visible": false,
+      "role": "diagram",
+      "scale": 1.25,
+      "left": 890.9600833333337,
+      "top": 267.9698333333334
+    },
+    {
+      "x": 978.7500000000002,
+      "height": 26.250000000000004,
+      "width": 458.75000000000006,
+      "name": "Rectangle 157",
+      "id": 158,
+      "y": 308.75000000000006,
+      "visible": false,
+      "role": "diagram",
+      "scale": 1.25,
+      "left": 890.9600833333337,
+      "top": 300.7823333333334
+    },
+    {
+      "x": 761.2500000000001,
+      "height": 60.000000000000014,
+      "width": 90.00000000000001,
+      "name": "Rectangle 158",
+      "id": 159,
+      "y": 283.75000000000006,
+      "visible": false,
+      "role": "diagram",
+      "scale": 0.8,
+      "left": 686.2,
+      "top": 291.00000000000006
+    },
+    {
+      "x": 656.2500000000001,
+      "height": 60.000000000000014,
+      "width": 90.00000000000001,
+      "name": "Rectangle 159",
+      "id": 160,
+      "y": 283.75000000000006,
+      "visible": false,
+      "role": "diagram",
+      "scale": 0.8,
+      "left": 602.2,
+      "top": 291.00000000000006
+    },
+    {
+      "x": 978.7500000000002,
+      "height": 27.500000000000004,
+      "width": 520.0000000000001,
+      "name": "Rectangle 161",
+      "id": 162,
+      "y": 333.75000000000006,
+      "visible": false,
+      "role": "diagram",
+      "scale": 1.25,
+      "left": 890.9600833333337,
+      "top": 332.0323333333334
+    },
+    {
+      "x": 615.0000000000001,
+      "height": 85.00000000000001,
+      "width": 280.00000000000006,
+      "name": "Rectangle 162",
+      "id": 163,
+      "y": 278.75000000000006,
+      "visible": false,
+      "role": "diagram",
+      "scale": 0.8,
+      "left": 569.2,
+      "top": 287.00000000000006
+    },
+    {
+      "id": 6,
+      "left": 91,
+      "top": 175,
+      "width": 1419,
+      "height": 50,
+      "scale": 1,
+      "visible": true,
+      "html": "We define system composition through single-step components.",
+      "role": "explanation"
+    },
+    {
+      "id": 126,
+      "left": 91,
+      "top": 220,
+      "width": 1419,
+      "height": 50,
+      "scale": 1,
+      "visible": true,
+      "html": "Sequential composition",
+      "role": "label"
+    },
+    {
+      "id": 127,
+      "left": 91,
+      "top": 380,
+      "width": 1419,
+      "height": 50,
+      "scale": 1,
+      "visible": true,
+      "html": "Pass-through (left/right)",
+      "role": "label"
+    },
+    {
+      "id": 128,
+      "left": 91,
+      "top": 562,
+      "width": 1419,
+      "height": 50,
+      "scale": 1,
+      "visible": true,
+      "html": "Parallel composition",
+      "role": "label"
+    }
+  ]
+}

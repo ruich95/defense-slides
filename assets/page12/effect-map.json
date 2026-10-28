@@ -1,0 +1,1519 @@
+{
+  "source": "AEiC-26.pptx / slide7.xml",
+  "clickGroups": [
+    {
+      "events": [
+        {
+          "id": 182,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "clickEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "5",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 148,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "7",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 145,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "9",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 172,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "11",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 147,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "13",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 162,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "15",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 146,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "17",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 202,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "19",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 203,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "21",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 149,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "23",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 150,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "25",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        }
+      ],
+      "duration": 1
+    },
+    {
+      "events": [
+        {
+          "id": 182,
+          "kind": "path",
+          "start": 0,
+          "duration": 1000,
+          "relation": "clickEffect",
+          "accel": 0.5,
+          "decel": 0.5,
+          "sourceTimingId": "29",
+          "path": "M 0.00105 -0.00185 L 0.51576 -0.19884 ",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 148,
+          "kind": "path",
+          "start": 0,
+          "duration": 1000,
+          "relation": "withEffect",
+          "accel": 0.5,
+          "decel": 0.5,
+          "sourceTimingId": "31",
+          "path": "M 0.00313 -2.22222E-6 L 0.41133 -0.11643 ",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 145,
+          "kind": "path",
+          "start": 0,
+          "duration": 1000,
+          "relation": "withEffect",
+          "accel": 0.5,
+          "decel": 0.5,
+          "sourceTimingId": "33",
+          "path": "M 0.00065 -0.00092 L 0.42722 -0.09976 ",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 20,
+          "kind": "entr",
+          "start": 1000,
+          "duration": 500,
+          "relation": "afterEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "36",
+          "filter": "wipe(left)",
+          "transition": "in",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 17,
+          "kind": "entr",
+          "start": 1000,
+          "duration": 500,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "39",
+          "filter": "wipe(up)",
+          "transition": "in",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 19,
+          "kind": "entr",
+          "start": 1500,
+          "duration": 250,
+          "relation": "afterEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "43",
+          "filter": "wipe(left)",
+          "transition": "in",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "kind": "entr",
+          "start": 1500,
+          "duration": 500,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "46",
+          "filter": "wipe(left)",
+          "transition": "in",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 145,
+          "kind": "path",
+          "start": 1500,
+          "duration": 500,
+          "relation": "withEffect",
+          "accel": 0.5,
+          "decel": 0.5,
+          "sourceTimingId": "49",
+          "path": "M 0.42722 -0.09976 L 0.45235 -0.0199 L 0.58308 -0.01828 ",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 12,
+          "kind": "entr",
+          "start": 1750,
+          "duration": 250,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "51",
+          "filter": "wipe(left)",
+          "transition": "in",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        }
+      ],
+      "duration": 2000
+    },
+    {
+      "events": [
+        {
+          "id": 172,
+          "kind": "path",
+          "start": 0,
+          "duration": 1000,
+          "relation": "clickEffect",
+          "accel": 0.5,
+          "decel": 0.5,
+          "sourceTimingId": "56",
+          "path": "M -0.00027 0.00741 L 0.51601 -0.12338 ",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 147,
+          "kind": "path",
+          "start": 0,
+          "duration": 1000,
+          "relation": "withEffect",
+          "accel": 0.5,
+          "decel": 0.5,
+          "sourceTimingId": "58",
+          "path": "M -0.00079 -0.00833 L 0.4082 -0.0412 ",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 46,
+          "kind": "entr",
+          "start": 1000,
+          "duration": 500,
+          "relation": "afterEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "61",
+          "filter": "wipe(up)",
+          "transition": "in",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 55,
+          "kind": "entr",
+          "start": 1000,
+          "duration": 500,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "64",
+          "filter": "wipe(left)",
+          "transition": "in",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "kind": "exit",
+          "start": 1000,
+          "duration": 150,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "67",
+          "filter": "wipe(left)",
+          "transition": "out",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 48,
+          "kind": "entr",
+          "start": 1500,
+          "duration": 250,
+          "relation": "afterEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "71",
+          "filter": "wipe(left)",
+          "transition": "in",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "kind": "entr",
+          "start": 1500,
+          "duration": 500,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "74",
+          "filter": "wipe(left)",
+          "transition": "in",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 145,
+          "kind": "path",
+          "start": 1500,
+          "duration": 1000,
+          "relation": "withEffect",
+          "accel": 0.5,
+          "decel": 0.5,
+          "sourceTimingId": "77",
+          "path": "M 0.58308 -0.01828 C 0.58529 -0.0118 0.58763 -0.00509 0.58985 0.00186 L 0.46355 0.00186 L 0.4793 0.05672 L 0.60782 0.05764 ",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 13,
+          "kind": "entr",
+          "start": 2250,
+          "duration": 250,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "79",
+          "filter": "wipe(left)",
+          "transition": "in",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        }
+      ],
+      "duration": 2500
+    },
+    {
+      "events": [
+        {
+          "id": 162,
+          "kind": "path",
+          "start": 0,
+          "duration": 750,
+          "relation": "clickEffect",
+          "accel": 0.49333,
+          "decel": 0.50667,
+          "sourceTimingId": "84",
+          "path": "M 3.125E-6 -3.33333E-6 L 0.51627 -0.04699 ",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 146,
+          "kind": "path",
+          "start": 0,
+          "duration": 750,
+          "relation": "withEffect",
+          "accel": 0.49333,
+          "decel": 0.50667,
+          "sourceTimingId": "86",
+          "path": "M 3.125E-6 -2.22222E-6 L 0.40586 0.03496 ",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 202,
+          "kind": "exit",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "88",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 203,
+          "kind": "exit",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "90",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 71,
+          "kind": "entr",
+          "start": 750,
+          "duration": 250,
+          "relation": "afterEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "93",
+          "filter": "wipe(left)",
+          "transition": "in",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 67,
+          "kind": "entr",
+          "start": 750,
+          "duration": 250,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "96",
+          "filter": "wipe(up)",
+          "transition": "in",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "kind": "exit",
+          "start": 750,
+          "duration": 150,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "99",
+          "filter": "wipe(left)",
+          "transition": "out",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 70,
+          "kind": "entr",
+          "start": 1000,
+          "duration": 250,
+          "relation": "afterEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "103",
+          "filter": "wipe(left)",
+          "transition": "in",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 8,
+          "kind": "entr",
+          "start": 1000,
+          "duration": 500,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "106",
+          "filter": "wipe(left)",
+          "transition": "in",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 145,
+          "kind": "path",
+          "start": 1000,
+          "duration": 1000,
+          "relation": "withEffect",
+          "accel": 0.5,
+          "decel": 0.5,
+          "sourceTimingId": "109",
+          "path": "M 0.60782 0.05764 C 0.61003 0.06436 0.61224 0.07153 0.61446 0.07894 L 0.48946 0.07894 L 0.50625 0.13403 L 0.6336 0.13334 ",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 14,
+          "kind": "entr",
+          "start": 1750,
+          "duration": 250,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "111",
+          "filter": "wipe(left)",
+          "transition": "in",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 133,
+          "kind": "entr",
+          "start": 2000,
+          "duration": 250,
+          "relation": "afterEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "115",
+          "filter": "wipe(up)",
+          "transition": "in",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 111,
+          "kind": "entr",
+          "start": 2000,
+          "duration": 250,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "118",
+          "filter": "wipe(up)",
+          "transition": "in",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 8,
+          "kind": "exit",
+          "start": 2000,
+          "duration": 150,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "121",
+          "filter": "wipe(left)",
+          "transition": "out",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 137,
+          "kind": "entr",
+          "start": 2000,
+          "duration": 250,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "124",
+          "filter": "wipe(up)",
+          "transition": "in",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 145,
+          "kind": "path",
+          "start": 2000,
+          "duration": 500,
+          "relation": "withEffect",
+          "accel": 0.5,
+          "decel": 0.5,
+          "sourceTimingId": "127",
+          "path": "M 0.6336 0.13334 C 0.63815 0.14723 0.64219 0.1625 0.64701 0.17778 L 0.60183 0.17732 ",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 149,
+          "kind": "path",
+          "start": 2500,
+          "duration": 750,
+          "relation": "afterEffect",
+          "accel": 0.49333,
+          "decel": 0.50667,
+          "sourceTimingId": "130",
+          "path": "M -0.00117 -0.00416 L 0.34518 0.15579 ",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 150,
+          "kind": "path",
+          "start": 2500,
+          "duration": 750,
+          "relation": "withEffect",
+          "accel": 0.49333,
+          "decel": 0.50667,
+          "sourceTimingId": "132",
+          "path": "M 2.08333E-6 2.22222E-6 L 0.45469 0.07338 ",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 129,
+          "kind": "entr",
+          "start": 3250,
+          "duration": 100,
+          "relation": "afterEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "135",
+          "filter": "wipe(right)",
+          "transition": "in",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 113,
+          "kind": "entr",
+          "start": 3350,
+          "duration": 250,
+          "relation": "afterEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "139",
+          "filter": "wipe(up)",
+          "transition": "in",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 116,
+          "kind": "entr",
+          "start": 3350,
+          "duration": 250,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "142",
+          "filter": "wipe(left)",
+          "transition": "in",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 115,
+          "kind": "entr",
+          "start": 3600,
+          "duration": 250,
+          "relation": "afterEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "146",
+          "filter": "wipe(left)",
+          "transition": "in",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 112,
+          "kind": "entr",
+          "start": 3600,
+          "duration": 250,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "149",
+          "filter": "wipe(up)",
+          "transition": "in",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 145,
+          "kind": "path",
+          "start": 3600,
+          "duration": 1000,
+          "relation": "withEffect",
+          "accel": 0.5,
+          "decel": 0.5,
+          "sourceTimingId": "152",
+          "path": "M 0.60157 0.17801 L 0.5224 0.17801 L 0.54532 0.2544 L 0.67188 0.2544 L 0.69193 0.31598 ",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        },
+        {
+          "id": 15,
+          "kind": "entr",
+          "start": 4350,
+          "duration": 250,
+          "relation": "withEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "154",
+          "filter": "wipe(left)",
+          "transition": "in",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        }
+      ],
+      "duration": 4600
+    },
+    {
+      "events": [
+        {
+          "id": 23,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "clickEffect",
+          "accel": 0.0,
+          "decel": 0.0,
+          "sourceTimingId": "159",
+          "effects": [
+            {
+              "tag": "childTnLst"
+            }
+          ]
+        }
+      ],
+      "duration": 1
+    }
+  ],
+  "shapes": [
+    {
+      "x": 198.75000000000003,
+      "name": "Graphic 8",
+      "height": 85.00000000000001,
+      "width": 130.00000000000003,
+      "y": 538.7500000000001,
+      "id": 182,
+      "visible": false,
+      "role": "diagram",
+      "scale": 0.9,
+      "left": 187.97500000000002,
+      "top": 541.8750000000001
+    },
+    {
+      "x": -1.2500000000000002,
+      "name": "Oval 75",
+      "height": 2.5000000000000004,
+      "width": 2.5000000000000004,
+      "y": -1.2500000000000002,
+      "id": 76,
+      "visible": false,
+      "role": "diagram",
+      "scale": 0.9,
+      "left": 7.974999999999994,
+      "top": 55.875
+    },
+    {
+      "x": -1.2500000000000002,
+      "name": "Freeform 76",
+      "height": 2.5000000000000004,
+      "width": 2.5000000000000004,
+      "y": -1.2500000000000002,
+      "id": 77,
+      "visible": false,
+      "role": "diagram",
+      "scale": 0.9,
+      "left": 7.974999999999994,
+      "top": 55.875
+    },
+    {
+      "x": -1.2500000000000002,
+      "name": "Oval 95",
+      "height": 2.5000000000000004,
+      "width": 2.5000000000000004,
+      "y": -1.2500000000000002,
+      "id": 96,
+      "visible": false,
+      "role": "diagram",
+      "scale": 0.9,
+      "left": 7.974999999999994,
+      "top": 55.875
+    },
+    {
+      "x": -1.2500000000000002,
+      "name": "Rectangle 97",
+      "height": 2.5000000000000004,
+      "width": 2.5000000000000004,
+      "y": -1.2500000000000002,
+      "id": 98,
+      "visible": false,
+      "role": "diagram",
+      "scale": 0.9,
+      "left": 7.974999999999994,
+      "top": 55.875
+    },
+    {
+      "x": -1.2500000000000002,
+      "name": "Oval 98",
+      "height": 2.5000000000000004,
+      "width": 2.5000000000000004,
+      "y": -1.2500000000000002,
+      "id": 99,
+      "visible": false,
+      "role": "diagram",
+      "scale": 0.9,
+      "left": 7.974999999999994,
+      "top": 55.875
+    },
+    {
+      "x": -1.2500000000000002,
+      "name": "Freeform 99",
+      "height": 2.5000000000000004,
+      "width": 2.5000000000000004,
+      "y": -1.2500000000000002,
+      "id": 100,
+      "visible": false,
+      "role": "diagram",
+      "scale": 0.9,
+      "left": 7.974999999999994,
+      "top": 55.875
+    },
+    {
+      "x": -1.2500000000000002,
+      "name": "Rectangle 100",
+      "height": 2.5000000000000004,
+      "width": 2.5000000000000004,
+      "y": -1.2500000000000002,
+      "id": 101,
+      "visible": false,
+      "role": "diagram",
+      "scale": 0.9,
+      "left": 7.974999999999994,
+      "top": 55.875
+    },
+    {
+      "x": -1.2500000000000002,
+      "name": "Oval 101",
+      "height": 2.5000000000000004,
+      "width": 2.5000000000000004,
+      "y": -1.2500000000000002,
+      "id": 102,
+      "visible": false,
+      "role": "diagram",
+      "scale": 0.9,
+      "left": 7.974999999999994,
+      "top": 55.875
+    },
+    {
+      "x": 956.2500000000001,
+      "name": "!!Freeform: Shape 16",
+      "height": 71.25000000000001,
+      "width": 90.00000000000001,
+      "y": 366.25000000000006,
+      "id": 17,
+      "visible": false,
+      "role": "diagram",
+      "scale": 0.9,
+      "left": 869.7250000000001,
+      "top": 386.62500000000006
+    },
+    {
+      "x": 1243.7500000000002,
+      "name": "!!Rectangle 11",
+      "height": 28.750000000000004,
+      "width": 28.750000000000004,
+      "y": 373.75000000000006,
+      "id": 12,
+      "visible": false,
+      "role": "diagram",
+      "scale": 0.9,
+      "left": 1128.4750000000001,
+      "top": 393.37500000000006
+    },
+    {
+      "x": 1150.0000000000002,
+      "name": "Freeform 18",
+      "height": 35.00000000000001,
+      "width": 96.25000000000001,
+      "y": 370.00000000000006,
+      "id": 19,
+      "visible": false,
+      "role": "diagram",
+      "scale": 0.9,
+      "left": 1044.1000000000004,
+      "top": 390.00000000000006
+    },
+    {
+      "x": 948.7500000000001,
+      "name": "Freeform 19",
+      "height": 35.00000000000001,
+      "width": 95.00000000000001,
+      "y": 370.00000000000006,
+      "id": 20,
+      "visible": false,
+      "role": "diagram",
+      "scale": 0.9,
+      "left": 862.9750000000001,
+      "top": 390.00000000000006
+    },
+    {
+      "x": 1287.5000000000002,
+      "name": "!!Rectangle 12",
+      "height": 28.750000000000004,
+      "width": 27.500000000000004,
+      "y": 441.25000000000006,
+      "id": 13,
+      "visible": false,
+      "role": "diagram",
+      "scale": 0.9,
+      "left": 1167.8500000000001,
+      "top": 454.12500000000006
+    },
+    {
+      "x": 1192.5000000000002,
+      "name": "Freeform 47",
+      "height": 36.25000000000001,
+      "width": 96.25000000000001,
+      "y": 437.50000000000006,
+      "id": 48,
+      "visible": false,
+      "role": "diagram",
+      "scale": 0.9,
+      "left": 1082.3500000000004,
+      "top": 450.75000000000006
+    },
+    {
+      "x": 1326.2500000000002,
+      "name": "!!Rectangle 13",
+      "height": 28.750000000000004,
+      "width": 28.750000000000004,
+      "y": 510.0000000000001,
+      "id": 14,
+      "visible": false,
+      "role": "diagram",
+      "scale": 0.9,
+      "left": 1202.7250000000001,
+      "top": 516.0000000000001
+    },
+    {
+      "x": 1235.0000000000002,
+      "name": "Freeform 69",
+      "height": 36.25000000000001,
+      "width": 95.00000000000001,
+      "y": 506.2500000000001,
+      "id": 70,
+      "visible": false,
+      "role": "diagram",
+      "scale": 0.9,
+      "left": 1120.6000000000001,
+      "top": 512.6250000000001
+    },
+    {
+      "x": 1000.0000000000002,
+      "name": "!!Freeform: Shape 45",
+      "height": 91.25000000000001,
+      "width": 207.50000000000003,
+      "y": 413.75000000000006,
+      "id": 46,
+      "visible": false,
+      "role": "diagram",
+      "scale": 0.9,
+      "left": 909.1000000000003,
+      "top": 429.37500000000006
+    },
+    {
+      "x": 240.00000000000006,
+      "name": "Graphic 8",
+      "height": 85.00000000000001,
+      "width": 130.00000000000003,
+      "y": 538.7500000000001,
+      "id": 172,
+      "visible": false,
+      "role": "diagram",
+      "scale": 0.9,
+      "left": 225.10000000000005,
+      "top": 541.8750000000001
+    },
+    {
+      "x": 991.2500000000002,
+      "name": "Freeform 54",
+      "height": 36.25000000000001,
+      "width": 95.00000000000001,
+      "y": 437.50000000000006,
+      "id": 55,
+      "visible": false,
+      "role": "diagram",
+      "scale": 0.9,
+      "left": 901.2250000000003,
+      "top": 450.75000000000006
+    },
+    {
+      "x": 1213.7500000000002,
+      "name": "!!Freeform: Shape 110",
+      "height": 47.50000000000001,
+      "width": 88.75000000000001,
+      "y": 550.0000000000001,
+      "id": 111,
+      "visible": false,
+      "role": "diagram",
+      "scale": 0.9,
+      "left": 1101.4750000000004,
+      "top": 552.0000000000001
+    },
+    {
+      "x": 1296.2500000000002,
+      "name": "!!Freeform: Shape 111",
+      "height": 62.500000000000014,
+      "width": 83.75000000000001,
+      "y": 658.7500000000001,
+      "id": 112,
+      "visible": false,
+      "role": "diagram",
+      "scale": 0.9,
+      "left": 1175.7250000000001,
+      "top": 649.8750000000001
+    },
+    {
+      "x": 1093.7500000000002,
+      "name": "!!Freeform: Shape 112",
+      "height": 93.75000000000001,
+      "width": 101.25000000000001,
+      "y": 588.7500000000001,
+      "id": 113,
+      "visible": false,
+      "role": "diagram",
+      "scale": 0.9,
+      "left": 993.4750000000003,
+      "top": 586.8750000000001
+    },
+    {
+      "x": 1041.2500000000002,
+      "name": "!!Freeform: Shape 66",
+      "height": 91.25000000000001,
+      "width": 208.75000000000003,
+      "y": 482.5000000000001,
+      "id": 67,
+      "visible": false,
+      "role": "diagram",
+      "scale": 0.9,
+      "left": 946.2250000000003,
+      "top": 491.2500000000001
+    },
+    {
+      "x": 282.50000000000006,
+      "name": "!!Graphic 8-3",
+      "height": 85.00000000000001,
+      "width": 128.75000000000003,
+      "y": 538.7500000000001,
+      "id": 162,
+      "visible": false,
+      "role": "diagram",
+      "scale": 0.9,
+      "left": 263.35,
+      "top": 541.8750000000001
+    },
+    {
+      "x": 1032.5000000000002,
+      "name": "Freeform 70",
+      "height": 36.25000000000001,
+      "width": 96.25000000000001,
+      "y": 506.2500000000001,
+      "id": 71,
+      "visible": false,
+      "role": "diagram",
+      "scale": 0.9,
+      "left": 938.3500000000003,
+      "top": 512.6250000000001
+    },
+    {
+      "x": 1185.0000000000002,
+      "name": "Graphic 8",
+      "height": 7.500000000000002,
+      "width": 25.000000000000004,
+      "y": 590.0000000000001,
+      "id": 129,
+      "visible": false,
+      "role": "diagram",
+      "scale": 0.9,
+      "left": 1075.6000000000004,
+      "top": 588.0000000000001
+    },
+    {
+      "x": 1020.0000000000002,
+      "name": "Graphic 8",
+      "height": 31.250000000000007,
+      "width": 22.500000000000004,
+      "y": 562.5000000000001,
+      "id": 133,
+      "visible": false,
+      "role": "diagram",
+      "scale": 0.9,
+      "left": 927.1000000000003,
+      "top": 563.2500000000001
+    },
+    {
+      "x": 1360.0000000000002,
+      "name": "Graphic 8",
+      "height": 31.250000000000007,
+      "width": 21.250000000000004,
+      "y": 562.5000000000001,
+      "id": 137,
+      "visible": false,
+      "role": "diagram",
+      "scale": 0.9,
+      "left": 1233.1000000000001,
+      "top": 563.2500000000001
+    },
+    {
+      "x": 386.25000000000006,
+      "name": "TextBox 201",
+      "height": 65.00000000000001,
+      "width": 88.75000000000001,
+      "y": 551.2500000000001,
+      "id": 202,
+      "visible": false,
+      "role": "diagram",
+      "scale": 0.9,
+      "left": 356.7250000000001,
+      "top": 553.1250000000001
+    },
+    {
+      "x": 332.50000000000006,
+      "name": "Freeform 145",
+      "height": 32.50000000000001,
+      "width": 28.750000000000004,
+      "y": 476.25000000000006,
+      "id": 146,
+      "visible": false,
+      "role": "diagram",
+      "scale": 0.9,
+      "left": 308.35,
+      "top": 485.62500000000006
+    },
+    {
+      "x": 291.25000000000006,
+      "name": "Freeform 146",
+      "height": 32.50000000000001,
+      "width": 28.750000000000004,
+      "y": 476.25000000000006,
+      "id": 147,
+      "visible": false,
+      "role": "diagram",
+      "scale": 0.9,
+      "left": 271.225,
+      "top": 485.62500000000006
+    },
+    {
+      "x": 248.75000000000006,
+      "name": "Freeform 147",
+      "height": 32.50000000000001,
+      "width": 30.000000000000007,
+      "y": 476.25000000000006,
+      "id": 148,
+      "visible": false,
+      "role": "diagram",
+      "scale": 0.9,
+      "left": 232.97500000000005,
+      "top": 485.62500000000006
+    },
+    {
+      "x": 493.7500000000001,
+      "name": "Freeform 148",
+      "height": 32.50000000000001,
+      "width": 28.750000000000004,
+      "y": 476.25000000000006,
+      "id": 149,
+      "visible": false,
+      "role": "diagram",
+      "scale": 0.9,
+      "left": 453.47500000000014,
+      "top": 485.62500000000006
+    },
+    {
+      "x": 386.25000000000006,
+      "name": "TextBox 202",
+      "height": 65.00000000000001,
+      "width": 88.75000000000001,
+      "y": 465.00000000000006,
+      "id": 203,
+      "visible": false,
+      "role": "diagram",
+      "scale": 0.9,
+      "left": 356.7250000000001,
+      "top": 475.50000000000006
+    },
+    {
+      "x": 443.75000000000006,
+      "name": "!!Graphic 8-4",
+      "height": 86.25000000000001,
+      "width": 128.75000000000003,
+      "y": 538.7500000000001,
+      "id": 150,
+      "visible": false,
+      "role": "diagram",
+      "scale": 0.9,
+      "left": 408.4750000000001,
+      "top": 541.8750000000001
+    },
+    {
+      "x": 1393.7500000000002,
+      "name": "!!Rectangle 14",
+      "height": 28.750000000000004,
+      "width": 28.750000000000004,
+      "y": 618.7500000000001,
+      "id": 15,
+      "visible": false,
+      "role": "diagram",
+      "scale": 0.9,
+      "left": 1263.4750000000001,
+      "top": 613.8750000000001
+    },
+    {
+      "x": 1297.5000000000002,
+      "name": "Freeform 114",
+      "height": 36.25000000000001,
+      "width": 96.25000000000001,
+      "y": 615.0000000000001,
+      "id": 115,
+      "visible": false,
+      "role": "diagram",
+      "scale": 0.9,
+      "left": 1176.8500000000001,
+      "top": 610.5000000000001
+    },
+    {
+      "x": 1096.2500000000002,
+      "name": "Freeform 115",
+      "height": 36.25000000000001,
+      "width": 95.00000000000001,
+      "y": 615.0000000000001,
+      "id": 116,
+      "visible": false,
+      "role": "diagram",
+      "scale": 0.9,
+      "left": 995.7250000000003,
+      "top": 610.5000000000001
+    },
+    {
+      "x": 250.00000000000006,
+      "name": "!!Graphic 142",
+      "height": 27.500000000000004,
+      "width": 27.500000000000004,
+      "y": 420.00000000000006,
+      "id": 145,
+      "visible": false,
+      "role": "diagram",
+      "scale": 0.9,
+      "left": 234.10000000000005,
+      "top": 435.00000000000006
+    },
+    {
+      "x": 1151.2500000000002,
+      "name": "Freeform 5",
+      "height": 36.25000000000001,
+      "width": 48.75000000000001,
+      "y": 400.00000000000006,
+      "id": 6,
+      "visible": false,
+      "role": "diagram",
+      "scale": 0.9,
+      "left": 1045.2250000000004,
+      "top": 417.00000000000006
+    },
+    {
+      "x": 1193.7500000000002,
+      "name": "Freeform 6",
+      "height": 36.25000000000001,
+      "width": 48.75000000000001,
+      "y": 468.75000000000006,
+      "id": 7,
+      "visible": false,
+      "role": "diagram",
+      "scale": 0.9,
+      "left": 1083.4750000000004,
+      "top": 478.87500000000006
+    },
+    {
+      "x": 1236.2500000000002,
+      "name": "Freeform 7",
+      "height": 36.25000000000001,
+      "width": 47.50000000000001,
+      "y": 536.2500000000001,
+      "id": 8,
+      "visible": false,
+      "role": "diagram",
+      "scale": 0.9,
+      "left": 1121.7250000000001,
+      "top": 539.6250000000001
+    },
+    {
+      "x": 118.38831666666667,
+      "name": "Graphic 21",
+      "height": 115.20000000000002,
+      "width": 798.4551,
+      "y": 242.04566666666665,
+      "id": 22,
+      "visible": true,
+      "role": "code",
+      "scale": 1.3,
+      "left": 91,
+      "top": 235
+    },
+    {
+      "id": 16,
+      "left": 91,
+      "top": 175,
+      "width": 1419,
+      "height": 90,
+      "scale": 1,
+      "visible": true,
+      "html": "The function <code>run</code> lifts single-step behaviour to a sequence of reactions.",
+      "role": "explanation"
+    },
+    {
+      "id": 23,
+      "left": 91,
+      "top": 760,
+      "width": 1419,
+      "height": 90,
+      "scale": 1,
+      "visible": false,
+      "html": "Unfold the inputs and component uses along logical time; then fold them into a recurring process.",
+      "role": "explanation"
+    }
+  ]
+}

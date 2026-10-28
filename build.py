@@ -177,6 +177,88 @@ def page5_draft_art():
     # Retain the draft's 1920 by 1080 viewBox: this applies 5/6 exactly once.
     return E.tostring(draft, encoding='unicode')
 
+
+def page8_start_pyramid():
+    # The same empty source used by page 5, including the current phase fills,
+    # dashed rear rims and label paths. Never recreate its silhouette by eye.
+    pyramid = E.fromstring(page5_start_pyramid())
+    # Only this overview starts without phase captions; all other slides keep
+    # their labels and source artwork unchanged.
+    for parent in list(pyramid.iter()):
+        for child in list(parent):
+            if child.tag == SVG + 'text':
+                parent.remove(child)
+    for node in pyramid.iter():
+        for key, value in list(node.attrib.items()):
+            node.set(key, value.replace('p5-start-', 'p8-start-').replace('page5-start-', 'page8-start-'))
+        if node.get('id') == 'p8-start-pyramid-layer1':
+            node.set('data-page8-source-structure', '')
+    pyramid.set('aria-label', 'Unlabelled full abstraction pyramid with three levels')
+    return E.tostring(pyramid, encoding='unicode')
+
+
+def page8_framework_art():
+    art = E.parse(ROOT / 'figures/svg/SynQ-abstraction-level-overview.svg').getroot()
+    layer = next(n for n in art if n.get('id') == 'layer1')
+    by_id = {n.get('id'): n for n in layer.iter() if n.get('id')}
+    # Visual inventory of Figure 1.5, in its original paint order:
+    # path2551/2: outer sides; g7: implementation surface AND its caption;
+    # g7-1: intermediate surface; g8: entire modelling surface (despite its
+    # Inkscape label 'idris'). These surfaces are structural, never reveals.
+    # g15/g16 each mix interpretation arrows with projection-cylinder sides.
+    reveals = {
+        # Black arrows construct SynQ terms using Idris2, including terms
+        # outside SynQ. Red arrows transform models at the same level.
+        1: ['path2549-1-6', 'g14', 'g24', 'g10', 'rect2555',
+            'rect2555-4', 'g21', 'g22', 'g23'],
+        2: ['g19'],
+        3: ['g9', 'g2550-0', 'g10-6', 'g10-8', 'g13', 'g6',
+            'g11', 'g11-7', 'g12', 'g12-5'],
+        4: ['path2549-1-3', 'path2549-1-3-4', 'path2549-1-3-8', 'g25'],
+    }
+    for threshold, names in reveals.items():
+        for name in names:
+            node = by_id[name]
+            # Two opening clicks precede the four capability reveals.
+            node.set('data-page8-reveal', str(threshold + 2))
+            node.set('opacity', '0')
+            node.set('visibility', 'hidden')
+            node.set('aria-hidden', 'true')
+    # Repair the exported caption guides in each text's coordinate system.
+    # Keep the original textPath, font styles, group and reveal assignment.
+    # Baselines follow inset front-left ellipse quadrants, left to right.
+    ancestors = {child: parent for parent in layer.iter() for child in parent}
+    for text_id, guide_id, cx, cy, rx, ry, offset in [
+        ('text13', 'path2549-8', 329.19098, 342.69445, 100.61536, 29.205116, '37%'),
+        ('text2554-3-9', 'path2549-2-0-9', 326.0968, 467.86104, 130.15192, 39.05004, '50%'),
+    ]:
+        guide, parent = by_id[guide_id], ancestors[by_id[text_id]]
+        while parent is not layer:
+            translation = parent.get('transform', '')
+            if translation.startswith('translate('):
+                tx, ty = map(float, re.findall(r'[-+]?\d*\.?\d+(?:e[-+]?\d+)?', translation))
+                cx, cy = cx - tx, cy - ty
+            parent = ancestors[parent]
+        guide.attrib.pop('transform', None)
+        guide.set('d', f'M {cx-rx},{cy} A {rx},{ry} 0 0 0 {cx},{cy+ry}')
+        by_id[text_id].find(SVG + 'textPath').set('startOffset', offset)
+    for parent in list(art.iter()):
+        for child in list(parent):
+            if child.tag.split('}')[-1] in ['style', 'script', 'namedview', 'title', 'desc']:
+                parent.remove(child)
+    prefix_svg(art, 'p8-figure-', 'page8-framework-svg')
+    art.set('viewBox', '170 250 320 281')
+    art.set('width', '570')
+    art.set('height', '500.53125')
+    art.set('fill', 'none')
+    art.set('stroke', 'none')
+    art.set('role', 'img')
+    art.set('aria-label', 'Figure 1.5: modelling, Other DSLs/IRs and implementation levels of the SynQ framework')
+    for node in art.iter(SVG + 'text'):
+        node.set('fill', '#000')
+        node.set('stroke', 'none')
+    return E.tostring(art, encoding='unicode')
+
 def page6_paper_art():
     """Preserve original AEiC group transforms, picture crops and highlights."""
     ns = {'p': 'http://schemas.openxmlformats.org/presentationml/2006/main',
@@ -251,14 +333,87 @@ def page6_paper_art():
 
 def main():
     entries = json.loads((HERE / 'slides.json').read_text(encoding='utf8'))
+    p11 = json.loads((HERE / 'assets/page11/animation.json').read_text(encoding='utf8'))
+    p11_content = []
+    for shape in p11['shapes']:
+        content = shape.pop('uri', None)
+        body = '<img alt="" src="' + content + '">' if content else shape['html']
+        scale = shape['scale']
+        classes = 'page11-item' + (' page11-explanation' if not content else '')
+        p11_content.append(f'<div id="p11-shape-{shape["id"]}" class="{classes}" data-source-id="{shape["id"]}" style="left:{shape["left"]}px;top:{shape["top"]}px;width:{shape["width"]*scale}px;height:{shape["height"]*scale}px">{body}</div>')
+    p12 = json.loads((HERE / 'assets/page12/animation.json').read_text(encoding='utf8'))
+    p12_content = []
+    for shape in p12['shapes']:
+        content = shape.pop('uri', None)
+        body = '<img alt="" src="' + content + '">' if content else shape['html']
+        scale = shape['scale']
+        classes = 'page12-item' + (' page12-explanation' if not content else '')
+        p12_content.append(f'<div id="p12-shape-{shape["id"]}" class="{classes}" data-source-id="{shape["id"]}" style="left:{shape["left"]}px;top:{shape["top"]}px;width:{shape["width"]*scale}px;height:{shape["height"]*scale}px">{body}</div>')
+    p13 = json.loads((HERE / 'assets/page13/animation.json').read_text(encoding='utf8'))
+    p13_content = []
+    for shape in p13['shapes']:
+        content = shape.pop('uri', None)
+        body = '<img alt="" src="' + content + '">' if content else shape['html']
+        scale = shape['scale']
+        classes = 'page13-item' + (' page13-explanation' if not content else '')
+        p13_content.append(f'<div id="p13-shape-{shape["id"]}" class="{classes}" data-source-id="{shape["id"]}" style="left:{shape["left"]}px;top:{shape["top"]}px;width:{shape["width"]*scale}px;height:{shape["height"]*scale}px">{body}</div>')
+    p14 = json.loads((HERE / 'assets/page14/animation.json').read_text(encoding='utf8'))
+    p14_content = []
+    for shape in p14['shapes']:
+        content = shape.pop('uri', None)
+        body = '<img alt="" src="' + content + '">' if content else shape['html']
+        scale = shape['scale']
+        classes = 'page14-item' + (' page14-explanation' if not content else '') + (' page14-label' if shape['role']=='label' else '')
+        p14_content.append(f'<div id="p14-shape-{shape["id"]}" class="{classes}" data-source-id="{shape["id"]}" style="left:{shape["left"]}px;top:{shape["top"]}px;width:{shape["width"]*scale}px;height:{shape["height"]*scale}px">{body}</div>')
+    p15 = json.loads((HERE / 'assets/page15/animation.json').read_text(encoding='utf8'))
+    p15_content = []
+    for shape in p15['shapes']:
+        content = shape.pop('uri', None)
+        body = '<img alt="" src="' + content + '">' if content else shape['html']
+        scale = shape['scale']
+        classes = 'page15-item' + (' page15-explanation' if not content else '') + (' page15-label' if shape['role']=='label' else '')
+        p15_content.append(f'<div id="p15-shape-{shape["id"]}" class="{classes}" data-source-id="{shape["id"]}" style="left:{shape["left"]}px;top:{shape["top"]}px;width:{shape["width"]*scale}px;height:{shape["height"]*scale}px">{body}</div>')
+    p16 = json.loads((HERE / 'assets/page16/animation.json').read_text(encoding='utf8'))
+    p16_content = []
+    for shape in p16['shapes']:
+        content = shape.pop('uri', None)
+        body = '<img alt="" src="' + content + '">' if content else shape['html']
+        scale = shape['scale']
+        classes = 'page16-item' + (' page16-explanation' if not content else '') + (' page16-label' if shape['role']=='label' else '')
+        p16_content.append(f'<div id="p16-shape-{shape["id"]}" class="{classes}" data-source-id="{shape["id"]}" style="left:{shape["left"]}px;top:{shape["top"]}px;width:{shape["width"]*scale}px;height:{shape["height"]*scale}px">{body}</div>')
+    p17 = json.loads((HERE / 'assets/page17/animation.json').read_text(encoding='utf8'))
+    p17_content = []
+    for shape in p17['shapes']:
+        content = shape.pop('uri', None)
+        body = '<img alt="" src="' + content + '">' if content else shape['html']
+        scale = shape['scale']
+        classes = 'page17-item' + (' page17-explanation' if not content else '') + (' page17-label' if shape['role']=='label' else '')
+        p17_content.append(f'<div id="p17-shape-{shape["id"]}" class="{classes}" data-source-id="{shape["id"]}" style="left:{shape["left"]}px;top:{shape["top"]}px;width:{shape["width"]*scale}px;height:{shape["height"]*scale}px">{body}</div>')
     replacements = {
         '@@COVER@@': data(HERE / 'assets/cover.svg', 'image/svg+xml'),
         '@@LOGO@@': data(HERE / 'assets/kth-logo.svg', 'image/svg+xml'),
+        '@@PAGE17_CONTENT@@': '\n'.join(p17_content),
+        '@@PAGE17_DATA@@': json.dumps(p17, ensure_ascii=False).replace('</', '<\\/'),
+        '@@PAGE16_CONTENT@@': '\n'.join(p16_content),
+        '@@PAGE16_DATA@@': json.dumps(p16, ensure_ascii=False).replace('</', '<\\/'),
+        '@@PAGE15_CONTENT@@': '\n'.join(p15_content),
+        '@@PAGE15_DATA@@': json.dumps(p15, ensure_ascii=False).replace('</', '<\\/'),
+        '@@PAGE14_CONTENT@@': '\n'.join(p14_content),
+        '@@PAGE14_DATA@@': json.dumps(p14, ensure_ascii=False).replace('</', '<\\/'),
+        '@@PAGE13_CONTENT@@': '\n'.join(p13_content),
+        '@@PAGE13_DATA@@': json.dumps(p13, ensure_ascii=False).replace('</', '<\\/'),
+        '@@PAGE12_CONTENT@@': '\n'.join(p12_content),
+        '@@PAGE12_DATA@@': json.dumps(p12, ensure_ascii=False).replace('</', '<\\/'),
+        '@@PAGE11_CONTENT@@': '\n'.join(p11_content),
+        '@@PAGE11_DATA@@': json.dumps(p11, ensure_ascii=False).replace('</', '<\\/'),
         '@@PYRAMID@@': pyramid_art(),
         '@@REQUIREMENTS_PYRAMID@@': requirements_pyramid_art(),
         '@@PAGE5_START_PYRAMID@@': page5_start_pyramid(),
         '@@PAGE5_DRAFT@@': page5_draft_art(),
+        '@@PAGE8_START_PYRAMID@@': page8_start_pyramid(),
+        '@@PAGE8_FRAMEWORK@@': page8_framework_art(),
         '@@PAGE6_PAPERS@@': page6_paper_art(),
+        '@@PAGE9_SIGNALS@@': (HERE / 'assets/page9/signals.svg').read_text(encoding='utf-8-sig'),
         '@@ANIMATION@@': receiver_art(),
         '@@ES_CAR@@': data(HERE / 'assets/embedded-systems/braking-system.png', 'image/png'),
         '@@ES_ROBOT@@': data(HERE / 'assets/embedded-systems/robot-controller.png', 'image/png'),
@@ -276,8 +431,25 @@ def main():
         slides[entry['id']] = content
         if entry.get('controller'):
             controllers[entry['id']] = (HERE / entry['controller']).read_text(encoding='utf8')
+            if entry['id'] == 'page17':
+                controllers[entry['id']] = controllers[entry['id']].replace('@@PAGE17_DATA@@', replacements['@@PAGE17_DATA@@'])
+            if entry['id'] == 'page16':
+                controllers[entry['id']] = controllers[entry['id']].replace('@@PAGE16_DATA@@', replacements['@@PAGE16_DATA@@'])
+            if entry['id'] == 'page15':
+                controllers[entry['id']] = controllers[entry['id']].replace('@@PAGE15_DATA@@', replacements['@@PAGE15_DATA@@'])
+            if entry['id'] == 'page14':
+                controllers[entry['id']] = controllers[entry['id']].replace('@@PAGE14_DATA@@', replacements['@@PAGE14_DATA@@'])
+            if entry['id'] == 'page13':
+                controllers[entry['id']] = controllers[entry['id']].replace('@@PAGE13_DATA@@', replacements['@@PAGE13_DATA@@'])
+            if entry['id'] == 'page12':
+                controllers[entry['id']] = controllers[entry['id']].replace('@@PAGE12_DATA@@', replacements['@@PAGE12_DATA@@'])
+            if entry['id'] == 'page11':
+                controllers[entry['id']] = controllers[entry['id']].replace('@@PAGE11_DATA@@', replacements['@@PAGE11_DATA@@'])
     styles = (HERE / 'shared/styles.css').read_text(encoding='utf8')
     styles = styles.replace('../assets/Figtree.ttf', data(HERE / 'assets/Figtree.ttf', 'font/ttf'))
+    styles = styles.replace('../assets/page10/Consolas.ttf', data(HERE / 'assets/page10/Consolas.ttf', 'font/ttf'))
+    for font in ['MathRoman', 'MathItalic']:
+        styles = styles.replace(f'../assets/page9/{font}.ttf', data(HERE / f'assets/page9/{font}.ttf', 'font/ttf'))
     shell = (HERE / 'shared/shell.html').read_text(encoding='utf8')
     def render(selected, title):
         result = shell

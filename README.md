@@ -1,6 +1,6 @@
 # HTML defence presentation
 
-Open **index.html** in Edge or Chrome to present the complete deck. It currently contains the cover, the Embedded Systems introduction, the animated Embedded System Design slide, Requirements for a Design Framework, A Key Challenge: Connecting Abstraction Levels, Type Theory as a Programming Language, and Research Question and Objectives. The generated presentation is self-contained and works offline or on GitHub Pages.
+Open **index.html** in Edge or Chrome to present the complete eight-page introduction, ending with The Proposed (Partial) Solution: SynQ. The generated presentation is self-contained and works offline or on GitHub Pages.
 
 ## Structure
 
@@ -28,7 +28,9 @@ defense-html/
     page6.html           Type Theory as a Programming Language source fragment
     page6.js             Eight cumulative paper/capability reveal states
     page7.html           Full-width research question and objectives
-    page7.js             Four states with synchronised colour associations
+    page7.js             Five states with synchronised colour associations
+    page8.html           Proposed framework with Figure 1.5
+    page8.js             Two-click section/removal/focus and four capability reveals
   shared/
     styles.css           Common layout, typography and slide styling
     navigation.js        Deck navigation, full screen and notes
@@ -96,7 +98,7 @@ The left text reserves space for every reveal, preserving fixed positions. Speak
 
 ## Planning status
 
-Synchronized 27 October 2026. The deck contains six pages and 40 reveal states in total. The eight-page introduction plan reserves page 7 for the research question and objectives, and page 8 for the Figure 1.5 framework roadmap. Neither is implemented yet. The revised approximately eight-minute introduction remains a rehearsal target within the 45-minute defense.
+Synchronized 27 October 2026. The deck contains eight pages and 51 reveal states in total. The revised approximately eight-minute introduction remains a rehearsal target within the 45-minute defense.
 
 
 ## Displayed page 7
@@ -108,3 +110,35 @@ All four question emphasis spans are bold from the start and black when the ques
 Transitions last 225 ms. The summary fades out before the question fades in; reverse navigation restores the summary. Objective opacity and corresponding question colours change together. Reduced motion makes changes immediately, and direct links show their requested settled state. There is no automatic entrance or placeholder page 8. Speaker notes include the requested summary, complete question, objective explanations, qualifications and references.
 
 Use `index.html#7.1` through `#7.5`, or the standalone `page7.html#1` through `#5`. Edit sources and rebuild with `build.py`; do not edit generated HTML directly.
+
+## Displayed page 8
+
+Page 8 is titled **The Proposed (Partial) Solution: SynQ** and follows `../slides-detail/page8.md`.
+
+The opening reads: “To address the research question and objectives, we propose the framework SynQ¹ for **synchronous system design**, grounded in **Quantitative Type Theory (QTT)** and embedded in Idris2.” Its footnote reads “¹ SynQ — **Syn**chronous System Design with **Q**uantitative Types”. The sentence's domain and QTT phrases, plus Syn/Q in the footnote, are bold; the remainder is regular weight. Both text elements are visible and stationary throughout. The expanded-name footnote matches page 3's bottom placement (left 91 px, top 808 px) and 18 px muted-grey styling, above the footer. It is outside the main text flow; the three capability bullets follow the opening sentence with a 36 px gap. Speaker notes explicitly explain: “Idris2 provides the programming language through which we use Quantitative Type Theory.”
+
+Page 8 follows `../slides-detail/page8.md` and has **seven states**: unlabelled full pyramid; retained portion held at its original size after upper removal; focused empty Figure 1.5 shell; Modelling (O1/O3); Design steps with transformations emphasized (O2); that same sentence with interpretations emphasized (O2); Properties (O2). Initial entry and R wait for input. Opening/name text stays fixed throughout; capability reveals retain their cumulative 225 ms fades and paired artwork, at thresholds 3–6.
+
+The three bullets read “Modelling: construct SynQ models using Idris2 terms and functions. O1 O3”, “Design steps: express transformations and interpretations as Idris2 functions. O2”, and “Properties: specify and verify properties of models and design steps through types. O2”. Four capability clicks remain. Modelling reveals the black construction arrows and their source/target points together with the Idris2/SynQ region and labels. The next click reveals the entire Design steps sentence, emphasizes transformations in red with a subtle background, and reveals the red transformation arrow. The following click shifts subtle color/background emphasis to interpretations in blue in that same sentence and reveals blue interpretation connections and target representations. Every word stays visible and stationary, with no layout change. Properties clears the term emphasis and reveals its artwork. Reversing restores the corresponding emphasis. Mixed interpretation/projection groups retain child-level reveal timing.
+
+Speaker notes recall page 3: transformations operate within abstraction levels, while interpretations across levels provide refinement or implementation. Both are Idris2 functions. Black arrows construct SynQ terms from Idris2 inputs that may lie outside SynQ.
+
+The first click takes 700 ms. A contained elliptical section 35% into the green modelling band fades in over 0–150 ms, gives one gentle smooth pulse over 150–450 ms, and becomes the retained green top as the upper portion fades over 450–700 ms. Its side intersections come from the source pyramid; its front rim is solid and rear rim is initially dashed. As the upper portion fades, the rear cut rim becomes solid and stays solid in the held and focusing compositions. There is no projecting polygon, lift, deformation or lower-region movement. The held-cut state waits indefinitely for a second click.
+
+The second click fits the retained region into the exact empty framework over 500 ms, with a subtle final crossfade only after its control geometry aligns. It does not reveal a capability. All three framework levels, including Other DSLs/IRs, preserve their source geometry, fills, transforms and paint order. The original framework SVG is unchanged. Idris2 and Implementation keep their repaired curved caption guides and styling. Tiny source fill cut-outs are not stretched during the focus animation.
+
+Only P8's imported initial pyramid loses its text labels. Other slides and shared navigation are unchanged. Reverse from the focused shell restores the held cut, and reverse again restores the unlabelled full pyramid. Backward entry from P9 restores state 7. Direct links settle immediately; reduced motion skips pulse/movement while retaining both opening clicks. Leaving or superseding navigation cancels pending frames; repeated advances are ignored while busy. No automatic entrance hook is added.
+
+Use `index.html#8.1`–`#8.7`, or `page8.html#1`–`#7`. Deterministic previews are `previewTransition('cut', ms)` for 0–700 ms and `previewTransition('focus', ms)` for 0–500 ms. Inspect section/rim alignment, pulse/removal timing, a stationary held cut, exact framework handoff, all seven settled states, no premature capabilities, reverse/direct links, restart, reduced motion and cancellation.
+
+## Displayed page 10
+
+Page 10, **Quantitative Type Theory**, follows `../slides-detail/page10.md` and has six states. The fixed opening reads “QTT combines dependent types and linear types through usage multiplicities.” The initially 34 px one-line schematic signature is `foo : (0 x : Nat) -> (1 y : Nat) -> (z : Nat) -> R x y`. The result remains independent of the ordinary unrestricted z binder.
+
+States 2–5 reveal “Types can depend on terms.”, the complete 0 group, the complete 1 group, then the complete ω group including its Idris2 note. Each annotation has a subtle 1.5 px blue guide and underline on the associated code fragment; these remain after reveal. The z-to-omega guide uses a short elbow underneath the code, matching the 0/1 guides, and tracks the final spacing compression. The separate x/y binder-to-result dependency curves appear only in displayed state 2 and restore on reverse/direct state 2 links. Later states hide those two curves. Active pale-blue focus moves from result to 0 x, 1 y and z without changing code geometry.
+
+The final click moves the entire annotated example upward as one composition over 400 ms and scales it to 93%, retaining 31.62 px code. Within the same motion, the multiplicity groups lift an additional 50 local pixels and their guide endpoints track them, shortening the final code-to-explanation gap by 46.5 stage pixels without smaller text. The final text groups align near their binders at stage x437.3/739.55/1060.4 with common baselines and clear gaps. The dependency sentence settles at y270.14, about 29 px below the fixed opening, and the takeaway block starts at y665. These positions move smoothly with compaction. States 1–5 keep their original positions and spacing, restored on reverse. Then both takeaway bullets fade in together over 150 ms, with bold labels: “Dependent types: formal specification and reasoning.” and “Usage multiplicities: constrain system-model construction and use.” The title, opening and footer stay fixed. Reverse hides the bullets before expanding the example. Ordinary earlier reveals use 225 ms fades. Direct links settle immediately, reduced motion skips motion, and leaving/superseding navigation cancels pending frames. The controller retains the current visual composition when interrupted.
+
+Speaker notes distinguish term dependence from merely evaluated values and explain three arguments followed by the result. The erased Nat x illustrates erasure, not the later parametricity argument. Notes connect 1 to disciplined state/resource use, 0 to reasoning without consuming linear terms, and 0 on abstract type parameters plus a supplied constructor context to parametricity restricting model construction. References include thesis §1.2.3 and §4.2.1 and the Idris2 multiplicities tutorial. The transition leads to “Linear Terms as Resources”.
+
+Use `index.html#10.1`–`#10.6` or `page10.html#1`–`#6`. The optional deterministic review method `page10Controller.previewTransition(ms, reverse)` previews the final 550 ms sequence. Edit sources and rebuild with `build.py`; preserve P8/P9 and shared navigation. Inspect every state and final-motion frames at 1600 × 900 and a smaller viewport, including reverse/direct links, restart, reduced motion, rapid input, cancellation and guide alignment after resize.

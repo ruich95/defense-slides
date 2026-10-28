@@ -47,5 +47,75 @@
     "source": "slides/page7.html",
     "controller": "slides/page7.js",
     "steps": 5
+  },
+  {
+    "id": "page8",
+    "title": "The Proposed (Partial) Solution: SynQ",
+    "source": "slides/page8.html",
+    "controller": "slides/page8.js",
+    "steps": 7
+  },
+  {
+    "id": "page9",
+    "title": "Synchronous Systems",
+    "source": "slides/page9.html",
+    "controller": "slides/page9.js",
+    "steps": 3
+  },
+  {
+    "id": "page10",
+    "title": "Quantitative Type Theory",
+    "source": "slides/page10.html",
+    "controller": "slides/page10.js",
+    "steps": 6
+  },
+  {
+    "id": "page11",
+    "title": "Linear Terms as Resources",
+    "source": "slides/page11.html",
+    "controller": "slides/page11.js",
+    "steps": 8
+  },
+  {
+    "id": "page12",
+    "title": "Synchronous Systems in QTT",
+    "source": "slides/page12.html",
+    "controller": "slides/page12.js",
+    "steps": 6
+  },
+  {
+    "id": "page13",
+    "title": "Synchronous Systems in QTT",
+    "source": "slides/page13.html",
+    "controller": "slides/page13.js",
+    "steps": 4
+  },
+  {
+    "id": "page14",
+    "title": "Synchronous Systems in QTT",
+    "source": "slides/page14.html",
+    "controller": "slides/page14.js",
+    "steps": 1
+  },
+  {
+    "id": "page15",
+    "title": "Synchronous Systems in QTT",
+    "source": "slides/page15.html",
+    "controller": "slides/page15.js",
+    "steps": 1
+  },
+  {
+    "id": "page16",
+    "title": "Synchronous Systems in QTT",
+    "source": "slides/page16.html",
+    "controller": "slides/page16.js",
+    "steps": 1
+  },
+  {
+    "id": "page17",
+    "title": "Synchronous Systems in QTT",
+    "source": "slides/page17.html",
+    "controller": "slides/page17.js",
+    "steps": 5
   }
 ]

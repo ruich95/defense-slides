@@ -1,0 +1,20 @@
+<section class="slide" id="page10" aria-label="Slide 10: Quantitative Type Theory">
+<img class="kth-logo" alt="KTH Royal Institute of Technology" src="@@LOGO@@">
+<h1>Quantitative Type Theory</h1>
+<p class="page10-opening">QTT combines dependent types and linear types through usage multiplicities.</p>
+<div class="page10-example">
+<p class="page10-dependency" data-page10-reveal="1">Types can depend on terms.</p>
+<svg class="page10-guides" viewBox="0 0 1600 900" aria-hidden="true" focusable="false">
+<g data-page10-dependencies-only><path id="p10-guide-x"/><path id="p10-guide-y"/></g><path id="p10-guide-dependency" data-page10-guide="1"/>
+<path id="p10-guide-zero" data-page10-guide="2"/><path id="p10-guide-one" data-page10-guide="3"/><path id="p10-guide-unrestricted" data-page10-guide="4"/>
+</svg>
+<div class="page10-code-region"><code id="p10-signature" aria-label="Illustrative Idris2 function type"><span class="p10-function">foo</span><span class="p10-syntax"> : (</span><span id="p10-zero" data-page10-focus="2" data-page10-underline="2">0 <span id="p10-binder-x">x</span></span><span class="p10-syntax"> : </span><span class="p10-type">Nat</span><span class="p10-syntax">) -&gt; (</span><span id="p10-one" data-page10-focus="3" data-page10-underline="3">1 <span id="p10-binder-y">y</span></span><span class="p10-syntax"> : </span><span class="p10-type">Nat</span><span class="p10-syntax">) -&gt; (</span><span id="p10-unrestricted" data-page10-focus="4" data-page10-underline="4">z</span><span class="p10-syntax"> : </span><span class="p10-type">Nat</span><span class="p10-syntax">) -&gt; </span><span class="page10-result" id="p10-result" data-page10-focus="1" data-page10-underline="1">R <span id="p10-result-x">x</span> <span id="p10-result-y">y</span></span></code></div>
+<div class="page10-multiplicities">
+<div class="page10-multiplicity page10-zero" data-page10-reveal="2"><p class="page10-symbol"><strong>0</strong></p><p class="page10-explanation">Erased at run time</p></div>
+<div class="page10-multiplicity page10-one" data-page10-reveal="3"><p class="page10-symbol"><strong>1</strong></p><p class="page10-explanation">Used exactly once<br>at run time</p></div>
+<div class="page10-multiplicity page10-unrestricted" data-page10-reveal="4"><p class="page10-symbol"><strong>ω</strong></p><p class="page10-explanation">Unrestricted use</p><p class="page10-idris-note">No explicit annotation in Idris2.</p></div>
+</div>
+</div>
+<ul class="page10-takeaways" data-page10-reveal="5"><li><strong>Dependent types:</strong> formal specification and reasoning.</li><li><strong>Usage multiplicities:</strong> constrain system-model construction and use.</li></ul>
+<footer><span class="footer-event">PhD Defence - 9 November 2026 - Stockholm</span><span class="footer-name">Rui Chen</span><span class="footer-page">10</span></footer>
+</section>

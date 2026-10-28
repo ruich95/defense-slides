@@ -93,6 +93,60 @@ body.full #viewport{inset:0}body.full .controlbar{display:none}#stage{cursor:poi
 #page6 strong{font-weight:700}
 #page6 [data-page6-reveal]{opacity:0;visibility:hidden}
 
+/* Page 11: original AEiC click groups and individual vector objects. */
+#page11 .page11-body{position:absolute;inset:0;pointer-events:none}
+#page11 .page11-item{position:absolute;opacity:0;visibility:hidden;transform-origin:0 0}
+#page11 .page11-item img{display:block;width:100%;height:100%}
+#page11 .page11-explanation{font-size:32px;line-height:1.28;font-weight:400;color:#000}
+#page11 .page11-explanation strong{font-weight:700}
+
+/* Page 10: dependent function type and runtime multiplicities. */
+@font-face{font-family:DefenseCode;src:url('../assets/page10/Consolas.ttf') format('truetype');font-weight:400;font-display:block}
+#page10 .page10-opening{position:absolute;left:91px;top:200px;width:1419px;margin:0;font-size:32px;line-height:1.28;font-weight:400;color:#000}
+#page10 .page10-example{position:absolute;inset:0;transform-origin:800px 450px}
+#page10 .page10-dependency{position:absolute;left:1000px;top:330px;width:510px;margin:0;font-size:32px;line-height:1.28;font-weight:400;color:#000}
+#page10 .page10-code-region{position:absolute;left:100px;top:446.25px;width:1400px;text-align:center}
+#page10 #p10-signature{display:inline-block;white-space:pre;font-family:DefenseCode,Consolas,monospace;font-size:34px;line-height:1.25;font-weight:400;font-variant-ligatures:none;letter-spacing:0;text-align:left;color:#000}
+#page10 .p10-function{color:#0029ED}#page10 .p10-syntax{color:#8A2BE2}#page10 .p10-type{color:#78001A}
+#page10 [data-page10-focus]{--p10-focus:0;background-color:rgba(0,41,237,calc(var(--p10-focus)*.1));box-shadow:0 0 0 5px rgba(0,41,237,calc(var(--p10-focus)*.1));border-radius:2px}
+#page10 [data-page10-underline]{position:relative}
+#page10 [data-page10-underline]::after{content:"";position:absolute;left:0;right:0;bottom:-9px;height:1.5px;background:#0029ED;opacity:calc(var(--p10-link,0)*.28);pointer-events:none}
+#page10 .page10-guides{position:absolute;inset:0;width:1600px;height:900px;overflow:visible;pointer-events:none}
+#page10 .page10-guides path{fill:none;stroke:rgba(0,41,237,.28);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+#page10 .page10-multiplicities{position:absolute;left:0;top:635px;width:1600px;height:145px;font-size:32px;line-height:1.28;font-weight:400;color:#000}
+#page10 .page10-multiplicity{position:absolute;top:0;width:410px;min-height:145px}
+#page10 .page10-zero{left:230px;width:350px}#page10 .page10-one{left:660px;width:350px}#page10 .page10-unrestricted{left:1100px}
+#page10 .page10-multiplicity p{margin:0}#page10 .page10-multiplicity strong{font-weight:700}
+#page10 .page10-multiplicity .page10-explanation{margin-top:8px}
+#page10 .page10-multiplicity .page10-idris-note{margin-top:14px;font-size:26px;line-height:1.28;font-weight:400}
+#page10 .page10-takeaways{position:absolute;left:91px;top:710px;width:1419px;margin:0;padding-left:37px;font-size:32px;line-height:1.28;list-style-type:disclosure-closed}
+#page10 .page10-takeaways li{padding-left:4px;margin:0 0 14px}#page10 .page10-takeaways li::marker{font-size:25px}#page10 .page10-takeaways strong{font-weight:700}
+#page10 [data-page10-reveal],#page10 [data-page10-guide],#page10 [data-page10-dependencies-only]{opacity:0;visibility:hidden}
+
+/* Page 9: shared logical instants, perfect synchrony and stream pairing. */
+#page9 .page9-opening{position:absolute;left:91px;top:200px;width:1419px;margin:0;font-size:32px;line-height:1.28;font-weight:400;color:#000}
+@font-face{font-family:DefenseMathRoman;src:url('../assets/page9/MathRoman.ttf') format('truetype');font-weight:400;font-display:block}
+@font-face{font-family:DefenseMathItalic;src:url('../assets/page9/MathItalic.ttf') format('truetype');font-weight:400;font-display:block}
+#page9 .page9-diagram{position:absolute;left:260px;top:278.556701px;width:1080px;height:263.505155px}
+#page9 #p9-signals{display:block;width:100%;height:100%;overflow:visible}
+#page9 .page9-instant-labels{font-family:Figtree,Arial,sans-serif;font-size:19.4px;font-weight:400;fill:#000;text-anchor:middle}
+#page9 .page9-logical-instant{font-family:Figtree,Arial,sans-serif;font-size:19.4px;font-weight:400;fill:#000}
+#page9 .page9-wave-lines{fill:none;stroke:#000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter}
+#page9 .page9-break-gap{fill:none;stroke:#fff;stroke-width:7;stroke-linecap:butt}
+#page9 .page9-equivalence-arrow{fill:#fff;stroke:#000;stroke-width:1.5;stroke-linejoin:miter}
+#page9 .page9-math-labels{font-family:DefenseMathRoman,"Times New Roman",serif;font-size:27px;fill:#000;text-anchor:middle;font-weight:400}
+#page9 .page9-math-variable{font-family:DefenseMathItalic,"Times New Roman",serif}
+#page9 .page9-math-sub{font-family:DefenseMathRoman,"Times New Roman",serif;font-size:18px;baseline-shift:sub}
+#page9 .page9-highlight{fill:#0029ED;fill-opacity:.1;stroke:none}
+#page9 .page9-process-body{fill:#ffccc4;fill-opacity:.7;stroke:#000;stroke-width:1.4}
+#page9 .page9-process-port{fill:#ebe5e0;stroke:#000;stroke-width:1.4}
+#page9 .page9-process-label{font-family:Figtree,Arial,sans-serif;font-size:27px;font-weight:400;fill:#000;stroke:none;text-anchor:middle}
+#page9 .page9-synchrony,#page9 .page9-isomorphism{position:absolute;left:91px;width:1419px;margin:0;font-size:32px;line-height:1.28;font-weight:400;color:#000}
+#page9 .page9-synchrony{top:610px}#page9 .page9-isomorphism{top:700px}
+#page9 .page9-logical-tail{white-space:nowrap}
+#page9 .page9-synchrony strong,#page9 .page9-isomorphism strong{font-weight:700}
+#page9 [data-page9-reveal],#page9 [data-page9-view],#page9 #p9-instant-highlight,#page9 #p9-output-highlight{opacity:0;visibility:hidden}
+
 /* Page 7: one selectable, full-width question/objectives region. */
 #page7 .page7-text{position:absolute;left:91px;top:200px;width:1419px;font-size:32px;line-height:1.28;font-weight:400;color:#000}
 #page7 .page7-upper{display:grid;grid-template-columns:1fr;align-items:start}
@@ -119,3 +173,104 @@ body.full #viewport{inset:0}body.full .controlbar{display:none}#stage{cursor:poi
 #page7 [data-objective-label="3"]{color:#A65900}
 #page7 [data-page7-reveal]{opacity:0;visibility:hidden}
 #page7 .page7-question{opacity:0;visibility:hidden}
+
+/* Page 8 uses stage coordinates throughout; shared navigation owns scaling. */
+#page8 .page8-start-pyramid{position:absolute;left:1058px;top:203px;width:455px;height:516px;pointer-events:none}
+#page8-start-pyramid-svg{display:block;width:100%;height:100%;overflow:visible}
+#page8 .page8-framework{position:absolute;left:965px;top:250px;width:570px;height:500.53125px;opacity:0;visibility:hidden;pointer-events:none}
+#page8-framework-svg{display:block;width:100%;height:100%;overflow:visible}
+#page8 .page8-text{position:absolute;left:91px;top:205px;width:820px;font-size:30px;line-height:1.28}
+#page8 .page8-opening{margin:0}
+#page8 .page8-footnote-marker{font-size:.55em;line-height:0;vertical-align:super}
+#page8 .page8-name{position:absolute;left:91px;top:808px;width:888px;margin:0;color:#626973;font-size:18px;line-height:1.25}
+#page8 .page8-name sup{font-size:.7em;line-height:0;vertical-align:super}
+#page8 .page8-capabilities{margin:36px 0 0;padding-left:37px;list-style-type:disclosure-closed}
+#page8 .page8-capabilities li{padding-left:4px;margin:0 0 22px}
+#page8 .page8-capabilities li::marker{font-size:24px}
+#page8 .page8-term{border-radius:3px;transition:color 225ms,background-color 225ms}
+#page8[data-page8-emphasis="transformations"] .page8-transformations{color:#78001A;background-color:#f8e9ec}
+#page8[data-page8-emphasis="interpretations"] .page8-interpretations{color:#004791;background-color:#eaf2fa}
+@media(prefers-reduced-motion:reduce){#page8 .page8-term{transition:none}}
+#page8 .page8-objective{font-size:24px;font-weight:700;white-space:nowrap}
+#page8 .o1{color:#78001A}#page8 .o2{color:#0029ED}#page8 .o3{color:#A65900}
+#page8 [data-page8-reveal]{opacity:0;visibility:hidden}
+
+/* P12: source-native, individually animated vectors. */
+#page12 .page12-body{position:absolute;inset:0;pointer-events:none}
+#page12 .page12-item{position:absolute;opacity:0;visibility:hidden;transform-origin:0 0}
+#page12 .page12-item img{display:block;width:100%;height:100%}
+#page12 .page12-explanation{font-size:32px;line-height:1.28;font-weight:400;color:#000}
+#page12 .page12-explanation code{font-family:Consolas,monospace;font-size:1em}
+
+/* P13: continuous object morph from P12; isolated slide styling. */
+#page13 .page13-body{position:absolute;inset:0;pointer-events:none}
+#page13 .page13-item{position:absolute;opacity:0;visibility:hidden;transform-origin:0 0}
+#page13 .page13-item img{display:block;width:100%;height:100%}
+#page13 .page13-explanation{font-size:32px;line-height:1.28;font-weight:400;color:#000}
+#page13 .page13-explanation strong{font-weight:700}
+#page13 .page13-explanation code{font-family:Consolas,monospace;font-size:1em}
+#page13 .page13-morph{position:absolute;inset:0;pointer-events:none}
+#page13 .page13-morph-object{position:absolute;transform-origin:0 0}
+#page13 .page13-morph-object>img,#page13 .page13-morph-object>svg{width:100%;height:100%;display:block;overflow:visible}
+
+/* P14: composition entrance from P13; isolated slide styling. */
+#page14 .page14-body{position:absolute;inset:0;pointer-events:none}
+#page14 .page14-item{position:absolute;opacity:0;visibility:hidden;transform-origin:0 0}
+#page14 .page14-item img{display:block;width:100%;height:100%}
+#page14 .page14-explanation{font-size:32px;line-height:1.28;font-weight:400;color:#000}
+#page14 .page14-explanation strong{font-weight:700}
+#page14 .page14-explanation code{font-family:Consolas,monospace;font-size:1em}
+#page14 .page14-morph{position:absolute;inset:0;pointer-events:none}
+#page14 .page14-morph-object{position:absolute;transform-origin:0 0}
+#page14 .page14-morph-object>img,#page14 .page14-morph-object>svg{width:100%;height:100%;display:block;overflow:visible}
+
+#page14 .page14-label{padding-left:37px;box-sizing:border-box}
+#page14 .page14-label::before{content:"▸";position:absolute;left:0;font-size:25px;top:4px}
+
+/* P15: comparison entrance from P14; isolated slide styling. */
+#page15 .page15-body{position:absolute;inset:0;pointer-events:none}
+#page15 .page15-item{position:absolute;opacity:0;visibility:hidden;transform-origin:0 0}
+#page15 .page15-item img{display:block;width:100%;height:100%}
+#page15 .page15-explanation{font-size:32px;line-height:1.28;font-weight:400;color:#000}
+#page15 .page15-explanation strong{font-weight:700}
+#page15 .page15-explanation code{font-family:Consolas,monospace;font-size:1em}
+#page15 .page15-morph{position:absolute;inset:0;pointer-events:none}
+#page15 .page15-morph-object{position:absolute;transform-origin:0 0}
+#page15 .page15-morph-object>img,#page15 .page15-morph-object>svg{width:100%;height:100%;display:block;overflow:visible}
+
+#page15 .page15-label{padding-left:37px;box-sizing:border-box}
+#page15 .page15-label::before{content:"▸";position:absolute;left:0;font-size:25px;top:4px}
+
+/* P16: boundary entrance from P15; isolated slide styling. */
+#page16 .page16-body{position:absolute;inset:0;pointer-events:none}
+#page16 .page16-item{position:absolute;opacity:0;visibility:hidden;transform-origin:0 0}
+#page16 .page16-item img{display:block;width:100%;height:100%}
+#page16 .page16-explanation{font-size:32px;line-height:1.28;font-weight:400;color:#000}
+#page16 .page16-explanation strong{font-weight:700}
+#page16 .page16-explanation code{font-family:Consolas,monospace;font-size:1em}
+#page16 .page16-morph{position:absolute;inset:0;pointer-events:none}
+#page16 .page16-morph-object{position:absolute;transform-origin:0 0}
+#page16 .page16-morph-object>img,#page16 .page16-morph-object>svg{width:100%;height:100%;display:block;overflow:visible}
+
+#page16 .page16-label{padding-left:37px;box-sizing:border-box}
+#page16 .page16-label::before{content:"▸";position:absolute;left:0;font-size:25px;top:4px}
+
+/* P17: typed composition entrance from P16; isolated slide styling. */
+#page17 .page17-body{position:absolute;inset:0;pointer-events:none}
+#page17 .page17-item{position:absolute;opacity:0;visibility:hidden;transform-origin:0 0}
+#page17 .page17-item img{display:block;width:100%;height:100%}
+#page17 .page17-explanation{font-size:32px;line-height:1.28;font-weight:400;color:#000}
+#page17 .page17-explanation strong{font-weight:700}
+#page17 .page17-explanation code{font-family:Consolas,monospace;font-size:1em}
+#page17 .page17-morph{position:absolute;inset:0;pointer-events:none}
+#page17 .page17-morph-object{position:absolute;transform-origin:0 0}
+#page17 .page17-morph-object>img,#page17 .page17-morph-object>svg{width:100%;height:100%;display:block;overflow:visible}
+
+#page17 .page17-label{padding-left:37px;box-sizing:border-box}
+#page17 .page17-label::before{content:"▸";position:absolute;left:0;font-size:25px;top:4px}
+
+/* P17 code emphasis follows P10; diagram outlines retain the source red. */
+#page17 #p17-shape-157,#page17 #p17-shape-158,#page17 #p17-shape-162{z-index:0}
+#page17 #p17-shape-157 img,#page17 #p17-shape-158 img,#page17 #p17-shape-162 img{display:none}
+#page17 #p17-shape-157::before,#page17 #p17-shape-158::before,#page17 #p17-shape-162::before{content:"";position:absolute;inset:3px;background-color:rgba(0,41,237,.1);box-shadow:0 0 0 5px rgba(0,41,237,.1);border-radius:2px}
+#page17 #p17-shape-150,#page17 #p17-shape-152,#page17 #p17-shape-154,#page17 #p17-shape-156{z-index:1}

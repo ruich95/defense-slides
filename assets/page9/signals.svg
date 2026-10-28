@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="p9-signals" viewBox="0 -70 873 213" role="group" aria-label="A synchronous process and synchronous stream pairing">
+ <title>Logical clocks in reactions and stream pairing</title>
+ <desc>Initially, x₁, x₂, x₃ and y₁, y₂, y₃ feed two ports of process P, which produces z₁, z₂, z₃ through one output port. The second samples are highlighted simultaneously. All sequence cells and selected highlights stay fixed in place. The final explanatory view replaces P and its connections with an equivalence arrow, and changes only the right sequence labels to (x₁, y₁), (x₂, y₂), (x₃, y₃). P is not asserted to be invertible or to perform pairing.</desc>
+ <defs>
+  <g id="p9-wave-row">
+   <path fill="none" stroke="#000" stroke-width="1.5" stroke-linejoin="miter" d="M0 11 H47 L58 55 H105 L116 11 H163 L174 55 H221 M0 55 H47 L58 11 H105 L116 55 H163 L174 11 H221 M0 11 V55" />
+  </g>
+  <g id="p9-continuation">
+   <path fill="none" stroke="#fff" stroke-width="7" d="M193 66 C206 46 198 21 214 0" />
+   <path fill="none" stroke="#000" stroke-width="1.5" d="M191 66 C204 46 196 21 212 0 M196 66 C209 46 201 21 217 0" />
+  </g>
+  <marker id="p9-process-arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="6.7" markerUnits="userSpaceOnUse" orient="auto" overflow="visible">
+   <path d="M0 0 L10 5 L0 10 L2.6 5 Z" fill="#000" stroke="none" />
+  </marker>
+ </defs>
+ <text id="p9-logical-instant" class="page9-logical-instant" x="0" y="-44">Logical clocks</text>
+ <g id="p9-instant-labels" class="page9-instant-labels" aria-label="Logical clocks: 1, 2, 3, continuing">
+  <text x="25" y="-14">1</text>
+  <text x="82" y="-14">2</text>
+  <text x="140" y="-14">3</text>
+  <text x="194" y="-14">…</text>
+ </g>
+ <rect id="p9-instant-highlight" class="page9-highlight" x="57" y="5" width="51" height="132" aria-label="Input events x₂ and y₂ at logical clock tick 2" />
+ <g id="p9-left-signals" role="img" aria-label="Two input signals: x₁, x₂, x₃, continuing; y₁, y₂, y₃, continuing">
+  <use href="#p9-wave-row" transform="translate(0 0)" />
+  <use href="#p9-continuation" transform="translate(0 0)" />
+  <use href="#p9-wave-row" transform="translate(0 76)" />
+  <use href="#p9-continuation" transform="translate(0 76)" />
+  <g class="page9-math-labels">
+   <text x="25" y="39" data-value="x₁"><tspan class="page9-math-variable">x</tspan><tspan class="page9-math-sub">1</tspan></text>
+   <text x="82" y="39" data-value="x₂"><tspan class="page9-math-variable">x</tspan><tspan class="page9-math-sub">2</tspan></text>
+   <text x="140" y="39" data-value="x₃"><tspan class="page9-math-variable">x</tspan><tspan class="page9-math-sub">3</tspan></text>
+  </g>
+  <g class="page9-math-labels">
+   <text x="25" y="115" data-value="y₁"><tspan class="page9-math-variable">y</tspan><tspan class="page9-math-sub">1</tspan></text>
+   <text x="82" y="115" data-value="y₂"><tspan class="page9-math-variable">y</tspan><tspan class="page9-math-sub">2</tspan></text>
+   <text x="140" y="115" data-value="y₃"><tspan class="page9-math-variable">y</tspan><tspan class="page9-math-sub">3</tspan></text>
+  </g>
+ </g>
+ <g id="p9-output-signal" role="group" aria-label="Fixed output sequence cells: z values in the process view; paired values in the isomorphism view">
+  <rect id="p9-output-highlight" class="page9-highlight" x="546" y="45" width="100" height="54" aria-label="Selected second event in the fixed right-hand sequence" />
+  <path id="p9-output-boundaries" class="page9-wave-lines" d="M435 50 H536 L547 94 H646 L657 50 H756 L767 94 H811 M435 94 H536 L547 50 H646 L657 94 H756 L767 50 H811 M435 50 V94" />
+  <use href="#p9-continuation" transform="translate(598 39)" />
+ </g>
+ <g id="p9-process-view" data-page9-view="process" role="group" aria-label="Generic synchronous process P with two input ports and one output port">
+  <g id="p9-process-connections" fill="none" stroke="#000" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="butt">
+   <path id="p9-wire-input-x" d="M235 33 H250 Q258 33 258 41 V47 Q258 55 266 55 H280.25" marker-end="url(#p9-process-arrow)" />
+   <path id="p9-wire-input-y" d="M235 109 H250 Q258 109 258 101 V97 Q258 89 266 89 H280.25" marker-end="url(#p9-process-arrow)" />
+   <path id="p9-wire-output-z" d="M383.75 72 H421" marker-end="url(#p9-process-arrow)" />
+  </g>
+  <g id="p9-process-node">
+   <rect id="p9-process-body" class="page9-process-body" x="284" y="38" width="96" height="68" rx="7.5" ry="7.5" />
+   <text id="p9-process-label" class="page9-process-label" x="332" y="81">P</text>
+   <rect id="p9-port-input-x" class="page9-process-port" data-port="input-x" x="280.25" y="51.25" width="7.5" height="7.5" />
+   <rect id="p9-port-input-y" class="page9-process-port" data-port="input-y" x="280.25" y="85.25" width="7.5" height="7.5" />
+   <rect id="p9-port-output-z" class="page9-process-port" data-port="output-z" x="376.25" y="68.25" width="7.5" height="7.5" />
+  </g>
+  <g id="p9-z-labels" role="img" aria-label="Output signal z₁, z₂, z₃, continuing">
+   <g class="page9-math-labels">
+    <text x="486" y="78" data-value="z₁"><tspan class="page9-math-variable">z</tspan><tspan class="page9-math-sub">1</tspan></text>
+    <text x="596" y="78" data-value="z₂"><tspan class="page9-math-variable">z</tspan><tspan class="page9-math-sub">2</tspan></text>
+    <text x="706" y="78" data-value="z₃"><tspan class="page9-math-variable">z</tspan><tspan class="page9-math-sub">3</tspan></text>
+   </g>
+  </g>
+ </g>
+ <g id="p9-pairing" data-page9-view="pairing" role="img" aria-label="Equivalence arrow and paired stream: (x₁, y₁), (x₂, y₂), (x₃, y₃), continuing">
+  <path id="p9-equivalence-arrow" class="page9-equivalence-arrow" d="M311 58 H340 V50 L356 65 H311 Z M355 76 H326 V84 L310 69 H355 Z" />
+  <g class="page9-math-labels">
+   <text x="486" y="78" data-value="(x₁, y₁)">(<tspan class="page9-math-variable">x</tspan><tspan class="page9-math-sub">1</tspan>, <tspan class="page9-math-variable">y</tspan><tspan class="page9-math-sub">1</tspan>)</text>
+   <text x="596" y="78" data-value="(x₂, y₂)">(<tspan class="page9-math-variable">x</tspan><tspan class="page9-math-sub">2</tspan>, <tspan class="page9-math-variable">y</tspan><tspan class="page9-math-sub">2</tspan>)</text>
+   <text x="706" y="78" data-value="(x₃, y₃)">(<tspan class="page9-math-variable">x</tspan><tspan class="page9-math-sub">3</tspan>, <tspan class="page9-math-variable">y</tspan><tspan class="page9-math-sub">3</tspan>)</text>
+  </g>
+ </g>
+</svg>
