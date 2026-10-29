@@ -1,0 +1,893 @@
+{
+  "source": "AEiC slides13–14",
+  "entrance": {
+    "duration": 1000,
+    "predecessor": "page17",
+    "matches": [
+      {
+        "sourceId": 11,
+        "targetId": null,
+        "sourceName": "Freeform 10",
+        "box": {
+          "x": 573.2,
+          "y": 292.00000000000006,
+          "width": 215.00000000000006,
+          "height": 59.000000000000014
+        },
+        "vectorMorph": false
+      },
+      {
+        "sourceId": 246,
+        "targetId": null,
+        "sourceName": "!!InSeqG",
+        "box": {
+          "x": 663.2,
+          "y": 300.00000000000006,
+          "width": 42.00000000000001,
+          "height": 18.000000000000004
+        },
+        "vectorMorph": false
+      },
+      {
+        "sourceId": 247,
+        "targetId": null,
+        "sourceName": "!!OutSeqG",
+        "box": {
+          "x": 748.2,
+          "y": 300.00000000000006,
+          "width": 43.00000000000001,
+          "height": 18.000000000000004
+        },
+        "vectorMorph": false
+      },
+      {
+        "sourceId": 12,
+        "targetId": null,
+        "sourceName": "Graphic 7",
+        "box": {
+          "x": 781.2,
+          "y": 304.00000000000006,
+          "width": 10.000000000000002,
+          "height": 35.00000000000001
+        },
+        "vectorMorph": false
+      },
+      {
+        "sourceId": 16,
+        "targetId": null,
+        "sourceName": "Freeform 15",
+        "box": {
+          "x": 577.2,
+          "y": 313.00000000000006,
+          "width": 43.00000000000001,
+          "height": 18.000000000000004
+        },
+        "vectorMorph": false
+      },
+      {
+        "sourceId": 17,
+        "targetId": null,
+        "sourceName": "Freeform 16",
+        "box": {
+          "x": 660.2,
+          "y": 313.00000000000006,
+          "width": 131.00000000000003,
+          "height": 29.000000000000007
+        },
+        "vectorMorph": false
+      },
+      {
+        "sourceId": 18,
+        "targetId": null,
+        "sourceName": "Freeform 17",
+        "box": {
+          "x": 574.2,
+          "y": 313.00000000000006,
+          "width": 131.00000000000003,
+          "height": 29.000000000000007
+        },
+        "vectorMorph": false
+      },
+      {
+        "sourceId": 19,
+        "targetId": null,
+        "sourceName": "Freeform 18",
+        "box": {
+          "x": 745.2,
+          "y": 320.00000000000006,
+          "width": 46.00000000000001,
+          "height": 23.000000000000004
+        },
+        "vectorMorph": false
+      },
+      {
+        "sourceId": 36,
+        "targetId": null,
+        "sourceName": "Graphic 7",
+        "box": {
+          "x": 570.2,
+          "y": 304.00000000000006,
+          "width": 10.000000000000002,
+          "height": 35.00000000000001
+        },
+        "vectorMorph": false
+      },
+      {
+        "sourceId": 64,
+        "targetId": null,
+        "sourceName": "!!ProcessF",
+        "box": {
+          "x": 610.2,
+          "y": 297.00000000000006,
+          "width": 55.000000000000014,
+          "height": 37.00000000000001
+        },
+        "vectorMorph": false
+      },
+      {
+        "sourceId": 65,
+        "targetId": null,
+        "sourceName": "!!ProcessG",
+        "box": {
+          "x": 695.2,
+          "y": 297.00000000000006,
+          "width": 56.000000000000014,
+          "height": 37.00000000000001
+        },
+        "vectorMorph": false
+      },
+      {
+        "sourceId": 60,
+        "targetId": null,
+        "sourceName": "!!InSeqF",
+        "box": {
+          "x": 578.2,
+          "y": 300.00000000000006,
+          "width": 41.00000000000001,
+          "height": 18.000000000000004
+        },
+        "vectorMorph": false
+      },
+      {
+        "sourceId": 425,
+        "targetId": null,
+        "sourceName": "Freeform 424",
+        "box": {
+          "x": 572.2,
+          "y": 680.0000000000001,
+          "width": 217.00000000000006,
+          "height": 69.00000000000001
+        },
+        "vectorMorph": false
+      },
+      {
+        "sourceId": 426,
+        "targetId": null,
+        "sourceName": "Rectangle 425",
+        "box": {
+          "x": 782.2,
+          "y": 692.0000000000001,
+          "width": 10.000000000000002,
+          "height": 10.000000000000002
+        },
+        "vectorMorph": false
+      },
+      {
+        "sourceId": 427,
+        "targetId": null,
+        "sourceName": "Rectangle 426",
+        "box": {
+          "x": 569.2,
+          "y": 692.0000000000001,
+          "width": 10.000000000000002,
+          "height": 10.000000000000002
+        },
+        "vectorMorph": false
+      },
+      {
+        "sourceId": 428,
+        "targetId": null,
+        "sourceName": "Graphic 421",
+        "box": {
+          "x": 782.2,
+          "y": 705.0000000000001,
+          "width": 10.000000000000002,
+          "height": 36.00000000000001
+        },
+        "vectorMorph": false
+      },
+      {
+        "sourceId": 432,
+        "targetId": null,
+        "sourceName": "Graphic 421",
+        "box": {
+          "x": 569.2,
+          "y": 705.0000000000001,
+          "width": 10.000000000000002,
+          "height": 36.00000000000001
+        },
+        "vectorMorph": false
+      },
+      {
+        "sourceId": 384,
+        "targetId": null,
+        "sourceName": "!!InParF",
+        "box": {
+          "x": 576.2,
+          "y": 695.0000000000001,
+          "width": 49.000000000000014,
+          "height": 24.000000000000007
+        },
+        "vectorMorph": false
+      },
+      {
+        "sourceId": 387,
+        "targetId": null,
+        "sourceName": "!!ProcessF3",
+        "box": {
+          "x": 615.2,
+          "y": 698.0000000000001,
+          "width": 56.000000000000014,
+          "height": 37.00000000000001
+        },
+        "vectorMorph": false
+      },
+      {
+        "sourceId": 402,
+        "targetId": null,
+        "sourceName": "!!ProcessG3",
+        "box": {
+          "x": 700.2,
+          "y": 698.0000000000001,
+          "width": 56.000000000000014,
+          "height": 37.00000000000001
+        },
+        "vectorMorph": false
+      },
+      {
+        "sourceId": 412,
+        "targetId": null,
+        "sourceName": "!!InParG",
+        "box": {
+          "x": 576.2,
+          "y": 689.0000000000001,
+          "width": 134.00000000000003,
+          "height": 30.000000000000007
+        },
+        "vectorMorph": false
+      },
+      {
+        "sourceId": 413,
+        "targetId": null,
+        "sourceName": "!!OutParF",
+        "box": {
+          "x": 668.2,
+          "y": 688.0000000000001,
+          "width": 124.00000000000003,
+          "height": 24.000000000000007
+        },
+        "vectorMorph": false
+      },
+      {
+        "sourceId": 416,
+        "targetId": null,
+        "sourceName": "!!OutParG",
+        "box": {
+          "x": 754.2,
+          "y": 701.0000000000001,
+          "width": 38.00000000000001,
+          "height": 18.000000000000004
+        },
+        "vectorMorph": false
+      },
+      {
+        "sourceId": 442,
+        "targetId": null,
+        "sourceName": "!!SetF31",
+        "box": {
+          "x": 664.2,
+          "y": 715.0000000000001,
+          "width": 128.00000000000003,
+          "height": 28.000000000000007
+        },
+        "vectorMorph": false
+      },
+      {
+        "sourceId": 443,
+        "targetId": null,
+        "sourceName": "GetG31",
+        "box": {
+          "x": 576.2,
+          "y": 714.0000000000001,
+          "width": 133.00000000000003,
+          "height": 29.000000000000007
+        },
+        "vectorMorph": false
+      },
+      {
+        "sourceId": 457,
+        "targetId": null,
+        "sourceName": "!!InPar2",
+        "box": {
+          "x": 576.2,
+          "y": 714.0000000000001,
+          "width": 49.000000000000014,
+          "height": 18.000000000000004
+        },
+        "vectorMorph": false
+      },
+      {
+        "sourceId": 462,
+        "targetId": null,
+        "sourceName": "Graphic 460",
+        "box": {
+          "x": 749.2,
+          "y": 722.0000000000001,
+          "width": 43.00000000000001,
+          "height": 22.000000000000004
+        },
+        "vectorMorph": false
+      },
+      {
+        "sourceId": 453,
+        "targetId": null,
+        "sourceName": "!!Arrow: Left-Right 594",
+        "box": {
+          "x": 500,
+          "y": 475,
+          "width": 70,
+          "height": 28
+        },
+        "vectorMorph": false
+      },
+      {
+        "sourceId": 458,
+        "targetId": null,
+        "sourceName": "TextBox 457",
+        "box": {
+          "x": 494,
+          "y": 439,
+          "width": 93.75000000000001,
+          "height": 65.00000000000001
+        },
+        "vectorMorph": false
+      },
+      {
+        "sourceId": 459,
+        "targetId": null,
+        "sourceName": "SeqCpy",
+        "box": {
+          "x": 110.89062499999997,
+          "y": 280.00000000000006,
+          "width": 347.00000000000006,
+          "height": 83.00000000000001
+        },
+        "vectorMorph": false
+      },
+      {
+        "sourceId": 500,
+        "targetId": null,
+        "sourceName": "Group 499",
+        "box": {
+          "x": 189.390625,
+          "y": 435.00000000000006,
+          "width": 190.00000000000003,
+          "height": 106.00000000000003
+        },
+        "vectorMorph": false
+      },
+      {
+        "sourceId": 79,
+        "targetId": null,
+        "sourceName": "Group 78",
+        "box": {
+          "x": 189.390625,
+          "y": 631.0000000000001,
+          "width": 190.00000000000003,
+          "height": 168.00000000000003
+        },
+        "vectorMorph": false
+      },
+      {
+        "sourceId": 254,
+        "targetId": null,
+        "sourceName": "Group 253",
+        "box": {
+          "x": 611.2,
+          "y": 429.00000000000006,
+          "width": 138.00000000000003,
+          "height": 61.000000000000014
+        },
+        "vectorMorph": false
+      },
+      {
+        "sourceId": 175,
+        "targetId": null,
+        "sourceName": "!!InPTId",
+        "box": {
+          "x": 619.2,
+          "y": 438.00000000000006,
+          "width": 129.00000000000003,
+          "height": 17.000000000000004
+        },
+        "vectorMorph": false
+      },
+      {
+        "sourceId": 176,
+        "targetId": null,
+        "sourceName": "!!ProcessF2",
+        "box": {
+          "x": 652.2,
+          "y": 447.00000000000006,
+          "width": 57.000000000000014,
+          "height": 38.00000000000001
+        },
+        "vectorMorph": false
+      },
+      {
+        "sourceId": 229,
+        "targetId": null,
+        "sourceName": "!!InPTF2",
+        "box": {
+          "x": 619.2,
+          "y": 451.00000000000006,
+          "width": 42.00000000000001,
+          "height": 17.000000000000004
+        },
+        "vectorMorph": false
+      },
+      {
+        "sourceId": 230,
+        "targetId": null,
+        "sourceName": "!!OutPTF2",
+        "box": {
+          "x": 707.2,
+          "y": 451.00000000000006,
+          "width": 42.00000000000001,
+          "height": 17.000000000000004
+        },
+        "vectorMorph": false
+      },
+      {
+        "sourceId": 267,
+        "targetId": null,
+        "sourceName": "!!InPTF2",
+        "box": {
+          "x": 619.2,
+          "y": 464.00000000000006,
+          "width": 42.00000000000001,
+          "height": 17.000000000000004
+        },
+        "vectorMorph": false
+      },
+      {
+        "sourceId": 268,
+        "targetId": null,
+        "sourceName": "!!InPTF2",
+        "box": {
+          "x": 707.2,
+          "y": 464.00000000000006,
+          "width": 42.00000000000001,
+          "height": 17.000000000000004
+        },
+        "vectorMorph": false
+      },
+      {
+        "sourceId": 454,
+        "targetId": null,
+        "sourceName": "Freeform 453",
+        "box": {
+          "x": 616.2,
+          "y": 496.0000000000001,
+          "width": 131.00000000000003,
+          "height": 60.000000000000014
+        },
+        "vectorMorph": false
+      },
+      {
+        "sourceId": 455,
+        "targetId": null,
+        "sourceName": "Graphic 7",
+        "box": {
+          "x": 740.2,
+          "y": 508.0000000000001,
+          "width": 10.000000000000002,
+          "height": 36.00000000000001
+        },
+        "vectorMorph": false
+      },
+      {
+        "sourceId": 130,
+        "targetId": null,
+        "sourceName": "Freeform 129",
+        "box": {
+          "x": 621.2,
+          "y": 504.0000000000001,
+          "width": 42.00000000000001,
+          "height": 18.000000000000004
+        },
+        "vectorMorph": false
+      },
+      {
+        "sourceId": 131,
+        "targetId": null,
+        "sourceName": "Freeform 130",
+        "box": {
+          "x": 708.2,
+          "y": 504.0000000000001,
+          "width": 42.00000000000001,
+          "height": 18.000000000000004
+        },
+        "vectorMorph": false
+      },
+      {
+        "sourceId": 132,
+        "targetId": null,
+        "sourceName": "Freeform 131",
+        "box": {
+          "x": 620.2,
+          "y": 517.0000000000001,
+          "width": 130.00000000000003,
+          "height": 27.000000000000007
+        },
+        "vectorMorph": false
+      },
+      {
+        "sourceId": 133,
+        "targetId": null,
+        "sourceName": "Rounded Rectangle 132",
+        "box": {
+          "x": 656.2,
+          "y": 501.0000000000001,
+          "width": 50.000000000000014,
+          "height": 37.00000000000001
+        },
+        "vectorMorph": false
+      },
+      {
+        "sourceId": 134,
+        "targetId": null,
+        "sourceName": "Graphic 7",
+        "box": {
+          "x": 699.2,
+          "y": 508.0000000000001,
+          "width": 10.000000000000002,
+          "height": 23.000000000000004
+        },
+        "vectorMorph": false
+      },
+      {
+        "sourceId": 137,
+        "targetId": null,
+        "sourceName": "Graphic 7",
+        "box": {
+          "x": 653.2,
+          "y": 508.0000000000001,
+          "width": 10.000000000000002,
+          "height": 23.000000000000004
+        },
+        "vectorMorph": false
+      },
+      {
+        "sourceId": 140,
+        "targetId": null,
+        "sourceName": "Graphic 7",
+        "box": {
+          "x": 613.2,
+          "y": 508.0000000000001,
+          "width": 10.000000000000002,
+          "height": 36.00000000000001
+        },
+        "vectorMorph": false
+      },
+      {
+        "sourceId": 144,
+        "targetId": null,
+        "sourceName": "Freeform 143",
+        "box": {
+          "x": 674.2,
+          "y": 507.0000000000001,
+          "width": 14.000000000000004,
+          "height": 25.000000000000007
+        },
+        "vectorMorph": false
+      },
+      {
+        "sourceId": 145,
+        "targetId": null,
+        "sourceName": "Freeform 144",
+        "box": {
+          "x": 708.2,
+          "y": 524.0000000000001,
+          "width": 42.00000000000001,
+          "height": 24.000000000000007
+        },
+        "vectorMorph": false
+      },
+      {
+        "sourceId": 146,
+        "targetId": null,
+        "sourceName": "Freeform 145",
+        "box": {
+          "x": 621.2,
+          "y": 517.0000000000001,
+          "width": 42.00000000000001,
+          "height": 24.000000000000007
+        },
+        "vectorMorph": false
+      },
+      {
+        "sourceId": 150,
+        "targetId": null,
+        "sourceName": "Graphic 149",
+        "box": {
+          "x": 810,
+          "y": 275,
+          "width": 714.5357708333335,
+          "height": 85.5
+        },
+        "vectorMorph": false
+      },
+      {
+        "sourceId": 152,
+        "targetId": null,
+        "sourceName": "Graphic 151",
+        "box": {
+          "x": 810,
+          "y": 432,
+          "width": 632.0,
+          "height": 54.0
+        },
+        "vectorMorph": false
+      },
+      {
+        "sourceId": 154,
+        "targetId": null,
+        "sourceName": "Graphic 153",
+        "box": {
+          "x": 810,
+          "y": 512,
+          "width": 632.0,
+          "height": 54.0
+        },
+        "vectorMorph": false
+      },
+      {
+        "sourceId": 156,
+        "targetId": null,
+        "sourceName": "Graphic 155",
+        "box": {
+          "x": 810,
+          "y": 650,
+          "width": 714.9602481764942,
+          "height": 118.6843054214331
+        },
+        "vectorMorph": false
+      },
+      {
+        "sourceId": 6,
+        "targetId": null,
+        "sourceName": "P17 text",
+        "box": {
+          "x": 91,
+          "y": 175,
+          "width": 1419,
+          "height": 50
+        },
+        "vectorMorph": false
+      },
+      {
+        "sourceId": 126,
+        "targetId": null,
+        "sourceName": "P17 text",
+        "box": {
+          "x": 91,
+          "y": 220,
+          "width": 1419,
+          "height": 50
+        },
+        "vectorMorph": false
+      },
+      {
+        "sourceId": 127,
+        "targetId": null,
+        "sourceName": "P17 text",
+        "box": {
+          "x": 91,
+          "y": 380,
+          "width": 1419,
+          "height": 50
+        },
+        "vectorMorph": false
+      },
+      {
+        "sourceId": 128,
+        "targetId": null,
+        "sourceName": "P17 text",
+        "box": {
+          "x": 91,
+          "y": 562,
+          "width": 1419,
+          "height": 50
+        },
+        "vectorMorph": false
+      }
+    ]
+  },
+  "internal": {
+    "duration": 500,
+    "matches": [
+      {
+        "sourceId": 16,
+        "targetId": 11,
+        "sourceName": "!!FBSys",
+        "box": {
+          "x": 740.0000000000001,
+          "y": 347.50000000000006,
+          "width": 120.00000000000003,
+          "height": 68.75000000000001
+        },
+        "vectorMorph": true
+      },
+      {
+        "sourceId": 17,
+        "targetId": 13,
+        "sourceName": "!!Get4",
+        "box": {
+          "x": 723.7500000000001,
+          "y": 375.00000000000006,
+          "width": 30.000000000000007,
+          "height": 23.750000000000004
+        },
+        "vectorMorph": true
+      },
+      {
+        "sourceId": 18,
+        "targetId": 39,
+        "sourceName": "!!Get2",
+        "box": {
+          "x": 702.5000000000001,
+          "y": 383.75000000000006,
+          "width": 20.000000000000004,
+          "height": 6.250000000000001
+        },
+        "vectorMorph": true
+      },
+      {
+        "sourceId": 20,
+        "targetId": 41,
+        "sourceName": "!!Get3",
+        "box": {
+          "x": 718.7500000000001,
+          "y": 383.75000000000006,
+          "width": 10.000000000000002,
+          "height": 6.250000000000001
+        },
+        "vectorMorph": true
+      },
+      {
+        "sourceId": 24,
+        "targetId": 43,
+        "sourceName": "!!Set1",
+        "box": {
+          "x": 858.7500000000001,
+          "y": 383.75000000000006,
+          "width": 17.500000000000004,
+          "height": 6.250000000000001
+        },
+        "vectorMorph": true
+      },
+      {
+        "sourceId": 27,
+        "targetId": 50,
+        "sourceName": "!!Set2",
+        "box": {
+          "x": 872.5000000000001,
+          "y": 383.75000000000006,
+          "width": 18.750000000000004,
+          "height": 6.250000000000001
+        },
+        "vectorMorph": true
+      },
+      {
+        "sourceId": 29,
+        "targetId": 52,
+        "sourceName": "!!FBDly",
+        "box": {
+          "x": 776.2500000000001,
+          "y": 428.75000000000006,
+          "width": 47.50000000000001,
+          "height": 48.75000000000001
+        },
+        "vectorMorph": true
+      },
+      {
+        "sourceId": 32,
+        "targetId": 55,
+        "sourceName": "!!Get1",
+        "box": {
+          "x": 695.0000000000001,
+          "y": 383.75000000000006,
+          "width": 83.75000000000001,
+          "height": 71.25000000000001
+        },
+        "vectorMorph": true
+      },
+      {
+        "sourceId": 34,
+        "targetId": 56,
+        "sourceName": "!!Set3",
+        "box": {
+          "x": 810.0000000000001,
+          "y": 383.75000000000006,
+          "width": 95.00000000000001,
+          "height": 81.25000000000001
+        },
+        "vectorMorph": true
+      }
+    ]
+  },
+  "groups": [
+    {
+      "events": [
+        {
+          "id": 64,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "clickEffect"
+        },
+        {
+          "id": 66,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect"
+        },
+        {
+          "id": 23,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect"
+        }
+      ],
+      "duration": 1
+    },
+    {
+      "events": [
+        {
+          "id": 64,
+          "kind": "exit",
+          "start": 0,
+          "duration": 1,
+          "relation": "clickEffect"
+        },
+        {
+          "id": 66,
+          "kind": "exit",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect"
+        },
+        {
+          "id": 62,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect"
+        },
+        {
+          "id": 81,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect"
+        }
+      ],
+      "duration": 1
+    }
+  ],
+  "entranceResolution": "No verified corresponding diagram objects between original slide12 and13. Depart actual P17 objects individually; introduce the genuinely new feedback drawing, without inventing composition-to-feedback matches.",
+  "internalResolution": "Unique forced !! names and matching semantic roles: FBSys,Get1–4,Set1–3,FBDly; ids are local to each scene."
+}

@@ -1,0 +1,252 @@
+{
+  "source": "AEiC slide21",
+  "groups": [
+    {
+      "events": [
+        {
+          "id": 7,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "clickEffect"
+        },
+        {
+          "id": 9,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect"
+        },
+        {
+          "id": 43,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect"
+        }
+      ],
+      "duration": 1
+    },
+    {
+      "events": [
+        {
+          "id": 57,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "clickEffect",
+          "nativeHideOnNextClick": true
+        },
+        {
+          "id": 65,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "nativeHideOnNextClick": true
+        },
+        {
+          "id": 63,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "nativeHideOnNextClick": true
+        }
+      ],
+      "duration": 1
+    },
+    {
+      "events": [
+        {
+          "id": 69,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "clickEffect",
+          "nativeHideOnNextClick": true
+        },
+        {
+          "id": 68,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "nativeHideOnNextClick": true
+        },
+        {
+          "id": 62,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "nativeHideOnNextClick": true
+        }
+      ],
+      "duration": 1
+    },
+    {
+      "events": [
+        {
+          "id": 36,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "clickEffect",
+          "nativeHideOnNextClick": true
+        },
+        {
+          "id": 48,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "nativeHideOnNextClick": true
+        },
+        {
+          "id": 53,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "nativeHideOnNextClick": true
+        },
+        {
+          "id": 9,
+          "kind": "exit",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect"
+        },
+        {
+          "id": 43,
+          "kind": "exit",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect"
+        }
+      ],
+      "duration": 1
+    },
+    {
+      "events": [
+        {
+          "id": 37,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "clickEffect",
+          "nativeHideOnNextClick": true
+        },
+        {
+          "id": 50,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "nativeHideOnNextClick": true
+        }
+      ],
+      "duration": 1
+    },
+    {
+      "events": [
+        {
+          "id": 38,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "clickEffect",
+          "nativeHideOnNextClick": true
+        },
+        {
+          "id": 51,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "nativeHideOnNextClick": true
+        }
+      ],
+      "duration": 1
+    },
+    {
+      "events": [
+        {
+          "id": 39,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "clickEffect",
+          "nativeHideOnNextClick": true
+        },
+        {
+          "id": 52,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "nativeHideOnNextClick": true
+        }
+      ],
+      "duration": 1
+    },
+    {
+      "events": [
+        {
+          "id": 40,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "clickEffect",
+          "nativeHideOnNextClick": true
+        },
+        {
+          "id": 55,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "nativeHideOnNextClick": true
+        }
+      ],
+      "duration": 1
+    },
+    {
+      "events": [
+        {
+          "id": 41,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "clickEffect"
+        },
+        {
+          "id": 56,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect"
+        }
+      ],
+      "duration": 1
+    }
+  ],
+  "adaptation": "The requested full-model/cumulative composition replaces white code masks with pale-blue semantic cues, and overrides native hide-on-next-click settings for cues/callouts. Source trigger groups and explicit exits remain exact. Logical diagram visibility accumulates; only the latest frame paints, avoiding transparent-PNG ghosting.",
+  "maskRoles": {
+    "43": "State / input / output types",
+    "48": "Definition name",
+    "50": "Input binding with abst",
+    "51": "Read previous value",
+    "52": "Supply next value"
+  },
+  "frameMap": {
+    "9": "image78.png",
+    "36": "image72.png",
+    "37": "image73.png",
+    "38": "image74.png",
+    "39": "image75.png",
+    "40": "image76.png",
+    "41": "image77.png"
+  }
+}

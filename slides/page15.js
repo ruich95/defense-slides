@@ -1,6 +1,6 @@
 window.slideFactories.page15=()=>{
  const data=@@PAGE15_DATA@@,root=document.getElementById('page15'),body=root.querySelector('.page15-body'),ns='http://www.w3.org/2000/svg',nodes=new Map(data.shapes.map(s=>[s.id,root.querySelector('#p15-shape-'+s.id)]));
- const states=[{name:'Networks and composite components',note:data.notes[0]+'\n\nSource: AEiC-26.pptx slide 10. A 750 ms object entrance from P14; no internal clicks. Source mapping: assets/page15/morph-map.json.'}];
+ const states=[{name:'Networks and composite components',note:data.notes[0]+'\n\nSource: AEiC-26.pptx slide 10. A 750 ms internal object Morph from the composition scene. Source mapping: assets/page15/morph-map.json.'}];
  let generation=0,busy=false,raf=0,resolveMotion=null;
  const overlay=document.createElement('div');overlay.className='page15-morph';overlay.hidden=true;root.append(overlay);
  const clamp=t=>Math.max(0,Math.min(1,t)),box=s=>({x:s.left,y:s.top,width:s.width*s.scale,height:s.height*s.scale});

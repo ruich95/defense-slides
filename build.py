@@ -389,9 +389,86 @@ def main():
         scale = shape['scale']
         classes = 'page17-item' + (' page17-explanation' if not content else '') + (' page17-label' if shape['role']=='label' else '')
         p17_content.append(f'<div id="p17-shape-{shape["id"]}" class="{classes}" data-source-id="{shape["id"]}" style="left:{shape["left"]}px;top:{shape["top"]}px;width:{shape["width"]*scale}px;height:{shape["height"]*scale}px">{body}</div>')
+    p18 = json.loads((HERE / 'assets/page18/animation.json').read_text(encoding='utf8'))
+    p18_content = []
+    for name, scene in p18['scenes'].items():
+        parts = []
+        for shape in scene['shapes']:
+            content = shape.pop('uri', None)
+            body = '<img alt="" src="' + content + '">' if content else shape['html']
+            scale = shape['scale']
+            parts.append(f'<div id="p18-{name}-{shape["id"]}" class="page18-item" data-source-scene="{name}" data-source-id="{shape["id"]}" style="left:{shape["left"]}px;top:{shape["top"]}px;width:{shape["width"]*scale}px;height:{shape["height"]*scale}px">{body}</div>')
+        p18_content.append('<div class="page18-scene" data-page18-scene="' + name + '">' + ''.join(parts) + '</div>')
+    p19 = json.loads((HERE / 'assets/page19/animation.json').read_text(encoding='utf8'))
+    p19_content = []
+    for name, scene in p19['scenes'].items():
+        parts = []
+        for shape in scene['shapes']:
+            content = shape.pop('uri', None)
+            body = '<img alt="" src="' + content + '">' if content else shape['html']
+            scale = shape['scale']
+            parts.append(f'<div id="p19-{name}-{shape["id"]}" class="page19-item" data-source-scene="{name}" data-source-id="{shape["id"]}" style="left:{shape["left"]}px;top:{shape["top"]}px;width:{shape["width"]*scale}px;height:{shape["height"]*scale}px">{body}</div>')
+        p19_content.append('<div class="page19-scene" data-page19-scene="' + name + '">' + ''.join(parts) + '</div>')
+    p20 = json.loads((HERE / 'assets/page20/animation.json').read_text(encoding='utf8'))
+    p20_content = []
+    for name, scene in p20['scenes'].items():
+        parts = []
+        for shape in scene['shapes']:
+            content = shape.pop('uri', None)
+            body = '<img alt="" src="' + content + '">' if content else shape['html']
+            scale = shape['scale']
+            parts.append(f'<div id="p20-{name}-{shape["id"]}" class="page20-item{' page20-label' if shape['role']=='label' else ''}" data-source-scene="{name}" data-source-id="{shape["id"]}" style="left:{shape["left"]}px;top:{shape["top"]}px;width:{shape["width"]*scale}px;height:{shape["height"]*scale}px">{body}</div>')
+        p20_content.append('<div class="page20-scene" data-page20-scene="' + name + '">' + ''.join(parts) + '</div>')
+    p21 = json.loads((HERE / 'assets/page21/animation.json').read_text(encoding='utf8'))
+    p21_content = []
+    for name, scene in p21['scenes'].items():
+        parts = []
+        for shape in scene['shapes']:
+            content = shape.pop('uri', None)
+            body = '<img alt="" src="' + content + '">' if content else shape['html']
+            scale = shape['scale']
+            parts.append(f'<div id="p21-{name}-{shape["id"]}" class="page21-item{' page21-label' if shape['role']=='label' else ''}" data-source-scene="{name}" data-source-id="{shape["id"]}" style="left:{shape["left"]}px;top:{shape["top"]}px;width:{shape["width"]*scale}px;height:{shape["height"]*scale}px">{body}</div>')
+        p21_content.append('<div class="page21-scene" data-page21-scene="' + name + '">' + ''.join(parts) + '</div>')
+    p22 = json.loads((HERE / 'assets/page22/animation.json').read_text(encoding='utf8'))
+    p22_content = []
+    for shape in p22['shapes']:
+        content = shape.pop('uri', None)
+        body = '<img alt="" src="' + content + '">' if content else shape['html']
+        scale = shape['scale']
+        p22_content.append(f'<div id="p22-shape-{shape["id"]}" class="page22-item page22-{shape["role"]}" data-source-id="{shape["id"]}" style="left:{shape["left"]}px;top:{shape["top"]}px;width:{shape["width"]*scale}px;height:{shape["height"]*scale}px">{body}</div>')
+    p23 = json.loads((HERE / 'assets/page23/animation.json').read_text(encoding='utf8'))
+    p23_content = []
+    for shape in p23['shapes']:
+        content = shape.pop('uri', None)
+        body = '<img alt="" src="' + content + '">' if content else shape['html']
+        scale = shape['scale']
+        p23_content.append(f'<div id="p23-shape-{shape["id"]}" class="page23-item page23-{shape["role"]}" data-source-id="{shape["id"]}" style="left:{shape["left"]}px;top:{shape["top"]}px;width:{shape["width"]*scale}px;height:{shape["height"]*scale}px">{body}</div>')
+    p24 = json.loads((HERE / 'assets/page24/animation.json').read_text(encoding='utf8'))
+    p24_content = []
+    for shape in p24['shapes']:
+        content = shape.pop('uri', None)
+        body = '<img alt="" src="' + content + '">' if content else shape['html']
+        scale = shape['scale']
+        p24_content.append(f'<div id="p24-shape-{shape["id"]}" class="page24-item page24-{shape["role"]}" data-source-id="{shape["id"]}" style="left:{shape["left"]}px;top:{shape["top"]}px;width:{shape["width"]*scale}px;height:{shape["height"]*scale}px">{body}</div>')
     replacements = {
+        '@@PAGE25_TYPE@@': data(HERE / 'assets/page25/image79.svg', 'image/svg+xml'),
+        '@@PAGE25_PROOF@@': data(HERE / 'assets/page25/image85.png', 'image/png'),
+        '@@PAGE24_CONTENT@@': '\n'.join(p24_content),
+        '@@PAGE24_DATA@@': json.dumps(p24, ensure_ascii=False).replace('</', '<\\/'),
+        '@@PAGE23_CONTENT@@': '\n'.join(p23_content),
+        '@@PAGE23_DATA@@': json.dumps(p23, ensure_ascii=False).replace('</', '<\\/'),
+        '@@PAGE22_CONTENT@@': '\n'.join(p22_content),
+        '@@PAGE22_DATA@@': json.dumps(p22, ensure_ascii=False).replace('</', '<\\/'),
+        '@@PAGE21_CONTENT@@': '\n'.join(p21_content),
+        '@@PAGE21_DATA@@': json.dumps(p21, ensure_ascii=False).replace('</', '<\\/'),
+        '@@PAGE20_CONTENT@@': '\n'.join(p20_content),
+        '@@PAGE20_DATA@@': json.dumps(p20, ensure_ascii=False).replace('</', '<\\/'),
+        '@@PAGE19_CONTENT@@': '\n'.join(p19_content),
+        '@@PAGE19_DATA@@': json.dumps(p19, ensure_ascii=False).replace('</', '<\\/'),
         '@@COVER@@': data(HERE / 'assets/cover.svg', 'image/svg+xml'),
         '@@LOGO@@': data(HERE / 'assets/kth-logo.svg', 'image/svg+xml'),
+        '@@PAGE18_CONTENT@@': '\n'.join(p18_content),
+        '@@PAGE18_DATA@@': json.dumps(p18, ensure_ascii=False).replace('</', '<\\/'),
         '@@PAGE17_CONTENT@@': '\n'.join(p17_content),
         '@@PAGE17_DATA@@': json.dumps(p17, ensure_ascii=False).replace('</', '<\\/'),
         '@@PAGE16_CONTENT@@': '\n'.join(p16_content),
@@ -420,17 +497,32 @@ def main():
         '@@ES_AIRCRAFT@@': data(HERE / 'assets/embedded-systems/aircraft-attitude-control.png', 'image/png'),
     }
     slides, controllers = {}, {}
-    for entry in entries:
+    source_entries = [scene for entry in entries for scene in entry.get('scenes', [entry])]
+    for entry in source_entries:
         content = (HERE / entry['source']).read_text(encoding='utf8')
         for key, value in replacements.items():
             content = content.replace(key, value)
-        position = entries.index(entry) + 1
-        content = content.replace('class="footer-page">2</span>', f'class="footer-page">{position}</span>')
+        position = next(i for i, e in enumerate(entries, 1) if e is entry or entry in e.get('scenes', []))
+        content = re.sub(r'class="footer-page">\d+</span>', f'class="footer-page">{position}</span>', content)
         if 'aria-label="Slide ' in content:
-            content = content.replace('aria-label="Slide 2:', f'aria-label="Slide {position}:')
+            content = re.sub(r'aria-label="Slide \d+:', f'aria-label="Slide {position}:', content)
         slides[entry['id']] = content
         if entry.get('controller'):
             controllers[entry['id']] = (HERE / entry['controller']).read_text(encoding='utf8')
+            if entry['id'] == 'page24':
+                controllers[entry['id']] = controllers[entry['id']].replace('@@PAGE24_DATA@@', replacements['@@PAGE24_DATA@@'])
+            if entry['id'] == 'page23':
+                controllers[entry['id']] = controllers[entry['id']].replace('@@PAGE23_DATA@@', replacements['@@PAGE23_DATA@@'])
+            if entry['id'] == 'page22':
+                controllers[entry['id']] = controllers[entry['id']].replace('@@PAGE22_DATA@@', replacements['@@PAGE22_DATA@@'])
+            if entry['id'] == 'page21':
+                controllers[entry['id']] = controllers[entry['id']].replace('@@PAGE21_DATA@@', replacements['@@PAGE21_DATA@@'])
+            if entry['id'] == 'page20':
+                controllers[entry['id']] = controllers[entry['id']].replace('@@PAGE20_DATA@@', replacements['@@PAGE20_DATA@@'])
+            if entry['id'] == 'page19':
+                controllers[entry['id']] = controllers[entry['id']].replace('@@PAGE19_DATA@@', replacements['@@PAGE19_DATA@@'])
+            if entry['id'] == 'page18':
+                controllers[entry['id']] = controllers[entry['id']].replace('@@PAGE18_DATA@@', replacements['@@PAGE18_DATA@@'])
             if entry['id'] == 'page17':
                 controllers[entry['id']] = controllers[entry['id']].replace('@@PAGE17_DATA@@', replacements['@@PAGE17_DATA@@'])
             if entry['id'] == 'page16':
@@ -445,6 +537,11 @@ def main():
                 controllers[entry['id']] = controllers[entry['id']].replace('@@PAGE12_DATA@@', replacements['@@PAGE12_DATA@@'])
             if entry['id'] == 'page11':
                 controllers[entry['id']] = controllers[entry['id']].replace('@@PAGE11_DATA@@', replacements['@@PAGE11_DATA@@'])
+    for entry in entries:
+        if not entry.get('scenes'):
+            continue
+        slides[entry['id']] = (HERE / entry['source']).read_text(encoding='utf8').replace('@@MERGED_SCENES@@', '\n'.join(slides[scene['id']] for scene in entry['scenes']))
+        controllers[entry['id']] = '\n'.join(controllers[scene['id']] for scene in entry['scenes']) + '\n' + (HERE / entry['controller']).read_text(encoding='utf8')
     styles = (HERE / 'shared/styles.css').read_text(encoding='utf8')
     styles = styles.replace('../assets/Figtree.ttf', data(HERE / 'assets/Figtree.ttf', 'font/ttf'))
     styles = styles.replace('../assets/page10/Consolas.ttf', data(HERE / 'assets/page10/Consolas.ttf', 'font/ttf'))
@@ -466,8 +563,12 @@ def main():
         assert '@@' not in result
         return result
     (HERE / 'index.html').write_text(render(entries, 'SynQ · PhD Defence'), encoding='utf8')
-    for entry in entries:
-        (HERE / (entry['id'] + '.html')).write_text(render([entry], entry['title']), encoding='utf8')
+    for number, entry in enumerate(entries, 1):
+        (HERE / f'page{number}.html').write_text(render([entry], entry['title']), encoding='utf8')
+    # Keep the cover alias explicit; historical source IDs are not standalone page aliases.
+    (HERE / 'cover.html').write_text(render([entries[0]], entries[0]['title']), encoding='utf8')
+    for old_number in range(len(entries) + 1, 26):
+        (HERE / f'page{old_number}.html').write_text('<!doctype html><meta charset="utf-8"><title>Page numbering changed</title><p>This historical page number was retired when the deck was merged to 22 pages. Open <a href="index.html">the current deck</a>. Source IDs and the numbering map are documented in README.md.</p>', encoding='utf8')
     print(f'Built presentation with {len(entries)} slides and standalone previews.')
 
 if __name__ == '__main__':

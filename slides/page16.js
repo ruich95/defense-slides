@@ -1,6 +1,6 @@
 window.slideFactories.page16=()=>{
  const data=@@PAGE16_DATA@@,root=document.getElementById('page16'),body=root.querySelector('.page16-body'),ns='http://www.w3.org/2000/svg',nodes=new Map(data.shapes.map(s=>[s.id,root.querySelector('#p16-shape-'+s.id)]));
- const states=[{name:'The single-step composition boundary',note:data.notes[0]+'\n\nSource: AEiC-26.pptx slide 11. A 750 ms boundary/port entrance from P15; no internal clicks. Source mapping: assets/page16/morph-map.json.'}];
+ const states=[{name:'The single-step composition boundary',note:data.notes[0]+'\n\nSource: AEiC-26.pptx slide 11. A 750 ms internal boundary/port Morph from the network scene. Source mapping: assets/page16/morph-map.json.'}];
  let generation=0,busy=false,raf=0,resolveMotion=null;
  const overlay=document.createElement('div');overlay.className='page16-morph';overlay.hidden=true;root.append(overlay);
  const clamp=t=>Math.max(0,Math.min(1,t)),box=s=>({x:s.left,y:s.top,width:s.width*s.scale,height:s.height*s.scale});

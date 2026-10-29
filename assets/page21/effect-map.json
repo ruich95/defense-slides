@@ -1,0 +1,531 @@
+{
+  "source": "AEiC slides19–20",
+  "groups": {
+    "abstract": [
+      {
+        "events": [
+          {
+            "id": 249,
+            "kind": "entr",
+            "start": 0,
+            "duration": 1,
+            "relation": "clickEffect"
+          },
+          {
+            "id": 255,
+            "kind": "entr",
+            "start": 0,
+            "duration": 1,
+            "relation": "withEffect"
+          },
+          {
+            "id": 242,
+            "kind": "entr",
+            "start": 0,
+            "duration": 1,
+            "relation": "withEffect"
+          }
+        ],
+        "duration": 1
+      },
+      {
+        "events": [
+          {
+            "id": 256,
+            "kind": "entr",
+            "start": 0,
+            "duration": 1,
+            "relation": "clickEffect"
+          },
+          {
+            "id": 273,
+            "kind": "entr",
+            "start": 0,
+            "duration": 1,
+            "relation": "withEffect"
+          },
+          {
+            "id": 277,
+            "kind": "entr",
+            "start": 0,
+            "duration": 1,
+            "relation": "withEffect"
+          }
+        ],
+        "duration": 1
+      },
+      {
+        "events": [
+          {
+            "id": 263,
+            "kind": "entr",
+            "start": 0,
+            "duration": 1,
+            "relation": "clickEffect"
+          },
+          {
+            "id": 274,
+            "kind": "entr",
+            "start": 0,
+            "duration": 1,
+            "relation": "withEffect"
+          },
+          {
+            "id": 280,
+            "kind": "entr",
+            "start": 0,
+            "duration": 1,
+            "relation": "withEffect"
+          },
+          {
+            "id": 273,
+            "kind": "exit",
+            "start": 0,
+            "duration": 1,
+            "relation": "withEffect"
+          },
+          {
+            "id": 277,
+            "kind": "exit",
+            "start": 0,
+            "duration": 1,
+            "relation": "withEffect"
+          }
+        ],
+        "duration": 1
+      },
+      {
+        "events": [
+          {
+            "id": 266,
+            "kind": "entr",
+            "start": 0,
+            "duration": 1,
+            "relation": "clickEffect"
+          },
+          {
+            "id": 275,
+            "kind": "entr",
+            "start": 0,
+            "duration": 1,
+            "relation": "withEffect"
+          },
+          {
+            "id": 282,
+            "kind": "entr",
+            "start": 0,
+            "duration": 1,
+            "relation": "withEffect"
+          },
+          {
+            "id": 274,
+            "kind": "exit",
+            "start": 0,
+            "duration": 1,
+            "relation": "withEffect"
+          },
+          {
+            "id": 280,
+            "kind": "exit",
+            "start": 0,
+            "duration": 1,
+            "relation": "withEffect"
+          }
+        ],
+        "duration": 1
+      },
+      {
+        "events": [
+          {
+            "id": 270,
+            "kind": "entr",
+            "start": 0,
+            "duration": 1,
+            "relation": "clickEffect"
+          },
+          {
+            "id": 276,
+            "kind": "entr",
+            "start": 0,
+            "duration": 1,
+            "relation": "withEffect"
+          },
+          {
+            "id": 284,
+            "kind": "entr",
+            "start": 0,
+            "duration": 1,
+            "relation": "withEffect"
+          },
+          {
+            "id": 275,
+            "kind": "exit",
+            "start": 0,
+            "duration": 1,
+            "relation": "withEffect"
+          },
+          {
+            "id": 282,
+            "kind": "exit",
+            "start": 0,
+            "duration": 1,
+            "relation": "withEffect"
+          }
+        ],
+        "duration": 1
+      }
+    ],
+    "routes": [
+      {
+        "events": [
+          {
+            "id": 17,
+            "kind": "entr",
+            "start": 0,
+            "duration": 250,
+            "relation": "clickEffect",
+            "filter": "wipe(down)"
+          },
+          {
+            "id": 60,
+            "kind": "entr",
+            "start": 0,
+            "duration": 1,
+            "relation": "withEffect"
+          },
+          {
+            "id": 6,
+            "kind": "entr",
+            "start": 0,
+            "duration": 250,
+            "relation": "withEffect",
+            "filter": "wipe(left)"
+          },
+          {
+            "id": 49,
+            "kind": "entr",
+            "start": 250,
+            "duration": 1,
+            "relation": "afterEffect"
+          },
+          {
+            "id": 31,
+            "kind": "entr",
+            "start": 250,
+            "duration": 1,
+            "relation": "withEffect"
+          }
+        ],
+        "duration": 251
+      },
+      {
+        "events": [
+          {
+            "id": 25,
+            "kind": "entr",
+            "start": 0,
+            "duration": 250,
+            "relation": "clickEffect",
+            "filter": "wipe(right)"
+          },
+          {
+            "id": 22,
+            "kind": "entr",
+            "start": 0,
+            "duration": 250,
+            "relation": "withEffect",
+            "filter": "wipe(left)"
+          },
+          {
+            "id": 129,
+            "kind": "entr",
+            "start": 0,
+            "duration": 250,
+            "relation": "withEffect",
+            "filter": "wipe(left)"
+          },
+          {
+            "id": 144,
+            "kind": "entr",
+            "start": 0,
+            "duration": 250,
+            "relation": "withEffect",
+            "filter": "wipe(right)"
+          },
+          {
+            "id": 146,
+            "kind": "entr",
+            "start": 0,
+            "duration": 1,
+            "relation": "withEffect"
+          },
+          {
+            "id": 62,
+            "kind": "entr",
+            "start": 0,
+            "duration": 1,
+            "relation": "withEffect"
+          },
+          {
+            "id": 128,
+            "kind": "entr",
+            "start": 250,
+            "duration": 1,
+            "relation": "afterEffect"
+          },
+          {
+            "id": 26,
+            "kind": "entr",
+            "start": 250,
+            "duration": 1,
+            "relation": "afterEffect"
+          },
+          {
+            "id": 23,
+            "kind": "entr",
+            "start": 250,
+            "duration": 250,
+            "relation": "afterEffect",
+            "filter": "wipe(down)"
+          },
+          {
+            "id": 134,
+            "kind": "entr",
+            "start": 250,
+            "duration": 1,
+            "relation": "withEffect"
+          }
+        ],
+        "duration": 500
+      },
+      {
+        "events": [
+          {
+            "id": 7,
+            "kind": "entr",
+            "start": 0,
+            "duration": 250,
+            "relation": "clickEffect",
+            "filter": "fade"
+          },
+          {
+            "id": 24,
+            "kind": "entr",
+            "start": 0,
+            "duration": 250,
+            "relation": "withEffect",
+            "filter": "fade"
+          },
+          {
+            "id": 12,
+            "kind": "entr",
+            "start": 250,
+            "duration": 1,
+            "relation": "afterEffect"
+          },
+          {
+            "id": 20,
+            "kind": "entr",
+            "start": 350,
+            "duration": 250,
+            "relation": "afterEffect",
+            "filter": "barn(outVertical)"
+          },
+          {
+            "id": 16,
+            "kind": "entr",
+            "start": 350,
+            "duration": 250,
+            "relation": "withEffect",
+            "filter": "barn(outVertical)"
+          },
+          {
+            "id": 21,
+            "kind": "entr",
+            "start": 350,
+            "duration": 250,
+            "relation": "withEffect",
+            "filter": "barn(outVertical)"
+          }
+        ],
+        "duration": 600
+      },
+      {
+        "events": [
+          {
+            "id": 18,
+            "kind": "entr",
+            "start": 0,
+            "duration": 250,
+            "relation": "clickEffect",
+            "filter": "wipe(left)"
+          },
+          {
+            "id": 147,
+            "kind": "entr",
+            "start": 0,
+            "duration": 250,
+            "relation": "withEffect",
+            "filter": "wipe(left)"
+          },
+          {
+            "id": 214,
+            "kind": "entr",
+            "start": 0,
+            "duration": 250,
+            "relation": "withEffect",
+            "filter": "wipe(left)"
+          },
+          {
+            "id": 218,
+            "kind": "entr",
+            "start": 0,
+            "duration": 250,
+            "relation": "withEffect",
+            "filter": "wipe(left)"
+          },
+          {
+            "id": 35,
+            "kind": "entr",
+            "start": 250,
+            "duration": 1,
+            "relation": "afterEffect"
+          },
+          {
+            "id": 39,
+            "kind": "entr",
+            "start": 250,
+            "duration": 1,
+            "relation": "afterEffect"
+          },
+          {
+            "id": 211,
+            "kind": "entr",
+            "start": 250,
+            "duration": 1,
+            "relation": "afterEffect"
+          },
+          {
+            "id": 213,
+            "kind": "entr",
+            "start": 250,
+            "duration": 1,
+            "relation": "afterEffect"
+          }
+        ],
+        "duration": 251
+      }
+    ]
+  },
+  "matches": [
+    {
+      "sourceId": 242,
+      "targetId": null,
+      "sourceName": "Group 241",
+      "box": {
+        "x": 235,
+        "y": 328,
+        "width": 306.6250000000001,
+        "height": 90.75000000000003
+      },
+      "vectorMorph": false
+    },
+    {
+      "sourceId": 249,
+      "targetId": null,
+      "sourceName": "Explanation 249",
+      "box": {
+        "x": 91,
+        "y": 260,
+        "width": 650,
+        "height": 42
+      },
+      "vectorMorph": false
+    },
+    {
+      "sourceId": 255,
+      "targetId": 255,
+      "sourceName": "Graphic 254 / shared abstract model",
+      "box": {
+        "x": 91,
+        "y": 460,
+        "width": 600,
+        "height": 185.37427535236418
+      },
+      "vectorMorph": false
+    },
+    {
+      "sourceId": 256,
+      "targetId": null,
+      "sourceName": "Explanation 256",
+      "box": {
+        "x": 850,
+        "y": 250,
+        "width": 660,
+        "height": 164
+      },
+      "vectorMorph": false
+    },
+    {
+      "sourceId": 263,
+      "targetId": null,
+      "sourceName": "Explanation 263",
+      "box": {
+        "x": 850,
+        "y": 430,
+        "width": 660,
+        "height": 123
+      },
+      "vectorMorph": false
+    },
+    {
+      "sourceId": 266,
+      "targetId": null,
+      "sourceName": "Explanation 266",
+      "box": {
+        "x": 850,
+        "y": 575,
+        "width": 660,
+        "height": 96
+      },
+      "vectorMorph": false
+    },
+    {
+      "sourceId": 270,
+      "targetId": null,
+      "sourceName": "Explanation 270",
+      "box": {
+        "x": 850,
+        "y": 685,
+        "width": 660,
+        "height": 123
+      },
+      "vectorMorph": false
+    },
+    {
+      "sourceId": 276,
+      "targetId": null,
+      "sourceName": "Rectangle 275",
+      "box": {
+        "x": 165.67720539730138,
+        "y": 614.3731814092955,
+        "width": 175.4770614692654,
+        "height": 37.01469265367317
+      },
+      "vectorMorph": false
+    },
+    {
+      "sourceId": 284,
+      "targetId": null,
+      "sourceName": "Code guide 284",
+      "box": {
+        "x": 343.1542668665668,
+        "y": 622.8805277361321,
+        "width": 496.8457331334332,
+        "height": 137.02925194768773
+      },
+      "vectorMorph": false
+    }
+  ],
+  "resolution": "Only the shared original code picture255 persists between scenes. Explanations, active highlight/guide and foo/bar diagram leave individually; the initial framework model node enters. No false diagram-to-framework matches. Code guide geometry and five external interpretation/target arrows are adapted to the layout; native framework routes and paint order remain unchanged."
+}

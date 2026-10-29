@@ -1,0 +1,243 @@
+{
+  "source": "AEiC slides17–18",
+  "groups": {
+    "construction": [
+      {
+        "events": [
+          {
+            "id": 157,
+            "kind": "entr",
+            "start": 0,
+            "duration": 1,
+            "relation": "clickEffect"
+          },
+          {
+            "id": 150,
+            "kind": "entr",
+            "start": 0,
+            "duration": 1,
+            "relation": "withEffect"
+          },
+          {
+            "id": 164,
+            "kind": "entr",
+            "start": 0,
+            "duration": 1,
+            "relation": "withEffect"
+          }
+        ],
+        "duration": 1
+      },
+      {
+        "events": [
+          {
+            "id": 159,
+            "kind": "entr",
+            "start": 0,
+            "duration": 1,
+            "relation": "clickEffect"
+          },
+          {
+            "id": 152,
+            "kind": "entr",
+            "start": 0,
+            "duration": 1,
+            "relation": "withEffect"
+          },
+          {
+            "id": 164,
+            "kind": "exit",
+            "start": 0,
+            "duration": 1,
+            "relation": "withEffect"
+          },
+          {
+            "id": 165,
+            "kind": "entr",
+            "start": 0,
+            "duration": 1,
+            "relation": "withEffect"
+          }
+        ],
+        "duration": 1
+      },
+      {
+        "events": [
+          {
+            "id": 160,
+            "kind": "entr",
+            "start": 0,
+            "duration": 1,
+            "relation": "clickEffect"
+          },
+          {
+            "id": 154,
+            "kind": "entr",
+            "start": 0,
+            "duration": 1,
+            "relation": "withEffect"
+          },
+          {
+            "id": 165,
+            "kind": "exit",
+            "start": 0,
+            "duration": 1,
+            "relation": "withEffect"
+          },
+          {
+            "id": 166,
+            "kind": "entr",
+            "start": 0,
+            "duration": 1,
+            "relation": "withEffect"
+          }
+        ],
+        "duration": 1
+      },
+      {
+        "events": [
+          {
+            "id": 161,
+            "kind": "entr",
+            "start": 0,
+            "duration": 1,
+            "relation": "clickEffect"
+          },
+          {
+            "id": 166,
+            "kind": "exit",
+            "start": 0,
+            "duration": 1,
+            "relation": "withEffect"
+          }
+        ],
+        "duration": 1
+      }
+    ],
+    "structure": [
+      {
+        "events": [
+          {
+            "id": 463,
+            "kind": "entr",
+            "start": 0,
+            "duration": 1,
+            "relation": "clickEffect"
+          }
+        ],
+        "duration": 1
+      },
+      {
+        "events": [
+          {
+            "id": 466,
+            "kind": "entr",
+            "start": 0,
+            "duration": 1,
+            "relation": "clickEffect"
+          }
+        ],
+        "duration": 1
+      }
+    ]
+  },
+  "matches": [
+    {
+      "sourceId": 6,
+      "targetId": null,
+      "sourceName": "Simple rising detector / image59.png",
+      "box": {
+        "x": 596.0767716535433,
+        "y": 260.24199475065615,
+        "width": 388.0270341207349,
+        "height": 115.6734908136483
+      },
+      "vectorMorph": false
+    },
+    {
+      "sourceId": 157,
+      "targetId": 157,
+      "sourceName": "Group 156",
+      "box": {
+        "x": 412.50000000000006,
+        "y": 582.5000000000001,
+        "width": 91.25000000000001,
+        "height": 82.50000000000001
+      },
+      "vectorMorph": true
+    },
+    {
+      "sourceId": 159,
+      "targetId": 159,
+      "sourceName": "Group 158",
+      "box": {
+        "x": 501.2500000000001,
+        "y": 575.0000000000001,
+        "width": 545.0000000000001,
+        "height": 107.50000000000001
+      },
+      "vectorMorph": true
+    },
+    {
+      "sourceId": 160,
+      "targetId": 160,
+      "sourceName": "Group 159",
+      "box": {
+        "x": 1043.7500000000002,
+        "y": 575.0000000000001,
+        "width": 136.25000000000003,
+        "height": 90.00000000000001
+      },
+      "vectorMorph": true
+    },
+    {
+      "sourceId": 161,
+      "targetId": 161,
+      "sourceName": "Group 160",
+      "box": {
+        "x": 363.75000000000006,
+        "y": 595.0000000000001,
+        "width": 876.2500000000001,
+        "height": 137.50000000000003
+      },
+      "vectorMorph": true
+    },
+    {
+      "sourceId": 150,
+      "targetId": 150,
+      "sourceName": "Graphic 149",
+      "box": {
+        "x": 1309.6839895013122,
+        "y": 454.68503937007875,
+        "width": 136.5,
+        "height": 25.2
+      },
+      "vectorMorph": false
+    },
+    {
+      "sourceId": 152,
+      "targetId": 152,
+      "sourceName": "Graphic 151",
+      "box": {
+        "x": 378.24265091863515,
+        "y": 454.68503937007875,
+        "width": 915.6,
+        "height": 25.2
+      },
+      "vectorMorph": false
+    },
+    {
+      "sourceId": 154,
+      "targetId": 154,
+      "sourceName": "Graphic 153",
+      "box": {
+        "x": 162.9014435695538,
+        "y": 454.68503937007875,
+        "width": 199.5,
+        "height": 25.2
+      },
+      "vectorMorph": false
+    }
+  ],
+  "resolution": "Groups157,159,160,161 retain identical descendant ID order, ancestry and semantic roles. Code150/152/154 reuses verbatim images60/61/62. Overview image59 departs; two copied example rows enter independently. No entrance effect from P19."
+}

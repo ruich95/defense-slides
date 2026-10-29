@@ -1,0 +1,383 @@
+{
+  "source": "AEiC slides15–16",
+  "groups": {
+    "simple": [
+      {
+        "events": [
+          {
+            "id": 7,
+            "kind": "entr",
+            "start": 0,
+            "duration": 1,
+            "relation": "clickEffect"
+          },
+          {
+            "id": 10,
+            "kind": "entr",
+            "start": 0,
+            "duration": 1,
+            "relation": "withEffect"
+          },
+          {
+            "id": 33,
+            "kind": "entr",
+            "start": 0,
+            "duration": 1,
+            "relation": "withEffect"
+          },
+          {
+            "id": 34,
+            "kind": "entr",
+            "start": 0,
+            "duration": 1,
+            "relation": "withEffect"
+          },
+          {
+            "id": 35,
+            "kind": "entr",
+            "start": 0,
+            "duration": 1,
+            "relation": "withEffect"
+          },
+          {
+            "id": 36,
+            "kind": "entr",
+            "start": 0,
+            "duration": 1,
+            "relation": "withEffect"
+          },
+          {
+            "id": 37,
+            "kind": "entr",
+            "start": 0,
+            "duration": 1,
+            "relation": "withEffect"
+          },
+          {
+            "id": 38,
+            "kind": "entr",
+            "start": 0,
+            "duration": 1,
+            "relation": "withEffect"
+          },
+          {
+            "id": 39,
+            "kind": "entr",
+            "start": 0,
+            "duration": 1,
+            "relation": "withEffect"
+          },
+          {
+            "id": 40,
+            "kind": "entr",
+            "start": 0,
+            "duration": 1,
+            "relation": "withEffect"
+          },
+          {
+            "id": 43,
+            "kind": "entr",
+            "start": 0,
+            "duration": 1,
+            "relation": "withEffect"
+          },
+          {
+            "id": 44,
+            "kind": "entr",
+            "start": 0,
+            "duration": 1,
+            "relation": "withEffect"
+          },
+          {
+            "id": 45,
+            "kind": "entr",
+            "start": 0,
+            "duration": 1,
+            "relation": "withEffect"
+          },
+          {
+            "id": 46,
+            "kind": "entr",
+            "start": 0,
+            "duration": 1,
+            "relation": "withEffect"
+          },
+          {
+            "id": 47,
+            "kind": "entr",
+            "start": 0,
+            "duration": 1,
+            "relation": "withEffect"
+          },
+          {
+            "id": 48,
+            "kind": "entr",
+            "start": 0,
+            "duration": 1,
+            "relation": "withEffect"
+          },
+          {
+            "id": 49,
+            "kind": "entr",
+            "start": 0,
+            "duration": 1,
+            "relation": "withEffect"
+          },
+          {
+            "id": 52,
+            "kind": "entr",
+            "start": 0,
+            "duration": 1,
+            "relation": "withEffect"
+          }
+        ],
+        "duration": 1
+      }
+    ],
+    "expanded": [
+      {
+        "events": [
+          {
+            "id": 7,
+            "kind": "entr",
+            "start": 0,
+            "duration": 1,
+            "relation": "clickEffect",
+            "paragraph": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": 13,
+            "kind": "entr",
+            "start": 0,
+            "duration": 1,
+            "relation": "withEffect"
+          }
+        ],
+        "duration": 1
+      }
+    ]
+  },
+  "internalPairs": [
+    {
+      "sourceId": 7,
+      "targetId": 8,
+      "sourceName": "Forward-delay explanation",
+      "box": {
+        "x": 91,
+        "y": 400,
+        "width": 820,
+        "height": 150
+      },
+      "vectorMorph": false
+    },
+    {
+      "sourceId": 10,
+      "targetId": 10,
+      "sourceName": "Forward-delay picture / original crop",
+      "box": {
+        "x": 1149.113779527559,
+        "y": 263.848031496063,
+        "width": 143.88372703412074,
+        "height": 91.50577427821523
+      },
+      "vectorMorph": false
+    },
+    {
+      "sourceId": 33,
+      "targetId": 19,
+      "sourceName": "!!Set4",
+      "box": {
+        "x": 1221.2500000000002,
+        "y": 453.75000000000006,
+        "width": 21.250000000000004,
+        "height": 5.000000000000001
+      },
+      "vectorMorph": true
+    },
+    {
+      "sourceId": 34,
+      "targetId": 21,
+      "sourceName": "!!Get6",
+      "box": {
+        "x": 1217.5000000000002,
+        "y": 467.50000000000006,
+        "width": 66.25000000000001,
+        "height": 5.000000000000001
+      },
+      "vectorMorph": true
+    },
+    {
+      "sourceId": 35,
+      "targetId": 23,
+      "sourceName": "!!Set5",
+      "box": {
+        "x": 1238.7500000000002,
+        "y": 453.75000000000006,
+        "width": 23.750000000000004,
+        "height": 5.000000000000001
+      },
+      "vectorMorph": true
+    },
+    {
+      "sourceId": 36,
+      "targetId": 51,
+      "sourceName": "!!Set6",
+      "box": {
+        "x": 1257.5000000000002,
+        "y": 453.75000000000006,
+        "width": 31.250000000000007,
+        "height": 28.750000000000004
+      },
+      "vectorMorph": true
+    },
+    {
+      "sourceId": 37,
+      "targetId": 59,
+      "sourceName": "!!Get2",
+      "box": {
+        "x": 1151.2500000000002,
+        "y": 477.50000000000006,
+        "width": 13.750000000000002,
+        "height": 5.000000000000001
+      },
+      "vectorMorph": true
+    },
+    {
+      "sourceId": 38,
+      "targetId": 61,
+      "sourceName": "!!Get4",
+      "box": {
+        "x": 1182.5000000000002,
+        "y": 467.50000000000006,
+        "width": 20.000000000000004,
+        "height": 5.000000000000001
+      },
+      "vectorMorph": true
+    },
+    {
+      "sourceId": 39,
+      "targetId": 62,
+      "sourceName": "!!Set2",
+      "box": {
+        "x": 1145.0000000000002,
+        "y": 453.75000000000006,
+        "width": 61.250000000000014,
+        "height": 5.000000000000001
+      },
+      "vectorMorph": true
+    },
+    {
+      "sourceId": 40,
+      "targetId": 81,
+      "sourceName": "!!Dly",
+      "box": {
+        "x": 1203.7500000000002,
+        "y": 500.0000000000001,
+        "width": 45.00000000000001,
+        "height": 43.75000000000001
+      },
+      "vectorMorph": true
+    },
+    {
+      "sourceId": 43,
+      "targetId": 93,
+      "sourceName": "!!Get1",
+      "box": {
+        "x": 1140.0000000000002,
+        "y": 477.50000000000006,
+        "width": 66.25000000000001,
+        "height": 47.50000000000001
+      },
+      "vectorMorph": true
+    },
+    {
+      "sourceId": 44,
+      "targetId": 85,
+      "sourceName": "!!Set7",
+      "box": {
+        "x": 1236.2500000000002,
+        "y": 477.50000000000006,
+        "width": 67.50000000000001,
+        "height": 56.25000000000001
+      },
+      "vectorMorph": true
+    },
+    {
+      "sourceId": 45,
+      "targetId": 87,
+      "sourceName": "!!Get5",
+      "box": {
+        "x": 1198.7500000000002,
+        "y": 467.50000000000006,
+        "width": 22.500000000000004,
+        "height": 5.000000000000001
+      },
+      "vectorMorph": true
+    },
+    {
+      "sourceId": 46,
+      "targetId": 88,
+      "sourceName": "!!Set3",
+      "box": {
+        "x": 1202.5000000000002,
+        "y": 453.75000000000006,
+        "width": 22.500000000000004,
+        "height": 5.000000000000001
+      },
+      "vectorMorph": true
+    },
+    {
+      "sourceId": 47,
+      "targetId": 89,
+      "sourceName": "!!Set1",
+      "box": {
+        "x": 1110.0000000000002,
+        "y": 453.75000000000006,
+        "width": 38.75000000000001,
+        "height": 5.000000000000001
+      },
+      "vectorMorph": true
+    },
+    {
+      "sourceId": 48,
+      "targetId": 90,
+      "sourceName": "!!Get7",
+      "box": {
+        "x": 1280.0000000000002,
+        "y": 458.75000000000006,
+        "width": 62.500000000000014,
+        "height": 22.500000000000004
+      },
+      "vectorMorph": true
+    },
+    {
+      "sourceId": 49,
+      "targetId": 79,
+      "sourceName": "!!Get3",
+      "box": {
+        "x": 1161.2500000000002,
+        "y": 467.50000000000006,
+        "width": 22.500000000000004,
+        "height": 15.000000000000004
+      },
+      "vectorMorph": true
+    },
+    {
+      "sourceId": 52,
+      "targetId": 95,
+      "sourceName": "Down Arrow 51",
+      "box": {
+        "x": 1210.0000000000002,
+        "y": 356.25000000000006,
+        "width": 28.750000000000004,
+        "height": 55.00000000000001
+      },
+      "vectorMorph": true
+    }
+  ],
+  "entrance": "Source15 entry has no visible construction objects: all 18 entrances remain hidden. Actual completed P18 objects depart individually; no false object matches are invented.",
+  "resolution": "Unique !!Get1–7, !!Set1–7 and !!Dly correspondences verified by role and native geometry. Down arrows52→95 have the same role. Original cropped picture10 persists. Source15 text7→source16 text8; source16 text7 paragraph0 is independent."
+}

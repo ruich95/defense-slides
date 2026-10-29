@@ -14,8 +14,10 @@ async function go(targetSlide,targetStep=0,animate=true,options={}){
  sections.forEach((section,i)=>section.classList.toggle('active',i===slide));
  try{
   const api=controller(slide);if(api.resize)api.resize();render();
-  const playEntrance=step===0&&(['initial','restart','hash'].includes(reason)||(reason==='forward'&&old!==slide));
-  if(playEntrance&&api.enter)await api.enter({playEntrance:true,reason,previousId:manifest[old].id});
+  // P5's pyramid becomes the abstraction-progress bar: a semantic object transformation.
+  // Other page-entry Morphs only connected separately numbered scenes and are disabled.
+  const semanticEntrance=manifest[slide].id==='page5'&&step===0&&(['initial','restart','hash'].includes(reason)||(reason==='forward'&&old!==slide));
+  if(semanticEntrance&&api.enter)await api.enter({playEntrance:true,reason,previousId:manifest[old].id});
   else await api.go(step,animate&&old===slide);
  }finally{if(token===navigationGeneration){busy=false;render()}}
 }

@@ -1,0 +1,198 @@
+{
+  "source": "AEiC slide22",
+  "groups": [
+    {
+      "events": [
+        {
+          "id": 10,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "clickEffect",
+          "nativeHideOnNextClick": true
+        },
+        {
+          "id": 11,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "nativeHideOnNextClick": true
+        }
+      ],
+      "duration": 1
+    },
+    {
+      "events": [
+        {
+          "id": 14,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "clickEffect",
+          "nativeHideOnNextClick": true
+        },
+        {
+          "id": 15,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "nativeHideOnNextClick": true
+        }
+      ],
+      "duration": 1
+    },
+    {
+      "events": [
+        {
+          "id": 16,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "clickEffect",
+          "nativeHideOnNextClick": true
+        },
+        {
+          "id": 17,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "nativeHideOnNextClick": true
+        },
+        {
+          "id": 18,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "nativeHideOnNextClick": true
+        }
+      ],
+      "duration": 1
+    },
+    {
+      "events": [
+        {
+          "id": 19,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "clickEffect",
+          "nativeHideOnNextClick": true
+        },
+        {
+          "id": 20,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "nativeHideOnNextClick": true
+        }
+      ],
+      "duration": 1
+    },
+    {
+      "events": [
+        {
+          "id": 21,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "clickEffect",
+          "nativeHideOnNextClick": true
+        },
+        {
+          "id": 24,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "nativeHideOnNextClick": true
+        }
+      ],
+      "duration": 1
+    },
+    {
+      "events": [
+        {
+          "id": 25,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "clickEffect",
+          "nativeHideOnNextClick": true
+        },
+        {
+          "id": 26,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "nativeHideOnNextClick": true
+        },
+        {
+          "id": 27,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "nativeHideOnNextClick": true
+        }
+      ],
+      "duration": 1
+    },
+    {
+      "events": [
+        {
+          "id": 29,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "clickEffect"
+        },
+        {
+          "id": 32,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect"
+        },
+        {
+          "id": 33,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect"
+        }
+      ],
+      "duration": 1
+    }
+  ],
+  "adaptation": "All mathematical/media content is present at entry. Correspondences accumulate as requested, overriding native hide-on-next-click after-effect metadata. Original click groups, red proposition/waveform emphasis, semantic targets and native arrow directions remain. Seven code rectangles use the established pale-blue emphasis.",
+  "regions": {
+    "9": [
+      "image81.svg",
+      91,
+      525,
+      620,
+      "property"
+    ],
+    "28": [
+      "image79.svg",
+      760,
+      505,
+      750,
+      "code"
+    ],
+    "30": [
+      "image80.png",
+      525,
+      260,
+      620,
+      "waveform"
+    ]
+  },
+  "guides": "Native bent input guide27 stays rightward/upward; native output guide33 stays upward. Both resized to the new waveform/property placement."
+}

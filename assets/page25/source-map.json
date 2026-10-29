@@ -1,0 +1,30 @@
+{
+  "source": "AEiC slide24",
+  "stateCount": 1,
+  "internalClicks": 0,
+  "entrance": 0,
+  "inactiveStoredDuration": 2,
+  "media": {
+    "type": "image79.svg, original full SVG, including line-number column",
+    "proof": "image85.png, original680x145 RGBA"
+  },
+  "proofDisplay": {
+    "width": 960,
+    "scale": 1.411764705882353,
+    "splitAtSourceRow": 61,
+    "sourceBands": [
+      [
+        0,
+        61
+      ],
+      [
+        61,
+        145
+      ]
+    ],
+    "addedGap": 18,
+    "height": 222.7058823529412
+  },
+  "sourceCrop": "Native type picture10 has a5.154% left crop that removes the line-number column. The requested full image79.svg is shown here; the complete type is unchanged. Proof picture9 is uncropped.",
+  "verification": "No Idris2 checker or new simulation is run; proof artwork is reused from source."
+}

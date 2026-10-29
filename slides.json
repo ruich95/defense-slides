@@ -4,118 +4,214 @@
     "title": "SynQ: Synchronous System Design with Quantitative Types",
     "source": "slides/cover.html",
     "steps": 1,
-    "notes": "Rui Chen. PhD Defense, 9 November 2026, Stockholm.\n\nCover copied directly from slide 1 of defense-draft.pptx."
+    "notes": "Rui Chen. PhD Defense, 9 November 2026, Stockholm.\n\nCover copied directly from slide 1 of defense-draft.pptx.",
+    "displayNumber": 1
   },
   {
     "id": "page1",
     "title": "Embedded Systems",
     "source": "slides/page1.html",
     "controller": "slides/page1.js",
-    "steps": 9
+    "steps": 9,
+    "displayNumber": 2
   },
   {
     "id": "page2",
     "title": "Embedded System Design",
     "source": "slides/page2.html",
     "controller": "slides/page2.js",
-    "steps": 9
+    "steps": 9,
+    "displayNumber": 3
   },
   {
     "id": "page4",
     "title": "Requirements for a Design Framework",
     "source": "slides/page4.html",
     "controller": "slides/page4.js",
-    "steps": 5
+    "steps": 5,
+    "displayNumber": 4
   },
   {
     "id": "page5",
     "title": "A Key Challenge: Connecting Abstraction Levels",
     "source": "slides/page5.html",
     "controller": "slides/page5.js",
-    "steps": 8
+    "steps": 8,
+    "displayNumber": 5
   },
   {
     "id": "page6",
     "title": "Type Theory as a Programming Language",
     "source": "slides/page6.html",
     "controller": "slides/page6.js",
-    "steps": 8
+    "steps": 8,
+    "displayNumber": 6
   },
   {
     "id": "page7",
     "title": "Research Question and Objectives",
     "source": "slides/page7.html",
     "controller": "slides/page7.js",
-    "steps": 5
+    "steps": 5,
+    "displayNumber": 7
   },
   {
     "id": "page8",
     "title": "The Proposed (Partial) Solution: SynQ",
     "source": "slides/page8.html",
     "controller": "slides/page8.js",
-    "steps": 7
+    "steps": 7,
+    "displayNumber": 8
   },
   {
     "id": "page9",
     "title": "Synchronous Systems",
     "source": "slides/page9.html",
     "controller": "slides/page9.js",
-    "steps": 3
+    "steps": 3,
+    "displayNumber": 9
   },
   {
     "id": "page10",
     "title": "Quantitative Type Theory",
     "source": "slides/page10.html",
     "controller": "slides/page10.js",
-    "steps": 6
+    "steps": 6,
+    "displayNumber": 10
   },
   {
     "id": "page11",
     "title": "Linear Terms as Resources",
     "source": "slides/page11.html",
     "controller": "slides/page11.js",
-    "steps": 8
+    "steps": 8,
+    "displayNumber": 11
   },
   {
-    "id": "page12",
+    "id": "merged12",
     "title": "Synchronous Systems in QTT",
-    "source": "slides/page12.html",
-    "controller": "slides/page12.js",
-    "steps": 6
+    "source": "slides/merged12.html",
+    "controller": "slides/merged12.js",
+    "steps": 10,
+    "scenes": [
+      {
+        "id": "page12",
+        "title": "Synchronous Systems in QTT",
+        "source": "slides/page12.html",
+        "controller": "slides/page12.js",
+        "steps": 6
+      },
+      {
+        "id": "page13",
+        "title": "Synchronous Systems in QTT",
+        "source": "slides/page13.html",
+        "controller": "slides/page13.js",
+        "steps": 4
+      }
+    ],
+    "displayNumber": 12
   },
   {
-    "id": "page13",
+    "id": "merged13",
     "title": "Synchronous Systems in QTT",
-    "source": "slides/page13.html",
-    "controller": "slides/page13.js",
-    "steps": 4
-  },
-  {
-    "id": "page14",
-    "title": "Synchronous Systems in QTT",
-    "source": "slides/page14.html",
-    "controller": "slides/page14.js",
-    "steps": 1
-  },
-  {
-    "id": "page15",
-    "title": "Synchronous Systems in QTT",
-    "source": "slides/page15.html",
-    "controller": "slides/page15.js",
-    "steps": 1
-  },
-  {
-    "id": "page16",
-    "title": "Synchronous Systems in QTT",
-    "source": "slides/page16.html",
-    "controller": "slides/page16.js",
-    "steps": 1
+    "source": "slides/merged13.html",
+    "controller": "slides/merged13.js",
+    "steps": 3,
+    "scenes": [
+      {
+        "id": "page14",
+        "title": "Synchronous Systems in QTT",
+        "source": "slides/page14.html",
+        "controller": "slides/page14.js",
+        "steps": 1
+      },
+      {
+        "id": "page15",
+        "title": "Synchronous Systems in QTT",
+        "source": "slides/page15.html",
+        "controller": "slides/page15.js",
+        "steps": 1
+      },
+      {
+        "id": "page16",
+        "title": "Synchronous Systems in QTT",
+        "source": "slides/page16.html",
+        "controller": "slides/page16.js",
+        "steps": 1
+      }
+    ],
+    "displayNumber": 13
   },
   {
     "id": "page17",
     "title": "Synchronous Systems in QTT",
     "source": "slides/page17.html",
     "controller": "slides/page17.js",
-    "steps": 5
+    "steps": 5,
+    "displayNumber": 14
+  },
+  {
+    "id": "page18",
+    "title": "Synchronous Systems in QTT",
+    "source": "slides/page18.html",
+    "controller": "slides/page18.js",
+    "steps": 4,
+    "displayNumber": 15
+  },
+  {
+    "id": "page19",
+    "title": "Synchronous Systems in QTT",
+    "source": "slides/page19.html",
+    "controller": "slides/page19.js",
+    "steps": 4,
+    "displayNumber": 16
+  },
+  {
+    "id": "page20",
+    "title": "Example: Rising Pattern Detection",
+    "source": "slides/page20.html",
+    "controller": "slides/page20.js",
+    "steps": 8,
+    "displayNumber": 17
+  },
+  {
+    "id": "page21",
+    "title": "The EDSL SynQ",
+    "source": "slides/page21.html",
+    "controller": "slides/page21.js",
+    "steps": 11,
+    "displayNumber": 18
+  },
+  {
+    "id": "page22",
+    "title": "Rising Pattern Detection: Modelling",
+    "source": "slides/page22.html",
+    "controller": "slides/page22.js",
+    "steps": 10,
+    "displayNumber": 19
+  },
+  {
+    "id": "page23",
+    "title": "Rising Pattern Detection: Specification",
+    "source": "slides/page23.html",
+    "controller": "slides/page23.js",
+    "steps": 8,
+    "displayNumber": 20
+  },
+  {
+    "id": "page24",
+    "title": "Rising Pattern Detection: Implementation",
+    "source": "slides/page24.html",
+    "controller": "slides/page24.js",
+    "steps": 4,
+    "displayNumber": 21
+  },
+  {
+    "id": "page25",
+    "title": "Rising Pattern Detection: Verification",
+    "source": "slides/page25.html",
+    "controller": "slides/page25.js",
+    "steps": 1,
+    "displayNumber": 22
   }
 ]

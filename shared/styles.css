@@ -274,3 +274,123 @@ body.full #viewport{inset:0}body.full .controlbar{display:none}#stage{cursor:poi
 #page17 #p17-shape-157 img,#page17 #p17-shape-158 img,#page17 #p17-shape-162 img{display:none}
 #page17 #p17-shape-157::before,#page17 #p17-shape-158::before,#page17 #p17-shape-162::before{content:"";position:absolute;inset:3px;background-color:rgba(0,41,237,.1);box-shadow:0 0 0 5px rgba(0,41,237,.1);border-radius:2px}
 #page17 #p17-shape-150,#page17 #p17-shape-152,#page17 #p17-shape-154,#page17 #p17-shape-156{z-index:1}
+
+/* P18: merged feedback / Reg / shared-state composition. */
+#page18 .page18-opening{position:absolute;left:91px;top:175px;width:1419px;margin:0;font-size:32px;line-height:1.28;font-weight:400;color:#000}
+#page18 code{font-family:DefenseCode,Consolas,monospace;font-size:1em;font-weight:400;color:#78001A}
+#page18 .page18-body,#page18 .page18-scene{position:absolute;inset:0;pointer-events:none}
+#page18 .page18-item{position:absolute;opacity:0;visibility:hidden;transform-origin:0 0}
+#page18 .page18-item>img{display:block;width:100%;height:100%}
+#page18 .page18-reg-panel{width:100%;height:100%;display:flex;align-items:center;justify-content:center;gap:9px;background:#f8e9ec;border:2px solid #78001A;border-radius:12px;font-size:32px;line-height:1.28}
+#page18 .page18-shared-panel{position:relative;width:100%;height:100%;background:#f7f7f7;border:2px solid #323232;border-radius:18px;font-size:32px;line-height:1.28}
+#page18 .page18-shared-panel>p{position:absolute;left:18px;top:14px;width:770px;margin:0}
+#page18 .page18-shared-diagram{position:absolute;left:255px;top:64px;width:300px;height:90px;object-fit:contain}
+#page18 .page18-shared-code{position:absolute;left:55px;top:160px;width:700px;object-fit:contain}
+#page18 .page18-morph{position:absolute;inset:0;pointer-events:none}
+#page18 .page18-morph-object{position:absolute;transform-origin:0 0}
+#page18 .page18-morph-object>img,#page18 .page18-morph-object>svg{display:block;width:100%;height:100%;overflow:visible}
+#page18 .page18-explanation{font-size:32px;line-height:1.28;color:#000;font-weight:400}
+#page18 .page18-label{padding-left:37px;box-sizing:border-box}
+#page18 .page18-label::before{content:"▸";position:absolute;left:0;font-size:25px;top:4px}
+
+/* P19: structural subset and equivalent delay constructions. */
+#page19 .page19-opening{position:absolute;left:91px;top:175px;width:1419px;margin:0;font-size:32px;line-height:1.28;font-weight:400;color:#000}
+#page19 code{font-family:DefenseCode,Consolas,monospace;font-size:1em;font-weight:400;color:#78001A}
+#page19 p{margin:0}
+#page19 ul{list-style:none;margin:24px 0 0;padding:0}
+#page19 li{position:relative;padding-left:37px;margin:0 0 16px}
+#page19 li::before{content:"▸";position:absolute;left:0;font-size:25px;top:4px}
+#page19 .page19-opening ul{margin-top:24px}
+#page19 .page19-body,#page19 .page19-scene{position:absolute;inset:0;pointer-events:none}
+#page19 .page19-item{position:absolute;opacity:0;visibility:hidden;transform-origin:0 0;font-size:32px;line-height:1.28;color:#000;font-weight:400}
+#page19 .page19-item>img{display:block;width:100%;height:100%}
+#page19 .page19-forward-crop{position:relative;overflow:hidden;width:100%;height:100%}
+#page19 .page19-forward-crop img{display:block;max-width:none}
+#page19 #p19-expanded-7 ul{margin:0}
+#page19 .page19-morph{position:absolute;inset:0;pointer-events:none}
+#page19 .page19-morph-object{position:absolute;transform-origin:0 0}
+#page19 .page19-morph-object>img,#page19 .page19-morph-object>svg{display:block;width:100%;height:100%;overflow:visible}
+#page19 .page19-explanation{font-size:32px;line-height:1.28;color:#000;font-weight:400}
+/* Preserve the actual P18 panel layout while those objects leave during entry. */
+#page19 .page18-reg-panel{width:100%;height:100%;display:flex;align-items:center;justify-content:center;gap:9px;background:#f8e9ec;border:2px solid #78001A;border-radius:12px;font-size:32px;line-height:1.28}
+#page19 .page18-shared-panel{position:relative;width:100%;height:100%;background:#f7f7f7;border:2px solid #323232;border-radius:18px;font-size:32px;line-height:1.28}
+#page19 .page18-shared-panel>p{position:absolute;left:18px;top:14px;width:770px;margin:0}
+#page19 .page18-shared-diagram{position:absolute;left:255px;top:64px;width:300px;height:90px;object-fit:contain}
+#page19 .page18-shared-code{position:absolute;left:55px;top:160px;width:700px;object-fit:contain}
+
+/* P20: rising-pattern construction and explicit component structure. */
+#page20 .page20-opening{position:absolute;left:91px;top:175px;width:1419px;margin:0;font-size:32px;line-height:1.28;font-weight:400;color:#000}
+#page20 .page20-body,#page20 .page20-scene{position:absolute;inset:0;pointer-events:none}
+#page20 .page20-item{position:absolute;opacity:0;visibility:hidden;transform-origin:0 0;font-size:32px;line-height:1.28;color:#000;font-weight:400}
+#page20 .page20-item>img{display:block;width:100%;height:100%}
+#page20 .page20-morph{position:absolute;inset:0;pointer-events:none}
+#page20 .page20-morph-object{position:absolute;transform-origin:0 0}
+#page20 .page20-morph-object>img,#page20 .page20-morph-object>svg{display:block;width:100%;height:100%;overflow:visible}
+#page20 .page20-explanation{font-size:32px;line-height:1.28;color:#000;font-weight:400}
+#page20 .page20-label{padding-left:37px;box-sizing:border-box}
+#page20 .page20-label::before{content:"▸";position:absolute;left:0;font-size:25px;top:4px}
+#page20 p,#page20 ul{margin:0}
+#page20 ul{list-style:none;padding:0}
+#page20 li{position:relative;padding-left:37px;margin:0}
+#page20 li::before{content:"▸";position:absolute;left:0;font-size:25px;top:4px}
+
+/* P21: abstract representation and the timed interpretation routes. */
+#page21 .page21-opening{position:absolute;left:91px;top:175px;width:1419px;margin:0;font-size:32px;line-height:1.28;font-weight:400;color:#000}
+#page21 .page21-body,#page21 .page21-scene{position:absolute;inset:0;pointer-events:none}
+#page21 .page21-item{position:absolute;opacity:0;visibility:hidden;transform-origin:0 0;font-size:32px;line-height:1.28;color:#000;font-weight:400}
+#page21 .page21-item>img{display:block;width:100%;height:100%}
+#page21 .page21-morph{position:absolute;inset:0;pointer-events:none}
+#page21 .page21-morph-object{position:absolute;transform-origin:0 0}
+#page21 .page21-morph-object>img{display:block;width:100%;height:100%}
+#page21 .page21-explanation{font-size:32px;line-height:1.28;color:#000;font-weight:400}
+#page21 code{font-family:DefenseCode,Consolas,monospace;font-size:1em;line-height:1;font-weight:400;color:#000}
+#page21 strong{font-weight:700}
+#page21 .page21-code-focus{position:absolute;inset:0;background:rgba(0,41,237,.1);box-shadow:0 0 0 5px rgba(0,41,237,.1);border-radius:2px}
+#page21 [data-source-id="255"]{z-index:1}
+#page21 .page21-target-code{width:100%;height:100%;border:2px solid #00579e;box-sizing:border-box;background:#fbfbfb}
+#page21 .page21-target-code img{display:block;width:100%;height:100%}
+
+/* P22: full SynQ model with cumulative semantic cues and staged network. */
+#page22 .page22-opening{position:absolute;left:91px;top:175px;width:1419px;margin:0;font-size:32px;line-height:1.28;font-weight:400;color:#000}
+#page22 .page22-body{position:absolute;inset:0;pointer-events:none}
+#page22 .page22-item{position:absolute;opacity:0;visibility:hidden;transform-origin:0 0;font-size:32px;line-height:1.28;color:#000;font-weight:400}
+#page22 .page22-item>img{display:block;width:100%;height:100%}
+#page22 .page22-code{z-index:1}
+#page22 .page22-code-focus{position:absolute;inset:0;background:rgba(0,41,237,.1);box-shadow:0 0 0 4px rgba(0,41,237,.1);border-radius:2px}
+#page22 .page22-callout{display:flex;align-items:center}
+
+/* P23: one rising implication and cumulative waveform/property/type correspondences. */
+#page23 .page23-opening{position:absolute;left:91px;top:175px;width:1419px;margin:0;font-size:32px;line-height:1.28;font-weight:400;color:#000}
+#page23 .page23-body{position:absolute;inset:0;pointer-events:none}
+#page23 .page23-item{position:absolute;opacity:0;visibility:hidden;transform-origin:0 0;font-size:32px;line-height:1.28;color:#000;font-weight:400}
+#page23 .page23-item>img{display:block;width:100%;height:100%}
+#page23 .page23-code,#page23 .page23-property,#page23 .page23-waveform{z-index:1}
+#page23 .page23-focus-red,#page23 .page23-guide{z-index:2}
+#page23 .page23-label{font-weight:700}
+#page23 .page23-code-focus{position:absolute;inset:0;background:rgba(0,41,237,.1);box-shadow:0 0 0 4px rgba(0,41,237,.1);border-radius:2px}
+#page23 .page23-red-focus{position:absolute;inset:0;outline:2px solid #C00000;outline-offset:1px;box-sizing:border-box}
+#page23 #p23-shape-18 .page23-red-focus{outline:none;border:3px solid #C00000}
+
+/* P24: paragraph-level interpretation explanation and original implementation evidence. */
+#page24 .page24-opening{position:absolute;left:91px;top:175px;width:1419px;margin:0;font-size:32px;line-height:1.28;font-weight:400;color:#000}
+#page24 .page24-body{position:absolute;inset:0;pointer-events:none}
+#page24 .page24-item{position:absolute;opacity:0;visibility:hidden;transform-origin:0 0;font-size:32px;line-height:1.28;color:#000;font-weight:400}
+#page24 .page24-item>img{display:block;width:100%;height:100%}
+#page24 .page24-code,#page24 .page24-circuit,#page24 .page24-trace{z-index:1}
+#page24 .page24-emphasis{z-index:2}
+#page24 .page24-code-crop{position:relative;overflow:hidden;width:100%;height:100%}
+#page24 .page24-code-crop img{position:absolute;display:block;left:0;max-width:none}
+#page24 .page24-emphasis-box{position:absolute;inset:0;outline:2px solid var(--focus-colour);outline-offset:0}
+#page24 .page24-bullet{box-sizing:border-box;padding-left:37px}
+#page24 .page24-bullet::before{content:"▸";position:absolute;left:0;font-size:25px;top:4px}
+
+/* P25: complete source type and two proof clauses, one static composition. */
+#page25 .page25-opening{position:absolute;left:91px;top:175px;width:1419px;margin:0;font-size:32px;line-height:1.28;font-weight:400;color:#000}
+#page25 .page25-type{position:absolute;left:255px;top:270px;width:900px;height:213.51389377418224px;display:block}
+#page25 .page25-proof{position:absolute;left:300px;top:535px;width:960px;height:222.7058823529412px}
+#page25 .page25-proof-base,#page25 .page25-proof-step{position:relative;overflow:hidden;width:100%}
+#page25 .page25-proof-base{height:var(--proof-cut)}
+#page25 .page25-proof-step{height:var(--proof-tail);margin-top:18px}
+#page25 .page25-proof img{position:absolute;left:0;width:100%;height:var(--proof-full);display:block;max-width:none}
+#page25 .page25-proof-base img{top:0}
+#page25 .page25-proof-step img{top:calc(-1 * var(--proof-cut))}

@@ -1,0 +1,165 @@
+{
+  "source": "AEiC slide23",
+  "groups": [
+    {
+      "events": [
+        {
+          "id": 23,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "clickEffect",
+          "nativeHideOnNextClick": true
+        },
+        {
+          "id": 26,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "nativeHideOnNextClick": true
+        },
+        {
+          "id": 25,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "nativeHideOnNextClick": true
+        },
+        {
+          "id": 20,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "nativeHideOnNextClick": true
+        },
+        {
+          "id": 21,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "nativeHideOnNextClick": true
+        },
+        {
+          "id": 22,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "nativeHideOnNextClick": true
+        },
+        {
+          "id": 42,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "paragraph": [
+            1,
+            1
+          ]
+        }
+      ],
+      "duration": 1
+    },
+    {
+      "events": [
+        {
+          "id": 36,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "clickEffect"
+        },
+        {
+          "id": 41,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect"
+        },
+        {
+          "id": 39,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect"
+        },
+        {
+          "id": 40,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect"
+        },
+        {
+          "id": 38,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect"
+        },
+        {
+          "id": 37,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect"
+        },
+        {
+          "id": 42,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect",
+          "paragraph": [
+            2,
+            2
+          ]
+        }
+      ],
+      "duration": 1
+    },
+    {
+      "events": [
+        {
+          "id": 7,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "clickEffect"
+        }
+      ],
+      "duration": 1
+    }
+  ],
+  "adaptation": "Native paragraph1/2 targets are retained independently; paragraph0 is visible on entry. Requested cumulative primitive emphasis overrides native hide-on-next-click after-effects on the six primitive boxes. Yellow connections remain distinct. Circuit and trace occupy non-overlapping regions; trace has no crop or data changes.",
+  "crop": {
+    "top": 0.37582,
+    "fullHeight": 273.4638531725223,
+    "visibleHeight": 170.69066787322495,
+    "visibleLines": [
+      4,
+      5,
+      6,
+      7,
+      8
+    ]
+  },
+  "colours": {
+    "20": "#C00000",
+    "21": "#4DA060",
+    "22": "#6298D2",
+    "23": "#C00000",
+    "25": "#4DA060",
+    "26": "#6298D2",
+    "37": "#FFBE00",
+    "38": "#FFBE00",
+    "39": "#FFBE00",
+    "40": "#FFBE00",
+    "41": "#FFBE00"
+  }
+}

@@ -1,7 +1,7 @@
 window.slideFactories.page13=()=>{
  const data=@@PAGE13_DATA@@,root=document.getElementById('page13'),body=root.querySelector('.page13-body'),nodes=new Map(data.shapes.map(s=>[s.id,root.querySelector('#p13-shape-'+s.id)]));
  const names=['Recurring process','State between reactions','Mealy-machine behaviour','Composition through single steps'];
- const states=names.map((name,i)=>({name,note:data.notes[i]+'\n\nSource: AEiC-26.pptx slide 8; 750 ms by-object Morph from slide 7. run remains the schematic conference signature. The type alone does not enforce one input per iteration.'}));
+ const states=names.map((name,i)=>({name,note:data.notes[i]+'\n\nSource: AEiC-26.pptx slide 8; 750 ms internal object Morph from the unfolding scene. run remains the schematic conference signature. The type alone does not enforce one input per iteration.'}));
  let step=0,busy=false,generation=0,raf=0,resolveMotion=null;
  const overlay=document.createElement('div');overlay.className='page13-morph';overlay.hidden=true;root.append(overlay);
  const records=[],ns='http://www.w3.org/2000/svg';
