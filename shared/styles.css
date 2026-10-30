@@ -498,20 +498,6 @@ body.full #viewport{inset:0}body.full .controlbar{display:none}#stage{cursor:poi
 .chapter3-insert .c3-math var{font-family:DefenseMathItalic,'Times New Roman',serif;font-style:normal}
 .chapter3-insert .c3-math sub{font-size:.65em;line-height:0;vertical-align:-.25em}
 .chapter3-insert .c3-item{opacity:0;visibility:hidden;pointer-events:none}
-#contracts .contracts-excerpt-caption{position:absolute;left:100px;top:270px;font-size:22px;line-height:28px;color:#626973}
-#contracts .contracts-setter{position:absolute;left:100px;top:312px;margin:0;font-size:30px;line-height:1.3;white-space:pre}
-#contracts .contracts-register{position:absolute;left:1000px;top:270px;width:370px;height:185px}
-#contracts .contracts-unchanged{position:absolute;left:100px;top:415px;font-size:32px;line-height:1.28}
-#contracts.contracts-returned #contracts-returned-state{text-decoration:underline;text-decoration-color:#004791;text-underline-offset:8px;text-decoration-thickness:2px}
-#contracts .contracts-law-heading{position:absolute;left:100px;top:493px;font-size:32px;line-height:1.28}
-#contracts .contracts-spec{position:absolute;left:100px;top:551px;margin:0;font-size:30px;line-height:1.35;white-space:pre}
-#contracts .contracts-equation-side{text-decoration:underline;text-decoration-color:#004791;text-underline-offset:8px;text-decoration-thickness:1.5px}
-#contracts .contracts-explanation{position:absolute;left:100px;top:669px;width:1380px;font-size:32px;line-height:1.28}
-#contracts .contracts-memory{position:absolute;left:100px;top:280px;width:650px;height:200px}
-#contracts .contracts-memory-law{position:absolute;left:100px;top:530px;width:650px;font-size:32px;line-height:1.3}
-#contracts .contracts-reasoning{position:absolute;left:900px;top:310px;width:590px;font-size:32px;line-height:1.3}
-#contracts .contracts-evidence{position:absolute;left:900px;top:495px;width:590px;font-size:32px;line-height:1.3}
-#contracts .contracts-acsl{position:absolute;left:900px;top:620px;width:590px;font-size:26px;line-height:1.35}
 #rv32i_contracts .rv-contract-model{position:absolute;left:95px;top:267px;width:630px;height:260px}
 #rv32i_contracts .rv-dependency{fill:none;stroke:#000;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 #rv32i_contracts .rv-model-caption{font-family:Figtree,Arial,sans-serif;font-size:26px;fill:#626973}
@@ -625,3 +611,15 @@ body.full #viewport{inset:0}body.full .controlbar{display:none}#stage{cursor:poi
 
 #fm_model .fm-guide-end{position:relative;display:inline-block}
 #fm_model .fm-guide-end small{position:absolute;left:50%;top:58px;transform:translateX(-50%);font-size:23px;line-height:1.2;color:#626973;font-weight:400}
+
+/* Revised Page 16A: full original SVG groups in the user's three-row structure. */
+#contracts .contracts-row{position:absolute;left:91px;width:1419px;font-size:32px;line-height:1.28;font-weight:400}
+#contracts .contracts-row p{margin:0}
+#contracts-row1{top:175px}
+#contracts-row2{top:380px}
+#contracts-row3{top:585px}
+#contracts-native-art{position:absolute;inset:0;width:1600px;height:900px;pointer-events:none;overflow:visible}
+#contracts-native-art text{font-family:Figtree,Arial,sans-serif}
+#contracts-native-row1 [data-opening-reveal]{opacity:0;visibility:hidden}
+#contracts #contracts-contract{position:absolute;left:865px;top:639px;margin:0;font-family:DefenseCode,Consolas,monospace;font-size:28px;line-height:1.45;font-variant-ligatures:none;letter-spacing:0;white-space:pre}
+#contracts .contracts-function{color:#0029ed}

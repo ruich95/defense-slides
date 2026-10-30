@@ -167,12 +167,20 @@
     "displayNumber": 16
   },
   {
+    "id": "contracts",
+    "title": "Specifying Component Behaviour",
+    "source": "slides/contracts.html",
+    "controller": "slides/contracts.js",
+    "steps": 8,
+    "displayNumber": 17
+  },
+  {
     "id": "page20",
     "title": "Example: Rising Pattern Detection",
     "source": "slides/page20.html",
     "controller": "slides/page20.js",
     "steps": 8,
-    "displayNumber": 17
+    "displayNumber": 18
   },
   {
     "id": "page21",
@@ -180,7 +188,7 @@
     "source": "slides/page21.html",
     "controller": "slides/page21.js",
     "steps": 12,
-    "displayNumber": 18
+    "displayNumber": 19
   },
   {
     "id": "page22",
@@ -188,7 +196,7 @@
     "source": "slides/page22.html",
     "controller": "slides/page22.js",
     "steps": 10,
-    "displayNumber": 19
+    "displayNumber": 20
   },
   {
     "id": "page23",
@@ -196,7 +204,7 @@
     "source": "slides/page23.html",
     "controller": "slides/page23.js",
     "steps": 8,
-    "displayNumber": 20
+    "displayNumber": 21
   },
   {
     "id": "page24",
@@ -204,7 +212,7 @@
     "source": "slides/page24.html",
     "controller": "slides/page24.js",
     "steps": 4,
-    "displayNumber": 21
+    "displayNumber": 22
   },
   {
     "id": "page25",
@@ -212,7 +220,7 @@
     "source": "slides/page25.html",
     "controller": "slides/page25.js",
     "steps": 1,
-    "displayNumber": 22
+    "displayNumber": 23
   },
   {
     "id": "aeic25",
@@ -220,7 +228,7 @@
     "source": "slides/aeic25.html",
     "controller": "slides/aeic25.js",
     "steps": 8,
-    "displayNumber": 23
+    "displayNumber": 24
   },
   {
     "id": "aeic26_27",
@@ -228,7 +236,7 @@
     "source": "slides/aeic26_27.html",
     "controller": "slides/aeic26_27.js",
     "steps": 14,
-    "displayNumber": 24
+    "displayNumber": 25
   },
   {
     "id": "aeic28",
@@ -236,7 +244,7 @@
     "source": "slides/aeic28.html",
     "controller": "slides/aeic28.js",
     "steps": 2,
-    "displayNumber": 25
+    "displayNumber": 26
   },
   {
     "id": "aeic29",
@@ -244,7 +252,7 @@
     "source": "slides/aeic29.html",
     "controller": "slides/aeic29.js",
     "steps": 8,
-    "displayNumber": 26
+    "displayNumber": 27
   },
   {
     "id": "aeic30",
@@ -252,7 +260,7 @@
     "source": "slides/aeic30.html",
     "controller": "slides/aeic30.js",
     "steps": 1,
-    "displayNumber": 27
+    "displayNumber": 28
   },
   {
     "id": "aeic31",
@@ -260,7 +268,7 @@
     "source": "slides/aeic31.html",
     "controller": "slides/aeic31.js",
     "steps": 3,
-    "displayNumber": 28
+    "displayNumber": 29
   },
   {
     "id": "aeic32",
@@ -268,6 +276,6 @@
     "source": "slides/aeic32.html",
     "controller": "slides/aeic32.js",
     "steps": 1,
-    "displayNumber": 29
+    "displayNumber": 30
   }
 ]
