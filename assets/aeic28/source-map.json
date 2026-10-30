@@ -1,0 +1,77 @@
+{
+  "source": "final/AEiC-26.pptx",
+  "sourceSlide": 28,
+  "stableId": "aeic28",
+  "displayNumber": 25,
+  "states": 2,
+  "assets": {
+    "9": "image90.png",
+    "16": "image91.svg",
+    "18": "image92.svg",
+    "20": "image93.svg",
+    "21": "arrow21.svg"
+  },
+  "arrowSourceXML": "<ns0:sp xmlns:ns0=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:ns1=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:ns2=\"http://schemas.microsoft.com/office/drawing/2014/main\"><ns0:nvSpPr><ns0:cNvPr id=\"21\" name=\"Arrow: Down 20\"><ns1:extLst><ns1:ext uri=\"{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}\"><ns2:creationId id=\"{BEA47074-84F9-C06F-331F-19A04E7C6338}\" /></ns1:ext></ns1:extLst></ns0:cNvPr><ns0:cNvSpPr /><ns0:nvPr /></ns0:nvSpPr><ns0:spPr><ns1:xfrm><ns1:off x=\"3295624\" y=\"4432764\" /><ns1:ext cx=\"222250\" cy=\"273050\" /></ns1:xfrm><ns1:prstGeom prst=\"downArrow\"><ns1:avLst /></ns1:prstGeom><ns1:solidFill><ns1:srgbClr val=\"A6A6A6\" /></ns1:solidFill><ns1:ln><ns1:noFill /></ns1:ln></ns0:spPr><ns0:style><ns1:lnRef idx=\"2\"><ns1:schemeClr val=\"accent1\"><ns1:shade val=\"15000\" /></ns1:schemeClr></ns1:lnRef><ns1:fillRef idx=\"1\"><ns1:schemeClr val=\"accent1\" /></ns1:fillRef><ns1:effectRef idx=\"0\"><ns1:schemeClr val=\"accent1\" /></ns1:effectRef><ns1:fontRef idx=\"minor\"><ns1:schemeClr val=\"lt1\" /></ns1:fontRef></ns0:style><ns0:txBody><ns1:bodyPr rtlCol=\"0\" anchor=\"ctr\" /><ns1:lstStyle /><ns1:p><ns1:pPr algn=\"ctr\" /><ns1:endParaRPr lang=\"en-US\" dirty=\"0\" /></ns1:p></ns0:txBody></ns0:sp>",
+  "arrowConversion": "Original downArrow preset with default adjustments, source extent, A6A6A6 fill and no outline; recovered as vector from OOXML.",
+  "sourceEffects": {
+    "transition": 0,
+    "slide": 28,
+    "advanceOnTime": 0,
+    "duration": 2.0,
+    "effects": [
+      {
+        "index": 1,
+        "delay": 0.0,
+        "duration": 0.001,
+        "type": 1,
+        "shape": 21,
+        "trigger": 1,
+        "paragraph": null,
+        "exit": 0
+      },
+      {
+        "index": 2,
+        "delay": 0.0,
+        "duration": 0.001,
+        "type": 1,
+        "shape": 20,
+        "trigger": 2,
+        "paragraph": null,
+        "exit": 0
+      }
+    ]
+  },
+  "layout": {
+    "body": {
+      "x": 140,
+      "y": 260,
+      "w": 580,
+      "h": 322.0670486552367
+    },
+    "sum": {
+      "x": 170,
+      "y": 608,
+      "w": 523.1719914684264,
+      "h": 22.259001627538847
+    },
+    "balanced": {
+      "x": 170,
+      "y": 712,
+      "w": 718.5613745643175,
+      "h": 55.85817373791422
+    },
+    "diagram": {
+      "x": 810,
+      "y": 275,
+      "w": 700,
+      "h": 301.875
+    },
+    "arrow": {
+      "x": 417,
+      "y": 651,
+      "w": 29.166666666666668,
+      "h": 35.833333333333336
+    }
+  },
+  "adaptation": "Original media unchanged and uncropped. Equal code scale across all three vectors. Arrow and transformed code appear together; original model/sum/diagram remain stationary. No balancing, sequentialisation or page-entry animation."
+}

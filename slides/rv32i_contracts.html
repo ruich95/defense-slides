@@ -1,0 +1,43 @@
+<section class="slide chapter3-insert" id="rv32i_contracts" aria-label="Slide 18: RV32-I: Reasoning with Component Contracts">
+<img class="kth-logo" alt="KTH Royal Institute of Technology" src="@@LOGO@@">
+<h1>RV32-I: Reasoning with Component Contracts</h1>
+
+<p class="c3-opening">A processor model composes components with specified behaviour.</p>
+<svg class="rv-contract-model" viewBox="0 0 630 260" role="img" aria-label="High-level model: instruction behaviour depends on program counter, register file and memory">
+ <path d="M250 45H300V116H337" class="rv-dependency"/>
+ <path d="M228 130H337" class="rv-dependency rv-register-link"/>
+ <path d="M228 215H300V144H337" class="rv-dependency rv-memory-link"/>
+ <rect x="337" y="84" width="264" height="93" rx="3" fill="#ffccc4" fill-opacity=".7" stroke="#000" stroke-width="1.8"/>
+ <rect x="326" y="118" width="22" height="22" fill="#ebe5e0" stroke="#000" stroke-width="1.8"/>
+ <text x="12" y="54" class="c3-svg-label">Program counter</text>
+ <text x="12" y="139" class="c3-svg-label rv-register-label">Register file</text>
+ <text x="12" y="224" class="c3-svg-label rv-memory-label">Memory</text>
+ <text x="469" y="119" text-anchor="middle" class="c3-svg-label">Instruction</text>
+ <text x="469" y="154" text-anchor="middle" class="c3-svg-label">behaviour</text>
+ <text x="469" y="240" text-anchor="middle" class="rv-model-caption">High-level model</text>
+</svg>
+<div id="rv-contract-add" class="c3-item" data-first="1" data-last="4">
+ <p class="rv-contract-instruction"><code>ADD rd, rs1, rs2</code></p>
+ <p class="rv-contract-condition">For <span class="c3-math"><var>rd</var> ≠ 0</span>:</p>
+ <div class="rv-contract-equation c3-math" role="math" aria-label="st prime of rd equals lower 32 bits of st of rs1 plus st of rs2">
+  <span id="rv-contract-destination"><var>st</var>′[<var>rd</var>]</span> =<br>
+  <span class="rv-contract-rhs">lower<sub>32</sub>(<var>st</var>[<var>rs1</var>] + <var>st</var>[<var>rs2</var>])</span>
+ </div>
+ <p class="rv-contract-gloss">The destination receives the low 32 bits of the sum.</p>
+</div>
+<div id="rv-contract-trace" class="c3-item" data-first="2" data-last="4">
+ <div class="rv-trace-stage rv-trace-read"><strong>Read operands</strong><p class="c3-math"><var>st</var>[<var>rs1</var>], <var>st</var>[<var>rs2</var>]</p></div>
+ <div class="rv-trace-stage rv-trace-compute"><strong>Compute sum</strong><p class="c3-math">lower<sub>32</sub>(<var>a</var> + <var>b</var>)</p></div>
+ <div class="rv-trace-stage rv-trace-write"><strong>Write destination</strong><p class="c3-math"><span id="rv-contract-write"><var>rd</var> ← result</span></p></div>
+ <svg class="rv-trace-arrows" viewBox="0 0 1600 900" aria-hidden="true"><defs><marker id="rv-contract-trace-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#000" stroke-width="1.2"/></marker></defs><path d="M480 570H620" fill="none" stroke="#000" stroke-width="1.8" marker-end="url(#rv-contract-trace-arrow)"/><path d="M970 570H1100" fill="none" stroke="#000" stroke-width="1.8" marker-end="url(#rv-contract-trace-arrow)"/></svg>
+</div>
+<div id="rv-contract-law" class="c3-item" data-first="3" data-last="4">
+ <svg class="rv-contract-guide" viewBox="0 0 1600 900" aria-hidden="true"><path d="M1270 642V646H270V652" fill="none" stroke="#004791" stroke-width="1.8" stroke-linejoin="round"/></svg>
+ <p class="rv-contract-law-prose"><strong>Register-file contract:</strong> reading after writing observes the written value.</p>
+ <p class="rv-contract-law-id"><code>regFWriteElim1</code></p>
+</div>
+<p id="rv-contract-conclusion" class="rv-contract-conclusion c3-item" data-first="4" data-last="4">The ADD property follows by symbolic evaluation and rewriting with the contract.</p>
+<p class="c3-source">Thesis §3.4.3, Proposition 3.5 and Listing 3.9, pp. 87–89</p>
+
+<footer><span class="footer-event">PhD Defence - 9 November 2026 - Stockholm</span><span class="footer-name">Rui Chen</span><span class="footer-page">18</span></footer>
+</section>

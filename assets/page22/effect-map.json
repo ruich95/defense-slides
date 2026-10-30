@@ -232,7 +232,7 @@
       "duration": 1
     }
   ],
-  "adaptation": "The requested full-model/cumulative composition replaces white code masks with pale-blue semantic cues, and overrides native hide-on-next-click settings for cues/callouts. Source trigger groups and explicit exits remain exact. Logical diagram visibility accumulates; only the latest frame paints, avoiding transparent-PNG ghosting.",
+  "adaptation": "Full model and earlier explanations remain. Only the current click group code highlights and guides paint, matching displayed P18. Diagram construction still advances through the latest frame; no cumulative highlight wash.",
   "maskRoles": {
     "43": "State / input / output types",
     "48": "Definition name",
@@ -248,5 +248,6 @@
     "39": "image75.png",
     "40": "image76.png",
     "41": "image77.png"
-  }
+  },
+  "currentEmphasisRule": "Displayed P18 current-click emphasis, superseding cumulative highlight overrides; source event groups remain recorded unchanged."
 }

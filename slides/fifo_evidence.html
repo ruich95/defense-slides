@@ -1,0 +1,33 @@
+<section class="slide section4-insert" id="fifo_evidence" aria-label="Slide 26: FIFO: From Tests to Proof Obligations">
+<img class="kth-logo" alt="KTH Royal Institute of Technology" src="@@LOGO@@">
+<h1>FIFO: From Tests to Proof Obligations</h1>
+<p class="s4-opening">The software interpretation supports testing and reasoning about a FIFO.</p>
+<div class="fifo-diagram">@@FIFO_TESTING_SVG@@</div>
+<p class="fifo-legend">A transfer is accepted when data is valid and its acknowledgement is true.</p>
+<div class="s4-item" data-first="1" data-last="1">
+ <h2 class="fifo-test-heading">Test accepted sequences</h2>
+ <pre class="fifo-test-code"><code><span class="s4-function">fifoProp</span> input =
+  let (dataIn, ackIn) = unzip input
+      (dataOut, ackOut) = unzip $ fifoMealy input
+  in (squeeze $ dataOut `zip` ackIn)
+     &lt;: (squeeze $ dataIn `zip` ackOut)</code></pre>
+ <p class="fifo-prefix">Accepted output is a <strong>prefix</strong> of accepted input.</p>
+</div>
+<div class="s4-item" data-first="2" data-last="4">
+ <h2 class="fifo-step-heading">Prove stepwise behaviour</h2>
+ <p class="fifo-step-claim">With valid input and <strong>ackOut = 1</strong>, the datum is stored at the FIFO tail at the next event.</p>
+ <p class="fifo-scope">Depth-4 example; both ackIn cases.</p>
+</div>
+<div class="s4-item" data-first="3" data-last="4">
+ <h2 class="fifo-law-heading">The proof exposes required primitive laws</h2>
+ <p class="fifo-law">For any bit vector <var>x</var>: <strong><var>x</var> AND 0 = 0</strong></p>
+</div>
+<div class="s4-item" data-first="4" data-last="4">
+ <h2 class="fifo-obligation-heading">Check those laws against the primitive implementation</h2>
+ <pre class="fifo-acsl"><code>/*@ assigns \nothing;
+    ensures (val_2 == 0) ==&gt; (\result == 0); */</code></pre>
+ <p class="fifo-acsl-caption">Contract for the C bit-vector AND primitive.</p>
+</div>
+<p class="s4-source">Thesis §4.4.2, pp. 123–126; SETTA 2025, slide 20</p>
+<footer><span class="footer-event">PhD Defence - 9 November 2026 - Stockholm</span><span class="footer-name">Rui Chen</span><span class="footer-page">26</span></footer>
+</section>

@@ -1,0 +1,458 @@
+{
+  "source": "final/AEiC-26.pptx",
+  "sourceSlide": 29,
+  "stableId": "aeic29",
+  "displayNumber": 26,
+  "sourceMedia": {
+    "image94.svg": {
+      "w": 91.5893,
+      "h": 33.4022
+    },
+    "image95.svg": {
+      "w": 106.858,
+      "h": 60.9826
+    },
+    "image96.svg": {
+      "w": 260.225,
+      "h": 162.092
+    },
+    "image97.svg": {
+      "w": 232.672,
+      "h": 108.85
+    },
+    "image98.svg": {
+      "w": 522.821,
+      "h": 114.651
+    }
+  },
+  "pictures": {
+    "148": [
+      "image94.svg",
+      304,
+      245,
+      115
+    ],
+    "153": [
+      "image95.svg",
+      298,
+      285,
+      134
+    ],
+    "155": [
+      "image96.svg",
+      700,
+      235,
+      350
+    ],
+    "159": [
+      "image97.svg",
+      1100,
+      250,
+      410
+    ],
+    "165": [
+      "image98.svg",
+      270,
+      548,
+      1240
+    ]
+  },
+  "adaptations": [
+    "Source nodes and labels retain their native aspect, size and colours. Vertical gaps in the left process chart are compacted.",
+    "Chart connector shafts are rerouted to shorter gaps, preserving native colour and arrowhead/shaft dimensions.",
+    "Complete schedule uses1240px width and extends into the lower full-width region so all eight rows and unit columns remain readable.",
+    "All schedule emphasis artwork uses the same uniform source-to-schedule affine map; cross-unit endpoints are retained exactly.",
+    "Only shortened opening and metric prose replace source text; all seven show/exit groups are unchanged."
+  ],
+  "nativeSourceShapeIds": [
+    12,
+    17,
+    22,
+    27,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    56,
+    68,
+    73,
+    98,
+    139,
+    142,
+    148,
+    153,
+    155,
+    159,
+    161,
+    165,
+    167,
+    168,
+    170,
+    172,
+    173,
+    177,
+    178
+  ],
+  "stateVisibility": [
+    [],
+    [
+      73
+    ],
+    [
+      32,
+      33,
+      34,
+      44,
+      73,
+      139,
+      153,
+      155,
+      159
+    ],
+    [
+      12,
+      32,
+      33,
+      34,
+      40,
+      44,
+      73,
+      139,
+      153,
+      155,
+      159,
+      161,
+      165
+    ],
+    [
+      12,
+      32,
+      33,
+      34,
+      40,
+      44,
+      73,
+      139,
+      153,
+      155,
+      159,
+      161,
+      165,
+      167
+    ],
+    [
+      12,
+      32,
+      33,
+      34,
+      40,
+      44,
+      73,
+      139,
+      153,
+      155,
+      159,
+      161,
+      165,
+      168,
+      170,
+      172,
+      173,
+      177,
+      178
+    ],
+    [
+      12,
+      17,
+      32,
+      33,
+      34,
+      35,
+      39,
+      40,
+      41,
+      44,
+      73,
+      98,
+      139,
+      142,
+      148,
+      153,
+      155,
+      159,
+      161,
+      165
+    ],
+    [
+      12,
+      17,
+      22,
+      27,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      56,
+      68,
+      73,
+      98,
+      139,
+      142,
+      148,
+      153,
+      155,
+      159,
+      161,
+      165
+    ]
+  ],
+  "sourceGroups": [
+    [
+      {
+        "id": 73,
+        "show": true,
+        "duration": 0.001
+      }
+    ],
+    [
+      {
+        "id": 32,
+        "show": true,
+        "duration": 0.001
+      },
+      {
+        "id": 139,
+        "show": true,
+        "duration": 0.001
+      },
+      {
+        "id": 33,
+        "show": true,
+        "duration": 0.001
+      },
+      {
+        "id": 34,
+        "show": true,
+        "duration": 0.001
+      },
+      {
+        "id": 44,
+        "show": true,
+        "duration": 0.001
+      },
+      {
+        "id": 153,
+        "show": true,
+        "duration": 0.001
+      },
+      {
+        "id": 155,
+        "show": true,
+        "duration": 0.001
+      },
+      {
+        "id": 159,
+        "show": true,
+        "duration": 0.001
+      }
+    ],
+    [
+      {
+        "id": 40,
+        "show": true,
+        "duration": 0.001
+      },
+      {
+        "id": 12,
+        "show": true,
+        "duration": 0.001
+      },
+      {
+        "id": 161,
+        "show": true,
+        "duration": 0.001
+      },
+      {
+        "id": 165,
+        "show": true,
+        "duration": 0.001
+      }
+    ],
+    [
+      {
+        "id": 167,
+        "show": true,
+        "duration": 0.001
+      }
+    ],
+    [
+      {
+        "id": 167,
+        "show": false,
+        "duration": 0.001
+      },
+      {
+        "id": 178,
+        "show": true,
+        "duration": 0.001
+      },
+      {
+        "id": 177,
+        "show": true,
+        "duration": 0.001
+      },
+      {
+        "id": 170,
+        "show": true,
+        "duration": 0.001
+      },
+      {
+        "id": 172,
+        "show": true,
+        "duration": 0.001
+      },
+      {
+        "id": 173,
+        "show": true,
+        "duration": 0.001
+      },
+      {
+        "id": 168,
+        "show": true,
+        "duration": 0.001
+      }
+    ],
+    [
+      {
+        "id": 148,
+        "show": true,
+        "duration": 0.001
+      },
+      {
+        "id": 98,
+        "show": true,
+        "duration": 0.001
+      },
+      {
+        "id": 39,
+        "show": true,
+        "duration": 0.001
+      },
+      {
+        "id": 142,
+        "show": true,
+        "duration": 0.001
+      },
+      {
+        "id": 35,
+        "show": true,
+        "duration": 0.001
+      },
+      {
+        "id": 41,
+        "show": true,
+        "duration": 0.001
+      },
+      {
+        "id": 17,
+        "show": true,
+        "duration": 0.001
+      },
+      {
+        "id": 178,
+        "show": false,
+        "duration": 0.001
+      },
+      {
+        "id": 177,
+        "show": false,
+        "duration": 0.001
+      },
+      {
+        "id": 170,
+        "show": false,
+        "duration": 0.001
+      },
+      {
+        "id": 172,
+        "show": false,
+        "duration": 0.001
+      },
+      {
+        "id": 173,
+        "show": false,
+        "duration": 0.001
+      },
+      {
+        "id": 168,
+        "show": false,
+        "duration": 0.001
+      }
+    ],
+    [
+      {
+        "id": 38,
+        "show": true,
+        "duration": 0.001
+      },
+      {
+        "id": 37,
+        "show": true,
+        "duration": 0.001
+      },
+      {
+        "id": 36,
+        "show": true,
+        "duration": 0.001
+      },
+      {
+        "id": 56,
+        "show": true,
+        "duration": 0.001
+      },
+      {
+        "id": 42,
+        "show": true,
+        "duration": 0.001
+      },
+      {
+        "id": 43,
+        "show": true,
+        "duration": 0.001
+      },
+      {
+        "id": 22,
+        "show": true,
+        "duration": 0.001
+      },
+      {
+        "id": 27,
+        "show": true,
+        "duration": 0.001
+      },
+      {
+        "id": 68,
+        "show": true,
+        "duration": 0.001
+      }
+    ]
+  ]
+}

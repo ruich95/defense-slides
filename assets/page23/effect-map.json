@@ -170,7 +170,7 @@
       "duration": 1
     }
   ],
-  "adaptation": "All mathematical/media content is present at entry. Correspondences accumulate as requested, overriding native hide-on-next-click after-effect metadata. Original click groups, red proposition/waveform emphasis, semantic targets and native arrow directions remain. Seven code rectangles use the established pale-blue emphasis.",
+  "adaptation": "Complete property, waveform and type stay visible. Each click replaces the previous correspondence highlights and guides. Only the current code fragment has P18-style pale-blue emphasis; red property/waveform accents retain their semantic role.",
   "regions": {
     "9": [
       "image81.svg",
@@ -194,5 +194,6 @@
       "waveform"
     ]
   },
-  "guides": "Native bent input guide27 stays rightward/upward; native output guide33 stays upward. Both resized to the new waveform/property placement."
+  "guides": "Native bent input guide27 stays rightward/upward; native output guide33 stays upward. Both resized to the new waveform/property placement.",
+  "currentEmphasisRule": "Displayed P18 current-click emphasis, superseding cumulative highlight overrides; source event groups remain recorded unchanged."
 }

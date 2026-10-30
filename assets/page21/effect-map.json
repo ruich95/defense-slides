@@ -361,23 +361,7 @@
             "filter": "wipe(left)"
           },
           {
-            "id": 147,
-            "kind": "entr",
-            "start": 0,
-            "duration": 250,
-            "relation": "withEffect",
-            "filter": "wipe(left)"
-          },
-          {
             "id": 214,
-            "kind": "entr",
-            "start": 0,
-            "duration": 250,
-            "relation": "withEffect",
-            "filter": "wipe(left)"
-          },
-          {
-            "id": 218,
             "kind": "entr",
             "start": 0,
             "duration": 250,
@@ -392,14 +376,35 @@
             "relation": "afterEffect"
           },
           {
-            "id": 39,
+            "id": 211,
             "kind": "entr",
             "start": 250,
             "duration": 1,
             "relation": "afterEffect"
+          }
+        ],
+        "duration": 251
+      },
+      {
+        "events": [
+          {
+            "id": 147,
+            "kind": "entr",
+            "start": 0,
+            "duration": 250,
+            "relation": "clickEffect",
+            "filter": "wipe(left)"
           },
           {
-            "id": 211,
+            "id": 218,
+            "kind": "entr",
+            "start": 0,
+            "duration": 250,
+            "relation": "withEffect",
+            "filter": "wipe(left)"
+          },
+          {
+            "id": 39,
             "kind": "entr",
             "start": 250,
             "duration": 1,
@@ -527,5 +532,258 @@
       "vectorMorph": false
     }
   ],
-  "resolution": "Only the shared original code picture255 persists between scenes. Explanations, active highlight/guide and foo/bar diagram leave individually; the initial framework model node enters. No false diagram-to-framework matches. Code guide geometry and five external interpretation/target arrows are adapted to the layout; native framework routes and paint order remain unchanged."
+  "resolution": "Only original code picture255 persists between scenes. Abstract-scene exits and 500ms object Morph are unchanged. Five external code-to-code guides are straight lines; the semantic model-transformation loop and native framework curves remain. Page5-style target wrappers overlap as in source P20, with Verilog and LLVM revealed on separate clicks. Original native target grouping is preserved in sourceRouteGroups; groups.routes records the current twelve-state adaptation.",
+  "sourceRouteGroups": [
+    {
+      "events": [
+        {
+          "id": 17,
+          "kind": "entr",
+          "start": 0,
+          "duration": 250,
+          "relation": "clickEffect",
+          "filter": "wipe(down)"
+        },
+        {
+          "id": 60,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect"
+        },
+        {
+          "id": 6,
+          "kind": "entr",
+          "start": 0,
+          "duration": 250,
+          "relation": "withEffect",
+          "filter": "wipe(left)"
+        },
+        {
+          "id": 49,
+          "kind": "entr",
+          "start": 250,
+          "duration": 1,
+          "relation": "afterEffect"
+        },
+        {
+          "id": 31,
+          "kind": "entr",
+          "start": 250,
+          "duration": 1,
+          "relation": "withEffect"
+        }
+      ],
+      "duration": 251
+    },
+    {
+      "events": [
+        {
+          "id": 25,
+          "kind": "entr",
+          "start": 0,
+          "duration": 250,
+          "relation": "clickEffect",
+          "filter": "wipe(right)"
+        },
+        {
+          "id": 22,
+          "kind": "entr",
+          "start": 0,
+          "duration": 250,
+          "relation": "withEffect",
+          "filter": "wipe(left)"
+        },
+        {
+          "id": 129,
+          "kind": "entr",
+          "start": 0,
+          "duration": 250,
+          "relation": "withEffect",
+          "filter": "wipe(left)"
+        },
+        {
+          "id": 144,
+          "kind": "entr",
+          "start": 0,
+          "duration": 250,
+          "relation": "withEffect",
+          "filter": "wipe(right)"
+        },
+        {
+          "id": 146,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect"
+        },
+        {
+          "id": 62,
+          "kind": "entr",
+          "start": 0,
+          "duration": 1,
+          "relation": "withEffect"
+        },
+        {
+          "id": 128,
+          "kind": "entr",
+          "start": 250,
+          "duration": 1,
+          "relation": "afterEffect"
+        },
+        {
+          "id": 26,
+          "kind": "entr",
+          "start": 250,
+          "duration": 1,
+          "relation": "afterEffect"
+        },
+        {
+          "id": 23,
+          "kind": "entr",
+          "start": 250,
+          "duration": 250,
+          "relation": "afterEffect",
+          "filter": "wipe(down)"
+        },
+        {
+          "id": 134,
+          "kind": "entr",
+          "start": 250,
+          "duration": 1,
+          "relation": "withEffect"
+        }
+      ],
+      "duration": 500
+    },
+    {
+      "events": [
+        {
+          "id": 7,
+          "kind": "entr",
+          "start": 0,
+          "duration": 250,
+          "relation": "clickEffect",
+          "filter": "fade"
+        },
+        {
+          "id": 24,
+          "kind": "entr",
+          "start": 0,
+          "duration": 250,
+          "relation": "withEffect",
+          "filter": "fade"
+        },
+        {
+          "id": 12,
+          "kind": "entr",
+          "start": 250,
+          "duration": 1,
+          "relation": "afterEffect"
+        },
+        {
+          "id": 20,
+          "kind": "entr",
+          "start": 350,
+          "duration": 250,
+          "relation": "afterEffect",
+          "filter": "barn(outVertical)"
+        },
+        {
+          "id": 16,
+          "kind": "entr",
+          "start": 350,
+          "duration": 250,
+          "relation": "withEffect",
+          "filter": "barn(outVertical)"
+        },
+        {
+          "id": 21,
+          "kind": "entr",
+          "start": 350,
+          "duration": 250,
+          "relation": "withEffect",
+          "filter": "barn(outVertical)"
+        }
+      ],
+      "duration": 600
+    },
+    {
+      "events": [
+        {
+          "id": 18,
+          "kind": "entr",
+          "start": 0,
+          "duration": 250,
+          "relation": "clickEffect",
+          "filter": "wipe(left)"
+        },
+        {
+          "id": 147,
+          "kind": "entr",
+          "start": 0,
+          "duration": 250,
+          "relation": "withEffect",
+          "filter": "wipe(left)"
+        },
+        {
+          "id": 214,
+          "kind": "entr",
+          "start": 0,
+          "duration": 250,
+          "relation": "withEffect",
+          "filter": "wipe(left)"
+        },
+        {
+          "id": 218,
+          "kind": "entr",
+          "start": 0,
+          "duration": 250,
+          "relation": "withEffect",
+          "filter": "wipe(left)"
+        },
+        {
+          "id": 35,
+          "kind": "entr",
+          "start": 250,
+          "duration": 1,
+          "relation": "afterEffect"
+        },
+        {
+          "id": 39,
+          "kind": "entr",
+          "start": 250,
+          "duration": 1,
+          "relation": "afterEffect"
+        },
+        {
+          "id": 211,
+          "kind": "entr",
+          "start": 250,
+          "duration": 1,
+          "relation": "afterEffect"
+        },
+        {
+          "id": 213,
+          "kind": "entr",
+          "start": 250,
+          "duration": 1,
+          "relation": "afterEffect"
+        }
+      ],
+      "duration": 251
+    }
+  ],
+  "currentAdaptation": {
+    "date": "2026-10-30",
+    "displayedPage": 18,
+    "states": 12,
+    "clicks": 11,
+    "targetSourceClick": 4,
+    "targetRevealStates": [
+      11,
+      12
+    ],
+    "description": "User-requested straight code-to-code arrows and source-P20-like geometry. Split native target source click4 into Verilog and LLVM clicks, retaining each route 0–250ms wipe and result appearance at250ms. LLVM appears above the lower part of the still-visible Verilog panel. Source code artwork and framework paths are unchanged."
+  }
 }

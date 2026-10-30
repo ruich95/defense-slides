@@ -1,0 +1,44 @@
+{
+  "source": "final/AEiC-26.pptx",
+  "sourceSlide": 31,
+  "stableId": "aeic31",
+  "displayNumber": 28,
+  "provisionalClosing": true,
+  "states": 3,
+  "sourceEffects": {
+    "transition": 0,
+    "slide": 31,
+    "advanceOnTime": 0,
+    "duration": 2.0,
+    "effects": [
+      {
+        "index": 1,
+        "delay": 0.0,
+        "duration": 0.001,
+        "type": 1,
+        "shape": 8,
+        "trigger": 1,
+        "paragraph": null,
+        "exit": 0
+      },
+      {
+        "index": 2,
+        "delay": 0.0,
+        "duration": 0.001,
+        "type": 1,
+        "shape": 25,
+        "trigger": 1,
+        "paragraph": null,
+        "exit": 0
+      }
+    ]
+  },
+  "sourceTargets": {
+    "entry": 11,
+    "firstClick": 8,
+    "secondClick": 25
+  },
+  "quotation": "We can have a hierarchy of languages, of ascending power, each of which can express the interpreters of those below it.",
+  "attribution": "D. A. Turner (2004), Total Functional Programming",
+  "adaptation": "Exact shortened conclusion/future-work prose from page28.md. All four conclusions visible on entry. Single lower-right quotation block keeps original text, with restrained styling. No per-bullet clicks, page-entry Morph or automatic advance. Closing placement remains provisional and must follow later technical material."
+}

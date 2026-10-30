@@ -1,0 +1,20 @@
+window.slideFactories.aeic29=()=>{
+ const root=document.getElementById('aeic29'),data=@@AEIC29_DATA@@;
+ const items=[...root.querySelectorAll('[data-source-id]')];
+ const source='\n\nSource: final/AEiC-26.pptx, slide29, original image94.svg–image98.svg and original process/platform/emphasis vectors. Thesis §5.3.1, Figures5.6–5.7, printed pp.147–149. This reuses the thesis/conference evidence; no new experiment has been run. Steps and communications are abstract model metrics, not wall-clock time, FPGA frequency, energy or chip area. Do not add concrete speedup numbers.';
+ const states=[
+  {name:'A common mapping process',note:'Compare the original and balanced FIR using the same mapping process. This is a concrete instance of the general system-design process introduced earlier. Explain the experiment before showing its distributions.'},
+  {name:'Original FIR structure',note:'Begin with the original direct-form FIR structure. Its products feed a chain of additions. The sample-history delays remain; the comparison concerns reassociating the sum.'},
+  {name:'IR, platform and first mapping',note:'The mapping assigns each IR statement to one of two execution units. These units can execute simultaneously when their operands are available. The platform has unlimited communication capabilities.\n\nIR means the intermediate program representation. Follow the application/platform/mapping relation. Explain the assignment colours and P1/P2 labels in the listing and complete mapped network rather than reading every IR instruction.'},
+  {name:'Metrics and two-unit schedule',note:'We count scheduling steps and accesses to data produced by the other execution unit. These are abstract model metrics, not measured runtime. The complete schedule has both processor columns and eight scheduled rows; the right-hand trace is the illustrative original mapping.'},
+  {name:'Eight execution steps',note:'Point to the eight rows of the schedule and the vertical execution-step arrow. This illustrative four-tap mapping requires eight scheduling steps; it does not establish eight physical clock cycles or a measured hardware runtime.'},
+  {name:'Two communications',note:'Follow the two marked inter-unit dependencies. The red boxes identify their source and destination variables on P1 and P2. Count accesses to data produced on the other unit; do not count line crossings or all wire uses as separate communications. The example requires two communications. The step-count arrow is now absent.'},
+  {name:'Balanced branch under the same process',note:'Now apply balancing and evaluate the transformed version through the same mapping process. The platform and evaluation rules are held fixed; this does not assert an identical physical implementation.\n\nThe communication emphasis has disappeared. The original mapped network and schedule remain as the illustrative original case; do not relabel that unchanged schedule as a newly executed balanced trace.'},
+  {name:'Further mappings and paired results',note:'Repeat this over many mappings to see how the available design space changes. The original route stays red/orange and the transformed route blue. Additional mapping paths, ellipsis and paired results appear together.\n\nTransition: Compare the resulting distributions of execution steps and inter-unit communications. These are the reused experimental results, not newly rerun measurements.'}
+ ].map(s=>({...s,note:s.note+source}));
+ let step=0;
+ function render(){const visible=new Set(data.states[step]);for(const item of items){const show=visible.has(Number(item.dataset.sourceId));item.style.opacity=show?'1':'0';item.style.visibility=show?'visible':'hidden';item.setAttribute('aria-hidden',String(!show));}root.dataset.state=String(step+1);}
+ function go(target){step=Math.max(0,Math.min(states.length-1,Math.round(target)));render();return Promise.resolve();}
+ function cancel(){} // All native effects are1 ms appearances/exits; nothing remains pending.
+ render();const api={go,cancel,leave:cancel,states,getState:()=>({step,busy:false,count:states.length})};root.aeic29Controller=api;return api;
+};

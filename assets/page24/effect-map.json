@@ -136,7 +136,7 @@
       "duration": 1
     }
   ],
-  "adaptation": "Native paragraph1/2 targets are retained independently; paragraph0 is visible on entry. Requested cumulative primitive emphasis overrides native hide-on-next-click after-effects on the six primitive boxes. Yellow connections remain distinct. Circuit and trace occupy non-overlapping regions; trace has no crop or data changes.",
+  "adaptation": "Paragraph explanations accumulate. Primitive emphasis is replaced by connection emphasis, then cleared for execution evidence. Code uses translucent filled highlights as on P18, retaining the red/green/blue/yellow semantic correspondence colours. Circuit source colours and trace remain intact.",
   "crop": {
     "top": 0.37582,
     "fullHeight": 273.4638531725223,
@@ -161,5 +161,6 @@
     "39": "#FFBE00",
     "40": "#FFBE00",
     "41": "#FFBE00"
-  }
+  },
+  "currentEmphasisRule": "Displayed P18 current-click emphasis, superseding cumulative highlight overrides; source event groups remain recorded unchanged."
 }

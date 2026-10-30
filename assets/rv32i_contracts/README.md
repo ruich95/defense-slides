@@ -1,0 +1,5 @@
+# rv32i_contracts
+
+The slide uses editable HTML/SVG text, equations and diagrams in `../../slides/rv32i_contracts.html`.
+
+Source: thesis §§3.4.1–3.4.3, printed pp.81–89. Proposition3.5 and Listing3.9 supply the ADD claim and proof method. st and st′ are the register-file state before and after the instruction. rd ≠0 is explicit in the proposition prose. The printed proof signature does not visibly carry the premise in the same form. This slide stays at the mathematical proposition and proof-method level and does not invent a checked declaration or resolve that discrepancy. The topology is a conceptual component-dependency diagram, not a wiring diagram, pipeline or clock schedule. The displayed trace isolates the claim-relevant operations and omits the actual program-counter update. Component contracts are assumptions for this reasoning. No processor-wide hardware verification or new proof execution is claimed. Width typing alone does not prove arithmetic correctness, and state linearity does not bound hardware accesses per clock. Backup B1–B2 and B5 retain details.

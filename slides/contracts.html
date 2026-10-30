@@ -1,0 +1,49 @@
+<section class="slide chapter3-insert" id="contracts" aria-label="Slide 17: Specifying Component Behaviour">
+<img class="kth-logo" alt="KTH Royal Institute of Technology" src="@@LOGO@@">
+<h1>Specifying Component Behaviour</h1>
+
+<p class="c3-opening">Linear use alone does not specify component behaviour.</p>
+<div id="contracts-register-scene" class="c3-item" data-first="0" data-last="2">
+ <p class="contracts-excerpt-caption">regBad — setter excerpt</p>
+ <pre class="contracts-setter"><code><span class="c3-function">set</span> : Component (!* a) a ()
+<span class="c3-function">set</span> x st = <span id="contracts-returned-state">st</span> # ()</code></pre>
+ <svg class="contracts-register" viewBox="0 0 400 200" role="img" aria-label="regBad: input x reaches the setter interface, but the stored state remains s">
+  <defs><marker id="contracts-reg-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#000" stroke-width="1.2"/></marker></defs>
+  <text x="207" y="31" text-anchor="middle" class="c3-svg-label">regBad</text>
+  <rect x="110" y="53" width="195" height="118" rx="3" fill="#ffccc4" fill-opacity=".7" stroke="#000" stroke-width="1.8"/>
+  <rect x="99" y="100" width="22" height="22" fill="#ebe5e0" stroke="#000" stroke-width="1.8"/>
+  <rect x="294" y="100" width="22" height="22" fill="#ebe5e0" stroke="#000" stroke-width="1.8"/>
+  <path d="M41 111H98M317 111H373" fill="none" stroke="#000" stroke-width="1.8" marker-end="url(#contracts-reg-arrow)"/>
+  <text x="23" y="119" text-anchor="middle" class="c3-svg-math">x</text>
+  <text x="207" y="127" text-anchor="middle" class="c3-svg-math">s</text>
+  <text x="378" y="96" text-anchor="middle" class="c3-svg-label">()</text>
+ </svg>
+ <p class="contracts-unchanged c3-item" data-first="1" data-last="2">Well typed, but the stored value is unchanged.</p>
+ <div id="contracts-law" class="c3-item" data-first="2" data-last="2">
+  <p class="contracts-law-heading"><strong>Add a behavioural contract</strong></p>
+  <pre class="contracts-spec"><code><span class="c3-function">spec</span> : (st : !* a) -&gt; (x : a) -&gt;
+       <span class="contracts-equation-side">(get =&lt;&lt; set) x st</span> = <span class="contracts-equation-side">get () (MkBang x)</span></code></pre>
+  <p class="contracts-explanation">Writing and then reading must agree with reading the updated state.</p>
+ </div>
+</div>
+<div id="contracts-memory-scene" class="c3-item" data-first="3" data-last="4">
+ <svg class="contracts-memory" viewBox="0 0 650 200" role="img" aria-label="Black-box Memory component with read and write operations">
+  <rect x="181" y="27" width="284" height="138" rx="3" fill="#f2f2f2" stroke="#000" stroke-width="1.8"/>
+  <rect x="170" y="84" width="22" height="22" fill="#ebe5e0" stroke="#000" stroke-width="1.8"/>
+  <rect x="454" y="84" width="22" height="22" fill="#ebe5e0" stroke="#000" stroke-width="1.8"/>
+  <path d="M105 95H170M476 95H548" stroke="#000" stroke-width="1.8" fill="none"/>
+  <text x="323" y="109" text-anchor="middle" class="c3-svg-label">Memory</text>
+  <text x="82" y="104" text-anchor="end" class="c3-svg-label">read</text>
+  <text x="569" y="104" class="c3-svg-label">write</text>
+ </svg>
+ <p class="contracts-memory-law">Reading an address after writing it returns the written value.</p>
+ <p class="contracts-reasoning"><strong>Reason about a component<br>through its contract.</strong></p>
+ <div id="contracts-foreign-evidence" class="c3-item" data-first="4" data-last="4">
+  <p class="contracts-evidence">A foreign implementation needs evidence for the contract.</p>
+  <p class="contracts-acsl"><strong>Read preserves state:</strong><br>a C memory-read contract verified using ACSL.</p>
+ </div>
+</div>
+<p class="c3-source">Thesis §3.3.4, pp. 77–79</p>
+
+<footer><span class="footer-event">PhD Defence - 9 November 2026 - Stockholm</span><span class="footer-name">Rui Chen</span><span class="footer-page">17</span></footer>
+</section>

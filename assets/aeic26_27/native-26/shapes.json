@@ -1,0 +1,70 @@
+{
+  "height": 540.0,
+  "shapes": [
+    {
+      "id": 15,
+      "width": 230.9544,
+      "x": 138.0456,
+      "name": "Rectangle 14",
+      "y": 234.93921,
+      "height": 18.397558
+    },
+    {
+      "id": 16,
+      "width": 119.79157,
+      "x": 377.25,
+      "name": "Straight Arrow Connector 15",
+      "y": 191.40024,
+      "height": 43.538975
+    },
+    {
+      "id": 21,
+      "width": 142.4544,
+      "x": 138.0456,
+      "name": "Rectangle 20",
+      "y": 252.65425,
+      "height": 17.345827
+    },
+    {
+      "id": 22,
+      "width": 216.16551,
+      "x": 288.0,
+      "name": "Straight Arrow Connector 21",
+      "y": 267.47733,
+      "height": 2.5226772
+    },
+    {
+      "id": 31,
+      "width": 319.39496,
+      "x": 65.25,
+      "name": "Rectangle 30",
+      "y": 270.0567,
+      "height": 18.39748
+    },
+    {
+      "id": 32,
+      "width": 319.39487,
+      "x": 65.24992,
+      "name": "Rectangle 31",
+      "y": 289.37708,
+      "height": 34.589607
+    },
+    {
+      "id": 33,
+      "width": 101.79157,
+      "x": 395.25,
+      "name": "Straight Arrow Connector 32",
+      "y": 282.70267,
+      "height": 56.125355
+    },
+    {
+      "id": 34,
+      "width": 100.95882,
+      "x": 396.08276,
+      "name": "Straight Arrow Connector 33",
+      "y": 305.1741,
+      "height": 101.542046
+    }
+  ],
+  "width": 960.0
+}

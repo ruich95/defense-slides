@@ -451,6 +451,22 @@ def main():
         scale = shape['scale']
         p24_content.append(f'<div id="p24-shape-{shape["id"]}" class="page24-item page24-{shape["role"]}" data-source-id="{shape["id"]}" style="left:{shape["left"]}px;top:{shape["top"]}px;width:{shape["width"]*scale}px;height:{shape["height"]*scale}px">{body}</div>')
     replacements = {
+        '@@RV32I_PARTIAL_SIMULATION@@': data(HERE / 'assets/rv32i_process/fig3-12b.png', 'image/png'),
+        '@@AEIC32_THANKS@@': data(HERE / 'assets/aeic32/image102-with-font.svg', 'image/svg+xml'),
+        '@@AEIC32_CREST@@': data(HERE / 'assets/aeic32/image103.svg', 'image/svg+xml'),
+        '@@AEIC30_32@@': data(HERE / 'assets/aeic30/image99.png', 'image/png'),
+        '@@AEIC30_64@@': data(HERE / 'assets/aeic30/image100.png', 'image/png'),
+        '@@AEIC30_128@@': data(HERE / 'assets/aeic30/image101.png', 'image/png'),
+        '@@AEIC29_CONTENT@@': (HERE / 'assets/aeic29/content.html').read_text(encoding='utf8'),
+        '@@AEIC29_DATA@@': (HERE / 'assets/aeic29/animation.json').read_text(encoding='utf8').replace('</', '<\\/'),
+        '@@AEIC28_MODEL@@': data(HERE / 'assets/aeic28/image91.svg', 'image/svg+xml'),
+        '@@AEIC28_DIAGRAM@@': data(HERE / 'assets/aeic28/image90.png', 'image/png'),
+        '@@AEIC28_SUM@@': data(HERE / 'assets/aeic28/image92.svg', 'image/svg+xml'),
+        '@@AEIC28_BALANCED@@': data(HERE / 'assets/aeic28/image93.svg', 'image/svg+xml'),
+        '@@AEIC28_ARROW@@': data(HERE / 'assets/aeic28/arrow21.svg', 'image/svg+xml'),
+        '@@AEIC26_27_REDUCE@@': data(HERE / 'assets/aeic26_27/image86.svg', 'image/svg+xml'),
+        '@@AEIC26_27_CONTENT@@': (HERE / 'assets/aeic26_27/content.html').read_text(encoding='utf8'),
+        '@@AEIC26_27_DATA@@': (HERE / 'assets/aeic26_27/animation.json').read_text(encoding='utf8').replace('</', '<\\/'),
         '@@PAGE25_TYPE@@': data(HERE / 'assets/page25/image79.svg', 'image/svg+xml'),
         '@@PAGE25_PROOF@@': data(HERE / 'assets/page25/image85.png', 'image/png'),
         '@@PAGE24_CONTENT@@': '\n'.join(p24_content),
@@ -496,6 +512,13 @@ def main():
         '@@ES_ROBOT@@': data(HERE / 'assets/embedded-systems/robot-controller.png', 'image/png'),
         '@@ES_AIRCRAFT@@': data(HERE / 'assets/embedded-systems/aircraft-attitude-control.png', 'image/png'),
     }
+    replacements.update({
+        '@@FIFO_TESTING_SVG@@': (HERE/'assets/fifo_evidence/fifo-testing.svg').read_text(encoding='utf8').split('?>')[-1],
+        '@@FM_HIERARCHY_SVG@@': (HERE/'assets/fm_model/hierarchy-two-tiers.svg').read_text(encoding='utf8').split('?>')[-1],
+        '@@FM_DDC_TIER_SVG@@': (HERE/'assets/fm_validation/ddc-tier.svg').read_text(encoding='utf8').split('?>')[-1],
+        '@@FM_DDC_RESPONSE@@': data(HERE/'assets/fm_validation/ddc-frequency-response.svg','image/svg+xml'),
+        '@@FM_SPECTRUM@@': data(HERE/'assets/fm_validation/spectrum_demodulated_signal.png','image/png'),
+    })
     slides, controllers = {}, {}
     source_entries = [scene for entry in entries for scene in entry.get('scenes', [entry])]
     for entry in source_entries:
@@ -509,6 +532,10 @@ def main():
         slides[entry['id']] = content
         if entry.get('controller'):
             controllers[entry['id']] = (HERE / entry['controller']).read_text(encoding='utf8')
+            if entry['id'] == 'aeic29':
+                controllers[entry['id']] = controllers[entry['id']].replace('@@AEIC29_DATA@@', replacements['@@AEIC29_DATA@@'])
+            if entry['id'] == 'aeic26_27':
+                controllers[entry['id']] = controllers[entry['id']].replace('@@AEIC26_27_DATA@@', replacements['@@AEIC26_27_DATA@@'])
             if entry['id'] == 'page24':
                 controllers[entry['id']] = controllers[entry['id']].replace('@@PAGE24_DATA@@', replacements['@@PAGE24_DATA@@'])
             if entry['id'] == 'page23':
@@ -567,8 +594,16 @@ def main():
         (HERE / f'page{number}.html').write_text(render([entry], entry['title']), encoding='utf8')
     # Keep the cover alias explicit; historical source IDs are not standalone page aliases.
     (HERE / 'cover.html').write_text(render([entries[0]], entries[0]['title']), encoding='utf8')
-    for old_number in range(len(entries) + 1, 26):
-        (HERE / f'page{old_number}.html').write_text('<!doctype html><meta charset="utf-8"><title>Page numbering changed</title><p>This historical page number was retired when the deck was merged to 22 pages. Open <a href="index.html">the current deck</a>. Source IDs and the numbering map are documented in README.md.</p>', encoding='utf8')
+    # Retire stale generated previews whenever the active manifest shrinks.
+    # Preserve editable sources and assets; old page links lead to the current deck.
+    for old_preview in HERE.glob('page*.html'):
+        match = re.fullmatch(r'page(\d+)\.html', old_preview.name)
+        if match and int(match.group(1)) > len(entries):
+            old_preview.write_text(
+                '<!doctype html><meta charset="utf-8"><title>Page numbering changed</title>'
+                f'<p>This page number is no longer part of the active {len(entries)}-page deck. '
+                'Open <a href="index.html">the current deck</a>. '
+                'The current numbering map is documented in README.md.</p>', encoding='utf8')
     print(f'Built presentation with {len(entries)} slides and standalone previews.')
 
 if __name__ == '__main__':

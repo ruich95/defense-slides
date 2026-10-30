@@ -1,0 +1,67 @@
+{
+  "source": "final/AEiC-26.pptx",
+  "sourceSlide": 30,
+  "stableId": "aeic30",
+  "displayNumber": 27,
+  "states": 1,
+  "internalClicks": 0,
+  "assets": [
+    {
+      "media": "image99.png",
+      "taps": 32,
+      "naturalSize": [
+        1500,
+        1500
+      ],
+      "layout": {
+        "x": 80,
+        "y": 264,
+        "w": 480,
+        "h": 480
+      },
+      "crop": "none"
+    },
+    {
+      "media": "image100.png",
+      "taps": 64,
+      "naturalSize": [
+        1500,
+        1500
+      ],
+      "layout": {
+        "x": 565,
+        "y": 264,
+        "w": 480,
+        "h": 480
+      },
+      "crop": "none"
+    },
+    {
+      "media": "image101.png",
+      "taps": 128,
+      "naturalSize": [
+        1500,
+        1500
+      ],
+      "layout": {
+        "x": 1050,
+        "y": 264,
+        "w": 480,
+        "h": 480
+      },
+      "crop": "none"
+    }
+  ],
+  "sourceLegendColors": {
+    "before": "#4DA060",
+    "after": "#E86A58"
+  },
+  "sourceEffects": {
+    "transition": 0,
+    "slide": 30,
+    "advanceOnTime": 0,
+    "duration": 2.0,
+    "effects": []
+  },
+  "adaptation": "Complete original1500-square raster plots retain all scatter, marginal histogram, polar and axis content. Same left-to-right order. Explicit source-colour legend in opening; specified cautious caption. No crop, recolouring, data reconstruction or added animation."
+}

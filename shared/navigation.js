@@ -7,7 +7,7 @@ function render(){document.body.classList.toggle('busy',busy);$('previous').disa
 async function go(targetSlide,targetStep=0,animate=true,options={}){
  const reason=options.reason||'programmatic';
  if(busy){if(!['programmatic','hash','initial'].includes(reason))return;const active=instances.get(slide);if(active&&active.cancel)active.cancel()}
- const token=++navigationGeneration,old=slide;
+ const token=++navigationGeneration,old=slide,previousStep=step;
  const destination=Math.max(0,Math.min(manifest.length-1,Math.round(targetSlide)));
  if(destination!==old){const leaving=instances.get(old);if(leaving&&leaving.leave)leaving.leave()}
  slide=destination;step=Math.max(0,Math.min(count(slide)-1,Math.round(targetStep)));busy=true;
@@ -15,9 +15,13 @@ async function go(targetSlide,targetStep=0,animate=true,options={}){
  try{
   const api=controller(slide);if(api.resize)api.resize();render();
   // P5's pyramid becomes the abstraction-progress bar: a semantic object transformation.
-  // Other page-entry Morphs only connected separately numbered scenes and are disabled.
+  // Two composition entrances retain their original object Morph engines.
+  // All other page boundaries still settle immediately.
   const semanticEntrance=manifest[slide].id==='page5'&&step===0&&(['initial','restart','hash'].includes(reason)||(reason==='forward'&&old!==slide));
-  if(semanticEntrance&&api.enter)await api.enter({playEntrance:true,reason,previousId:manifest[old].id});
+  const compositionEntrance=animate&&reason==='forward'&&old!==slide&&previousStep===count(old)-1&&step===0&&(
+   (manifest[old].id==='merged12'&&manifest[slide].id==='merged13')||
+   (manifest[old].id==='merged13'&&manifest[slide].id==='page17'));
+  if((semanticEntrance||compositionEntrance)&&api.enter)await api.enter({playEntrance:true,reason,previousId:manifest[old].id});
   else await api.go(step,animate&&old===slide);
  }finally{if(token===navigationGeneration){busy=false;render()}}
 }

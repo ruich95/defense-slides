@@ -1,0 +1,39 @@
+{
+  "source": "final/AEiC-26.pptx",
+  "sourceSlide": 32,
+  "stableId": "aeic32",
+  "displayNumber": 29,
+  "provisionalClosing": true,
+  "states": 1,
+  "internalClicks": 0,
+  "sourceBoxes": {
+    "9": {
+      "x": 118.91863517060368,
+      "y": 376.9734908136483,
+      "w": 566.0813648293963,
+      "h": 146.0530183727034
+    },
+    "12": {
+      "x": 1025.0005249343833,
+      "y": 249.704593175853,
+      "w": 357.4994750656168,
+      "h": 400.590813648294
+    }
+  },
+  "split": 800,
+  "background": "#004791",
+  "sourceArtwork": {
+    "9": "image102.svg",
+    "12": "image103.svg"
+  },
+  "renderedThanks": "image102-with-font.svg",
+  "fontAdaptation": "Original SVG text and transforms retained; bundled Figtree font embedded in a derived copy for offline rendering. Untouched original kept.",
+  "sourceEffects": {
+    "transition": 0,
+    "slide": 32,
+    "advanceOnTime": 0,
+    "duration": 2.0,
+    "effects": []
+  },
+  "adaptation": "Original half-white/half-KTH-blue composition with original SVG artwork and crest. Defense event, sole presenter Rui Chen and displayed29 replace conference metadata. Footer uses blue/white contrast at the split. No ordinary title/header, links, contact content or animation."
+}

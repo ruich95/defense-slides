@@ -1,0 +1,14 @@
+{
+  "pinnedCommit": "2d1c1a8e7c4dc763bfb05da92a423f5f7bacc68c",
+  "thesis": "C:/Users/rui chen/Downloads/thesis-print2.pdf",
+  "noNewProofOrExperiment": true,
+  "source": "../latex-project/synq-revision/figs/fm.svg",
+  "sourceGroup": "g69",
+  "svg": "hierarchy-two-tiers.svg",
+  "selection": "Complete top two tiers and original connecting gray expansion wedge; detailed FIR third tier and its wedge omitted. Full source preserved in references. Native source paths/text/ports/boundary retained.",
+  "cicSource": "PipelinedCIC.idr173\u2013177; actual intStg' name.",
+  "fileSHA256": {
+    "ddc-tier.svg": "6b34e090ce7bbd2478ecc7479e2b43cedf1571d47635e219220ed303a282f150",
+    "hierarchy-two-tiers.svg": "16e47ba6a4b9db8799ba7459bb9c1f031018b008992b78915ca993f210953947"
+  }
+}

@@ -1,0 +1,238 @@
+{
+  "displayNumber": 23,
+  "stableId": "aeic25",
+  "source": "final/AEiC-26.pptx",
+  "sourceSlide": 25,
+  "sourceAnimation": {
+    "transition": 0,
+    "slide": 25,
+    "advanceOnTime": 0,
+    "duration": 2.0,
+    "effects": [
+      {
+        "index": 1,
+        "delay": 0.0,
+        "duration": 0.001,
+        "type": 1,
+        "shape": 11,
+        "trigger": 1,
+        "paragraph": 2,
+        "exit": 0
+      },
+      {
+        "index": 2,
+        "delay": 0.0,
+        "duration": 0.001,
+        "type": 1,
+        "shape": 11,
+        "trigger": 1,
+        "paragraph": 3,
+        "exit": 0
+      },
+      {
+        "index": 3,
+        "delay": 0.0,
+        "duration": "Infinity",
+        "type": 62,
+        "shape": 11,
+        "trigger": 1,
+        "paragraph": 2,
+        "exit": 0
+      },
+      {
+        "index": 4,
+        "delay": 0.0,
+        "duration": 0.001,
+        "type": 1,
+        "shape": 6,
+        "trigger": 1,
+        "paragraph": 1,
+        "exit": 0
+      },
+      {
+        "index": 5,
+        "delay": 0.0,
+        "duration": 0.001,
+        "type": 1,
+        "shape": 6,
+        "trigger": 1,
+        "paragraph": 2,
+        "exit": 0
+      },
+      {
+        "index": 6,
+        "delay": 0.0,
+        "duration": 0.001,
+        "type": 1,
+        "shape": 6,
+        "trigger": 1,
+        "paragraph": 3,
+        "exit": 0
+      },
+      {
+        "index": 7,
+        "delay": 0.0,
+        "duration": 0.001,
+        "type": 1,
+        "shape": 6,
+        "trigger": 1,
+        "paragraph": 4,
+        "exit": 0
+      }
+    ]
+  },
+  "sourceShapes": {
+    "shapes": {
+      "11": {
+        "name": "TextBox 10",
+        "kind": "sp",
+        "text": "Two approaches to implement design transformations: implementing transformations as  abstract interpretations  of SynQ models; and implementing transformations based on the expressiveness of Idris2.",
+        "media": [],
+        "geometry": [
+          [
+            "off",
+            {
+              "x": "600075",
+              "y": "1595043"
+            }
+          ],
+          [
+            "ext",
+            {
+              "cx": "10416618",
+              "cy": "1077218"
+            }
+          ]
+        ],
+        "crop": []
+      },
+      "2": {
+        "name": "Title 1",
+        "kind": "sp",
+        "text": "Design Transformation",
+        "media": [],
+        "geometry": [
+          [
+            "off",
+            {
+              "x": "1201737",
+              "y": "289897"
+            }
+          ],
+          [
+            "ext",
+            {
+              "cx": "10990263",
+              "cy": "568412"
+            }
+          ]
+        ],
+        "crop": []
+      },
+      "4": {
+        "name": "Slide Number Placeholder 3",
+        "kind": "sp",
+        "text": "25",
+        "media": [],
+        "geometry": [],
+        "crop": []
+      },
+      "5": {
+        "name": "Date Placeholder 4",
+        "kind": "sp",
+        "text": "AEiC-2026",
+        "media": [],
+        "geometry": [],
+        "crop": []
+      },
+      "3": {
+        "name": "Footer Placeholder 2",
+        "kind": "sp",
+        "text": "Rui Chen and Ingo Sander",
+        "media": [],
+        "geometry": [],
+        "crop": []
+      },
+      "6": {
+        "name": "TextBox 5",
+        "kind": "sp",
+        "text": "We demonstrate the  balance-tree transformation ,  which is based on three key enablers: well-formedness by well- typedness  of models in SynQ; the expressiveness of QTT to define  type-aware SynQ models ; and the expressiveness of QTT to define  functions that transforming types .",
+        "media": [],
+        "geometry": [
+          [
+            "off",
+            {
+              "x": "600075",
+              "y": "3408996"
+            }
+          ],
+          [
+            "ext",
+            {
+              "cx": "10416618",
+              "cy": "1431161"
+            }
+          ]
+        ],
+        "crop": []
+      }
+    },
+    "transition": null
+  },
+  "opacityXML": [
+    "<ns0:set xmlns:ns0=\"http://schemas.openxmlformats.org/presentationml/2006/main\"><ns0:cBhvr><ns0:cTn id=\"14\" dur=\"indefinite\" /><ns0:tgtEl><ns0:spTgt spid=\"11\"><ns0:txEl><ns0:pRg st=\"1\" end=\"1\" /></ns0:txEl></ns0:spTgt></ns0:tgtEl><ns0:attrNameLst><ns0:attrName>style.opacity</ns0:attrName></ns0:attrNameLst></ns0:cBhvr><ns0:to><ns0:strVal val=\"0.25\" /></ns0:to></ns0:set>"
+  ],
+  "mapping": [
+    {
+      "state": 2,
+      "shape": 11,
+      "comParagraph": 2,
+      "ooxmlParagraph": 1,
+      "action": "show"
+    },
+    {
+      "state": 3,
+      "shape": 11,
+      "comParagraph": 3,
+      "ooxmlParagraph": 2,
+      "action": "show"
+    },
+    {
+      "state": 4,
+      "shape": 11,
+      "comParagraph": 2,
+      "ooxmlParagraph": 1,
+      "action": "opacity",
+      "value": 0.25
+    },
+    {
+      "state": 5,
+      "shape": 6,
+      "comParagraph": 1,
+      "ooxmlParagraph": 0,
+      "action": "show"
+    },
+    {
+      "state": 6,
+      "shape": 6,
+      "comParagraph": 2,
+      "ooxmlParagraph": 1,
+      "action": "show"
+    },
+    {
+      "state": 7,
+      "shape": 6,
+      "comParagraph": 3,
+      "ooxmlParagraph": 2,
+      "action": "show"
+    },
+    {
+      "state": 8,
+      "shape": 6,
+      "comParagraph": 4,
+      "ooxmlParagraph": 3,
+      "action": "show"
+    }
+  ],
+  "adaptation": "Exact shortened prose from slides-detail/page23.md; text-only source, with no media, code, plots or Morph. Native 1ms appearances settle immediately. Held opacity assigns a persistent endpoint and never blocks the controller."
+}

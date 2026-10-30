@@ -1,0 +1,14 @@
+window.slideFactories.aeic28=()=>{
+ const root=document.getElementById('aeic28'),items=[...root.querySelectorAll('[data-aeic28-reveal]')];
+ const source='\n\nSource: final/AEiC-26.pptx, slide28, original image90.png and image91.svg–image93.svg. Thesis §5.3.1 and Figure5.5, printed pp.146–147; behaviour preservation refers back to Proposition5.2 under associativity of the chosen adder. The diagram and both code variants are source evidence, not a newly run experiment or proof-checker result.';
+ const connection='\n\nCallback to the introduction: This is the FIR computation already used to illustrate a structural design choice. The receiver’s compensation FIR is sequential, whereas this experiment uses the direct-form model. If making the connection, say: “Unrolling the computation for one output sample exposes its products and sum, while retaining the sample history.” Do not say “remove all registers.” A verified SynQ conversion from the receiver’s sequential FIR to this direct-form model is not claimed.';
+ const states=[
+  {name:'Direct-form FIR and original sum',note:'This filter forms weighted samples and reduces them with addition. Its sample history remains in the delay line; the sum has a chain structure.\n\nBriefly point to the same code/diagram variables: xin, cur, weighted, nxt and output. The full source model and original sum are visible together. Do not read every line.'+connection},
+  {name:'Balance the weighted collection',note:'We reshape the weighted collection before reducing it. The surrounding filter model stays the same. The behaviour-preservation argument uses associativity of the chosen adder.\n\nBoth variants use the same reduce add. The new version first applies balance, unpacks its compact dependent pair and then reduces the reshaped input. Retain this compact presentation form rather than inserting the thesis’s additional tuple witness without changing the entire signature and caller consistently. Exact arithmetic matters: do not claim preservation for every finite-precision addition.\n\nTransition: A shallower reduction tree exposes more parallelism. How does that affect the design choices available on a platform?'+connection}
+ ].map(s=>({...s,note:s.note+source}));
+ let step=0;
+ function render(){for(const item of items){const show=step===1;item.style.opacity=show?'1':'0';item.style.visibility=show?'visible':'hidden';item.setAttribute('aria-hidden',String(!show));}root.dataset.state=String(step+1);}
+ function go(target){step=Math.max(0,Math.min(1,Math.round(target)));render();return Promise.resolve();}
+ function cancel(){} // Source effects are 1 ms appearances; no pending frames or timers.
+ render();const api={go,cancel,leave:cancel,states,getState:()=>({step,busy:false,count:2})};root.aeic28Controller=api;return api;
+};

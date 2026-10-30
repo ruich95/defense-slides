@@ -19,6 +19,14 @@ window.slideFactories.merged13=()=>{
   if(token!==generation)return;
   show(b.scene);await apis[b.scene].go(b.local,false);busy=false;
  }
+ async function enter(context={}){
+  cancel();const token=++generation;step=0;show(0);busy=true;
+  // The retained scene owns its original correspondence and configured duration.
+  // Translate only this displayed-page boundary to the legacy predecessor ID.
+  if(context.reason==='forward'&&context.previousId==='merged12')await apis[0].enter({...context,previousId:'page13'});
+  else await apis[0].go(0,false);
+  if(token===generation){show(0);busy=false}
+ }
  function previewBoundary(boundary,ms){cancel();const scene=boundary;show(scene);apis[scene].previewEntrance(ms)}
- show(0);const api={go,cancel,leave:cancel,states,previewBoundary,resize:()=>apis.forEach(a=>a.resize?.()),getState:()=>({step,busy,count,scene:locate(step).scene})};root.merged13Controller=api;return api;
+ show(0);const api={go,enter,cancel,leave:cancel,states,previewBoundary,resize:()=>apis.forEach(a=>a.resize?.()),getState:()=>({step,busy,count,scene:locate(step).scene})};root.merged13Controller=api;return api;
 };

@@ -2,7 +2,7 @@ window.slideFactories.page21=()=>{
  const data=@@PAGE21_DATA@@,root=document.getElementById('page21'),body=root.querySelector('.page21-body');
  const clamp=x=>Math.max(0,Math.min(1,x)),mix=(a,b,t)=>a+(b-a)*t,box=s=>({x:s.left,y:s.top,width:s.width*s.scale,height:s.height*s.scale});
  const nodes=Object.fromEntries(Object.entries(data.scenes).map(([name,scene])=>[name,new Map(scene.shapes.map(s=>[s.id,root.querySelector('#p21-'+name+'-'+s.id)]))]));
- const names=['One model, different interpretations','Abstract the representation','State, input and output indices','Supplied composition','Resulting component','Model construction','Choose an interpretation','Executable Idris2 interpretation','IR and other representations','Type-encoded properties','Target code generation'];
+ const names=['One model, different interpretations','Abstract the representation','State, input and output indices','Supplied composition','Resulting component','Model construction','Choose an interpretation','Executable Idris2 interpretation','IR and other representations','Type-encoded properties','Verilog HDL generation','LLVM IR generation'];
  const states=names.map((name,i)=>({name,note:data.notes[i]+'\n\nSource: AEiC slides19–20; thesis sections4.2.1–4.2.3 and4.3.1–4.3.3. The abstract seq fragment is pedagogical, with foo/bar supplied in context, and is not a new standalone checked definition. Source timing: assets/page21/effect-map.json.'}));
  let step=0,busy=false,generation=0,raf=0,resolveMotion=null;
  const overlay=document.createElement('div');overlay.className='page21-morph';overlay.hidden=true;root.append(overlay);
@@ -34,7 +34,7 @@ window.slideFactories.page21=()=>{
  }
  function cancel(){generation++;if(raf)cancelAnimationFrame(raf);raf=0;if(resolveMotion){const done=resolveMotion;resolveMotion=null;done()}busy=false;overlay.hidden=true;body.style.opacity=''}
  async function animate(duration,draw){const token=++generation;busy=true;draw(0);await new Promise(resolve=>{resolveMotion=resolve;const start=performance.now();function tick(now){if(token!==generation)return;const ms=Math.min(duration,now-start);draw(ms);if(ms<duration)raf=requestAnimationFrame(tick);else{raf=0;resolveMotion=null;resolve()}}raf=requestAnimationFrame(tick)});if(token===generation){render();busy=false}}
- async function go(target=0,play=true){cancel();const from=step;step=Math.max(0,Math.min(10,Math.round(target)));const motion=play&&step===from+1&&!matchMedia('(prefers-reduced-motion: reduce)').matches;
+ async function go(target=0,play=true){cancel();const from=step;step=Math.max(0,Math.min(names.length-1,Math.round(target)));const motion=play&&step===from+1&&!matchMedia('(prefers-reduced-motion: reduce)').matches;
   if(motion&&step===6){render(5);await animate(500,ms=>drawMorph(ms/500))}
   else if(motion&&step>=7){const group=data.scenes.routes.groups[step-7];await animate(group.duration,ms=>render(step,ms))}
   else render();
@@ -42,5 +42,5 @@ window.slideFactories.page21=()=>{
  async function enter(){cancel();step=0;render()}
  function previewInternal(ms){cancel();step=6;render(5);drawMorph(clamp(ms/500))}
  function previewReveal(group,ms){cancel();step=6+group;render(step,ms)}
- render();const api={go,enter,cancel,leave:cancel,states,previewInternal,previewReveal,getState:()=>({step,busy,count:11,timings:data.scenes.routes.groups.map(g=>g.duration)})};root.page21Controller=api;return api;
+ render();const api={go,enter,cancel,leave:cancel,states,previewInternal,previewReveal,getState:()=>({step,busy,count:names.length,timings:data.scenes.routes.groups.map(g=>g.duration)})};root.page21Controller=api;return api;
 };

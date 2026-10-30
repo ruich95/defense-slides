@@ -1,0 +1,16 @@
+{
+  "pinnedCommit": "2d1c1a8e7c4dc763bfb05da92a423f5f7bacc68c",
+  "thesis": "C:/Users/rui chen/Downloads/thesis-print2.pdf",
+  "noNewProofOrExperiment": true,
+  "source": "../latex-project/synq-revision/figs/",
+  "plots": {
+    "ddc-frequency-response.svg": "Faithful pdftocairo conversion; original 1097\u00d7832 and 507\u00d7389 images and vector inset annotations retained.",
+    "spectrum_demodulated_signal.png": "Original 1062\u00d7797 PNG, RGB pixel-identical to embedded thesis PDF 143 Im54.png (independently checked by parent)."
+  },
+  "ddcTier": "Original g48/g55 DDC tier with mixer, CIC and complete 64-tap compensation FIR; no new curves or inferred equivalence.",
+  "fileSHA256": {
+    "ddc-frequency-response.svg": "8856c7b6bcadd84b625cd44974afe73855c3b89d9dfa1dd54f7724580dd393fd",
+    "ddc-tier.svg": "6b34e090ce7bbd2478ecc7479e2b43cedf1571d47635e219220ed303a282f150",
+    "spectrum_demodulated_signal.png": "e87e165cb69af851993971fc4628880960b249e024369fbd60a2489eb3b83908"
+  }
+}

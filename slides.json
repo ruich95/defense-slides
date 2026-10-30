@@ -179,7 +179,7 @@
     "title": "The EDSL SynQ",
     "source": "slides/page21.html",
     "controller": "slides/page21.js",
-    "steps": 11,
+    "steps": 12,
     "displayNumber": 18
   },
   {
@@ -213,5 +213,61 @@
     "controller": "slides/page25.js",
     "steps": 1,
     "displayNumber": 22
+  },
+  {
+    "id": "aeic25",
+    "title": "Design Transformations",
+    "source": "slides/aeic25.html",
+    "controller": "slides/aeic25.js",
+    "steps": 8,
+    "displayNumber": 23
+  },
+  {
+    "id": "aeic26_27",
+    "title": "Balance-Tree Transformation",
+    "source": "slides/aeic26_27.html",
+    "controller": "slides/aeic26_27.js",
+    "steps": 14,
+    "displayNumber": 24
+  },
+  {
+    "id": "aeic28",
+    "title": "Balance-Tree Transformation: FIR Filter",
+    "source": "slides/aeic28.html",
+    "controller": "slides/aeic28.js",
+    "steps": 2,
+    "displayNumber": 25
+  },
+  {
+    "id": "aeic29",
+    "title": "FIR Mapping Experiment",
+    "source": "slides/aeic29.html",
+    "controller": "slides/aeic29.js",
+    "steps": 8,
+    "displayNumber": 26
+  },
+  {
+    "id": "aeic30",
+    "title": "FIR Mapping Results",
+    "source": "slides/aeic30.html",
+    "controller": "slides/aeic30.js",
+    "steps": 1,
+    "displayNumber": 27
+  },
+  {
+    "id": "aeic31",
+    "title": "Conclusion and Future Work",
+    "source": "slides/aeic31.html",
+    "controller": "slides/aeic31.js",
+    "steps": 3,
+    "displayNumber": 28
+  },
+  {
+    "id": "aeic32",
+    "title": "Thank You",
+    "source": "slides/aeic32.html",
+    "controller": "slides/aeic32.js",
+    "steps": 1,
+    "displayNumber": 29
   }
 ]

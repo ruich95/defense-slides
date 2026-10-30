@@ -1,0 +1,19 @@
+{
+  "source": "slides-detail/references/section3-insert/fig3-12-source.pdf",
+  "authority": "C:/Users/rui chen/Downloads/thesis-print2.pdf",
+  "pdf_page_1_based": 115,
+  "printed_page": 91,
+  "subfigure": "3.12(b)",
+  "render": "pdftoppm -cropbox -r 600 -png -singlefile",
+  "render_size": [
+    1543,
+    1563
+  ],
+  "crop_pixels": [
+    0,
+    780,
+    1543,
+    1563
+  ],
+  "preserved": "Both dashed boundaries, all three AXI-GPIO bridges, PL/PS labels and subfigure (b) label"
+}

@@ -1,0 +1,12 @@
+{
+  "pinnedCommit": "2d1c1a8e7c4dc763bfb05da92a423f5f7bacc68c",
+  "thesis": "C:/Users/rui chen/Downloads/thesis-print2.pdf",
+  "noNewProofOrExperiment": true,
+  "source": "setta-25/src/regular.svg",
+  "sourceGroup": "g3235",
+  "svg": "fifo-testing.svg",
+  "scope": "Thesis \u00a74.4.2 pp123\u2013126; test property differs from stepwise depth 4 storage; validI=1 and produced readyO/ackOut=1, both readyI/ackIn cases.",
+  "fileSHA256": {
+    "fifo-testing.svg": "07b2d906f5addc104e84203548c1e9f8dc59a7e9f261c8e1a2bc96a5d3f0b517"
+  }
+}

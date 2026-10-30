@@ -1,0 +1,36 @@
+window.slideFactories.rv32i_contracts = () => {
+ const root=document.getElementById('rv32i_contracts'),items=[...root.querySelectorAll('.c3-item')];
+ const states=[
+  {
+    "name": "The high-level model",
+    "note": "The case study models the RV32-I instruction set using components for the program counter, register file and memory. Their contracts let us reason about the model without exposing every implementation detail.\n\nSource: thesis §§3.4.1–3.4.3, printed pp.81–89. Proposition3.5 and Listing3.9 supply the ADD claim and proof method. st and st′ are the register-file state before and after the instruction. rd ≠0 is explicit in the proposition prose. The printed proof signature does not visibly carry the premise in the same form. This slide stays at the mathematical proposition and proof-method level and does not invent a checked declaration or resolve that discrepancy. The topology is a conceptual component-dependency diagram, not a wiring diagram, pipeline or clock schedule. The displayed trace isolates the claim-relevant operations and omits the actual program-counter update. Component contracts are assumptions for this reasoning. No processor-wide hardware verification or new proof execution is claimed. Width typing alone does not prove arithmetic correctness, and state linearity does not bound hardware accesses per clock. Backup B1–B2 and B5 retain details."
+  },
+  {
+    "name": "The ADD property",
+    "note": "Consider addition. The source registers contain two operands; the destination should contain the low 32 bits of their sum. The condition excludes register zero, whose value is fixed. Here the prime marks the state after executing the instruction.\n\nSource: thesis §§3.4.1–3.4.3, printed pp.81–89. Proposition3.5 and Listing3.9 supply the ADD claim and proof method. st and st′ are the register-file state before and after the instruction. rd ≠0 is explicit in the proposition prose. The printed proof signature does not visibly carry the premise in the same form. This slide stays at the mathematical proposition and proof-method level and does not invent a checked declaration or resolve that discrepancy. The topology is a conceptual component-dependency diagram, not a wiring diagram, pipeline or clock schedule. The displayed trace isolates the claim-relevant operations and omits the actual program-counter update. Component contracts are assumptions for this reasoning. No processor-wide hardware verification or new proof execution is claimed. Width typing alone does not prove arithmetic correctness, and state linearity does not bound hardware accesses per clock. Backup B1–B2 and B5 retain details."
+  },
+  {
+    "name": "The selected computation",
+    "note": "For this property, the relevant computation reads two operands, computes the result and writes the destination. The actual instruction also updates the program counter; this diagram isolates the part used in the displayed claim.\n\nSource: thesis §§3.4.1–3.4.3, printed pp.81–89. Proposition3.5 and Listing3.9 supply the ADD claim and proof method. st and st′ are the register-file state before and after the instruction. rd ≠0 is explicit in the proposition prose. The printed proof signature does not visibly carry the premise in the same form. This slide stays at the mathematical proposition and proof-method level and does not invent a checked declaration or resolve that discrepancy. The topology is a conceptual component-dependency diagram, not a wiring diagram, pipeline or clock schedule. The displayed trace isolates the claim-relevant operations and omits the actual program-counter update. Component contracts are assumptions for this reasoning. No processor-wide hardware verification or new proof execution is claimed. Width typing alone does not prove arithmetic correctness, and state linearity does not bound hardware accesses per clock. Backup B1–B2 and B5 retain details."
+  },
+  {
+    "name": "Rewriting with the contract",
+    "note": "To establish the value subsequently read from the destination, the proof uses the register-file read-after-write law. Symbolic evaluation exposes the operations, and rewriting with the law connects the write to the value observed afterwards.\n\nSource: thesis §§3.4.1–3.4.3, printed pp.81–89. Proposition3.5 and Listing3.9 supply the ADD claim and proof method. st and st′ are the register-file state before and after the instruction. rd ≠0 is explicit in the proposition prose. The printed proof signature does not visibly carry the premise in the same form. This slide stays at the mathematical proposition and proof-method level and does not invent a checked declaration or resolve that discrepancy. The topology is a conceptual component-dependency diagram, not a wiring diagram, pipeline or clock schedule. The displayed trace isolates the claim-relevant operations and omits the actual program-counter update. Component contracts are assumptions for this reasoning. No processor-wide hardware verification or new proof execution is claimed. Width typing alone does not prove arithmetic correctness, and state linearity does not bound hardware accesses per clock. Backup B1–B2 and B5 retain details."
+  },
+  {
+    "name": "The scoped ADD result",
+    "note": "This establishes the stated ADD property of the high-level model, relative to the component contracts. It is an example of compositional reasoning, not verification of the entire instruction set or the eventual hardware.\n\nTransition: We also want to turn such a model into an implementation. The same case study lets us examine that design process.\n\nSource: thesis §§3.4.1–3.4.3, printed pp.81–89. Proposition3.5 and Listing3.9 supply the ADD claim and proof method. st and st′ are the register-file state before and after the instruction. rd ≠0 is explicit in the proposition prose. The printed proof signature does not visibly carry the premise in the same form. This slide stays at the mathematical proposition and proof-method level and does not invent a checked declaration or resolve that discrepancy. The topology is a conceptual component-dependency diagram, not a wiring diagram, pipeline or clock schedule. The displayed trace isolates the claim-relevant operations and omits the actual program-counter update. Component contracts are assumptions for this reasoning. No processor-wide hardware verification or new proof execution is claimed. Width typing alone does not prove arithmetic correctness, and state linearity does not bound hardware accesses per clock. Backup B1–B2 and B5 retain details."
+  }
+];
+ let step=0;
+ function render(){
+  for(const node of items){const visible=step>=Number(node.dataset.first)&&step<=Number(node.dataset.last);node.style.opacity=visible?'1':'0';node.style.visibility=visible?'visible':'hidden';node.setAttribute('aria-hidden',String(!visible));}
+  root.classList.toggle('rv-register-selected',step>=1);root.classList.toggle('rv-contract-underlined',step>=3);
+  root.dataset.state=String(step+1);
+ }
+ function go(target){step=Math.max(0,Math.min(states.length-1,Math.round(target)));render();return Promise.resolve();}
+ function cancel(){} // Immediate reveals have no running frames or timers.
+ render();
+ const api={go,cancel,leave:cancel,states,getState:()=>({step,busy:false,count:states.length})};
+ root.rv32i_contractsController=api;return api;
+};
