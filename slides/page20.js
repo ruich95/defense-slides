@@ -3,7 +3,7 @@ window.slideFactories.page20=()=>{
  const clamp=t=>Math.max(0,Math.min(1,t)),mix=(a,b,t)=>a+(b-a)*t,box=s=>({x:s.left,y:s.top,width:s.width*s.scale,height:s.height*s.scale});
  function color(a,b,t){if(a==='none'||b==='none')return t<.5?a:b;const rgb=c=>{if(c[0]==='#'){if(c.length===4)c='#'+[...c.slice(1)].map(v=>v+v).join('');return [1,3,5].map(i=>parseInt(c.slice(i,i+2),16))}return c.match(/[\d.]+/g).slice(0,3).map(Number)};const x=rgb(a),y=rgb(b);return 'rgb('+x.map((v,i)=>Math.round(mix(v,y[i],t))).join(',')+')'}
  const sceneNodes=Object.fromEntries(Object.entries(data.scenes).map(([name,scene])=>[name,new Map(scene.shapes.map(s=>[s.id,root.querySelector('#p20-'+name+'-'+s.id)]))]));
- const names=['Rising adjacent samples','Copy the current input','Construct the forward delay','Compare adjacent samples','Complete feedback','Compositions and atomic components','Why explicit structure is needed','The next step: SynQ'];
+ const names=['Rising adjacent samples','Copy the current input','Construct the forward delay','Compare adjacent samples','Complete feedback','Compositions and atomic components'];
  const states=names.map((name,i)=>({name,note:data.notes[i]+'\n\nSemantic reference: thesis section3.3.2, Listing3.2; Chapter4 opening and section4.1, printed pp95–97. Source: AEiC slides17–18. Source-state mapping: assets/page20/effect-map.json.'}));
  let step=0,busy=false,generation=0,raf=0,resolveMotion=null;
  const diagnostics={exact:0,resampled:0};
@@ -109,8 +109,8 @@ window.slideFactories.page20=()=>{
   await new Promise(resolve=>{resolveMotion=resolve;const start=performance.now();function tick(now){if(token!==generation)return;const t=clamp((now-start)/500);internal.draw(t);if(t<1)raf=requestAnimationFrame(tick);else{raf=0;resolveMotion=null;resolve()}}raf=requestAnimationFrame(tick)});
   if(token===generation){render();busy=false}
  }
- async function go(target=0,animate=true){cancel();const from=step;step=Math.max(0,Math.min(7,Math.round(target)));if(animate&&from===4&&step===5&&!matchMedia('(prefers-reduced-motion: reduce)').matches){render(4);await motion()}else render()}
+ async function go(target=0,animate=true){cancel();const from=step;step=Math.max(0,Math.min(5,Math.round(target)));if(animate&&from===4&&step===5&&!matchMedia('(prefers-reduced-motion: reduce)').matches){render(4);await motion()}else render()}
  async function enter(){cancel();step=0;render()}
  function previewInternal(ms){cancel();step=5;render(4);internal.draw(clamp(ms/500))}
- render();const api={go,enter,cancel,leave:cancel,states,previewInternal,getState:()=>({step,busy,count:8,diagnostics})};root.page20Controller=api;return api;
+ render();const api={go,enter,cancel,leave:cancel,states,previewInternal,getState:()=>({step,busy,count:6,diagnostics})};root.page20Controller=api;return api;
 };

@@ -1,37 +1,25 @@
-<section class="slide chapter3-insert" id="rv32i_process" aria-label="Slide 19: RV32-I: A Design Process Across Languages">
+<section class="slide" id="rv32i_process" aria-label="Slide 20: RV32-I: From Modelling to Implementation">
 <img class="kth-logo" alt="KTH Royal Institute of Technology" src="@@LOGO@@">
-<h1>RV32-I: A Design Process Across Languages</h1>
-
-<p class="c3-opening c3-item" data-first="0" data-last="2">The case study connects a high-level model to implementation and validation.</p>
-<div id="rv-process-a" class="rv-process-node" data-first="0" data-last="4"><strong>A · High-level model</strong><p>Idris2 + C primitives</p></div>
-<div id="rv-process-b" class="rv-process-node c3-item" data-first="1" data-last="4"><strong>B · Transformed model</strong><p>Memory / processor partition</p></div>
-<div id="rv-process-e" class="rv-process-node c3-item" data-first="2" data-last="4"><strong>E · Implementation</strong><p>Verilog + memory IP</p></div>
-<p id="rv-process-simulation" class="rv-process-attached">Simulation</p>
-<p id="rv-process-reasoning" class="rv-process-attached">Reasoning with contracts</p>
-<div id="rv-process-transform" class="rv-process-arrow c3-item" data-first="1" data-last="4">
- <p class="rv-process-arrow-label">Manual<br>transformation</p>
- <svg viewBox="0 0 220 100" aria-hidden="true"><defs><marker id="rv-process-transform-tip" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#000" stroke-width="1.2"/></marker></defs><path d="M15 70H205" fill="none" stroke="#000" stroke-width="1.8" marker-end="url(#rv-process-transform-tip)"/></svg>
+<h1>RV32-I: From Modelling to Implementation</h1>
+<div class="rv-case-text rv-case-achievements" data-rv-first="0" data-rv-last="3">
+ <p>The RV32-I case study demonstrates<br>the design process.</p>
+ <ul>
+  <li data-rv-first="1" data-rv-last="3"><strong>Modelling and simulation:</strong> stateful, black-box components.</li>
+  <li data-rv-first="2" data-rv-last="3"><strong>Reasoning and validation:</strong> proofs, partial simulation and property-based testing.</li>
+  <li data-rv-first="3" data-rv-last="3"><strong>Implementation:</strong> manual transformation and mapping to Verilog HDL.</li>
+ </ul>
 </div>
-<div id="rv-process-map" class="rv-process-arrow c3-item" data-first="2" data-last="4">
- <p class="rv-process-arrow-label">Manual<br>mapping</p>
- <svg viewBox="0 0 180 100" aria-hidden="true"><defs><marker id="rv-process-map-tip" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#000" stroke-width="1.2"/></marker></defs><path d="M10 70H170" fill="none" stroke="#000" stroke-width="1.8" marker-end="url(#rv-process-map-tip)"/></svg>
+<div class="rv-case-text rv-case-limitations" data-rv-first="4" data-rv-last="4">
+ <p><strong>This shallowly embedded DSL does not yet provide sufficient support for the design process.</strong></p>
+ <ul>
+  <li><strong>Implementation:</strong> support systematic mapping to target platforms.</li>
+  <li><strong>Semantics:</strong> align behaviour across different interpretations.</li>
+  <li><strong>Refinement and transformation:</strong> support their systematic application and verification.</li>
+  <li><strong>Modelling:</strong> support readable models beyond point-free composition.</li>
+ </ul>
 </div>
-<p id="rv-process-hardware" class="c3-item" data-first="2" data-last="4">Pipeline and hardware-oriented structure</p>
-<p id="rv-process-scope" class="c3-item" data-first="2" data-last="2">Pipelining changes cycle behaviour; equivalence is not established by this diagram.</p>
-<div id="rv-process-validation" class="c3-item" data-first="3" data-last="3">
- <p class="rv-process-partial"><strong>Partial simulation</strong></p>
- <p class="rv-process-pl">Hardware (PL): <strong>Verilog</strong></p>
- <p class="rv-process-ps">Software (PS): <strong>Python</strong><br><span>memory + program counter</span></p>
- <img class="rv-process-partition" src="@@RV32I_PARTIAL_SIMULATION@@" alt="Thesis Fig. 3.12(b): the complete PL/PS partition, including three AXI-GPIO bridges, processor hardware at left and Python software at right">
- <p class="rv-process-test-heading"><strong>Property-based testing</strong></p>
- <p class="rv-process-test-body">Memory implementation checked against contract properties.</p>
- <p class="rv-process-test-scope">Test evidence, not a universal proof.</p>
-</div>
-<div id="rv-process-challenge" class="c3-item" data-first="4" data-last="4">
- <p class="rv-process-challenge-lead"><strong>The remaining challenge: make model structure explicit for systematic design steps.</strong></p>
- <ul><li>Transformations and mappings were carried out manually.</li><li>A shallow model does not expose its composition structure as explicit syntax.</li></ul>
-</div>
-<p class="c3-source">Adapted from thesis Fig. 3.10, p. 80<span class="c3-item" data-first="3" data-last="3"> · Fig. 3.12(b), p. 91</span></p>
-
-<footer><span class="footer-event">PhD Defence - 9 November 2026 - Stockholm</span><span class="footer-name">Rui Chen</span><span class="footer-page">19</span></footer>
+<figure class="rv-case-artwork">
+ @@RV32I_CASE_FIGURE@@
+</figure>
+<footer><span class="footer-event">PhD Defence - 9 November 2026 - Stockholm</span><span class="footer-name">Rui Chen</span><span class="footer-page">20</span></footer>
 </section>

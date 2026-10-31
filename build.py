@@ -479,6 +479,7 @@ def main():
         '@@PAGE21_DATA@@': json.dumps(p21, ensure_ascii=False).replace('</', '<\\/'),
         '@@PAGE20_CONTENT@@': '\n'.join(p20_content),
         '@@PAGE20_DATA@@': json.dumps(p20, ensure_ascii=False).replace('</', '<\\/'),
+        '@@RV32I_CASE_FIGURE@@': (HERE / 'assets/rv32i_process/fig3-10.svg').read_text(encoding='utf8'),
         '@@PAGE19_CONTENT@@': '\n'.join(p19_content),
         '@@PAGE19_DATA@@': json.dumps(p19, ensure_ascii=False).replace('</', '<\\/'),
         '@@COVER@@': data(HERE / 'assets/cover.svg', 'image/svg+xml'),

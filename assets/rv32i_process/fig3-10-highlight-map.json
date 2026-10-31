@@ -1,0 +1,60 @@
+{
+  "source": "slides-detail/references/section3-insert/fig3-10-source.pdf",
+  "sourceSHA256": "1c917100249212bda6c4cc495b4ad595d765d335a2c3361ef3086affb33d5d7f",
+  "conversion": "pdftocairo -svg; complete PDF CropBox preserved",
+  "viewBox": "0 0 330.059246 316.157334",
+  "categories": {
+    "modelling": {
+      "models A/B": [
+        83,
+        80
+      ],
+      "simulation 1": [
+        133,
+        134
+      ],
+      "verification/simulation 4": [
+        164,
+        165
+      ]
+    },
+    "reasoning": {
+      "verification 2": [
+        130,
+        131
+      ],
+      "verification/simulation 4": [
+        164,
+        165
+      ],
+      "partial-simulation C": [
+        82
+      ],
+      "simulation 10": [
+        137,
+        138
+      ],
+      "property-test 9": [
+        112
+      ]
+    },
+    "implementation": {
+      "transformation 3": [
+        135,
+        136
+      ],
+      "hardware mapping 5": [
+        98,
+        100
+      ],
+      "hardware mapping 8": [
+        128,
+        129
+      ],
+      "implementation E": [
+        115
+      ]
+    }
+  },
+  "method": "Exact copies of original path d/transform, inserted directly before the native path; no altered direction, geometry, language paint or labels."
+}

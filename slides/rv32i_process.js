@@ -1,47 +1,38 @@
-window.slideFactories.rv32i_process = () => {
- const root=document.getElementById('rv32i_process'),items=[...root.querySelectorAll('.c3-item')];
+window.slideFactories.rv32i_process=()=>{
+ const root=document.getElementById('rv32i_process'),items=[...root.querySelectorAll('[data-rv-first]')],halos=[...root.querySelectorAll('[data-rv-focus]')];
+ const source='\n\nSource: thesis Fig. 3.10 (printed p. 80), §3.4 and §3.5; Chapter 4 opening and §4.1 for the shallow-embedding limitations; AEiC P18 for mapping, transformation and point-free accessibility needs. The complete supplied vector figure, language colours, legend, topology and labels are preserved. The range of design activities is complete; formal verification and automation are not. Selected proofs and property-based tests provide scoped evidence, not complete processor verification. Transformations and hardware mappings were manual. No new proof or experiment is run, and no automatic Verilog generation or equivalence of every figure arrow is claimed.';
  const states=[
-  {
-    "name": "Model, simulation and reasoning",
-    "note": "This model is also the starting point of a practical design process. Idris2 expresses the model, with efficient C primitives behind interfaces. We can simulate it and reason using component contracts, as in the previous example.\n\nSource: thesis Fig.3.10, printed p.80, and §§3.4.4–3.4.5, pp.89–92, including Fig.3.12(b), p.91. Chapter3 manual shallow-model case before SynQ, not the later automatic code-generation case. The simplified editable diagram deliberately selects A→B→E. In the full source, C is the co-simulation arrangement and D is memory IP. Manual pipeline transformation does not preserve the original model behaviour as stated. The source partial-simulation partition retains both dashed boundaries and all three AXI-GPIO bridges. Memory and the program counter run in software, manually translated to Python; the rest is Verilog hardware on the PYNQ programmable logic. The code thumbnail is contextual evidence, not body text. Property-based tests exercise contract properties for tested cases and are not universal proofs. The challenge concerns this shallow embedding not exposing composition as explicit syntax. Do not claim Idris2 terms lack structure or that every transformation can be automatic. No new experiment, proof execution, automatic Verilog generation or verification of the final processor is claimed. Backup B6–B7 retain the full figures and test details."
-  },
-  {
-    "name": "Manual transformation",
-    "note": "The model is then transformed into a form suitable for the intended implementation. In this case study those changes are manual.\n\nSource: thesis Fig.3.10, printed p.80, and §§3.4.4–3.4.5, pp.89–92, including Fig.3.12(b), p.91. Chapter3 manual shallow-model case before SynQ, not the later automatic code-generation case. The simplified editable diagram deliberately selects A→B→E. In the full source, C is the co-simulation arrangement and D is memory IP. Manual pipeline transformation does not preserve the original model behaviour as stated. The source partial-simulation partition retains both dashed boundaries and all three AXI-GPIO bridges. Memory and the program counter run in software, manually translated to Python; the rest is Verilog hardware on the PYNQ programmable logic. The code thumbnail is contextual evidence, not body text. Property-based tests exercise contract properties for tested cases and are not universal proofs. The challenge concerns this shallow embedding not exposing composition as explicit syntax. Do not claim Idris2 terms lack structure or that every transformation can be automatic. No new experiment, proof execution, automatic Verilog generation or verification of the final processor is claimed. Backup B6–B7 retain the full figures and test details."
-  },
-  {
-    "name": "Manual mapping and its scope",
-    "note": "The transformed model is mapped to Verilog and integrated with memory IP. Hardware-oriented structure and pipelining introduce further design decisions. The thesis explicitly notes that the pipeline transformation does not preserve the original model's behaviour. The arrows describe the process; they are not a chain of equivalence proofs.\n\nSource: thesis Fig.3.10, printed p.80, and §§3.4.4–3.4.5, pp.89–92, including Fig.3.12(b), p.91. Chapter3 manual shallow-model case before SynQ, not the later automatic code-generation case. The simplified editable diagram deliberately selects A→B→E. In the full source, C is the co-simulation arrangement and D is memory IP. Manual pipeline transformation does not preserve the original model behaviour as stated. The source partial-simulation partition retains both dashed boundaries and all three AXI-GPIO bridges. Memory and the program counter run in software, manually translated to Python; the rest is Verilog hardware on the PYNQ programmable logic. The code thumbnail is contextual evidence, not body text. Property-based tests exercise contract properties for tested cases and are not universal proofs. The challenge concerns this shallow embedding not exposing composition as explicit syntax. Do not claim Idris2 terms lack structure or that every transformation can be automatic. No new experiment, proof execution, automatic Verilog generation or verification of the final processor is claimed. Backup B6–B7 retain the full figures and test details."
-  },
-  {
-    "name": "Partial simulation and testing",
-    "note": "Validation can cross the language boundary too. On PYNQ, part of the design runs in programmable logic, while memory and the program counter run in software, manually translated to Python. The bridge allows partial simulation. Property-based tests also exercise the memory implementation against its contract properties. These tests provide evidence for the tested cases.\n\nSource: thesis Fig.3.10, printed p.80, and §§3.4.4–3.4.5, pp.89–92, including Fig.3.12(b), p.91. Chapter3 manual shallow-model case before SynQ, not the later automatic code-generation case. The simplified editable diagram deliberately selects A→B→E. In the full source, C is the co-simulation arrangement and D is memory IP. Manual pipeline transformation does not preserve the original model behaviour as stated. The source partial-simulation partition retains both dashed boundaries and all three AXI-GPIO bridges. Memory and the program counter run in software, manually translated to Python; the rest is Verilog hardware on the PYNQ programmable logic. The code thumbnail is contextual evidence, not body text. Property-based tests exercise contract properties for tested cases and are not universal proofs. The challenge concerns this shallow embedding not exposing composition as explicit syntax. Do not claim Idris2 terms lack structure or that every transformation can be automatic. No new experiment, proof execution, automatic Verilog generation or verification of the final processor is claimed. Backup B6–B7 retain the full figures and test details."
-  },
-  {
-    "name": "Explicit model structure",
-    "note": "So the shallow approach demonstrates modelling, reasoning and implementation, but the design steps still depend on manual work. To support these steps systematically, we need the model's composition structure in a form that can be inspected and transformed.\n\nTransition: Let us make that structural issue concrete with a much smaller example: detecting a rising pattern.\n\nSource: thesis Fig.3.10, printed p.80, and §§3.4.4–3.4.5, pp.89–92, including Fig.3.12(b), p.91. Chapter3 manual shallow-model case before SynQ, not the later automatic code-generation case. The simplified editable diagram deliberately selects A→B→E. In the full source, C is the co-simulation arrangement and D is memory IP. Manual pipeline transformation does not preserve the original model behaviour as stated. The source partial-simulation partition retains both dashed boundaries and all three AXI-GPIO bridges. Memory and the program counter run in software, manually translated to Python; the rest is Verilog hardware on the PYNQ programmable logic. The code thumbnail is contextual evidence, not body text. Property-based tests exercise contract properties for tested cases and are not universal proofs. The challenge concerns this shallow embedding not exposing composition as explicit syntax. Do not claim Idris2 terms lack structure or that every transformation can be automatic. No new experiment, proof execution, automatic Verilog generation or verification of the final processor is claimed. Backup B6–B7 retain the full figures and test details."
-  }
-];
- let step=0,busy=false,generation=0,raf=0,resolveMotion=null;
- const clamp=x=>Math.max(0,Math.min(1,x)),ease=x=>x*x*(3-2*x);
- const visible=(node,s)=>s>=Number(node.dataset.first)&&s<=Number(node.dataset.last);
- function show(node,opacity){node.style.opacity=String(opacity);node.style.visibility=opacity>0?'visible':'hidden';node.setAttribute('aria-hidden',String(opacity<=0));}
- function geometry(compact){root.style.setProperty('--process-compact',String(compact));}
- function settled(){geometry(step>=3?1:0);for(const node of items)show(node,visible(node,step)?1:0);root.dataset.state=String(step+1);delete root.dataset.motionProgress;}
- function motion(from,to,t){
-  const u=ease(clamp(t)),a=from>=3?1:0,b=to>=3?1:0;geometry(a+(b-a)*u);
-  for(const node of items){const before=visible(node,from),after=visible(node,to);show(node,before&&after?1:before?1-ease(clamp(t/.2)):after?ease(clamp((t-.85)/.15)):0);}
-  root.dataset.motionProgress=String(t);root.dataset.state=String(to+1);
- }
- function cancel(){generation++;if(raf)cancelAnimationFrame(raf);raf=0;if(resolveMotion){const done=resolveMotion;resolveMotion=null;done();}busy=false;settled();}
+  {name:'A larger design process',note:'The rising detector illustrates the construction on a small example. We also explored a larger case: an RV32-I instruction-set model, taken through a design process involving Idris2, C, Python and Verilog.\n\nIntroduce RV32-I orally as a processor instruction-set case study. Do not narrate every numbered path.'},
+  {name:'Modelling and simulation',note:'The model combines stateful components behind interfaces. We can execute it for simulation without exposing their implementation details.\n\nPoint to A and B, and simulation paths 1 and 4. The original figure labels path 4 Verification, Simulation; preserve both roles.'},
+  {name:'Reasoning and validation',note:'Contracts support proofs of selected instruction properties. Partial simulation and property-based tests provide further validation of implementations.\n\nPoint to verification paths 2 and 4, partial-simulation model C/path 10, and property-test path 9. Explain selected proofs and test evidence without presenting the entire processor or every implementation as formally verified. Do not repeat the Listing 3.3 tutorial from 16B.'},
+  {name:'Manual implementation',note:'We manually transformed the model and mapped it to Verilog, integrating memory IP. This demonstrated feasibility, but it was not an automatic compilation flow.\n\nPoint to transformation 3, hardware mapping 5 and 8, and implementation E. The pipeline transformation changes the original model’s behaviour; Fig. 3.10 describes activities and connections, not a chain of established equivalences. Mention this when discussing pipeline/equivalence; do not suggest behaviour preservation merely from the arrows.'},
+  {name:'Needs motivating SynQ',note:'Our shallow models are ordinary Idris2 functions. Their types do not restrict them to the supported component vocabulary, so replacing each component with its target implementation is not always sufficient (C2). Their execution is tied to Idris2’s evaluation semantics, which must be aligned with target interpretations (C3). Transforming these models requires manipulating Idris2 terms through restricted metaprogramming, making transformations difficult to implement and verify (C4). Point-free composition also becomes cumbersome for larger models. We therefore need systematic mapping, aligned interpretations, support for applying and verifying refinements and transformations, and readable modelling notation.\n\nThese are needs motivating the next approach, not claims that SynQ completely solves every aspect. Do not claim Idris2 terms have no structure, all shallow models are unmappable, or tagless-final embedding requires an explicit syntax tree. The regular rising-detector example already uses identifiable compositions; the limitation concerns what this modelling discipline guarantees for arbitrary well-typed models.\n\nThese needs motivate the next step: a modelling language with controlled construction, different interpretations, and support for refinement and transformation.'}
+ ].map(s=>({...s,note:s.note+source}));
+ let step=0,busy=false,generation=0,animations=[];
+ const category=s=>s===1?'modelling':s===2?'reasoning':s>=3?'implementation':'';
+ const visible=(n,s)=>s>=Number(n.dataset.rvFirst)&&s<=Number(n.dataset.rvLast);
+ function show(n,v){n.style.opacity=v?'1':'0';n.style.visibility=v?'visible':'hidden';n.setAttribute('aria-hidden',String(!v));}
+ function render(){for(const n of items)show(n,visible(n,step));for(const n of halos)show(n,!!category(step)&&n.dataset.rvFocus.split(' ').includes(category(step)));root.dataset.state=String(step+1);root.dataset.focus=category(step);}
+ function cancel(){generation++;for(const a of animations)a.cancel();animations=[];busy=false;render();}
  async function go(target,animate=true){
-  cancel();const from=step;step=Math.max(0,Math.min(states.length-1,Math.round(target)));const token=++generation;
-  const compactMove=(from===2&&step===3)||(from===3&&step===2);
-  if(animate&&compactMove&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
-   busy=true;motion(from,step,0);
-   await new Promise(resolve=>{resolveMotion=resolve;const start=performance.now();function tick(now){if(token!==generation)return;const t=clamp((now-start)/400);motion(from,step,t);if(t<1)raf=requestAnimationFrame(tick);else{raf=0;resolveMotion=null;resolve();}}raf=requestAnimationFrame(tick);});
+  const previous=step;cancel();step=Math.max(0,Math.min(states.length-1,Math.round(target)));
+  const changed=step!==previous;if(!changed||!animate||matchMedia('(prefers-reduced-motion: reduce)').matches){render();return;}
+  const token=++generation;busy=true;
+  const replacement=(previous===4)!==(step===4);
+  if(replacement){
+   // One 225 ms text replacement; the complete vector figure stays fixed.
+   const outgoing=root.querySelector(previous===4?'.rv-case-limitations':'.rv-case-achievements');
+   animations.push(outgoing.animate([{opacity:1},{opacity:0}],{duration:112.5,easing:'ease-out'}));
+   await Promise.all(animations.map(a=>a.finished.catch(()=>{})));
+   if(token!==generation)return;for(const a of animations)a.cancel();animations=[];render();
+   const incoming=root.querySelector(step===4?'.rv-case-limitations':'.rv-case-achievements');
+   animations.push(incoming.animate([{opacity:0},{opacity:1}],{duration:112.5,easing:'ease-in'}));
+  }else{
+   render();for(const n of items)if(visible(n,step)&&!visible(n,previous))animations.push(n.animate([{opacity:0},{opacity:1}],{duration:225,easing:'ease-out'}));
+   for(const n of halos)if(category(step)&&n.dataset.rvFocus.split(' ').includes(category(step)))animations.push(n.animate([{opacity:0},{opacity:1}],{duration:225,easing:'ease-out'}));
   }
-  if(token===generation){busy=false;settled();}
+  await Promise.all(animations.map(a=>a.finished.catch(()=>{})));
+  if(token===generation){for(const a of animations)a.cancel();animations=[];busy=false;render();}
  }
- settled();const api={go,cancel,leave:cancel,states,getState:()=>({step,busy,count:states.length})};root.rv32i_processController=api;return api;
+ render();const api={go,cancel,leave:cancel,states,getState:()=>({step,busy,count:5})};root.rv32i_processController=api;return api;
 };

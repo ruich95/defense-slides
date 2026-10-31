@@ -1,4 +1,54 @@
 @font-face{font-family:Figtree;src:url('../assets/Figtree.ttf') format('truetype');font-weight:300 900;font-display:block}
+/* Listing 3.3 across the FFI boundary. No styles escape this slide. */
+#language_boundary p{margin:0;font-size:32px;line-height:1.28;font-weight:400}
+#language_boundary .lb-opening{position:absolute;left:91px;top:175px;width:1419px}
+#language_boundary .lb-requirement{position:absolute;left:91px;top:175px;width:1419px;font-size:34px}
+#language_boundary .lb-property-label{color:#000061;font-weight:700}
+#language_boundary[data-state="4"] .lb-ffi,#language_boundary[data-state="5"] .lb-ffi{opacity:.28!important}
+#language_boundary h2{position:absolute;top:250px;margin:0;font-size:32px;line-height:1.28;font-weight:700}
+#language_boundary .lb-model-heading{left:91px}
+#language_boundary .lb-component-heading{left:830px}
+#language_boundary .lb-boundary{position:absolute;left:800px;top:260px;height:475px;border-left:1.5px dashed #aeb6bb}
+#language_boundary .lb-ffi,#language_boundary .lb-translation{position:absolute;left:580px;width:440px;text-align:center;color:#626973;font-size:26px;line-height:31px}
+#language_boundary .lb-ffi{left:630px;top:242px;width:170px}
+#language_boundary .lb-ffi svg{width:170px!important}
+#language_boundary .lb-translation{top:294px;color:#0029ED}
+#language_boundary .lb-ffi span,#language_boundary .lb-translation span{background:#fff;padding:0 8px}
+#language_boundary .lb-ffi svg,#language_boundary .lb-translation svg{display:block;width:440px;height:16px;margin-top:3px;overflow:visible}
+#language_boundary .lb-ffi path,#language_boundary .lb-translation path{fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+#language_boundary .lb-specification{position:absolute;top:350px;width:660px}
+#language_boundary .lb-idris-operation,#language_boundary .lb-c-operation{position:absolute;top:350px;width:660px}
+#language_boundary .lb-idris-operation{left:91px}
+#language_boundary .lb-c-operation{left:830px;width:700px}
+#language_boundary .lb-idris{left:91px;top:500px}
+#language_boundary .lb-c{left:830px;width:700px}
+#language_boundary .lb-code-label{font-size:26px;line-height:31.2px}
+#language_boundary pre{margin:7.8px 0 0;font-family:DefenseCode,Consolas,monospace;font-size:26px;line-height:1.12;white-space:pre;font-variant-ligatures:none;letter-spacing:0;font-weight:400;color:#000}
+#language_boundary code{font:inherit}
+#language_boundary .lb-function{color:#0029ED}
+#language_boundary .lb-syntax{color:#8A2BE2}
+#language_boundary .lb-type{color:#78001A}
+#language_boundary .lb-comment{color:#626973}
+#language_boundary .lb-equality{background-color:rgba(0,41,237,.10);box-shadow:0 0 0 3px rgba(0,41,237,.10);border-radius:2px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+#language_boundary .lb-status{position:absolute;top:742px;width:660px}
+#language_boundary .lb-justification{position:absolute;left:510px;top:670px;width:580px;text-align:center;color:#0029ED;font-size:26px;line-height:31px}
+#language_boundary .lb-justification span{background:#fff;padding:0 8px}
+#language_boundary .lb-justification svg{display:block;width:580px;height:16px;margin-top:3px;overflow:visible}
+#language_boundary .lb-justification path{fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+#language_boundary .lb-assumed{left:91px}
+#language_boundary .lb-verified{left:830px;width:700px}
+#language_boundary [data-lb-reveal]{opacity:0;visibility:hidden}
+/* Revised 16C, displayed P20: complete thesis figure and two replacing text scenes. */
+#rv32i_process .rv-case-text{position:absolute;left:91px;top:175px;width:735px;font-size:32px;line-height:1.28;font-weight:400}
+#rv32i_process .rv-case-text p{margin:0}
+#rv32i_process .rv-case-text ul{margin:28px 0 0;padding:0;list-style:none}
+#rv32i_process .rv-case-text li{position:relative;padding-left:37px;margin:0 0 24px}
+#rv32i_process .rv-case-text li::before{content:"▸";position:absolute;left:0;top:4px;font-size:25px}
+#rv32i_process .rv-case-text strong{font-weight:700}
+#rv32i_process .rv-case-limitations li:last-child{margin-bottom:0}
+#rv32i_process .rv-case-artwork{position:absolute;left:853.98148px;top:140px;width:689.02119px;height:660px;margin:0}
+#rv32i_process #rv-case-figure{display:block;width:100%;height:100%;overflow:visible}
+#rv32i_process [data-rv-first]{opacity:0;visibility:hidden}
 :root{--navy:#000061;--blue:#004791;--sky:#6298d2}
 *{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden}body{font-family:Figtree,Arial,sans-serif;background:#eceef0;color:#000}
 #viewport{position:absolute;inset:0 0 50px}#stage{position:absolute;left:50%;top:50%;width:1600px;height:900px;background:white;transform-origin:center;overflow:hidden}

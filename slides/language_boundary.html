@@ -1,0 +1,46 @@
+<section class="slide" id="language_boundary" aria-label="Slide 18: Reasoning Across Language Boundaries">
+<img class="kth-logo" alt="KTH Royal Institute of Technology" src="@@LOGO@@">
+<h1>Reasoning Across Language Boundaries</h1>
+<p class="lb-opening" data-lb-reveal="0" data-lb-last="1">Consider a memory component implemented in C.</p>
+<p class="lb-requirement" data-lb-reveal="2"><strong>Required property:</strong> Reading does not change memory.</p>
+<h2 class="lb-model-heading">Memory read in Idris2</h2>
+<h2 class="lb-component-heading">Memory read in C</h2>
+<div class="lb-boundary" aria-hidden="true"></div>
+<div class="lb-ffi" data-lb-reveal="1" aria-label="The Idris2 memory-read component calls its C implementation through the FFI">
+ <span>FFI</span><svg viewBox="0 0 440 16" aria-hidden="true"><path d="M 0 8 H 438 M 430 1 L 438 8 L 430 15"/></svg>
+</div>
+<div class="lb-translation" data-lb-reveal="3">
+ <span>Translate the specification</span><svg viewBox="0 0 440 16" aria-hidden="true"><path d="M 0 8 H 438 M 430 1 L 438 8 L 430 15"/></svg>
+</div>
+<div class="lb-idris-operation" data-lb-reveal="1">
+ <p class="lb-code-label">Operation</p>
+ <pre id="lb-memread-code"><code><span class="lb-function">memRead</span> : (1 _ : <span class="lb-type">BitVec</span> n)
+       -&gt; (1 _ : <span class="lb-type">MemSt</span>)
+       -&gt; (<span class="lb-type">BitVec</span> 32, <span class="lb-type">MemSt</span>)</code></pre>
+</div>
+<div class="lb-c-operation" data-lb-reveal="1">
+ <p class="lb-code-label">Operation</p>
+ <pre id="lb-c-signature"><code><span class="lb-type">uint64_t</span> <span class="lb-function">mem_read_32_val</span><span class="lb-syntax">(</span><span class="lb-type">BV</span><span class="lb-syntax">(), </span><span class="lb-type">mem_ty</span> mem<span class="lb-syntax">) {...}</span></code></pre>
+</div>
+<div class="lb-idris lb-specification" data-lb-reveal="2">
+ <p class="lb-code-label">Type-encoded property</p>
+ <pre id="lb-idris-code"><code>0 <span class="lb-function">readElim</span><span class="lb-syntax"> : (</span>mem<span class="lb-syntax"> : </span><span class="lb-type">MemSt</span><span class="lb-syntax">) -&gt;</span>
+             <span class="lb-syntax">(</span>addr<span class="lb-syntax"> : </span><span class="lb-type">BitVec</span> n<span class="lb-syntax">) -&gt;</span>
+ <span class="lb-equality"><span class="lb-syntax">(</span><span class="lb-function">getSt</span><span class="lb-syntax"> $ </span><span class="lb-function">memRead</span> addr mem<span class="lb-syntax">) = </span>mem</span></code></pre>
+</div>
+<div class="lb-c lb-specification" data-lb-reveal="3">
+ <p class="lb-code-label">ACSL contract</p>
+ <pre id="lb-c-code"><code><span class="lb-comment">/*@</span> <span class="lb-syntax">assigns</span> <span class="lb-function">\nothing</span><span class="lb-syntax">;</span>
+    <span class="lb-syntax">ensures</span> <span class="lb-function">\forall</span> <span class="lb-type">integer</span> i<span class="lb-syntax">;</span>
+      <span class="lb-function">\valid_read</span><span class="lb-syntax">((</span><span class="lb-type">uint8_t</span><span class="lb-syntax">*)</span>mem<span class="lb-syntax"> + </span>i<span class="lb-syntax">)</span>
+      <span class="lb-syntax">==&gt;</span> <span class="lb-equality"><span class="lb-syntax">((</span><span class="lb-type">uint8_t</span><span class="lb-syntax">*)</span>mem<span class="lb-syntax">)[</span>i<span class="lb-syntax">]</span></span>
+          <span class="lb-equality"><span class="lb-syntax">==</span> <span class="lb-function">\old</span><span class="lb-syntax">(((</span><span class="lb-type">uint8_t</span><span class="lb-syntax">*)</span>mem<span class="lb-syntax">)[</span>i<span class="lb-syntax">]);</span></span>
+<span class="lb-comment">*/</span></code></pre>
+</div>
+<div class="lb-justification" data-lb-reveal="4" aria-label="C verification justifies the Idris2 interface assumption">
+ <span>Justify the interface assumption</span><svg viewBox="0 0 580 16" aria-hidden="true"><path d="M 580 8 H 2 M 10 1 L 2 8 L 10 15"/></svg>
+</div>
+<p class="lb-assumed lb-status" data-lb-reveal="4">Assumed at the Idris2 interface</p>
+<p class="lb-verified lb-status" data-lb-reveal="4">Verified against the C implementation</p>
+<footer><span class="footer-event">PhD Defence - 9 November 2026 - Stockholm</span><span class="footer-name">Rui Chen</span><span class="footer-page">18</span></footer>
+</section>

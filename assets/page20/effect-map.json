@@ -114,32 +114,7 @@
         "duration": 1
       }
     ],
-    "structure": [
-      {
-        "events": [
-          {
-            "id": 463,
-            "kind": "entr",
-            "start": 0,
-            "duration": 1,
-            "relation": "clickEffect"
-          }
-        ],
-        "duration": 1
-      },
-      {
-        "events": [
-          {
-            "id": 466,
-            "kind": "entr",
-            "start": 0,
-            "duration": 1,
-            "relation": "clickEffect"
-          }
-        ],
-        "duration": 1
-      }
-    ]
+    "structure": []
   },
   "matches": [
     {
@@ -239,5 +214,5 @@
       "vectorMorph": false
     }
   ],
-  "resolution": "Groups157,159,160,161 retain identical descendant ID order, ancestry and semantic roles. Code150/152/154 reuses verbatim images60/61/62. Overview image59 departs; two copied example rows enter independently. No entrance effect from P19."
+  "resolution": "Groups157,159,160,161 retain identical descendant ID order, ancestry and semantic roles. Code150/152/154 reuses verbatim images60/61/62. Overview image59 departs; two copied example rows enter independently. No entrance effect from P19. Current P19 retains six states; historical groups463/466 are relocated to revised 16C and are absent from active shapes/groups."
 }
