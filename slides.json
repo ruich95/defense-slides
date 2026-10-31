@@ -259,8 +259,16 @@
     "title": "Design Transformations",
     "source": "slides/aeic25.html",
     "controller": "slides/aeic25.js",
-    "steps": 8,
+    "steps": 3,
     "displayNumber": 28
+  },
+  {
+    "id": "normalisation",
+    "title": "Normalisation by Abstract Interpretation",
+    "source": "slides/normalisation.html",
+    "controller": "slides/normalisation.js",
+    "steps": 6,
+    "displayNumber": 29
   },
   {
     "id": "aeic26_27",
@@ -268,7 +276,7 @@
     "source": "slides/aeic26_27.html",
     "controller": "slides/aeic26_27.js",
     "steps": 14,
-    "displayNumber": 29
+    "displayNumber": 30
   },
   {
     "id": "aeic28",
@@ -276,7 +284,7 @@
     "source": "slides/aeic28.html",
     "controller": "slides/aeic28.js",
     "steps": 2,
-    "displayNumber": 30
+    "displayNumber": 31
   },
   {
     "id": "aeic29",
@@ -284,7 +292,7 @@
     "source": "slides/aeic29.html",
     "controller": "slides/aeic29.js",
     "steps": 8,
-    "displayNumber": 31
+    "displayNumber": 32
   },
   {
     "id": "aeic30",
@@ -292,7 +300,15 @@
     "source": "slides/aeic30.html",
     "controller": "slides/aeic30.js",
     "steps": 1,
-    "displayNumber": 32
+    "displayNumber": 33
+  },
+  {
+    "id": "product_elimination",
+    "title": "Product Elimination: Efficient Code Generation",
+    "source": "slides/product_elimination.html",
+    "controller": "slides/product_elimination.js",
+    "steps": 3,
+    "displayNumber": 34
   },
   {
     "id": "aeic31",
@@ -300,7 +316,7 @@
     "source": "slides/aeic31.html",
     "controller": "slides/aeic31.js",
     "steps": 3,
-    "displayNumber": 33
+    "displayNumber": 35
   },
   {
     "id": "aeic32",
@@ -308,6 +324,6 @@
     "source": "slides/aeic32.html",
     "controller": "slides/aeic32.js",
     "steps": 1,
-    "displayNumber": 34
+    "displayNumber": 36
   }
 ]

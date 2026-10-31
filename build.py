@@ -543,6 +543,8 @@ def main():
         scale = shape['scale']
         p24_content.append(f'<div id="p24-shape-{shape["id"]}" class="page24-item page24-{shape["role"]}" data-source-id="{shape["id"]}" style="left:{shape["left"]}px;top:{shape["top"]}px;width:{shape["width"]*scale}px;height:{shape["height"]*scale}px">{body}</div>')
     replacements = {
+        '@@PRODUCT_ELIMINATION_FIGURE@@': data(HERE / 'assets/product_elimination/figure5-8.svg', 'image/svg+xml'),
+        '@@NORMALISATION_FIGURE@@': data(HERE / 'assets/normalisation/figure5-1.svg', 'image/svg+xml'),
         '@@RV32I_PARTIAL_SIMULATION@@': data(HERE / 'assets/rv32i_process/fig3-12b.png', 'image/png'),
         '@@AEIC32_THANKS@@': data(HERE / 'assets/aeic32/image102-with-font.svg', 'image/svg+xml'),
         '@@AEIC32_CREST@@': data(HERE / 'assets/aeic32/image103.svg', 'image/svg+xml'),

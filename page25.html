@@ -462,10 +462,9 @@ body.full #viewport{inset:0}body.full .controlbar{display:none}#stage{cursor:poi
 #page25 .page25-proof-base img{top:0}
 #page25 .page25-proof-step img{top:calc(-1 * var(--proof-cut))}
 
-/* Displayed P23 / AEiC 25: two approaches and cumulative transformation enablers. */
+/* Displayed P28 / AEiC 25: two cumulative approaches. */
 #aeic25 .aeic25-text{position:absolute;left:91px;width:1419px;font-size:32px;line-height:1.28;font-weight:400;color:#000}
-#aeic25 .aeic25-approaches{top:220px}
-#aeic25 .aeic25-enablers{top:465px}
+#aeic25 .aeic25-approaches{top:450px;transform:translateY(-50%)}
 #aeic25 p{margin:0}
 #aeic25 ul{list-style:none;margin:18px 0 0;padding:0}
 #aeic25 li{position:relative;padding-left:37px;margin:0 0 18px}
@@ -473,6 +472,48 @@ body.full #viewport{inset:0}body.full .controlbar{display:none}#stage{cursor:poi
 #aeic25 li::before{content:"▸";position:absolute;left:0;font-size:25px;top:4px}
 #aeic25 strong{font-weight:700}
 #aeic25 [data-aeic25-reveal]{opacity:0;visibility:hidden}
+
+/* Displayed P29: fixed source figure and cumulative text groups. */
+#normalisation .normalisation-text{position:absolute;left:91px;top:175px;width:700px;font-size:32px;line-height:1.28;font-weight:400}
+#normalisation p{margin:0}
+#normalisation ul{margin:20px 0 0;padding:0;list-style:none}
+#normalisation li{position:relative;padding-left:37px;margin:0 0 16px}
+#normalisation li:last-child{margin-bottom:0}
+#normalisation .normalisation-guarantees{top:480px}
+#normalisation li::before{content:"▸";position:absolute;left:0;top:4px;font-size:25px}
+#normalisation strong{font-weight:700}
+#normalisation code{font-family:DefenseCode,Consolas,monospace;font-size:.94em;font-weight:400}
+#normalisation .normalisation-rule{position:absolute;left:900px;top:190px;width:600px;text-align:center;font-size:32px;line-height:1.28;white-space:nowrap}
+#normalisation .normalisation-rule span{color:#0029ed}
+#normalisation .normalisation-artwork{position:absolute;left:930px;top:235px;width:540px;height:562.344828px;margin:0}
+#normalisation .normalisation-artwork img{display:block;width:100%;height:100%;object-fit:contain}
+#normalisation [data-norm-first]{opacity:0;visibility:hidden}
+
+/* Displayed P32: model simplification and editable generation-time evidence. */
+#product_elimination .pe-problem,#product_elimination .pe-results{position:absolute;left:91px;top:175px;width:735px;font-size:32px;line-height:1.28;font-weight:400}
+#product_elimination p{margin:0}
+#product_elimination .pe-opening{width:735px}
+#product_elimination pre{position:absolute;margin:0;font-family:DefenseCode,Consolas,monospace;font-size:28px;line-height:1.28;font-weight:400;white-space:pre}
+#product_elimination code{font-family:DefenseCode,Consolas,monospace;font-size:inherit;font-weight:400}
+#product_elimination .pe-example{left:0;top:115px}
+#product_elimination .pe-rewrite{position:absolute;left:0;top:205px;font-size:28px;line-height:1.28;color:#0029ed}
+#product_elimination .pe-rewrite>span{display:inline-block;margin-right:16px;font-size:32px}
+#product_elimination .pe-ir{left:0;top:275px;line-height:1.45}
+#product_elimination .pe-unused{background:#ffccc4;box-shadow:0 0 0 3px #ffccc4}
+#product_elimination .pe-unused-label{position:absolute;left:235px;top:315.6px;font-size:26px;line-height:1.562;color:#78001a}
+#product_elimination .pe-method{position:absolute;left:0;top:395px;width:700px}
+#product_elimination .pe-artwork{position:absolute;left:941.445783px;top:200px;width:517.108434px;height:580px;margin:0}
+#product_elimination .pe-artwork img{display:block;width:100%;height:100%;object-fit:contain}
+#product_elimination .pe-results-heading,#product_elimination .pe-results-context{font-size:32px;line-height:1.28}
+#product_elimination .pe-results-context{margin-top:14px}
+#product_elimination table{width:735px;border-collapse:collapse;table-layout:fixed;margin-top:38px;font-size:30px;line-height:1.28;font-variant-numeric:tabular-nums}
+#product_elimination .pe-taps-col{width:155px}
+#product_elimination th,#product_elimination td{padding:16px 16px;text-align:right;font-weight:400}
+#product_elimination thead th{font-weight:700;border-bottom:1.5px solid #aeb6bb;padding-top:0;padding-bottom:20px}
+#product_elimination th:first-child{padding-left:0;text-align:left}
+#product_elimination .pe-conditions{margin-top:24px;font-size:26px;line-height:1.28}
+#product_elimination .pe-conditions p+p{margin-top:10px}
+#product_elimination [data-pe-first]{opacity:0;visibility:hidden}
 
 /* Displayed P24: shared reducer object and source network construction. */
 #aeic26_27 .aeic26-opening{position:absolute;left:91px;top:175px;width:1419px;margin:0;font-size:32px;line-height:1.28;font-weight:400;color:#000}
@@ -734,7 +775,7 @@ body.full #viewport{inset:0}body.full .controlbar{display:none}#stage{cursor:poi
  </form>
 </dialog>
 <aside id="notes-dialog"><button id="close-notes">Close</button><h2 id="notes-heading"></h2><p id="notes-text"></p></aside>
-<script>window.slideFactories={};window.deckManifest=[{"id": "page25", "title": "Rising Pattern Detection: Verification", "source": "slides/page25.html", "controller": "slides/page25.js", "steps": 1, "displayNumber": 25}];window.deckNavigationCatalog=[{"id": "cover", "steps": 1}, {"id": "page1", "steps": 9}, {"id": "page2", "steps": 9}, {"id": "page4", "steps": 5}, {"id": "page5", "steps": 8}, {"id": "page6", "steps": 8}, {"id": "page7", "steps": 5}, {"id": "page8", "steps": 7}, {"id": "page9", "steps": 3}, {"id": "page10", "steps": 6}, {"id": "page11", "steps": 8}, {"id": "merged12", "steps": 10}, {"id": "merged13", "steps": 3}, {"id": "page17", "steps": 5}, {"id": "page18", "steps": 4}, {"id": "page19", "steps": 4}, {"id": "contracts", "steps": 8}, {"id": "language_boundary", "steps": 5}, {"id": "page20", "steps": 6}, {"id": "rv32i_process", "steps": 5}, {"id": "page21", "steps": 12}, {"id": "page22", "steps": 10}, {"id": "page23", "steps": 8}, {"id": "page24", "steps": 4}, {"id": "page25", "steps": 1}, {"id": "fm_model", "steps": 7}, {"id": "fm_validation", "steps": 3}, {"id": "aeic25", "steps": 8}, {"id": "aeic26_27", "steps": 14}, {"id": "aeic28", "steps": 2}, {"id": "aeic29", "steps": 8}, {"id": "aeic30", "steps": 1}, {"id": "aeic31", "steps": 3}, {"id": "aeic32", "steps": 1}];</script>
+<script>window.slideFactories={};window.deckManifest=[{"id": "page25", "title": "Rising Pattern Detection: Verification", "source": "slides/page25.html", "controller": "slides/page25.js", "steps": 1, "displayNumber": 25}];window.deckNavigationCatalog=[{"id": "cover", "steps": 1}, {"id": "page1", "steps": 9}, {"id": "page2", "steps": 9}, {"id": "page4", "steps": 5}, {"id": "page5", "steps": 8}, {"id": "page6", "steps": 8}, {"id": "page7", "steps": 5}, {"id": "page8", "steps": 7}, {"id": "page9", "steps": 3}, {"id": "page10", "steps": 6}, {"id": "page11", "steps": 8}, {"id": "merged12", "steps": 10}, {"id": "merged13", "steps": 3}, {"id": "page17", "steps": 5}, {"id": "page18", "steps": 4}, {"id": "page19", "steps": 4}, {"id": "contracts", "steps": 8}, {"id": "language_boundary", "steps": 5}, {"id": "page20", "steps": 6}, {"id": "rv32i_process", "steps": 5}, {"id": "page21", "steps": 12}, {"id": "page22", "steps": 10}, {"id": "page23", "steps": 8}, {"id": "page24", "steps": 4}, {"id": "page25", "steps": 1}, {"id": "fm_model", "steps": 7}, {"id": "fm_validation", "steps": 3}, {"id": "aeic25", "steps": 3}, {"id": "normalisation", "steps": 6}, {"id": "aeic26_27", "steps": 14}, {"id": "aeic28", "steps": 2}, {"id": "aeic29", "steps": 8}, {"id": "aeic30", "steps": 1}, {"id": "product_elimination", "steps": 3}, {"id": "aeic31", "steps": 3}, {"id": "aeic32", "steps": 1}];</script>
 <script>window.slideFactories.page25=()=>{
  const root=document.getElementById('page25');
  const states=[{name:'Induction on the arbitrary input prefix',note:`This is the same property as before: if the last pair rises, the output ends in one. The proof proceeds by induction on the arbitrary prefix xs, not on the scalar samples or an infinite stream.

@@ -1,6 +1,6 @@
 # HTML defence presentation
 
-Open **index.html** in Edge or Chrome for the self-contained offline **34-page deck**. Cover counts as P1. Canonical standalone previews are **page1.html through page34.html**; `cover.html` is a cover alias. Planning 25B is active as **Building the FM Receiver in SynQ**, P26 (`fm_model`, seven states). Planning 25C is active as **FM Receiver: Simulation and Implementation**, P27 (`fm_validation`, three states). FIFO remains backup. Planning 16a remains the eight-state visual page **Specifying Component Behaviour**, P17 (`contracts`); its earlier code/memory version is archived. The stale page35 output displays a retirement notice.
+Open **index.html** in Edge or Chrome for the self-contained offline **36-page deck**. Cover counts as P1. Canonical standalone previews are **page1.html through page36.html**; `cover.html` is a cover alias. Planning 25B is active as **Building the FM Receiver in SynQ**, P26 (`fm_model`, seven states). Planning 25C is active as **FM Receiver: Simulation and Implementation**, P27 (`fm_validation`, three states). FIFO remains backup. Planning 16a remains the eight-state visual page **Specifying Component Behaviour**, P17 (`contracts`); its earlier code/memory version is archived. Normalisation is active as P29 (`normalisation`, six states), after the three-state P28 overview and before balancing at P30. Product elimination is P34 (`product_elimination`, three states), after mapping results P33 and before conclusion P35. FIR application P31 leads directly to mapping experiment P32.
 
 ## Jump navigation
 
@@ -39,13 +39,15 @@ Standalone previews use the same displayed slide numbers. A destination on the c
 | 25 | page25 | 1 |
 | 26 | fm_model | 7 |
 | 27 | fm_validation | 3 |
-| 28 | aeic25 | 8 |
-| 29 | aeic26_27 | 14 |
-| 30 | aeic28 | 2 |
-| 31 | aeic29 | 8 |
-| 32 | aeic30 | 1 |
-| 33 | aeic31 | 3 |
-| 34 | aeic32 | 1 |
+| 28 | aeic25 | 3 |
+| 29 | normalisation | 6 |
+| 30 | aeic26_27 | 14 |
+| 31 | aeic28 | 2 |
+| 32 | aeic29 | 8 |
+| 33 | aeic30 | 1 |
+| 34 | product_elimination | 3 |
+| 35 | aeic31 | 3 |
+| 36 | aeic32 | 1 |
 
 ## Authoring and animation
 
@@ -59,11 +61,13 @@ P17 `contracts` uses the user's three-row draft structure with concise 32 px int
 
 P21 `page21` uses 12 states: states 1–10 retain the original sequence and 500 ms internal Morph, then Verilog and LLVM IR appear on separate clicks. Its straight code-to-code arrows and overlapping target panels follow AEiC P20; the final LLVM panel covers the lower part of Verilog. Each target click keeps a 250 ms route wipe followed by its target/code appearance. Source SVG artwork and the Page 5 code-panel reference remain unchanged.
 
-P28 `aeic25` preserves seven paragraph clicks, including the held 25% opacity assignment to the first approach. P29 `aeic26_27` retains 14 states and its reversible 500 ms move of the same code object. P30 `aeic28` reveals the transformed FIR expression in one click. P31 `aeic29` retains eight mapping-experiment states, its IR/network/schedule and communication guides. P32 `aeic30` retains all three complete result plots in one state. P33 `aeic31` has three conclusion/future-work states; P34 `aeic32` is the static closing. Both closing positions remain provisional. Existing planning filenames retain their earlier numbers.
+P28 `aeic25` now has three states/two clicks, cumulatively introducing abstract interpretations and type-driven construction at full opacity. Its former dimming/focus and lower enabler group are removed; enabler narration moves to P30 notes. The completed overview text block is vertically centred at y450, preserving its full flow height and position throughout all three states. P29 `normalisation` has six states/five clicks, preserving full vector Figure 5.1 in a fixed right slot (x930/y235/w540/h562.34, centre x1200). Left text uses 32 px Figtree and triangle bullets. The original introduction/Reduction/Result remain from state 3 through state 6. The guarantees heading and Result form reveal below at state 4, followed by Totality and Behaviour preservation at states 5/6. Each cumulative reveal takes 225 ms; there is no text replacement. Intro/list gaps are 20 px and bullet gaps 16 px. Guarantees start at y480, about 23 px below the completed first group, and final prose ends near y738. The actual-text beta rule reveals above the figure. Result form, totality and per-model behaviour preservation stay distinct, with the auto/contract explanation retained in notes and backup. The visible proof-code snippet is removed. No figure caption is added. Source and scope are in notes; implementation details are in [page28a.md](../slides-detail/page28a.md), with B14/B15 in backup notes.
+
+P30 `aeic26_27` retains 14 states and its reversible 500 ms code-object move, with visible content and animation unchanged. Its final notes distinguish general behaviour preservation under associativity from normalisation's per-model obligations. P31 `aeic28` reveals the transformed FIR expression in one click. P32 `aeic29` retains eight mapping-experiment states. P33 `aeic30` retains all three complete result plots. P34 `product_elimination` has three states/two clicks: unused projected-product computation; model simplification before IR generation with complete Fig.5.8; selected editable Table5.1 timing rows. Figure includes the entire upper diagram, lower cost panel and High–Low legend in a fixed x941.446/y200/w517.108/h580 slot, centred at x1200. No figure caption is added. Body is 32 px, editable code28px, table30px and measurement conditions26px. Reveals/left-group replacement take225ms, with direct/back/restart/reduced/cancel support. The table measures IR-generation seconds at20 balancing iterations, with explicit Before/After elimination headers and timeout/machine conditions. [page31a.md](../slides-detail/page31a.md) specifies the page; backupB16 retains the full source table. P35 `aeic31` has three conclusion/future-work states; P36 `aeic32` is static closing. Closing positions remain provisional. The order is FIR application P31 → mapping experiment P32 → mapping results P33 → product elimination P34 → conclusion P35. Adjacent notes now introduce the mapping results first, then distinguish IR-generation time as another design-process cost, and finish with the conclusion transition. No visible content or animation changes accompany the reorder.
 
 ## P18 language boundary
 
-`language_boundary` follows `contracts` and precedes `page20`. Five states/four clicks introduce memory context, operation signatures/FFI, the required Idris2 property, C/ACSL translation, and justification of the interface assumption. The new memRead signature uses P14 output–state ordinary-pair presentation notation; notes distinguish it from the exact thesis representation. Original readElim, ACSL and C signature text remain exact 26 px excerpts. The SAME C signature/Operation-label group moves 230 px down over 400 ms before the 225 ms ACSL reveal, with reverse/direct/reduced/cancel support. Final statuses and persistent leftward “Justify the interface assumption” arrow remain alongside the forward translation arrow and static equality highlights. No pulses or automatic proof import. P18 numbering is unchanged in the 34-page deck.
+`language_boundary` follows `contracts` and precedes `page20`. Five states/four clicks introduce memory context, operation signatures/FFI, the required Idris2 property, C/ACSL translation, and justification of the interface assumption. The new memRead signature uses P14 output–state ordinary-pair presentation notation; notes distinguish it from the exact thesis representation. Original readElim, ACSL and C signature text remain exact 26 px excerpts. The SAME C signature/Operation-label group moves 230 px down over 400 ms before the 225 ms ACSL reveal, with reverse/direct/reduced/cancel support. Final statuses and persistent leftward “Justify the interface assumption” arrow remain alongside the forward translation arrow and static equality highlights. No pulses or automatic proof import. P18 numbering is unchanged in the 36-page deck.
 
 ## P19 detector and P20 RV32-I summary
 
@@ -75,7 +79,7 @@ Source and highlight provenance: `assets/rv32i_process/fig3-10-highlight-map.jso
 
 ## P26 FM modelling
 
-`fm_model` implements [25B](../slides-detail/page25b.md) as **seven held states/six clicks**, in the current 34-page deck. Hierarchy/DDC/CIC views map to child states [0,1,2,2,3,3,3]. State 3 expands CIC while retaining only the composition bullet; state 4 adds resource tracking over an identical held overview; state 5 shows configurable truncation and four integrators. In state 6 the first two headings remain context, while configurable truncation becomes the parent of indented type-configuration/inference subpoints. State 7 adds the second subpoint and aligned factual conclusion.
+`fm_model` implements [25B](../slides-detail/page25b.md) as **seven held states/six clicks**, in the current 36-page deck. Hierarchy/DDC/CIC views map to child states [0,1,2,2,3,3,3]. State 3 expands CIC while retaining only the composition bullet; state 4 adds resource tracking over an identical held overview; state 5 shows configurable truncation and four integrators. In state 6 the first two headings remain context, while configurable truncation becomes the parent of indented type-configuration/inference subpoints. State 7 adds the second subpoint and aligned factual conclusion.
 
 `build.py` embeds the compact standalone artwork/controller but adds deck-only wrapper frames. The SAME complete lower CIC moves upward in 600 ms for state 6; upper receiver/wedge leave, then the five-line signature appears beneath it. No isolated-stage copy is embedded. State 7 adds the three-line body. Native CIC width/height remain; diagram shifts 45 px right, left text widens to 690 px. Focused states place the complete CIC at y147 (23 px higher); 26 px code aligns to enclosure x861.911, signature y490/body y676.5. The figure-to-code gap is about 40 px, retained-heading gaps are 6 px and the final 32 px explanation uses secondary gray #626973. Opening uses normal left-aligned natural wrapping of “The receiver is built as a hierarchy of SynQ components.” with no explicit line break. Original standalone four-state SVG/preview remain unchanged by this integration revision. Deck input/cancel/reduced-motion behavior is retained.
 
