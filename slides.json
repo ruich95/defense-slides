@@ -239,12 +239,20 @@
     "displayNumber": 25
   },
   {
+    "id": "fm_model",
+    "title": "Building the FM Receiver in SynQ",
+    "source": "slides/fm_model.html",
+    "controller": "slides/fm_model.js",
+    "steps": 7,
+    "displayNumber": 26
+  },
+  {
     "id": "aeic25",
     "title": "Design Transformations",
     "source": "slides/aeic25.html",
     "controller": "slides/aeic25.js",
     "steps": 8,
-    "displayNumber": 26
+    "displayNumber": 27
   },
   {
     "id": "aeic26_27",
@@ -252,7 +260,7 @@
     "source": "slides/aeic26_27.html",
     "controller": "slides/aeic26_27.js",
     "steps": 14,
-    "displayNumber": 27
+    "displayNumber": 28
   },
   {
     "id": "aeic28",
@@ -260,7 +268,7 @@
     "source": "slides/aeic28.html",
     "controller": "slides/aeic28.js",
     "steps": 2,
-    "displayNumber": 28
+    "displayNumber": 29
   },
   {
     "id": "aeic29",
@@ -268,7 +276,7 @@
     "source": "slides/aeic29.html",
     "controller": "slides/aeic29.js",
     "steps": 8,
-    "displayNumber": 29
+    "displayNumber": 30
   },
   {
     "id": "aeic30",
@@ -276,7 +284,7 @@
     "source": "slides/aeic30.html",
     "controller": "slides/aeic30.js",
     "steps": 1,
-    "displayNumber": 30
+    "displayNumber": 31
   },
   {
     "id": "aeic31",
@@ -284,7 +292,7 @@
     "source": "slides/aeic31.html",
     "controller": "slides/aeic31.js",
     "steps": 3,
-    "displayNumber": 31
+    "displayNumber": 32
   },
   {
     "id": "aeic32",
@@ -292,6 +300,6 @@
     "source": "slides/aeic32.html",
     "controller": "slides/aeic32.js",
     "steps": 1,
-    "displayNumber": 32
+    "displayNumber": 33
   }
 ]

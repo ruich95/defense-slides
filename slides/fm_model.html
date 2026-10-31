@@ -1,38 +1,32 @@
-<section class="slide section4-insert" id="fm_model" aria-label="Slide 27: FM Receiver: Hierarchical, Typed Models">
+<section class="slide" id="fm_model" aria-label="Slide 26: Building the FM Receiver in SynQ">
 <img class="kth-logo" alt="KTH Royal Institute of Technology" src="@@LOGO@@">
-<h1>FM Receiver: Hierarchical, Typed Models</h1>
-<p class="s4-opening s4-item" data-first="0" data-last="1">The receiver is built as a hierarchy of SynQ components.</p>
-<p class="s4-opening s4-item" data-first="2" data-last="4">Types guide component construction.</p>
-<div class="s4-item" data-first="0" data-last="1">
- <div class="fm-hierarchy">@@FM_HIERARCHY_SVG@@</div>
- <p class="fm-hierarchy-explanation s4-item" data-first="0" data-last="0">Two DDCs select the channel; phase and phase difference recover the modulation.</p>
- <div class="fm-resources s4-item" data-first="1" data-last="1">
-  <h2>Linear resource bundles follow the component hierarchy.</h2>
-  <p class="fm-binding-caption">Top-level resource bindings (excerpt)</p>
-  <dl>
-   <div><dt><code>1 ddcIRegs</code></dt><dd>DDC in-phase</dd></div>
-   <div><dt><code>1 ddcQRegs</code></dt><dd>DDC quadrature</dd></div>
-   <div><dt><code>1 catan2Regs</code></dt><dd>Phase</dd></div>
-   <div><dt><code>1 unwrapDiffRegs</code></dt><dd>Difference</dd></div>
-  </dl>
- </div>
+<h1>Building the FM Receiver in SynQ</h1>
+<div class="fm-model-text">
+ <p>The receiver is built as a hierarchy of SynQ components.</p>
+ <ul class="fm-main-list">
+  <li class="fm-main-item" data-fm-first="1"><div class="fm-main-line"><strong>Hierarchical composition<span class="fm-colon">:</span></strong><span class="fm-explanation"> model each DDC from a mixer, CIC decimator and compensation filter.</span></div></li>
+  <li class="fm-main-item" data-fm-first="3"><div class="fm-main-line"><strong>Linear resource tracking<span class="fm-colon">:</span></strong><span class="fm-explanation"> bundle register resources along the component hierarchy.</span></div></li>
+  <li class="fm-main-item" data-fm-first="4"><div class="fm-main-line"><strong>Configurable truncation<span class="fm-colon">:</span></strong><span class="fm-explanation"> each accumulator truncates its output to a selected bit width.</span></div>
+   <div class="fm-subpoints">
+    <ul class="fm-sub-list">
+     <li class="fm-first-sub"><div class="fm-sub-line"><strong>Type-level configuration:</strong> specify accumulator widths and input/output widths.</div></li>
+     <li class="fm-second-sub"><div class="fm-sub-line"><strong>Inferred parameters:</strong> infer each accumulator’s input and output widths during type checking.</div></li>
+    </ul>
+    <p class="fm-model-conclusion"><span>Truncation parameters are calculated from the inferred widths.</span></p>
+   </div>
+  </li>
+ </ul>
 </div>
-<div class="s4-item" data-first="2" data-last="4">
- <p class="fm-code-caption">CIC integrator stages — source excerpt</p>
- <pre class="fm-cic-code"><code><span class="s4-function">cicInt4</span>: (Seq comb seq, Primitive comb)
-  =&gt; (1 regs: CICIntRegs <span class="fm-width">[44, 37, 31, 26]</span> comb seq)
-  -&gt; seq (CICIntSt <span class="fm-width">[44, 37, 31, 26]</span>)
-         (BitVec <span class="fm-width">44</span>) (BitVec <span class="fm-width">23</span>)
-<span class="s4-function">cicInt4</span> (r1 # r2 # r3 # r4) =
-  intStg' r4 &lt;&lt;&lt; intStg' r3 &lt;&lt;&lt; intStg' r2 &lt;&lt;&lt; intStg' r1</code></pre>
- <div class="fm-width-guide s4-item" data-first="3" data-last="4" aria-label="Width transitions: input 44, then 37, 31, 26, output 23 bits">
-  <p><span class="fm-guide-end">44<small>input</small></span> → 37 → 31 → 26 → <span class="fm-guide-end">23<small>output</small></span> bits</p>
- </div>
- <div class="fm-type-conclusion s4-item" data-first="4" data-last="4">
-  <p><strong>Inferred widths determine the truncation parameters.</strong></p>
-  <p>Type checking checks consistency with the chosen configuration.</p>
- </div>
+<div class="fm-model-figure-scene">@@FM_HIERARCHY_SVG@@</div>
+<div class="fm-model-code-scene" aria-hidden="true">
+ <pre class="fm-model-signature"><code><span class="fm-function">cicInt4</span>: (<span class="fm-type">Seq</span> comb seq, <span class="fm-type">Primitive</span> comb)
+  <span class="fm-syntax">=&gt;</span> <span class="fm-linear">(1 regs:</span>
+       <span class="fm-linear"><span class="fm-type">CICIntRegs</span> <span class="fm-code-width">[44, 37, 31, 26]</span> comb seq)</span>
+  <span class="fm-syntax">-&gt;</span> seq (<span class="fm-type">CICIntSt</span> <span class="fm-code-width">[44, 37, 31, 26]</span>)
+         (<span class="fm-type">BitVec</span> <span class="fm-code-width">44</span>) (<span class="fm-type">BitVec</span> <span class="fm-code-width">23</span>)</code></pre>
+ <pre class="fm-model-body"><code><span class="fm-function">cicInt4</span> (r1 <span class="fm-syntax">#</span> r2 <span class="fm-syntax">#</span> r3 <span class="fm-syntax">#</span> r4) = 
+  <span class="fm-function">intStg'</span> r4 <span class="fm-syntax">&lt;&lt;&lt;</span> <span class="fm-function">intStg'</span> r3
+    <span class="fm-syntax">&lt;&lt;&lt;</span> <span class="fm-function">intStg'</span> r2 <span class="fm-syntax">&lt;&lt;&lt;</span> <span class="fm-function">intStg'</span> r1</code></pre>
 </div>
-<p class="s4-source">Thesis §4.4.1, pp. 118, 120–123; SynQ source: FMDemod.idr and PipelinedCIC.idr</p>
-<footer><span class="footer-event">PhD Defence - 9 November 2026 - Stockholm</span><span class="footer-name">Rui Chen</span><span class="footer-page">27</span></footer>
+<footer><span class="footer-event">PhD Defence - 9 November 2026 - Stockholm</span><span class="footer-name">Rui Chen</span><span class="footer-page">26</span></footer>
 </section>

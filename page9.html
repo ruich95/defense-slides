@@ -642,6 +642,35 @@ body.full #viewport{inset:0}body.full .controlbar{display:none}#stage{cursor:poi
 #fm_model .fm-width-labels{display:flex;justify-content:space-between;width:635px;margin:8px auto 0;font-size:23px;line-height:1.2;color:#626973}
 #fm_model .fm-type-conclusion{position:absolute;left:100px;top:693px;width:1400px;font-size:32px;line-height:1.28}
 #fm_model .fm-type-conclusion p+p{margin-top:12px}
+/* Active six-state FM modelling page. Native hierarchy geometry is embedded. */
+#fm_model .fm-model-text{position:absolute;left:91px;top:175px;width:690px;font-size:32px;line-height:1.28;font-weight:400}
+#fm_model .fm-model-text p{margin:0}
+#fm_model .fm-model-text>p{white-space:normal;text-align:left}
+#fm_model .fm-model-text ul{list-style:none;margin:28px 0 0;padding:0}
+#fm_model .fm-model-text li{position:relative;padding-left:37px;margin:0 0 24px}
+#fm_model .fm-model-text li::before{content:"▸";position:absolute;left:0;top:4px;font-size:25px}
+#fm_model .fm-model-text strong{font-weight:700}
+#fm_model .fm-model-text li:last-child{margin-bottom:0}
+#fm_model [data-fm-first]{opacity:0;visibility:hidden}
+#fm_model .fm-main-item{overflow:hidden}
+#fm_model .fm-subpoints{position:absolute;left:65px;right:0;top:59px;opacity:0;visibility:hidden}
+#fm_model .fm-model-text .fm-sub-list{margin:0;padding:0}
+#fm_model .fm-model-text .fm-sub-list li{padding-left:31px;margin:0;overflow:hidden}
+#fm_model .fm-sub-list li::before{font-size:23px}
+#fm_model .fm-model-figure-scene{position:absolute;left:820px;top:175px;width:760px;height:640px}
+#fm_model #fm-model-hierarchy-svg{display:block;width:100%;height:100%;overflow:visible}
+#fm_model .fm-model-code-scene{position:absolute;inset:0;opacity:0;visibility:hidden}
+#fm_model .fm-model-stage{position:absolute;left:975px;top:175px;width:360px;height:125px}
+#fm_model #fm-model-stage-svg{display:block;width:100%;height:100%}
+#fm_model .fm-model-signature,#fm_model .fm-model-body{position:absolute;left:861.911px;width:678.089px;margin:0;white-space:pre;font-family:DefenseCode,Consolas,monospace;font-size:26px;line-height:1.25;font-weight:400;letter-spacing:0;font-variant-ligatures:none;color:#000}
+#fm_model .fm-model-signature{top:490px}
+#fm_model .fm-model-body{top:676.5px;opacity:0;visibility:hidden}
+#fm_model .fm-model-signature code,#fm_model .fm-model-body code{font:inherit}
+#fm_model .fm-function{color:#0029ED}#fm_model .fm-syntax{color:#8A2BE2}#fm_model .fm-type{color:#78001A}
+#fm_model .fm-linear{background:rgba(0,41,237,.07);box-shadow:0 0 0 3px rgba(0,41,237,.07)}
+#fm_model .fm-code-width{background:#dceafa;color:#004791}
+#fm_model .fm-model-text .fm-model-conclusion{position:relative;margin:0 0 0 31px;font-size:32px;line-height:1.28;font-weight:400;color:#626973;opacity:0;visibility:hidden;overflow:hidden}
+#fm_model .fm-model-conclusion>span{display:block}
 #fm_validation .fm-routes{position:absolute;left:0;top:225px;width:1600px;height:130px;font-size:30px;line-height:1.2}
 #fm_validation .fm-route-model{position:absolute;left:100px;top:32px}
 #fm_validation .fm-route-software{position:absolute;left:605px;top:5px}

@@ -6,6 +6,7 @@ import json
 import html
 import re
 import struct
+import copy
 from zipfile import ZipFile
 
 HERE = Path(__file__).resolve().parent
@@ -78,6 +79,67 @@ def receiver_art():
     for attr in ['width', 'height', 'tabindex']:
         animation.attrib.pop(attr, None)
     return E.tostring(animation, encoding='unicode')
+
+
+def fm_model_assets():
+    """Embed the approved standalone art, with the deck owning all input."""
+    source = E.parse(ROOT / 'figures/svg/fm-hierarchy-animated.svg').getroot()
+    script = source.find(SVG + 'script')
+    controller = script.text
+    listeners = controller.index("root.addEventListener('click',next);")
+    initialise = controller.index('render(0);notify();', listeners)
+    controller = controller[:listeners] + controller[initialise:]
+    controller = re.sub(r'^\(\(\)=>\{\s*', '', controller)
+    controller = re.sub(r'\}\)\(\);\s*$', '', controller)
+    controller = controller.replace(
+        "const root=document.currentScript.ownerSVGElement, $=id=>root.querySelector('#'+id),",
+        "const $=id=>root.querySelector('#fm-model-'+id),")
+    art = copy.deepcopy(source)
+    art.remove(art.find(SVG + 'script'))
+    # The deck-only focus moves this same complete lower CIC group upward.
+    # Remove only the redundant white canvas so overflow cannot cover text.
+    embedded_by_id = {n.get('id'): n for n in art.iter() if n.get('id')}
+    art.remove(embedded_by_id['fm-background'])
+    detail = embedded_by_id['cic-detail']
+    focus_frame = E.Element(SVG + 'g', {'id': 'cic-focus-frame'})
+    detail_index = list(art).index(detail)
+    art.remove(detail)
+    focus_frame.append(detail)
+    art.insert(detail_index, focus_frame)
+    for original_id, frame_id in [('receiver-context', 'receiver-focus-frame'), ('cic-wedge', 'wedge-focus-frame')]:
+        node = embedded_by_id[original_id]
+        frame = E.Element(SVG + 'g', {'id': frame_id})
+        index = list(art).index(node)
+        art.remove(node)
+        frame.append(node)
+        art.insert(index, frame)
+    prefix_svg(art, 'fm-model-', 'fm-model-hierarchy-svg')
+    for name in ['width', 'height', 'tabindex']:
+        art.attrib.pop(name, None)
+    for style in art.iter(SVG + 'style'):
+        style.text = re.sub(r'(^|\})\s*([^{}]+)\{',
+                            lambda m: m[1] + ','.join('#fm-model-hierarchy-svg ' + s.strip() for s in m[2].split(',')) + '{',
+                            style.text or '')
+    # A faithful small copy of the outlined first integrator for the code scene.
+    stage = E.Element(SVG + 'svg', {'viewBox': '30 36.8 28.8 10.2', 'role': 'img',
+                                     'aria-label': 'One complete integrator stage: 44-bit input, adder, register, truncation, feedback and 37-bit output'})
+    stage_defs = E.SubElement(stage, SVG + 'defs')
+    source_by_id = {n.get('id'): n for n in source.iter() if n.get('id')}
+    for name in ['cic-adder-symbol', 'cic-register-symbol', 'cic-truncation-symbol', 'cic-triangle-arrow']:
+        stage_defs.append(copy.deepcopy(source_by_id[name]))
+    first = copy.deepcopy(source_by_id['cic-integrator-1'])
+    first.set('transform', 'translate(0 -2)')
+    stage.append(first)
+    for segment in ['M30.5 40.4 H33.2612302', 'M51.4 40.4 H57.8']:
+        E.SubElement(stage, SVG + 'path', {'d': segment, 'fill': 'none', 'stroke': '#000', 'stroke-width': '.2',
+                                          'stroke-linecap': 'round', 'marker-end': 'url(#cic-triangle-arrow)'})
+    E.SubElement(stage, SVG + 'rect', {'x': '32.5', 'y': '37.5', 'width': '20.4', 'height': '8.3', 'rx': '.6',
+                                      'fill': 'none', 'stroke': '#000', 'stroke-width': '.16', 'stroke-dasharray': '.5 .5'})
+    for x, label in [('31.3', '44'), ('56.8', '37')]:
+        E.SubElement(stage, SVG + 'text', {'x': x, 'y': '43.2', 'text-anchor': 'middle',
+                                          'font-family': 'Figtree,Arial,sans-serif', 'font-size': '1.55', 'fill': '#004791'}).text = label
+    prefix_svg(stage, 'fm-stage-', 'fm-model-stage-svg')
+    return E.tostring(art, encoding='unicode'), controller, E.tostring(stage, encoding='unicode')
 
 
 def requirements_pyramid_art():
@@ -333,6 +395,7 @@ def page6_paper_art():
 
 def main():
     entries = json.loads((HERE / 'slides.json').read_text(encoding='utf8'))
+    fm_hierarchy, fm_controller, fm_stage = fm_model_assets()
     p11 = json.loads((HERE / 'assets/page11/animation.json').read_text(encoding='utf8'))
     p11_content = []
     for shape in p11['shapes']:
@@ -515,7 +578,9 @@ def main():
     }
     replacements.update({
         '@@FIFO_TESTING_SVG@@': (HERE/'assets/fifo_evidence/fifo-testing.svg').read_text(encoding='utf8').split('?>')[-1],
-        '@@FM_HIERARCHY_SVG@@': (HERE/'assets/fm_model/hierarchy-two-tiers.svg').read_text(encoding='utf8').split('?>')[-1],
+        '@@FM_HIERARCHY_SVG@@': fm_hierarchy,
+        '@@FM_MODEL_HIERARCHY_CONTROLLER@@': fm_controller,
+        '@@FM_MODEL_STAGE_SVG@@': fm_stage,
         '@@FM_DDC_TIER_SVG@@': (HERE/'assets/fm_validation/ddc-tier.svg').read_text(encoding='utf8').split('?>')[-1],
         '@@FM_DDC_RESPONSE@@': data(HERE/'assets/fm_validation/ddc-frequency-response.svg','image/svg+xml'),
         '@@FM_SPECTRUM@@': data(HERE/'assets/fm_validation/spectrum_demodulated_signal.png','image/png'),
@@ -533,6 +598,8 @@ def main():
         slides[entry['id']] = content
         if entry.get('controller'):
             controllers[entry['id']] = (HERE / entry['controller']).read_text(encoding='utf8')
+            if entry['id'] == 'fm_model':
+                controllers[entry['id']] = controllers[entry['id']].replace('@@FM_MODEL_HIERARCHY_CONTROLLER@@', fm_controller)
             if entry['id'] == 'aeic29':
                 controllers[entry['id']] = controllers[entry['id']].replace('@@AEIC29_DATA@@', replacements['@@AEIC29_DATA@@'])
             if entry['id'] == 'aeic26_27':
