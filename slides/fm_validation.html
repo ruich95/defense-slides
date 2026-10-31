@@ -1,35 +1,14 @@
-<section class="slide section4-insert" id="fm_validation" aria-label="Slide 28: FM Receiver: From Simulation to FPGA">
+<section class="slide section4-insert" id="fm_validation" aria-label="Slide 27: FM Receiver: Simulation and Implementation">
 <img class="kth-logo" alt="KTH Royal Institute of Technology" src="@@LOGO@@">
-<h1>FM Receiver: From Simulation to FPGA</h1>
-<p class="s4-opening">One SynQ model supports software evaluation and hardware implementation.</p>
-<div class="fm-routes">
- <p class="fm-route-model"><strong>SynQ FM model</strong></p>
- <svg class="fm-route-arrows" viewBox="0 0 1600 130" aria-hidden="true">
-  <defs><marker id="fm-validation-route-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#000" stroke-width="1.2"/></marker></defs>
-  <path d="M410 50H490V23H575" fill="none" stroke="#000" stroke-width="2" marker-end="url(#fm-validation-route-arrow)"/>
-  <g class="s4-item" data-first="2" data-last="4"><path d="M490 50V80H575" fill="none" stroke="#000" stroke-width="2" marker-end="url(#fm-validation-route-arrow)"/><path d="M930 80H1035" fill="none" stroke="#000" stroke-width="2" marker-end="url(#fm-validation-route-arrow)"/></g>
- </svg>
- <p class="fm-route-software">Software interpretation</p>
- <p class="fm-route-verilog s4-item" data-first="2" data-last="4">Generated Verilog</p>
- <p class="fm-route-fpga s4-item" data-first="2" data-last="4">FPGA</p>
+<h1>FM Receiver: Simulation and Implementation</h1>
+<p class="fm-validation-opening">One SynQ model supports simulation and FPGA implementation.</p>
+<div class="fm-validation-response fm-validation-scene">
+ <div class="fm-validation-plot"><img src="@@FM_DDC_RESPONSE@@" alt="Complete DDC frequency response, with full-band response, passband inset and original axes"></div>
+ <p class="fm-validation-explanation"><strong>LLVM IR implementation:</strong> evaluate channel selectivity and passband flatness.</p>
 </div>
-<div class="s4-item" data-first="1" data-last="1">
- <figure class="fm-result-figure"><img src="@@FM_DDC_RESPONSE@@" alt="Complete DDC frequency response with full-band response, passband inset and original axes"><figcaption>Software response — thesis Fig. 4.3</figcaption></figure>
- <p class="fm-result-explanation">Software evaluation: channel selectivity and passband flatness.</p>
+<div class="fm-validation-measurement fm-validation-scene">
+ <div class="fm-validation-plot"><img src="@@FM_SPECTRUM@@" alt="Complete reported demodulated spectrum, including pilot 19 kHz, stereo subcarrier 38 kHz and RDS subcarrier 57 kHz legend"></div>
+ <p class="fm-validation-explanation"><strong>Verilog HDL implementation:</strong> deploy the receiver on an FPGA.</p>
 </div>
-<div class="s4-item" data-first="2" data-last="3">
- <figure class="fm-result-figure"><img src="@@FM_SPECTRUM@@" alt="Complete reported demodulated spectrum, including pilot 19 kHz, stereo subcarrier 38 kHz and RDS subcarrier 57 kHz legend"><figcaption>Reported FPGA measurement — thesis Fig. 4.4</figcaption></figure>
- <p class="fm-result-explanation">FPGA implementation: demodulated broadcast spectrum.</p>
-</div>
-<div class="s4-item" data-first="3" data-last="3">
- <p class="fm-rate"><strong>122.88 MHz RF sampling<br>→ 960 kHz demodulated baseband</strong></p>
- <p class="fm-sampling">One output sample per 128 input samples, with deterministic latency.</p>
-</div>
-<div class="s4-item" data-first="4" data-last="4">
- <div class="fm-ddc-callback">@@FM_DDC_TIER_SVG@@</div>
- <p class="fm-transform-question"><strong>How can we express design transformations within the same framework?</strong></p>
- <p class="fm-fir-distinction">The receiver uses a sequential FIR; the later transformation example studies a direct-form FIR.</p>
- <p class="s4-source">Thesis §4.4.1, Fig. 4.2; §5.3.1</p>
-</div>
-<footer><span class="footer-event">PhD Defence - 9 November 2026 - Stockholm</span><span class="footer-name">Rui Chen</span><span class="footer-page">28</span></footer>
+<footer><span class="footer-event">PhD Defence - 9 November 2026 - Stockholm</span><span class="footer-name">Rui Chen</span><span class="footer-page">27</span></footer>
 </section>

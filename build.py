@@ -94,13 +94,42 @@ def fm_model_assets():
     controller = controller.replace(
         "const root=document.currentScript.ownerSVGElement, $=id=>root.querySelector('#'+id),",
         "const $=id=>root.querySelector('#fm-model-'+id),")
+    # Place 44 inside the first accumulator's clear feedback-loop space,
+    # avoiding both the scope boundary and the native dashed stage outline.
+    controller = controller.replace("set('focus-width-44',{y:y1+2.8})",
+                                    "set('focus-width-44',{x:38.25,y:y1+3})")
     art = copy.deepcopy(source)
     art.remove(art.find(SVG + 'script'))
     # The deck-only focus moves this same complete lower CIC group upward.
     # Remove only the redundant white canvas so overflow cannot cover text.
     embedded_by_id = {n.get('id'): n for n in art.iter() if n.get('id')}
+    # Deck-only numeric emphasis; standalone art, components and wiring stay native.
+    for node in embedded_by_id['cic-widths']:
+        node.set('font-size', '2.2')
+        node.set('font-weight', '600')
+        node.set('fill', '#003c7e')
+    # Keep the compact decimator's factor within its original symbol box.
+    factor = embedded_by_id['cic-decimator-symbol-text28']
+    factor.set('style', factor.get('style').replace('font-size:1.41111px', 'font-size:1.5px')
+               .replace('font-weight:normal', 'font-weight:600'))
     art.remove(embedded_by_id['fm-background'])
     detail = embedded_by_id['cic-detail']
+    # Scope of cicInt4, distinct from the full CIC. Keep every native object
+    # and wire unchanged; the stepped boundary follows both integrator rows.
+    scope = E.Element(SVG + 'g', {
+        'id': 'cic-integrator-scope', 'opacity': '0', 'visibility': 'hidden',
+        'aria-hidden': 'true', 'pointer-events': 'none',
+    })
+    E.SubElement(scope, SVG + 'path', {
+        'd': 'M30.6 36.5 H86.2 V49.2 H83 V56.9 H26.3 V46.7 H30.6 Z',
+        'fill': '#dceafa', 'fill-opacity': '.3', 'stroke': '#004791',
+        'stroke-width': '.16', 'stroke-linejoin': 'round',
+    })
+    E.SubElement(scope, SVG + 'text', {
+        'x': '31.2', 'y': '35.1', 'font-family': 'Figtree,Arial,sans-serif',
+        'font-size': '1.8', 'fill': '#004791', 'stroke': 'none',
+    }).text = 'cicInt4: 4 integrator stages'
+    detail.insert(1, scope)
     focus_frame = E.Element(SVG + 'g', {'id': 'cic-focus-frame'})
     detail_index = list(art).index(detail)
     art.remove(detail)
@@ -650,6 +679,7 @@ def main():
             '@@STYLES@@': styles,
             '@@SLIDES@@': '\n'.join(slides[e['id']] for e in selected),
             '@@MANIFEST@@': json.dumps(selected, ensure_ascii=False).replace('</', '<\\/'),
+            '@@NAVIGATION_CATALOG@@': json.dumps([{'id': e['id'], 'steps': e.get('steps', 1)} for e in entries]),
             '@@CONTROLLERS@@': '\n'.join(controllers.get(e['id'], '') for e in selected),
             '@@NAVIGATION@@': (HERE / 'shared/navigation.js').read_text(encoding='utf8'),
         }

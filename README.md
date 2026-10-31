@@ -1,6 +1,12 @@
 # HTML defence presentation
 
-Open **index.html** in Edge or Chrome for the self-contained offline **33-page deck**. Cover counts as P1. Canonical standalone previews are **page1.html through page33.html**; `cover.html` is a cover alias. Planning 25B is active as **Building the FM Receiver in SynQ**, P26 (`fm_model`, seven states). The FM results page and FIFO remain inactive. Planning 16a remains the eight-state visual page **Specifying Component Behaviour**, P17 (`contracts`); its earlier code/memory version is archived. Stale page34–35 outputs display retirement notices.
+Open **index.html** in Edge or Chrome for the self-contained offline **34-page deck**. Cover counts as P1. Canonical standalone previews are **page1.html through page34.html**; `cover.html` is a cover alias. Planning 25B is active as **Building the FM Receiver in SynQ**, P26 (`fm_model`, seven states). Planning 25C is active as **FM Receiver: Simulation and Implementation**, P27 (`fm_validation`, three states). FIFO remains backup. Planning 16a remains the eight-state visual page **Specifying Component Behaviour**, P17 (`contracts`); its earlier code/memory version is archived. The stale page35 output displays a retirement notice.
+
+## Jump navigation
+
+Choose **Jump to…** in the bottom toolbar, or press **G** (also in full screen). Enter a slide number such as `26` to open its first state, or `26.7` to open a particular state; a leading `#` is optional. **Enter/Go** submits; **Escape/Cancel** dismisses and restores focus. Invalid slide or state numbers show an inline error without changing the current view. Jumps settle directly, interrupting any active transition without replaying page entrances. Existing Next/Previous, notes and full-screen controls remain available.
+
+Standalone previews use the same displayed slide numbers. A destination on the current slide stays in that preview and preserves its existing step-only hash; another valid slide opens `index.html` at the requested destination. The dialog explains this behavior. The shared builder supplies a small slide/state catalog without embedding other slides in each preview. The toolbar hint hides on narrower windows so all controls and status fit at 1000 px.
 
 ## Current page/source mapping
 
@@ -32,13 +38,14 @@ Open **index.html** in Edge or Chrome for the self-contained offline **33-page d
 | 24 | page24 | 4 |
 | 25 | page25 | 1 |
 | 26 | fm_model | 7 |
-| 27 | aeic25 | 8 |
-| 28 | aeic26_27 | 14 |
-| 29 | aeic28 | 2 |
-| 30 | aeic29 | 8 |
-| 31 | aeic30 | 1 |
-| 32 | aeic31 | 3 |
-| 33 | aeic32 | 1 |
+| 27 | fm_validation | 3 |
+| 28 | aeic25 | 8 |
+| 29 | aeic26_27 | 14 |
+| 30 | aeic28 | 2 |
+| 31 | aeic29 | 8 |
+| 32 | aeic30 | 1 |
+| 33 | aeic31 | 3 |
+| 34 | aeic32 | 1 |
 
 ## Authoring and animation
 
@@ -52,11 +59,11 @@ P17 `contracts` uses the user's three-row draft structure with concise 32 px int
 
 P21 `page21` uses 12 states: states 1–10 retain the original sequence and 500 ms internal Morph, then Verilog and LLVM IR appear on separate clicks. Its straight code-to-code arrows and overlapping target panels follow AEiC P20; the final LLVM panel covers the lower part of Verilog. Each target click keeps a 250 ms route wipe followed by its target/code appearance. Source SVG artwork and the Page 5 code-panel reference remain unchanged.
 
-P27 `aeic25` preserves seven paragraph clicks, including the held 25% opacity assignment to the first approach. P28 `aeic26_27` retains 14 states and its reversible 500 ms move of the same code object. P29 `aeic28` reveals the transformed FIR expression in one click. P30 `aeic29` retains eight mapping-experiment states, its IR/network/schedule and communication guides. P31 `aeic30` retains all three complete result plots in one state. P32 `aeic31` has three conclusion/future-work states; P33 `aeic32` is the static closing. Both closing positions remain provisional. Existing planning filenames retain their earlier numbers.
+P28 `aeic25` preserves seven paragraph clicks, including the held 25% opacity assignment to the first approach. P29 `aeic26_27` retains 14 states and its reversible 500 ms move of the same code object. P30 `aeic28` reveals the transformed FIR expression in one click. P31 `aeic29` retains eight mapping-experiment states, its IR/network/schedule and communication guides. P32 `aeic30` retains all three complete result plots in one state. P33 `aeic31` has three conclusion/future-work states; P34 `aeic32` is the static closing. Both closing positions remain provisional. Existing planning filenames retain their earlier numbers.
 
 ## P18 language boundary
 
-`language_boundary` follows `contracts` and precedes `page20`. Five states/four clicks introduce memory context, operation signatures/FFI, the required Idris2 property, C/ACSL translation, and justification of the interface assumption. The new memRead signature uses P14 output–state ordinary-pair presentation notation; notes distinguish it from the exact thesis representation. Original readElim, ACSL and C signature text remain exact 26 px excerpts. The SAME C signature/Operation-label group moves 230 px down over 400 ms before the 225 ms ACSL reveal, with reverse/direct/reduced/cancel support. Final statuses and persistent leftward “Justify the interface assumption” arrow remain alongside the forward translation arrow and static equality highlights. No pulses or automatic proof import. P18 numbering is unchanged in the 33-page deck.
+`language_boundary` follows `contracts` and precedes `page20`. Five states/four clicks introduce memory context, operation signatures/FFI, the required Idris2 property, C/ACSL translation, and justification of the interface assumption. The new memRead signature uses P14 output–state ordinary-pair presentation notation; notes distinguish it from the exact thesis representation. Original readElim, ACSL and C signature text remain exact 26 px excerpts. The SAME C signature/Operation-label group moves 230 px down over 400 ms before the 225 ms ACSL reveal, with reverse/direct/reduced/cancel support. Final statuses and persistent leftward “Justify the interface assumption” arrow remain alongside the forward translation arrow and static equality highlights. No pulses or automatic proof import. P18 numbering is unchanged in the 34-page deck.
 
 ## P19 detector and P20 RV32-I summary
 
@@ -68,7 +75,7 @@ Source and highlight provenance: `assets/rv32i_process/fig3-10-highlight-map.jso
 
 ## P26 FM modelling
 
-`fm_model` implements [25B](../slides-detail/page25b.md) as **seven held states/six clicks**, retaining 33 pages. Hierarchy/DDC/CIC views map to child states [0,1,2,2,3,3,3]. State 3 expands CIC while retaining only the composition bullet; state 4 adds resource tracking over an identical held overview; state 5 shows configurable truncation and four integrators. In state 6 the first two headings remain context, while configurable truncation becomes the parent of indented type-configuration/inference subpoints. State 7 adds the second subpoint and aligned factual conclusion.
+`fm_model` implements [25B](../slides-detail/page25b.md) as **seven held states/six clicks**, in the current 34-page deck. Hierarchy/DDC/CIC views map to child states [0,1,2,2,3,3,3]. State 3 expands CIC while retaining only the composition bullet; state 4 adds resource tracking over an identical held overview; state 5 shows configurable truncation and four integrators. In state 6 the first two headings remain context, while configurable truncation becomes the parent of indented type-configuration/inference subpoints. State 7 adds the second subpoint and aligned factual conclusion.
 
 `build.py` embeds the compact standalone artwork/controller but adds deck-only wrapper frames. The SAME complete lower CIC moves upward in 600 ms for state 6; upper receiver/wedge leave, then the five-line signature appears beneath it. No isolated-stage copy is embedded. State 7 adds the three-line body. Native CIC width/height remain; diagram shifts 45 px right, left text widens to 690 px. Focused states place the complete CIC at y147 (23 px higher); 26 px code aligns to enclosure x861.911, signature y490/body y676.5. The figure-to-code gap is about 40 px, retained-heading gaps are 6 px and the final 32 px explanation uses secondary gray #626973. Opening uses normal left-aligned natural wrapping of “The receiver is built as a hierarchy of SynQ components.” with no explicit line break. Original standalone four-state SVG/preview remain unchanged by this integration revision. Deck input/cancel/reduced-motion behavior is retained.
 
@@ -76,10 +83,16 @@ Earlier six-state/centred/left-right/compact evidence remains historical in `../
 
 Initial seven-state checks passed without errors: reveal thresholds/no leaked text, identical state 3/state 4 diagram with no child go, same CIC DOM node/size, signature after movement, exact reverse focus and resolving cancelled/direct-switched tween Promises. Current layout polish is recorded in `../tmp/defense/fm-model-seven-polish/`: states 6/7 and focus midpoint approved; 26 px exact source tokens, code/enclosure alignment within 0.005 px, 39.41 px painted figure-to-code gap, 25.5 px signature-to-body gap, actual Next/Back exact restoration, reduced motion and smaller state-7 fit passed without browser errors. All seven states share the ordinary introduction paragraph with normal left-aligned natural wrapping. Earlier 28 px/six-line evidence remains historical.
 
+## P27 FM simulation and implementation
+
+`fm_validation` implements [25C](../slides-detail/page25c.md) as **three held states/two clicks**, after P26 and before P28 design transformations. The two-row layout opens with the introduction alone. Click 1 reveals the LLVM IR implementation bullet and full Fig. 4.3 response in the fixed lower-left slot. Click 2 retains both and adds the Verilog HDL implementation bullet and complete original Fig. 4.4 spectrum in the fixed lower-right slot. Both complete plots remain visible in the final state. The top row contains only the introduction and two bullets. The former route diagram and on-slide rate/sampling paragraphs are removed. Final speaker notes retain the 122.88 MHz input / 960 kHz demodulated baseband result, one output per 128 inputs with deterministic latency. Source provenance remains in notes. No new experiment or full receiver-correctness proof is implied.
+
+The introduction is one line at x91/y175/w1419. Both bullets use 32 px Figtree/1.28 at x128/w1382, y240 and y300, with triangular markers at x91 and only short prefixes bold. Plot slots are x91 and x850, y350/w690/h470 (centres x436/x1195), ending y820 above the footer. Full source plots are contained proportionally; intrinsic titles, axes, inset and legend remain. No captions are added. The first plot never rescales or moves when the second appears. Each click reveals its bullet/plot pair together over 225 ms. No extra state, automatic advance or cross-page Morph. Direct/back/restart/reduced-motion/cancellation settle deterministically. Current full/small endpoints and Edge navigation/asset checks are in `../tmp/defense/fm-validation-two-row/`; older `fm-validation-review` screenshots are historical.
+
 ## Inactive insertions
 
 - Chapter 3: `rv32i_contracts` and the former `rv32i_process` layout; the withdrawn 16b plan/prompt is archived in `../slides-detail/archive-16b-rv32i-2026-10-30/`; the old 16c plan/prompt is in `../slides-detail/archive-before-16c-replan-2026-10-30/`. Current `page16c.md` implements active P20. The current `page16b.md` instead specifies active `language_boundary` (P18). The old `contracts` implementation is archived under `../tmp/defense/p16a-visual-redesign/before`; old 16a documents are in `../slides-detail/archive-16a-before-visual-redesign-2026-10-30`. The current 16a specifications authorise the newly active visual redesign at P17.
-- Section 4.4: `fifo_evidence` remains backup and `fm_validation` remains planned. The historical `fm_model` layout was replaced by active P26; current `../slides-detail/page25b.md` and its prompt document the six-state implementation.
+- Section 4.4: `fifo_evidence` remains backup. Historical `fm_model` and `fm_validation` layouts were replaced by active P26 (seven states) and P27 (three states); current `../slides-detail/page25b.md`, `page25c.md` and their prompts describe the implementations.
 
 Do not register these sources from their old prompts without a new user request. The preserved source audits record code versions, evidence limits, figure provenance and earlier validation; their former page numbers are historical. Removed manifest entries are recorded in `../slides-detail/references/revoked-insertions-2026-10-30/manifest-entries.json`. Current active numbering and backup status are in `../currentplan.md` and `../defense-backup-slides.md`.
 

@@ -1,9 +1,19 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>@@TITLE@@</title><style>@@STYLES@@</style></head>
-<body><main id="viewport"><div id="stage">@@SLIDES@@</div></main>
-<nav class="controlbar" aria-label="Presentation controls"><button id="previous">← Previous</button><button id="next">Next →</button><button id="restart">Restart</button><button id="notes">Speaker notes</button><button id="fullscreen">Full screen</button><span id="status"></span><span class="hint">Click / Space / → advance · ← back · S notes · F full screen</span></nav>
+<body><main id="viewport"><div id="stage" tabindex="-1">@@SLIDES@@</div></main>
+<nav class="controlbar" aria-label="Presentation controls"><button id="previous">← Previous</button><button id="next">Next →</button><button id="restart">Restart</button><button id="jump" aria-haspopup="dialog" aria-controls="jump-dialog">Jump to…</button><button id="notes">Speaker notes</button><button id="fullscreen">Full screen</button><span id="status"></span><span class="hint">Click / Space / → advance · ← back · G jump · S notes · F full screen</span></nav>
+<dialog id="jump-dialog" aria-labelledby="jump-heading">
+ <form id="jump-form" novalidate>
+  <h2 id="jump-heading">Jump to…</h2>
+  <label for="jump-target">Slide or slide.step</label>
+  <input id="jump-target" type="text" placeholder="26.7" autocomplete="off" spellcheck="false" aria-describedby="jump-help jump-error">
+  <p id="jump-help"></p>
+  <p id="jump-error" role="alert"></p>
+  <div class="jump-actions"><button type="button" id="cancel-jump">Cancel</button><button type="submit">Go</button></div>
+ </form>
+</dialog>
 <aside id="notes-dialog"><button id="close-notes">Close</button><h2 id="notes-heading"></h2><p id="notes-text"></p></aside>
-<script>window.slideFactories={};window.deckManifest=@@MANIFEST@@;</script>
+<script>window.slideFactories={};window.deckManifest=@@MANIFEST@@;window.deckNavigationCatalog=@@NAVIGATION_CATALOG@@;</script>
 <script>@@CONTROLLERS@@</script>
 <script>@@NAVIGATION@@</script>
 </body></html>

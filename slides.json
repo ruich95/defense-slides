@@ -247,12 +247,20 @@
     "displayNumber": 26
   },
   {
+    "id": "fm_validation",
+    "title": "FM Receiver: Simulation and Implementation",
+    "source": "slides/fm_validation.html",
+    "controller": "slides/fm_validation.js",
+    "steps": 3,
+    "displayNumber": 27
+  },
+  {
     "id": "aeic25",
     "title": "Design Transformations",
     "source": "slides/aeic25.html",
     "controller": "slides/aeic25.js",
     "steps": 8,
-    "displayNumber": 27
+    "displayNumber": 28
   },
   {
     "id": "aeic26_27",
@@ -260,7 +268,7 @@
     "source": "slides/aeic26_27.html",
     "controller": "slides/aeic26_27.js",
     "steps": 14,
-    "displayNumber": 28
+    "displayNumber": 29
   },
   {
     "id": "aeic28",
@@ -268,7 +276,7 @@
     "source": "slides/aeic28.html",
     "controller": "slides/aeic28.js",
     "steps": 2,
-    "displayNumber": 29
+    "displayNumber": 30
   },
   {
     "id": "aeic29",
@@ -276,7 +284,7 @@
     "source": "slides/aeic29.html",
     "controller": "slides/aeic29.js",
     "steps": 8,
-    "displayNumber": 30
+    "displayNumber": 31
   },
   {
     "id": "aeic30",
@@ -284,7 +292,7 @@
     "source": "slides/aeic30.html",
     "controller": "slides/aeic30.js",
     "steps": 1,
-    "displayNumber": 31
+    "displayNumber": 32
   },
   {
     "id": "aeic31",
@@ -292,7 +300,7 @@
     "source": "slides/aeic31.html",
     "controller": "slides/aeic31.js",
     "steps": 3,
-    "displayNumber": 32
+    "displayNumber": 33
   },
   {
     "id": "aeic32",
@@ -300,6 +308,6 @@
     "source": "slides/aeic32.html",
     "controller": "slides/aeic32.js",
     "steps": 1,
-    "displayNumber": 33
+    "displayNumber": 34
   }
 ]
