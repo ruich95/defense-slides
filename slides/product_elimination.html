@@ -1,17 +1,26 @@
 <section class="slide" id="product_elimination" aria-label="Slide 34: Product Elimination: Efficient Code Generation">
 <img class="kth-logo" alt="KTH Royal Institute of Technology" src="@@LOGO@@">
 <h1>Product Elimination: Efficient Code Generation</h1>
-<div class="pe-problem" data-pe-first="0" data-pe-last="1">
+<div class="pe-problem" data-pe-first="0" data-pe-last="6">
  <p class="pe-opening">Direct code generation can emit computations whose results are unused.</p>
- <pre class="pe-example"><code>proj1 (prod (add 1 1)
-            (add 2 3))</code></pre>
- <div class="pe-rewrite" data-pe-first="1" data-pe-last="1"><span>→</span> <code>add 1 1</code></div>
- <pre class="pe-ir"><code><span>x0 = 1 + 1</span>
-<span class="pe-unused" data-pe-first="0" data-pe-last="0">x1 = 2 + 3</span></code></pre>
- <span class="pe-unused-label" data-pe-first="0" data-pe-last="0">unused</span>
- <p class="pe-method" data-pe-first="1" data-pe-last="1">Eliminate projected products<br>before generating IR.</p>
+ <div class="pe-diagram">
+  @@PRODUCT_ELIMINATION_DIAGRAM@@
+  <span class="pe-route-label pe-direct-label" data-pe-first="1" data-pe-last="6">Code<br>generation</span>
+  <span class="pe-route-label pe-product-label" data-pe-first="5" data-pe-last="6">Product<br>elimination</span>
+  <span class="pe-route-label pe-simplified-label" data-pe-first="5" data-pe-last="6">Code<br>generation</span>
+  <span class="pe-route-label pe-dead-label" data-pe-first="4" data-pe-last="6">Dead-code<br>elimination</span>
+  <pre class="pe-code pe-code1" data-pe-first="1" data-pe-last="6"><code><span>input: ()</span>
+<span class="pe-output">output: x0</span>
+<span>state: !()</span>
+<span>x0 = 1 + 1</span>
+<span class="pe-second-assignment" data-pe-first="2" data-pe-last="6">x1 = 2 + 3</span></code></pre>
+  <pre class="pe-code pe-code2" data-pe-first="4" data-pe-last="6"><code>input: ()
+output: x0
+state: !()
+x0 = 1 + 1</code></pre>
+ </div>
 </div>
-<div class="pe-results" data-pe-first="2" data-pe-last="2">
+<div class="pe-results" data-pe-first="7" data-pe-last="7">
  <p class="pe-results-heading">IR-generation time (s)</p>
  <p class="pe-results-context">Balanced FIR filters, 20 iterations.</p>
  <table aria-label="IR-generation time before and after product elimination, in seconds">
@@ -21,6 +30,7 @@
  </table>
  <div class="pe-conditions"><p>Timeout: 2-hour limit.</p><p>Intel Core i7-9750H, 64 GB RAM.</p></div>
 </div>
-<figure class="pe-artwork" data-pe-first="1" data-pe-last="2"><img alt="Product elimination in Comb before IR generation, with the complete code-generation cost illustration and High–Low legend." src="@@PRODUCT_ELIMINATION_FIGURE@@"></figure>
+<figure class="pe-artwork" data-pe-first="6" data-pe-last="7"><img alt="Product elimination in Comb before IR generation, with the complete code-generation cost illustration and High–Low legend." src="@@PRODUCT_ELIMINATION_FIGURE@@"></figure>
+<p class="pe-method" data-pe-first="6" data-pe-last="7"><span class="objective-tag objective-gutter" data-objective="O2">O2</span>Eliminate projected products<br>before generating IR.</p>
 <footer><span class="footer-event">PhD Defence - 9 November 2026 - Stockholm</span><span class="footer-name">Rui Chen</span><span class="footer-page">34</span></footer>
 </section>

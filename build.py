@@ -19,6 +19,35 @@ def data(path, mime):
     return f'data:{mime};base64,' + b64encode(path.read_bytes()).decode()
 
 
+def product_elimination_art():
+    """Reuse the user's exact network objects; only route-arrow lengths change."""
+    source = E.parse(ROOT / 'figures/svg/prod-elim-draft.svg').getroot()
+    nodes = {n.get('id'): n for n in source.iter() if n.get('id')}
+    art = E.Element(SVG + 'svg', {'viewBox': '0 0 929 500', 'id': 'pe-diagram-svg',
+        'role': 'img', 'aria-label': 'Two routes from a projected-product network to generated IR'})
+    art.append(copy.deepcopy(source.find(SVG + 'defs')))
+    original = E.SubElement(art, SVG + 'g', {'id': 'pe-original-network',
+        'transform': 'translate(25.63742 2.938995) scale(5) translate(1045.66235 -205.18335)'})
+    original.append(copy.deepcopy(nodes['g23']))
+    simplified = E.SubElement(art, SVG + 'g', {'id': 'pe-simplified-network',
+        'data-pe-first': '5', 'data-pe-last': '6',
+        'transform': 'translate(676.227936 36.109047) scale(5) translate(910.66463 -211.81735)'})
+    simplified.append(copy.deepcopy(nodes['g22']))
+    for name, source_id, transform, path, first in [
+        ('product-route', 'path23', 'translate(519 60) scale(4)', 'M0 0 H31.25', 5),
+        ('direct-generation', 'path23-0', 'translate(259 145) scale(4)', 'M0 0 V25', 1),
+        ('simplified-generation', 'path23-0-4', 'translate(759 145) scale(4)', 'M0 0 V25', 5),
+        ('dead-code-route', 'path23-7', 'translate(434 360) scale(4)', 'M0 0 H35', 4),
+    ]:
+        group = E.SubElement(art, SVG + 'g', {'id': 'pe-' + name,
+            'data-pe-first': str(first), 'data-pe-last': '6', 'transform': transform})
+        arrow = copy.deepcopy(nodes[source_id])
+        arrow.set('d', path)
+        group.append(arrow)
+    prefix_svg(art, 'pe-native-', 'pe-diagram-svg')
+    return E.tostring(art, encoding='unicode')
+
+
 def pyramid_art():
     source = next(path for path in [
         ROOT / 'figures/svg/abst-pyramid-w-trace.svg',
@@ -435,12 +464,14 @@ def main():
         p11_content.append(f'<div id="p11-shape-{shape["id"]}" class="{classes}" data-source-id="{shape["id"]}" style="left:{shape["left"]}px;top:{shape["top"]}px;width:{shape["width"]*scale}px;height:{shape["height"]*scale}px">{body}</div>')
     p12 = json.loads((HERE / 'assets/page12/animation.json').read_text(encoding='utf8'))
     p12_content = []
+    p12_diagram = []
     for shape in p12['shapes']:
         content = shape.pop('uri', None)
         body = '<img alt="" src="' + content + '">' if content else shape['html']
         scale = shape['scale']
         classes = 'page12-item' + (' page12-explanation' if not content else '')
-        p12_content.append(f'<div id="p12-shape-{shape["id"]}" class="{classes}" data-source-id="{shape["id"]}" style="left:{shape["left"]}px;top:{shape["top"]}px;width:{shape["width"]*scale}px;height:{shape["height"]*scale}px">{body}</div>')
+        (p12_diagram if shape.get('role') == 'diagram' else p12_content).append(f'<div id="p12-shape-{shape["id"]}" class="{classes}" data-source-id="{shape["id"]}" style="left:{shape["left"]}px;top:{shape["top"]}px;width:{shape["width"]*scale}px;height:{shape["height"]*scale}px">{body}</div>')
+    p12_content.insert(0, '<div class="page12-diagram">' + ''.join(p12_diagram) + '</div>')
     p13 = json.loads((HERE / 'assets/page13/animation.json').read_text(encoding='utf8'))
     p13_content = []
     for shape in p13['shapes']:
@@ -543,6 +574,7 @@ def main():
         scale = shape['scale']
         p24_content.append(f'<div id="p24-shape-{shape["id"]}" class="page24-item page24-{shape["role"]}" data-source-id="{shape["id"]}" style="left:{shape["left"]}px;top:{shape["top"]}px;width:{shape["width"]*scale}px;height:{shape["height"]*scale}px">{body}</div>')
     replacements = {
+        '@@PRODUCT_ELIMINATION_DIAGRAM@@': product_elimination_art(),
         '@@PRODUCT_ELIMINATION_FIGURE@@': data(HERE / 'assets/product_elimination/figure5-8.svg', 'image/svg+xml'),
         '@@NORMALISATION_FIGURE@@': data(HERE / 'assets/normalisation/figure5-1.svg', 'image/svg+xml'),
         '@@RV32I_PARTIAL_SIMULATION@@': data(HERE / 'assets/rv32i_process/fig3-12b.png', 'image/png'),
@@ -682,7 +714,7 @@ def main():
             '@@SLIDES@@': '\n'.join(slides[e['id']] for e in selected),
             '@@MANIFEST@@': json.dumps(selected, ensure_ascii=False).replace('</', '<\\/'),
             '@@NAVIGATION_CATALOG@@': json.dumps([{'id': e['id'], 'steps': e.get('steps', 1)} for e in entries]),
-            '@@CONTROLLERS@@': '\n'.join(controllers.get(e['id'], '') for e in selected),
+            '@@CONTROLLERS@@': '\n'.join(controllers.get(e['id'], '') for e in selected) + '\n' + (HERE / 'shared/objective-footnotes.js').read_text(encoding='utf8'),
             '@@NAVIGATION@@': (HERE / 'shared/navigation.js').read_text(encoding='utf8'),
         }
         for key, value in values.items():

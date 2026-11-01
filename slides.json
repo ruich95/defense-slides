@@ -307,7 +307,7 @@
     "title": "Product Elimination: Efficient Code Generation",
     "source": "slides/product_elimination.html",
     "controller": "slides/product_elimination.js",
-    "steps": 3,
+    "steps": 8,
     "displayNumber": 34
   },
   {

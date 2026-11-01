@@ -1,6 +1,6 @@
 window.slideFactories.page25=()=>{
  const root=document.getElementById('page25');
- const states=[{name:'Induction on the arbitrary input prefix',note:`This is the same property as before: if the last pair rises, the output ends in one. The proof proceeds by induction on the arbitrary prefix xs, not on the scalar samples or an infinite stream.
+ const states=[{name:'Induction on the arbitrary input prefix',note:`O2 callback: induction supplies verification evidence for this stated property, within the conditions below. This is the same property as before: if the last pair rises, the output ends in one. The proof proceeds by induction on the arbitrary prefix xs, not on the scalar samples or an infinite stream.
 
 Base clause: When the prefix is empty, the two final inputs are x and y. The supplied comparison evidence rewrites the last result to one; the preceding output forms the witness. Point to the first clause without a new animation.
 
