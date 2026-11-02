@@ -28,12 +28,12 @@
     "title": "Requirements for a Design Framework",
     "source": "slides/page4.html",
     "controller": "slides/page4.js",
-    "steps": 5,
+    "steps": 6,
     "displayNumber": 4
   },
   {
     "id": "page5",
-    "title": "A Key Challenge: Connecting Abstraction Levels",
+    "title": "Connecting Abstraction Levels",
     "source": "slides/page5.html",
     "controller": "slides/page5.js",
     "steps": 8,
@@ -92,14 +92,14 @@
     "title": "Synchronous Systems in QTT",
     "source": "slides/merged12.html",
     "controller": "slides/merged12.js",
-    "steps": 10,
+    "steps": 12,
     "scenes": [
       {
         "id": "page12",
         "title": "Synchronous Systems in QTT",
         "source": "slides/page12.html",
         "controller": "slides/page12.js",
-        "steps": 6
+        "steps": 8
       },
       {
         "id": "page13",

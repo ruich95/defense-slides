@@ -10,7 +10,7 @@ The function supplies an output prefix together with equality evidence. Type che
 
 Scope: the displayed rising-pair implication concerns the Idris2/software interpretation under its comparison premise. This does not establish the non-rising case, the full behavioural equation, generated hardware equivalence, backend correctness or timing. Do not generalise this proof to every compiler or synthesis step.
 
-Transition: The same framework also lets us define transformations of these models. Retain room later for the FM example and transformation contribution; the small detector is not the entire experimental evaluation.
+Transition: We now return to the FM receiver to see how SynQ supports a larger system, from its model to simulation and implementation. Afterwards, we turn to transformations of these models.
 
 Source: final/AEiC-26.pptx, slide24, original image79.svg and image85.png. Thesis Figure1.6(a), Eq1.14 and the two proof clauses on printed p27; the fuller behaviour is Eq1.13. Both clauses and every token are reused unchanged. There is one settled state, no entrance effect and no internal clicks.`}];
  function cancel(){}

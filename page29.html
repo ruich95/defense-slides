@@ -112,6 +112,7 @@ body.full #viewport{inset:0}body.full .controlbar{display:none}#stage{cursor:poi
 
 /* Displayed page 4 keeps the preceding page's pyramid placement and scale. */
 #page4 .requirements-text{width:888px}
+#page4 .requirements-closing-statement{width:888px;margin:32px 0 0;font-size:32px;line-height:1.28;font-weight:700;color:#000;text-align:left;text-wrap:wrap;white-space:normal}
 #page4 .requirements-challenges{margin-top:43px;list-style:none;padding-left:37px}
 #page4 .requirements-challenges>li{position:relative;margin-bottom:18px;padding-left:4px}
 #page4 .requirements-challenges>li>div::before{content:'\25B8';position:absolute;left:-30px;font-size:25px;line-height:40.96px}
@@ -266,6 +267,8 @@ body.full #viewport{inset:0}body.full .controlbar{display:none}#stage{cursor:poi
 #page12 #p12-shape-23,#page13 .page13-morph-object[data-source-id="23"]{text-align:left;text-wrap:wrap;white-space:normal}
 #page12 .page12-item{position:absolute;opacity:0;visibility:hidden;transform-origin:0 0}
 #page12 .page12-item img{display:block;width:100%;height:100%}
+#page12 #p12-shape-22 img{position:relative;z-index:1}
+#page12 .page12-binder-focus{position:absolute;z-index:0;background:rgba(0,41,237,.1);box-shadow:0 0 0 5px rgba(0,41,237,.1);border-radius:2px;pointer-events:none}
 #page12 .page12-explanation{font-size:32px;line-height:1.28;font-weight:400;color:#000}
 #page12 .page12-explanation code{font-family:Consolas,monospace;font-size:1em}
 
@@ -402,7 +405,7 @@ body.full #viewport{inset:0}body.full .controlbar{display:none}#stage{cursor:poi
 #page20 li::before{content:"▸";position:absolute;left:0;font-size:25px;top:4px}
 
 /* P21: abstract representation and the timed interpretation routes. */
-#page21 .page21-opening{position:absolute;left:91px;top:175px;width:1419px;margin:0;font-size:32px;line-height:1.28;font-weight:400;color:#000}
+#page21 .page21-opening{position:absolute;left:91px;top:145px;width:1419px;margin:0;font-size:32px;line-height:1.28;font-weight:400;color:#000}
 #page21 .page21-body,#page21 .page21-scene{position:absolute;inset:0;pointer-events:none}
 #page21 .page21-item{position:absolute;opacity:0;visibility:hidden;transform-origin:0 0;font-size:32px;line-height:1.28;color:#000;font-weight:400}
 #page21 .page21-item>img{display:block;width:100%;height:100%}
@@ -806,7 +809,7 @@ body.full #viewport{inset:0}body.full .controlbar{display:none}#stage{cursor:poi
  <ul>
   <li><strong>Result form:</strong> <code>CombL</code> excludes <code>app</code>.</li>
   <li data-norm-first="4" data-norm-last="5"><strong>Totality:</strong> the normaliser is accepted as total.</li>
-  <li data-norm-first="5" data-norm-last="5"><strong>Behaviour preservation:</strong> a proof obligation for each model.</li>
+  <li data-norm-first="5" data-norm-last="5"><strong>Behaviour preservation:</strong> per-model contracts support checked proofs on demand.</li>
  </ul>
 </div>
 <div class="normalisation-rule" data-norm-first="1" data-norm-last="5"><code><span>app (lam f) x</span> → f x</code></div>
@@ -826,7 +829,7 @@ body.full #viewport{inset:0}body.full .controlbar{display:none}#stage{cursor:poi
  </form>
 </dialog>
 <aside id="notes-dialog"><button id="close-notes">Close</button><h2 id="notes-heading"></h2><p id="notes-text"></p></aside>
-<script>window.slideFactories={};window.deckManifest=[{"id": "normalisation", "title": "Normalisation by Abstract Interpretation", "source": "slides/normalisation.html", "controller": "slides/normalisation.js", "steps": 6, "displayNumber": 29}];window.deckNavigationCatalog=[{"id": "cover", "steps": 1}, {"id": "page1", "steps": 9}, {"id": "page2", "steps": 9}, {"id": "page4", "steps": 5}, {"id": "page5", "steps": 8}, {"id": "page6", "steps": 8}, {"id": "page7", "steps": 5}, {"id": "page8", "steps": 7}, {"id": "page9", "steps": 3}, {"id": "page10", "steps": 6}, {"id": "page11", "steps": 8}, {"id": "merged12", "steps": 10}, {"id": "merged13", "steps": 3}, {"id": "page17", "steps": 5}, {"id": "page18", "steps": 4}, {"id": "page19", "steps": 4}, {"id": "contracts", "steps": 8}, {"id": "language_boundary", "steps": 5}, {"id": "page20", "steps": 6}, {"id": "rv32i_process", "steps": 5}, {"id": "page21", "steps": 12}, {"id": "page22", "steps": 10}, {"id": "page23", "steps": 8}, {"id": "page24", "steps": 4}, {"id": "page25", "steps": 1}, {"id": "fm_model", "steps": 7}, {"id": "fm_validation", "steps": 3}, {"id": "aeic25", "steps": 3}, {"id": "normalisation", "steps": 6}, {"id": "aeic26_27", "steps": 14}, {"id": "aeic28", "steps": 2}, {"id": "aeic29", "steps": 8}, {"id": "aeic30", "steps": 1}, {"id": "product_elimination", "steps": 8}, {"id": "aeic31", "steps": 3}, {"id": "aeic32", "steps": 1}];</script>
+<script>window.slideFactories={};window.deckManifest=[{"id": "normalisation", "title": "Normalisation by Abstract Interpretation", "source": "slides/normalisation.html", "controller": "slides/normalisation.js", "steps": 6, "displayNumber": 29}];window.deckNavigationCatalog=[{"id": "cover", "steps": 1}, {"id": "page1", "steps": 9}, {"id": "page2", "steps": 9}, {"id": "page4", "steps": 6}, {"id": "page5", "steps": 8}, {"id": "page6", "steps": 8}, {"id": "page7", "steps": 5}, {"id": "page8", "steps": 7}, {"id": "page9", "steps": 3}, {"id": "page10", "steps": 6}, {"id": "page11", "steps": 8}, {"id": "merged12", "steps": 12}, {"id": "merged13", "steps": 3}, {"id": "page17", "steps": 5}, {"id": "page18", "steps": 4}, {"id": "page19", "steps": 4}, {"id": "contracts", "steps": 8}, {"id": "language_boundary", "steps": 5}, {"id": "page20", "steps": 6}, {"id": "rv32i_process", "steps": 5}, {"id": "page21", "steps": 12}, {"id": "page22", "steps": 10}, {"id": "page23", "steps": 8}, {"id": "page24", "steps": 4}, {"id": "page25", "steps": 1}, {"id": "fm_model", "steps": 7}, {"id": "fm_validation", "steps": 3}, {"id": "aeic25", "steps": 3}, {"id": "normalisation", "steps": 6}, {"id": "aeic26_27", "steps": 14}, {"id": "aeic28", "steps": 2}, {"id": "aeic29", "steps": 8}, {"id": "aeic30", "steps": 1}, {"id": "product_elimination", "steps": 8}, {"id": "aeic31", "steps": 3}, {"id": "aeic32", "steps": 1}];</script>
 <script>window.slideFactories.normalisation=()=>{
  const root=document.getElementById('normalisation'),items=[...root.querySelectorAll('[data-norm-first]')];
  const provenance='\n\nSource: thesis §5.1.2, Proposition 5.1 and Fig. 5.1, printed pp. 135–138 (PDF pp. 159–162). Figure 5.1 is a proportional vector crop of the supplied thesis PDF, including every intrinsic label and excluding the external caption. It is not redrawn or simplified. Abstract interpretation here is the tagless-final mechanism for interpreting a SynQ model into another abstract model, not a claim about a particular lattice-based static analysis. No new proof, normalisation run or hardware-cost experiment is reported.';
@@ -836,7 +839,7 @@ body.full #viewport{inset:0}body.full .controlbar{display:none}#stage{cursor:poi
   {name:'An abstract result model',note:'O2 callback: the executable normalisation transformation is an Idris2 function from a SynQ model to another abstract model. This implemented design step is O2 evidence. Result form, totality and per-model behaviour-preservation obligations remain distinct. The result is a model over CombL that can be interpreted again. CombL excludes app, while abst maps unreduced lam constructors into CombL. The source language remains expressive, and the result remains abstract rather than being committed to hardware or software. The negative occurrence and the internal V/E separation used to obtain a total implementation are available in backup B14.'},
   {name:'Result form',note:'There are distinct questions about correctness. The result form is controlled by the target vocabulary: CombL excludes app. This type-correct construction is distinct from termination and from semantic equivalence.'},
   {name:'Totality',note:'The thesis presents a normaliser whose totality can be asserted. An initial internal higher-order representation has a negative occurrence of E, which obstructs this totality argument. Separating values V from expressions E, together with NotUnit and the impossible branch in app\u0027, supports the accepted total implementation. These internal choices do not restrict the expressive source language. The details stay in backup B14.'},
-  {name:'Behaviour preservation per model',note:'Verification remains a per-model obligation here, not an already established general preservation theorem. Behaviour preservation requires a proof obligation for each model. The thesis does not obtain a general theorem for every model in this encoding. contract sys generates the proposition for a particular system. The auto proof argument requests construction and checking of that proof on demand. Merely constructing the contract does not prove it, and auto is not claimed complete for all instances. Do not generalise this limitation into a claim that Idris2 cannot prove propositions quantified over functions. Type-correct result construction and totality are separate from behaviour preservation. Backup B15 retains the general proposition and exact contract.\n\nTransition: The next approach transforms the description from which a model is constructed, allowing a general behaviour-preservation proof under associativity.'}
+  {name:'Behaviour preservation per model',note:'Verification remains a per-model obligation here, not an already established general preservation theorem. Per-model contracts support checked proofs on demand. Each contract states the particular behaviour-preservation property for that model. The thesis does not obtain a general theorem for every model in this encoding. contract sys generates the proposition for a particular system. The auto proof argument requests construction and checking of that proof on demand. Merely constructing the contract does not prove it, and auto is not claimed complete for all instances. Do not generalise this limitation into a claim that Idris2 cannot prove propositions quantified over functions. Type-correct result construction and totality are separate from behaviour preservation. Backup B15 retains the general proposition and exact contract.\n\nTransition: The next approach transforms the description from which a model is constructed, allowing a general behaviour-preservation proof under associativity.'}
  ].map(s=>({...s,note:s.note+provenance}));
  let step=0,busy=false,generation=0,animations=[];
  const visible=(n,s)=>s>=Number(n.dataset.normFirst)&&s<=Number(n.dataset.normLast);

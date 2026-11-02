@@ -112,6 +112,7 @@ body.full #viewport{inset:0}body.full .controlbar{display:none}#stage{cursor:poi
 
 /* Displayed page 4 keeps the preceding page's pyramid placement and scale. */
 #page4 .requirements-text{width:888px}
+#page4 .requirements-closing-statement{width:888px;margin:32px 0 0;font-size:32px;line-height:1.28;font-weight:700;color:#000;text-align:left;text-wrap:wrap;white-space:normal}
 #page4 .requirements-challenges{margin-top:43px;list-style:none;padding-left:37px}
 #page4 .requirements-challenges>li{position:relative;margin-bottom:18px;padding-left:4px}
 #page4 .requirements-challenges>li>div::before{content:'\25B8';position:absolute;left:-30px;font-size:25px;line-height:40.96px}
@@ -266,6 +267,8 @@ body.full #viewport{inset:0}body.full .controlbar{display:none}#stage{cursor:poi
 #page12 #p12-shape-23,#page13 .page13-morph-object[data-source-id="23"]{text-align:left;text-wrap:wrap;white-space:normal}
 #page12 .page12-item{position:absolute;opacity:0;visibility:hidden;transform-origin:0 0}
 #page12 .page12-item img{display:block;width:100%;height:100%}
+#page12 #p12-shape-22 img{position:relative;z-index:1}
+#page12 .page12-binder-focus{position:absolute;z-index:0;background:rgba(0,41,237,.1);box-shadow:0 0 0 5px rgba(0,41,237,.1);border-radius:2px;pointer-events:none}
 #page12 .page12-explanation{font-size:32px;line-height:1.28;font-weight:400;color:#000}
 #page12 .page12-explanation code{font-family:Consolas,monospace;font-size:1em}
 
@@ -402,7 +405,7 @@ body.full #viewport{inset:0}body.full .controlbar{display:none}#stage{cursor:poi
 #page20 li::before{content:"▸";position:absolute;left:0;font-size:25px;top:4px}
 
 /* P21: abstract representation and the timed interpretation routes. */
-#page21 .page21-opening{position:absolute;left:91px;top:175px;width:1419px;margin:0;font-size:32px;line-height:1.28;font-weight:400;color:#000}
+#page21 .page21-opening{position:absolute;left:91px;top:145px;width:1419px;margin:0;font-size:32px;line-height:1.28;font-weight:400;color:#000}
 #page21 .page21-body,#page21 .page21-scene{position:absolute;inset:0;pointer-events:none}
 #page21 .page21-item{position:absolute;opacity:0;visibility:hidden;transform-origin:0 0;font-size:32px;line-height:1.28;color:#000;font-weight:400}
 #page21 .page21-item>img{display:block;width:100%;height:100%}
@@ -812,10 +815,10 @@ body.full #viewport{inset:0}body.full .controlbar{display:none}#stage{cursor:poi
 </div>
 
 <div class="es-characteristics">
-  <p class="es-question" data-es-reveal="4">What are embedded systems? They are:</p>
+  <p class="es-question" data-es-reveal="4">What characterises embedded systems?</p>
   <ul class="es-bullets">
     <li data-es-reveal="5"><strong>Computational systems</strong>, but not merely small computers;</li>
-    <li data-es-reveal="6">Designed for <strong>specialised functionality</strong> within a larger system;</li>
+    <li data-es-reveal="6">Designed for a <strong>specialised role</strong> within a larger system;</li>
     <li data-es-reveal="7">Often <strong>reactive</strong>, continually responding to their environment;</li>
     <li data-es-reveal="8">Designed to satisfy <strong>requirements beyond functionality</strong>, such as <strong>timing</strong> and <strong>resource constraints</strong>.</li>
   </ul>
@@ -836,7 +839,7 @@ body.full #viewport{inset:0}body.full .controlbar{display:none}#stage{cursor:poi
  </form>
 </dialog>
 <aside id="notes-dialog"><button id="close-notes">Close</button><h2 id="notes-heading"></h2><p id="notes-text"></p></aside>
-<script>window.slideFactories={};window.deckManifest=[{"id": "page1", "title": "Embedded Systems", "source": "slides/page1.html", "controller": "slides/page1.js", "steps": 9, "displayNumber": 2}];window.deckNavigationCatalog=[{"id": "cover", "steps": 1}, {"id": "page1", "steps": 9}, {"id": "page2", "steps": 9}, {"id": "page4", "steps": 5}, {"id": "page5", "steps": 8}, {"id": "page6", "steps": 8}, {"id": "page7", "steps": 5}, {"id": "page8", "steps": 7}, {"id": "page9", "steps": 3}, {"id": "page10", "steps": 6}, {"id": "page11", "steps": 8}, {"id": "merged12", "steps": 10}, {"id": "merged13", "steps": 3}, {"id": "page17", "steps": 5}, {"id": "page18", "steps": 4}, {"id": "page19", "steps": 4}, {"id": "contracts", "steps": 8}, {"id": "language_boundary", "steps": 5}, {"id": "page20", "steps": 6}, {"id": "rv32i_process", "steps": 5}, {"id": "page21", "steps": 12}, {"id": "page22", "steps": 10}, {"id": "page23", "steps": 8}, {"id": "page24", "steps": 4}, {"id": "page25", "steps": 1}, {"id": "fm_model", "steps": 7}, {"id": "fm_validation", "steps": 3}, {"id": "aeic25", "steps": 3}, {"id": "normalisation", "steps": 6}, {"id": "aeic26_27", "steps": 14}, {"id": "aeic28", "steps": 2}, {"id": "aeic29", "steps": 8}, {"id": "aeic30", "steps": 1}, {"id": "product_elimination", "steps": 8}, {"id": "aeic31", "steps": 3}, {"id": "aeic32", "steps": 1}];</script>
+<script>window.slideFactories={};window.deckManifest=[{"id": "page1", "title": "Embedded Systems", "source": "slides/page1.html", "controller": "slides/page1.js", "steps": 9, "displayNumber": 2}];window.deckNavigationCatalog=[{"id": "cover", "steps": 1}, {"id": "page1", "steps": 9}, {"id": "page2", "steps": 9}, {"id": "page4", "steps": 6}, {"id": "page5", "steps": 8}, {"id": "page6", "steps": 8}, {"id": "page7", "steps": 5}, {"id": "page8", "steps": 7}, {"id": "page9", "steps": 3}, {"id": "page10", "steps": 6}, {"id": "page11", "steps": 8}, {"id": "merged12", "steps": 12}, {"id": "merged13", "steps": 3}, {"id": "page17", "steps": 5}, {"id": "page18", "steps": 4}, {"id": "page19", "steps": 4}, {"id": "contracts", "steps": 8}, {"id": "language_boundary", "steps": 5}, {"id": "page20", "steps": 6}, {"id": "rv32i_process", "steps": 5}, {"id": "page21", "steps": 12}, {"id": "page22", "steps": 10}, {"id": "page23", "steps": 8}, {"id": "page24", "steps": 4}, {"id": "page25", "steps": 1}, {"id": "fm_model", "steps": 7}, {"id": "fm_validation", "steps": 3}, {"id": "aeic25", "steps": 3}, {"id": "normalisation", "steps": 6}, {"id": "aeic26_27", "steps": 14}, {"id": "aeic28", "steps": 2}, {"id": "aeic29", "steps": 8}, {"id": "aeic30", "steps": 1}, {"id": "product_elimination", "steps": 8}, {"id": "aeic31", "steps": 3}, {"id": "aeic32", "steps": 1}];</script>
 <script>window.slideFactories.page1=()=>{
 const root=document.getElementById('page1'),items=[...root.querySelectorAll('[data-es-reveal]')];
 const sources='\n\nBackground references:\nIngo Sander, System Modeling and Design Refinement in ForSyDe (2003), §1.1.1, pp. 1–2: https://people.kth.se/~ingo/Papers/Thesis_Sander_2003.pdf\nIngo Sander, Platform-Based Design of Heterogeneous Embedded Systems, RTiS 2009, slides 3–4: https://people.kth.se/~ingo/presentations/handouts_RTiS2009.pdf\nArm, Cortex-A Series Programmer’s Guide, Embedded systems: https://support.arm.com/documentation/den0013/d/Introduction/Embedded-systems\nEdward A. Lee, Embedded Software (2001), especially Reactivity: https://ptolemy.eecs.berkeley.edu/publications/papers/01/embsoft/embsoft.pdf\nArm, Cloud-based Embedded Development to Supercharge IoT, Software updates for deployed systems: https://newsroom.arm.com/blog/cloud-based-embedded-development\nThese are common introductory characteristics, with application-dependent qualifications. Stability of the intended role is a typical design intention, not a necessary property; functionality can evolve through updates.\n\nIllustrations: AI-generated with the built-in image-generation tool, iteratively edited and approved by Rui Chen, 24 October 2026. Source drafts and prompts: figures/embedded-systems-drafts/v6/README.md.';
@@ -845,9 +848,9 @@ const states=[
  {name:'Braking controller',note:'For example, controlling the brakes in a car.'},
  {name:'Robot controller',note:'Coordinating an industrial robot.'},
  {name:'Aircraft attitude control',note:'Or controlling the attitude of an aircraft.'},
- {name:'What characterises these systems?',note:'What characterises these systems?'},
+ {name:'What characterises embedded systems?',note:'What characterises embedded systems?'},
  {name:'Computational systems',note:'They are computational systems, but not merely small computers. Their role within the application shapes how they are designed.'},
- {name:'Specialised functionality',note:'They are designed for specialised functionality within a larger system. A braking controller, for example, has a specific role within the car. That intended role typically remains stable throughout its life cycle, even as its software is updated or its functionality evolves.'},
+ {name:'Specialised role',note:'They are designed for a specialised role within a larger system. A braking controller, for example, has a specific role within the car. That intended role typically remains stable throughout its life cycle, even as its implementation and functionality evolve.'},
  {name:'Reactive behaviour',note:'They are often reactive, continually responding to inputs and events from their environment.'},
  {name:'Requirements beyond functionality',note:'They must also satisfy requirements beyond functionality: responding within a required time, for example, or operating within limited memory, energy, or hardware resources.\n\nTransition:\nDesigning these systems therefore means obtaining an implementation that provides the required functionality while meeting these constraints. Let us look at how that design process proceeds.'}
 ].map(state=>({...state,note:state.note+sources}));

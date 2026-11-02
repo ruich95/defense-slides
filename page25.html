@@ -112,6 +112,7 @@ body.full #viewport{inset:0}body.full .controlbar{display:none}#stage{cursor:poi
 
 /* Displayed page 4 keeps the preceding page's pyramid placement and scale. */
 #page4 .requirements-text{width:888px}
+#page4 .requirements-closing-statement{width:888px;margin:32px 0 0;font-size:32px;line-height:1.28;font-weight:700;color:#000;text-align:left;text-wrap:wrap;white-space:normal}
 #page4 .requirements-challenges{margin-top:43px;list-style:none;padding-left:37px}
 #page4 .requirements-challenges>li{position:relative;margin-bottom:18px;padding-left:4px}
 #page4 .requirements-challenges>li>div::before{content:'\25B8';position:absolute;left:-30px;font-size:25px;line-height:40.96px}
@@ -266,6 +267,8 @@ body.full #viewport{inset:0}body.full .controlbar{display:none}#stage{cursor:poi
 #page12 #p12-shape-23,#page13 .page13-morph-object[data-source-id="23"]{text-align:left;text-wrap:wrap;white-space:normal}
 #page12 .page12-item{position:absolute;opacity:0;visibility:hidden;transform-origin:0 0}
 #page12 .page12-item img{display:block;width:100%;height:100%}
+#page12 #p12-shape-22 img{position:relative;z-index:1}
+#page12 .page12-binder-focus{position:absolute;z-index:0;background:rgba(0,41,237,.1);box-shadow:0 0 0 5px rgba(0,41,237,.1);border-radius:2px;pointer-events:none}
 #page12 .page12-explanation{font-size:32px;line-height:1.28;font-weight:400;color:#000}
 #page12 .page12-explanation code{font-family:Consolas,monospace;font-size:1em}
 
@@ -402,7 +405,7 @@ body.full #viewport{inset:0}body.full .controlbar{display:none}#stage{cursor:poi
 #page20 li::before{content:"▸";position:absolute;left:0;font-size:25px;top:4px}
 
 /* P21: abstract representation and the timed interpretation routes. */
-#page21 .page21-opening{position:absolute;left:91px;top:175px;width:1419px;margin:0;font-size:32px;line-height:1.28;font-weight:400;color:#000}
+#page21 .page21-opening{position:absolute;left:91px;top:145px;width:1419px;margin:0;font-size:32px;line-height:1.28;font-weight:400;color:#000}
 #page21 .page21-body,#page21 .page21-scene{position:absolute;inset:0;pointer-events:none}
 #page21 .page21-item{position:absolute;opacity:0;visibility:hidden;transform-origin:0 0;font-size:32px;line-height:1.28;color:#000;font-weight:400}
 #page21 .page21-item>img{display:block;width:100%;height:100%}
@@ -815,7 +818,7 @@ body.full #viewport{inset:0}body.full .controlbar{display:none}#stage{cursor:poi
  </form>
 </dialog>
 <aside id="notes-dialog"><button id="close-notes">Close</button><h2 id="notes-heading"></h2><p id="notes-text"></p></aside>
-<script>window.slideFactories={};window.deckManifest=[{"id": "page25", "title": "Rising Pattern Detection: Verification", "source": "slides/page25.html", "controller": "slides/page25.js", "steps": 1, "displayNumber": 25}];window.deckNavigationCatalog=[{"id": "cover", "steps": 1}, {"id": "page1", "steps": 9}, {"id": "page2", "steps": 9}, {"id": "page4", "steps": 5}, {"id": "page5", "steps": 8}, {"id": "page6", "steps": 8}, {"id": "page7", "steps": 5}, {"id": "page8", "steps": 7}, {"id": "page9", "steps": 3}, {"id": "page10", "steps": 6}, {"id": "page11", "steps": 8}, {"id": "merged12", "steps": 10}, {"id": "merged13", "steps": 3}, {"id": "page17", "steps": 5}, {"id": "page18", "steps": 4}, {"id": "page19", "steps": 4}, {"id": "contracts", "steps": 8}, {"id": "language_boundary", "steps": 5}, {"id": "page20", "steps": 6}, {"id": "rv32i_process", "steps": 5}, {"id": "page21", "steps": 12}, {"id": "page22", "steps": 10}, {"id": "page23", "steps": 8}, {"id": "page24", "steps": 4}, {"id": "page25", "steps": 1}, {"id": "fm_model", "steps": 7}, {"id": "fm_validation", "steps": 3}, {"id": "aeic25", "steps": 3}, {"id": "normalisation", "steps": 6}, {"id": "aeic26_27", "steps": 14}, {"id": "aeic28", "steps": 2}, {"id": "aeic29", "steps": 8}, {"id": "aeic30", "steps": 1}, {"id": "product_elimination", "steps": 8}, {"id": "aeic31", "steps": 3}, {"id": "aeic32", "steps": 1}];</script>
+<script>window.slideFactories={};window.deckManifest=[{"id": "page25", "title": "Rising Pattern Detection: Verification", "source": "slides/page25.html", "controller": "slides/page25.js", "steps": 1, "displayNumber": 25}];window.deckNavigationCatalog=[{"id": "cover", "steps": 1}, {"id": "page1", "steps": 9}, {"id": "page2", "steps": 9}, {"id": "page4", "steps": 6}, {"id": "page5", "steps": 8}, {"id": "page6", "steps": 8}, {"id": "page7", "steps": 5}, {"id": "page8", "steps": 7}, {"id": "page9", "steps": 3}, {"id": "page10", "steps": 6}, {"id": "page11", "steps": 8}, {"id": "merged12", "steps": 12}, {"id": "merged13", "steps": 3}, {"id": "page17", "steps": 5}, {"id": "page18", "steps": 4}, {"id": "page19", "steps": 4}, {"id": "contracts", "steps": 8}, {"id": "language_boundary", "steps": 5}, {"id": "page20", "steps": 6}, {"id": "rv32i_process", "steps": 5}, {"id": "page21", "steps": 12}, {"id": "page22", "steps": 10}, {"id": "page23", "steps": 8}, {"id": "page24", "steps": 4}, {"id": "page25", "steps": 1}, {"id": "fm_model", "steps": 7}, {"id": "fm_validation", "steps": 3}, {"id": "aeic25", "steps": 3}, {"id": "normalisation", "steps": 6}, {"id": "aeic26_27", "steps": 14}, {"id": "aeic28", "steps": 2}, {"id": "aeic29", "steps": 8}, {"id": "aeic30", "steps": 1}, {"id": "product_elimination", "steps": 8}, {"id": "aeic31", "steps": 3}, {"id": "aeic32", "steps": 1}];</script>
 <script>window.slideFactories.page25=()=>{
  const root=document.getElementById('page25');
  const states=[{name:'Induction on the arbitrary input prefix',note:`O2 callback: induction supplies verification evidence for this stated property, within the conditions below. This is the same property as before: if the last pair rises, the output ends in one. The proof proceeds by induction on the arbitrary prefix xs, not on the scalar samples or an infinite stream.
@@ -828,7 +831,7 @@ The function supplies an output prefix together with equality evidence. Type che
 
 Scope: the displayed rising-pair implication concerns the Idris2/software interpretation under its comparison premise. This does not establish the non-rising case, the full behavioural equation, generated hardware equivalence, backend correctness or timing. Do not generalise this proof to every compiler or synthesis step.
 
-Transition: The same framework also lets us define transformations of these models. Retain room later for the FM example and transformation contribution; the small detector is not the entire experimental evaluation.
+Transition: We now return to the FM receiver to see how SynQ supports a larger system, from its model to simulation and implementation. Afterwards, we turn to transformations of these models.
 
 Source: final/AEiC-26.pptx, slide24, original image79.svg and image85.png. Thesis Figure1.6(a), Eq1.14 and the two proof clauses on printed p27; the fuller behaviour is Eq1.13. Both clauses and every token are reused unchanged. There is one settled state, no entrance effect and no internal clicks.`}];
  function cancel(){}

@@ -2,15 +2,15 @@ window.slideFactories.page8=()=>{
  const root=document.getElementById('page8'),moving=root.querySelector('.page8-start-pyramid'),source=moving.querySelector('svg'),layer=source.querySelector('[id$="pyramid-layer1"]'),figure=root.querySelector('.page8-framework'),opening=root.querySelector('.page8-opening'),items=[...root.querySelectorAll('[data-page8-reveal]')];
  const states=[
   {name:'Locate the framework in the design process',note:'To address the research question and objectives, we propose the framework SynQ for synchronous system design, grounded in Quantitative Type Theory (QTT) and embedded in Idris2.\n\nSynQ — Synchronous System Design with Quantitative Types. Idris2 provides the programming language through which we use Quantitative Type Theory. Let us locate the part of the design process that the framework addresses.\n\nPresenter guidance: Entry waits for input. The opening statement, expanded-name footnote, and full unlabelled pyramid remain visible until the first click. Distinguish the application domain, theoretical foundation, and host language.'},
-  {name:'Hold the section within modelling',note:'We select a cross-section inside the modelling region. Everything above this section, including the upper slice of modelling, fades away. The retained region stays at its original size.\n\nPresenter guidance: The first click takes 700 ms: the contained elliptical section fades in over 0–150 ms, gives one gentle emphasis over 150–450 ms, then the upper portion fades over 450–700 ms. No movement, lift or deformation occurs. Hold the green top face indefinitely until the next click.'},
-  {name:'Focus within the modelling region',note:'We now focus on modelling, interpretations, and design operations within this retained part of the process. Within it, SynQ occupies a more specific modelling region inside Idris2.\n\nPresenter guidance: The second click moves and scales the retained portion into the exact empty Figure 1.5 shell over 500 ms. The complete focused artwork is vertically centred at slide y450 and remains fixed there through states 3–7. The focus destination is measured from the live target elements, so the upward move occurs within the same morph, without an endpoint jump. The intermediate Other DSLs/IRs surface remains present. No capability appears automatically. Both opening text elements stay fixed; type-encoded properties appear in the final capability reveal.'},
+  {name:'Hold the region between two scope boundaries',note:'We select a section inside modelling and a second section inside implementation. The upper excluded portion and the bottom implementation slice fade away together. The retained middle stays at its original size and position.\n\nPresenter guidance: Both contained elliptical sections appear over 0–150 ms and share one gentle emphasis over 150–450 ms. Both excluded portions fade simultaneously over 450–700 ms, without movement or deformation. The upper exposed rear edge becomes solid; the lower rear rim remains dashed. Hold this retained region until the next click. The lower cut marks an additional scope boundary, not a new abstraction level or a universal end-to-end implementation claim.'},
+  {name:'Focus within the modelling region',note:'We now focus on modelling, interpretations, and design operations within this retained part of the process. Within it, SynQ occupies a more specific modelling region inside Idris2.\n\nPresenter guidance: The second click moves and scales the retained portion into the exact empty Figure 1.5 shell over 500 ms. The complete focused artwork is vertically centred at slide y450 and remains fixed there through states 3–7. The focus destination is measured from the live target elements, so the upward move occurs within the same morph, without an endpoint jump. The lower cut is now the source base; the removed original base stays excluded through forward and reverse focus. The intermediate Other DSLs/IRs surface remains present. No capability appears automatically. Both opening text elements stay fixed; type-encoded properties appear in the final capability reveal.'},
   {name:'Modelling · O1 and O3',note:'We construct SynQ models using Idris2 terms and functions. The black arrows are Idris2 functions whose results lie in SynQ, although their inputs and intermediate terms may lie outside SynQ. This uses Idris2’s expressiveness for accessible modelling (O3), while SynQ supports synchronous systems with stateful, black-box components (O1).'},
   {name:'Design steps: transformations · O2',note:'Recall page 3: within an abstraction level, design steps transform models. The red dashed arrow shows transformations within SynQ, expressed as Idris2 functions, either directly or through other Idris2 terms as intermediate results. Their execution and formal treatment address O2.\n\nPresenter guidance: Reveal the whole Design steps sentence together with the red arrow. Emphasize transformations; interpretations is already visible in the same sentence.'},
   {name:'Design steps: interpretations · O2',note:'Recall page 3: across abstraction levels, interpretations provide refinement or implementation. The blue dashed connections interpret SynQ models into other DSLs and intermediate representations or into implementations. These interpretations are also Idris2 functions, so transformations and interpretations share the same host language and address O2. The projection is schematic.\n\nPresenter guidance: Shift emphasis to interpretations in the existing Design steps sentence while revealing the blue connections and their target representations. Keep every word and its position unchanged.'},
   {name:'Properties · O2',note:'Types express properties of models and design operations, supporting specification and verification alongside executable operations (O2). This overview does not imply that every property or design step has already been verified.'}
  ].map(s=>({...s,note:s.note+'\n\nScope: “Partial” qualifies the framework’s scope and completeness; this is not a claim of universal automation or end-to-end verification.\n\nArtwork: thesis Figure 1.5, figures/svg/SynQ-abstraction-level-overview.svg. Its modelling, Other DSLs/IRs, and implementation surfaces retain their source geometry and paint order in a namespaced copy. The initial full pyramid uses the exact empty source and stage geometry from pages 3–4, with all initial pyramid text removed only in this page’s imported copy.'}));
  const clamp=x=>Math.max(0,Math.min(1,x)),mix=(a,b,t)=>a+(b-a)*t,ease=x=>x*x*(3-2*x),reduced=()=>matchMedia('(prefers-reduced-motion: reduce)').matches;
- const ns='http://www.w3.org/2000/svg',cutDuration=700,focusDuration=500,cutFraction=.35;
+ const ns='http://www.w3.org/2000/svg',cutDuration=700,focusDuration=500,cutFraction=.35,lowerCutFraction=.65;
  let step=0,busy=false,generation=0,raf=0,resolveMotion=null,geometry=null,transition=null,transitionElapsed=0;
  const find=id=>source.querySelector('[id="p8-start-pyramid-'+id+'"]');
  function alpha(node,value){node.style.opacity=value;node.style.visibility=value>0?'visible':'hidden';node.setAttribute('aria-hidden',String(value===0))}
@@ -25,7 +25,16 @@ window.slideFactories.page8=()=>{
  const defs=element('defs'),upperClip=element('clipPath',{id:'p8-upper-cut-clip',clipPathUnits:'userSpaceOnUse'},defs),lowerClip=element('clipPath',{id:'p8-lower-cut-clip',clipPathUnits:'userSpaceOnUse'},defs);
  const upperClipPath=element('path',{},upperClip),lowerClipPath=element('path',{},lowerClip);
  const upperMotion=element('g',{id:'p8-upper-cut-motion'}),lowerMotion=element('g',{id:'p8-lower-cut-motion'});
- const upperCopy=copyLayer('p8-upper-',upperMotion),lowerCopy=copyLayer('p8-lower-',lowerMotion);
+ const bottomClip=element('clipPath',{id:'p8-bottom-cut-clip',clipPathUnits:'userSpaceOnUse'},defs),bottomClipPath=element('path',{},bottomClip),bottomMotion=element('g',{id:'p8-bottom-cut-motion'});
+ source.insertBefore(bottomMotion,upperMotion);
+ const upperCopy=copyLayer('p8-upper-',upperMotion),lowerCopy=copyLayer('p8-lower-',lowerMotion),bottomCopy=copyLayer('p8-bottom-',bottomMotion);
+ bottomCopy.setAttribute('clip-path','url(#p8-bottom-cut-clip)');
+ // The original base belongs only to the removed bottom piece. Keep its native
+ // paint behind the partitioned fills before removal, never inside the fit.
+ const oldBase=bottomCopy.querySelector('[id$="-pyramid-g4"]'),baseLayer=element('g',{transform:layer.getAttribute('transform')||''},bottomMotion);baseLayer.append(oldBase);bottomMotion.insertBefore(baseLayer,bottomCopy);lowerCopy.querySelector('[id$="-pyramid-g4"]').remove();
+ // The retained pink band has no old-base dash cut-outs: those belong to
+ // the removed base, and would otherwise leave white fragments at the new rim.
+ const retainedPink=lowerCopy.querySelector('[id$="-path2319"]');retainedPink.setAttribute('d',retainedPink.getAttribute('d').match(/^[\s\S]*?[zZ]/)[0]);
  upperCopy.setAttribute('clip-path','url(#p8-upper-cut-clip)');lowerCopy.setAttribute('clip-path','url(#p8-lower-cut-clip)');
  const capFaceGroup=element('g',{id:'p8-cross-section'},lowerMotion),capFace=element('ellipse',{id:'p8-retained-modelling-surface',stroke:'none','fill-opacity':'.5'},capFaceGroup);
  const rearRim=element('path',{id:'p8-section-rear-rim',fill:'none',stroke:'#000','stroke-width':'.9','stroke-dasharray':'2,2'},capFaceGroup);
@@ -33,8 +42,13 @@ window.slideFactories.page8=()=>{
  const frontRim=element('path',{id:'p8-section-front-rim',fill:'none',stroke:'#000','stroke-width':'.9'},capFaceGroup);
  function setSection(row){const {cx,cy,rx,ry}=row;for(const k of ['cx','cy','rx','ry'])capFace.setAttribute(k,row[k]);const start=`M${cx-rx} ${cy} A${rx} ${ry} 0 0 `;frontRim.setAttribute('d',start+`0 ${cx+rx} ${cy}`);for(const rim of [rearRim,rearSolid])rim.setAttribute('d',start+`1 ${cx+rx} ${cy}`)}
  function rearExposure(amount){alpha(rearRim,1-amount);alpha(rearSolid,amount)}
- // Preserve command topology. Map source control points using the cut, middle,
- // and base ellipses; never interpolate unrelated SVG path strings. The upper
+ const baseFaceGroup=element('g',{id:'p8-lower-cross-section'},lowerMotion),baseFace=element('ellipse',{id:'p8-retained-implementation-base',stroke:'none','fill-opacity':'0'},baseFaceGroup),baseRear=element('path',{id:'p8-lower-section-rear-rim',fill:'none',stroke:'#000','stroke-width':'.9','stroke-dasharray':'2,2'},baseFaceGroup),baseFront=element('path',{id:'p8-lower-section-front-rim',fill:'none',stroke:'#000','stroke-width':'.9'},baseFaceGroup);
+ const baseRearGroup=element('g',{id:'p8-lower-section-rear-layer'},lowerMotion);lowerMotion.insertBefore(baseRearGroup,lowerCopy);baseRearGroup.append(baseRear);
+ function baseVisibility(value){alpha(baseFaceGroup,value);alpha(baseRearGroup,value)}
+ function setBaseSection(row){for(const k of ['cx','cy','rx','ry'])baseFace.setAttribute(k,row[k]);const {cx,cy,rx,ry}=row,start=`M${cx-rx} ${cy} A${rx} ${ry} 0 0 `;baseFront.setAttribute('d',start+`0 ${cx+rx} ${cy}`);baseRear.setAttribute('d',start+`1 ${cx+rx} ${cy}`)}
+ function retainClip(top,base){const edge=10000;return `M${top.cx-top.rx} ${top.cy} A${top.rx} ${top.ry} 0 0 0 ${top.cx+top.rx} ${top.cy} L${edge} ${top.cy} L${edge} ${base.cy} L${base.cx+base.rx} ${base.cy} A${base.rx} ${base.ry} 0 0 1 ${base.cx-base.rx} ${base.cy} L${-edge} ${base.cy} L${-edge} ${top.cy} Z`}
+ // Preserve command topology. Map source control points using the upper cut, middle,
+ // and lower-cut ellipses; never interpolate unrelated SVG path strings. The upper
  // copy is excluded from these controls and remains completely undeformed.
  function commands(d){const tokens=d.match(/[a-z]|[-+]?(?:\d*\.)?\d+(?:e[-+]?\d+)?/gi)||[],out=[];let i=0,command='',x=0,y=0,sx=0,sy=0;
   while(i<tokens.length){if(/^[a-z]$/i.test(tokens[i]))command=tokens[i++];const relative=command===command.toLowerCase(),kind=command.toUpperCase();if(kind==='Z'){out.push(['Z']);x=sx;y=sy;continue}
@@ -56,20 +70,22 @@ window.slideFactories.page8=()=>{
   // Use the actual side intersections for the horizontal radius, and the
   // source boundary ellipses for depth. The section's endpoints meet both sides.
   const cut={cx:(cutLeft+cutRight)/2,cy:cutY,rx:(cutRight-cutLeft)/2,ry:mix(top.ry,middle.ry,cutFraction)};
+  const lowerY=mix(middle.cy,bottom.cy,lowerCutFraction),lowerLeft=mix(ax,lx,(lowerY-ay)/(ly-ay)),lowerRight=mix(ax,rx0,(lowerY-ay)/(ry0-ay)),lowerCut={cx:(lowerLeft+lowerRight)/2,cy:lowerY,rx:(lowerRight-lowerLeft)/2,ry:mix(middle.ry,bottom.ry,lowerCutFraction)};
   const {cx,cy,rx,ry}=cut,L=cx-rx,R=cx+rx,margin=10000;
   // The front half of the new elliptical rim partitions the side surface.
   // A green top face is added to the retained lower section after separation.
   const front=`M${L} ${cy} A${rx} ${ry} 0 0 0 ${R} ${cy}`;
   upperClipPath.setAttribute('d',front+` L${margin} ${cy} L${margin} ${-margin} L${-margin} ${-margin} L${-margin} ${cy} Z`);
-  lowerClipPath.setAttribute('d',front+` L${margin} ${cy} L${margin} ${margin} L${-margin} ${margin} L${-margin} ${cy} Z`);
-  capFaceGroup.setAttribute('transform',layer.getAttribute('transform')||'');setSection(cut);
+  lowerClipPath.setAttribute('d',retainClip(cut,lowerCut));
+  bottomClipPath.setAttribute('d',`M${lowerLeft} ${lowerY} A${lowerCut.rx} ${lowerCut.ry} 0 0 0 ${lowerRight} ${lowerY} L${margin} ${lowerY} L${margin} ${margin} L${-margin} ${margin} L${-margin} ${lowerY} Z`);
+  capFaceGroup.setAttribute('transform',layer.getAttribute('transform')||'');baseFaceGroup.setAttribute('transform',layer.getAttribute('transform')||'');baseRearGroup.setAttribute('transform',layer.getAttribute('transform')||'');setSection(cut);setBaseSection(lowerCut);baseFace.setAttribute('fill',getComputedStyle(find('path2319')).fill);
   capFace.setAttribute('fill',getComputedStyle(find('path2318')).fill);
   // Read live target CTMs: the raised centred shell is the morph destination,
   // not a translation applied after fitting. Reverse fitting uses the same rows.
   const target=id=>root.querySelector('#p8-figure-'+id),dst=[ellipseRow(target('path2549')),rimRow(target('path2549-2-2')),rimRow(target('path2549-2'))];
   const records=originalPaths.map(record=>{
    const {node}=record,matrix=inverse.multiply(node.getScreenCTM()),id=node.id;
-   const d=id.endsWith('-path4')?`M${lx} ${ly} L${cutLeft} ${cut.cy} M${cutRight} ${cut.cy} L${rx0} ${ry0}`:record.d;
+   const d=id.endsWith('-path4')?`M${lowerLeft} ${lowerCut.cy} L${cutLeft} ${cut.cy} M${cutRight} ${cut.cy} L${lowerRight} ${lowerCut.cy}`:record.d;
    const row=node.closest('[id$="-pyramid-g4"]')?2:node.closest('[id$="-pyramid-g4-1"]')?1:null;
    const band=id.endsWith('-path2318')?0:id.endsWith('-path2319')?1:null;
    // Source band fills contain tiny cut-outs for old dashed rims. Keep them
@@ -78,7 +94,7 @@ window.slideFactories.page8=()=>{
    return {...record,d,commands:commands(fittingD),matrix,inverse:matrix.inverse(),row,band};
   });
   const disks=originalDisks.map(disk=>({...disk,matrix:inverse.multiply(disk.node.getScreenCTM()),row:disk.node.id.endsWith('-path1-1')?1:null}));
-  geometry={cut,top,middle,src:[cut,middle,bottom],dst,records,disks,point,margin};
+  geometry={cut,lowerCut,top,middle,bottom,src:[cut,middle,lowerCut],dst,records,disks,point,margin};
  }
  function fitPoint(p,amount,row=null,band=null){
   const {src,dst}=geometry;let x,y;
@@ -100,14 +116,14 @@ window.slideFactories.page8=()=>{
   for(const disk of disks){const inverse=disk.matrix.inverse(),map=(x,y)=>fitPoint(point(disk.matrix,x,y),amount,disk.row).matrixTransform(inverse),c=map(disk.cx,disk.cy),r=map(disk.cx+disk.rx,disk.cy),b=map(disk.cx,disk.cy+disk.ry);for(const [k,v] of Object.entries({cx:c.x,cy:c.y,rx:Math.abs(r.x-c.x),ry:Math.abs(b.y-c.y)}))disk.node.setAttribute(k,v)}
   const cut=Object.fromEntries(['cx','cy','rx','ry'].map(k=>[k,mix(src[0][k],dst[0][k],amount)])),{cx,cy,rx,ry}=cut;
   setSection(cut);
-  lowerClipPath.setAttribute('d',`M${cx-rx} ${cy} A${rx} ${ry} 0 0 0 ${cx+rx} ${cy} L${margin} ${cy} L${margin} ${margin} L${-margin} ${margin} L${-margin} ${cy} Z`);
+  const base=Object.fromEntries(['cx','cy','rx','ry'].map(k=>[k,mix(src[2][k],dst[2][k],amount)]));setBaseSection(base);lowerClipPath.setAttribute('d',retainClip(cut,base));
  }
  function resetArtwork(){
   for(const {node,d} of originalPaths)node.setAttribute('d',d);
   for(const disk of originalDisks)for(const k of ['cx','cy','rx','ry'])disk.node.setAttribute(k,disk[k]);
-  upperMotion.removeAttribute('transform');lowerMotion.removeAttribute('transform');capFaceGroup.style.filter='none';capFace.setAttribute('fill-opacity','.5');rearExposure(0);alpha(upperMotion,0);alpha(lowerMotion,0);alpha(capFaceGroup,0);alpha(layer,1);
+  upperMotion.removeAttribute('transform');lowerMotion.removeAttribute('transform');bottomMotion.removeAttribute('transform');capFaceGroup.style.filter='none';baseFaceGroup.style.filter='none';baseFace.setAttribute('fill-opacity','0');alpha(bottomMotion,0);baseVisibility(0);capFace.setAttribute('fill-opacity','.5');rearExposure(0);alpha(upperMotion,0);alpha(lowerMotion,0);alpha(capFaceGroup,0);alpha(layer,1);
  }
- function showRetained(){alpha(layer,0);alpha(upperMotion,0);alpha(lowerMotion,1);alpha(capFaceGroup,1);rearExposure(1);alpha(moving,1);alpha(figure,0);alpha(opening,1)}
+ function showRetained(){alpha(layer,0);alpha(upperMotion,0);alpha(lowerMotion,1);alpha(capFaceGroup,1);baseVisibility(1);alpha(bottomMotion,0);baseFace.setAttribute('fill-opacity','0');rearExposure(1);alpha(moving,1);alpha(figure,0);alpha(opening,1)}
  function settled(target){
   resetArtwork();transition=null;transitionElapsed=0;root.dataset.transitionElapsed='0';alpha(opening,1);
   if(target===0){root.dataset.page8Mode='full';alpha(moving,1);alpha(figure,0)}
@@ -118,8 +134,8 @@ window.slideFactories.page8=()=>{
  function renderCut(ms){
   transition='cut';transitionElapsed=ms;root.dataset.page8Mode='cut-transition';root.dataset.transitionElapsed=String(ms);
   const appear=ease(clamp(ms/150)),pulse=ms>=150&&ms<=450?Math.sin(Math.PI*(ms-150)/300):0,remove=ease(clamp((ms-450)/250));
-  alpha(layer,0);alpha(upperMotion,1-remove);alpha(lowerMotion,1);alpha(moving,1);alpha(figure,0);alpha(opening,1);
-  fitRetained(0);alpha(capFaceGroup,appear);rearExposure(remove);capFace.setAttribute('fill-opacity',String(.2+.06*pulse+.3*remove));capFaceGroup.style.filter=`brightness(${1+.12*pulse})`;reveals(-1,-1,1);
+  alpha(layer,0);alpha(upperMotion,1-remove);alpha(bottomMotion,1-remove);alpha(lowerMotion,1);alpha(moving,1);alpha(figure,0);alpha(opening,1);
+  fitRetained(0);alpha(capFaceGroup,appear);baseVisibility(appear);baseFace.setAttribute('fill-opacity',String((.2+.06*pulse)*(1-remove)));baseFaceGroup.style.filter=`brightness(${1+.12*pulse})`;rearExposure(remove);capFace.setAttribute('fill-opacity',String(.2+.06*pulse+.3*remove));capFaceGroup.style.filter=`brightness(${1+.12*pulse})`;reveals(-1,-1,1);
  }
  function renderFocus(ms){
   transition='focus';transitionElapsed=ms;root.dataset.page8Mode='focus-transition';root.dataset.transitionElapsed=String(ms);
@@ -128,7 +144,7 @@ window.slideFactories.page8=()=>{
  }
  function renderRestore(ms){
   const t=ease(clamp(ms/250));transition='restore';transitionElapsed=ms;root.dataset.page8Mode='restore-transition';root.dataset.transitionElapsed=String(ms);
-  showRetained();fitRetained(0);alpha(upperMotion,t);rearExposure(1-t);alpha(capFaceGroup,1-t);reveals(-1,-1,1);
+  showRetained();fitRetained(0);alpha(upperMotion,t);alpha(bottomMotion,t);rearExposure(1-t);alpha(capFaceGroup,1-t);baseVisibility(1-t);reveals(-1,-1,1);
  }
  function cancel(){generation++;if(raf)cancelAnimationFrame(raf);raf=0;if(resolveMotion){const done=resolveMotion;resolveMotion=null;done(false)}busy=false;transition=null}
  function motion(milliseconds,draw,token){return new Promise(resolve=>{resolveMotion=resolve;const start=performance.now();function tick(now){if(token!==generation)return;const elapsed=Math.min(milliseconds,now-start);draw(elapsed);if(elapsed<milliseconds)raf=requestAnimationFrame(tick);else{raf=0;resolveMotion=null;resolve(true)}}raf=requestAnimationFrame(tick)})}
@@ -146,5 +162,5 @@ window.slideFactories.page8=()=>{
  // Entry waits. The first click sections/removes; the second focuses. No
  // capability appears until a later, independent click.
  settled(0);
- const api={go,cancel,leave:cancel,states,previewTransition,resize:()=>{},getState:()=>({step,busy,count:states.length,transition,transitionElapsed,cutFraction})};root.page8Controller=api;return api;
+ const api={go,cancel,leave:cancel,states,previewTransition,resize:()=>{},getState:()=>({step,busy,count:states.length,transition,transitionElapsed,cutFraction,lowerCutFraction,geometry:geometry?{src:geometry.src,dst:geometry.dst}:null})};root.page8Controller=api;return api;
 };

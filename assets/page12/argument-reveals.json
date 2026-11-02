@@ -1,0 +1,173 @@
+{
+  "source": "Original AEiC slide7 group0/effect-map.json remains unchanged provenance. Runtime adaptation splits its events into three clicks.",
+  "stateMap": [
+    {
+      "new": 1,
+      "old": 1
+    },
+    {
+      "new": 2,
+      "old": 2,
+      "binder": "st"
+    },
+    {
+      "new": 3,
+      "old": 2,
+      "binder": "xs"
+    },
+    {
+      "new": 4,
+      "old": 2,
+      "binder": "fs"
+    },
+    {
+      "new": 5,
+      "old": 3
+    },
+    {
+      "new": 6,
+      "old": 4
+    },
+    {
+      "new": 7,
+      "old": 5
+    },
+    {
+      "new": 8,
+      "old": 6
+    },
+    {
+      "new": 9,
+      "old": 7
+    },
+    {
+      "new": 10,
+      "old": 8
+    },
+    {
+      "new": 11,
+      "old": 9
+    },
+    {
+      "new": 12,
+      "old": 10
+    }
+  ],
+  "groups": {
+    "st": [
+      145
+    ],
+    "xs": [
+      148,
+      147,
+      146,
+      149,
+      203
+    ],
+    "fs": [
+      182,
+      172,
+      162,
+      150,
+      202
+    ]
+  },
+  "annotation": "One filled translucent blue/lavender overlay below native signature glyphs. Full binders include parentheses and complete types; run and leading arrows excluded. Cleared before first reaction.",
+  "highlightData": [
+    {
+      "binder": "st",
+      "fullBinder": "(1 st : s)",
+      "shapeIds": [
+        145
+      ],
+      "nativePathIds": [
+        "path3-15",
+        "path4-5",
+        "path5-4",
+        "path6-0",
+        "path7-2",
+        "path8-6"
+      ],
+      "box": {
+        "x": 92.93812276069863,
+        "y": -1.9999404792616222,
+        "width": 154.2731004152708,
+        "height": 30.8335387900198
+      }
+    },
+    {
+      "binder": "xs",
+      "fullBinder": "(1 xs : Vect n a)",
+      "shapeIds": [
+        148,
+        147,
+        146,
+        149,
+        203
+      ],
+      "nativePathIds": [
+        "path10-6",
+        "path11-1",
+        "path12-1",
+        "path13-17",
+        "path14-3",
+        "path15-00",
+        "path16-4",
+        "path17-8"
+      ],
+      "box": {
+        "x": 92.9379716415967,
+        "y": 37.752424279271736,
+        "width": 280.39623904958864,
+        "height": 30.8335272096926
+      }
+    },
+    {
+      "binder": "fs",
+      "fullBinder": "(1 fs : Resource n ((1 _ : a) -> (1 _ : s) -> (b, s)) _)",
+      "shapeIds": [
+        182,
+        172,
+        162,
+        150,
+        202
+      ],
+      "nativePathIds": [
+        "path19-0",
+        "path20-1",
+        "path21-2",
+        "path22-9",
+        "path23-0",
+        "path24-38",
+        "path25-8",
+        "path26-5",
+        "path27-7",
+        "path28-7",
+        "path29-0",
+        "path30-8",
+        "path31-9",
+        "path32-30",
+        "path33-7",
+        "path34-4",
+        "path35-7",
+        "path36-8",
+        "path37-3",
+        "path38-7",
+        "path39-1",
+        "path40-0",
+        "path41-0",
+        "path42-8",
+        "path43-3",
+        "path44-4"
+      ],
+      "box": {
+        "x": 92.9379716415967,
+        "y": 78.36874231222598,
+        "width": 947.0537454808664,
+        "height": 32.78505056586731
+      }
+    }
+  ],
+  "totalPages": 36,
+  "totalHeldStates": 212
+}

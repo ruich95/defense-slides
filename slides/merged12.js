@@ -2,7 +2,7 @@ window.slideFactories.merged12=()=>{
  const root=document.getElementById('merged12'),sceneIds=["page12", "page13"],roots=sceneIds.map(id=>document.getElementById(id));
  // Sampling SVG correspondence requires a live, laid-out scene at construction time.
  roots.forEach(n=>n.classList.add('active'));
- const apis=sceneIds.map(id=>window.slideFactories[id]()),offsets=[0, 6];
+ const apis=sceneIds.map(id=>window.slideFactories[id]()),offsets=[0, 8];
  const states=apis.flatMap(api=>api.states),count=states.length;
  let step=0,busy=false,generation=0,raf=0,resolveMotion=null;
  const locate=s=>{let scene=0;while(scene+1<offsets.length&&s>=offsets[scene+1])scene++;return {scene,local:s-offsets[scene]}};

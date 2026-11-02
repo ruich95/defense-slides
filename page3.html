@@ -112,6 +112,7 @@ body.full #viewport{inset:0}body.full .controlbar{display:none}#stage{cursor:poi
 
 /* Displayed page 4 keeps the preceding page's pyramid placement and scale. */
 #page4 .requirements-text{width:888px}
+#page4 .requirements-closing-statement{width:888px;margin:32px 0 0;font-size:32px;line-height:1.28;font-weight:700;color:#000;text-align:left;text-wrap:wrap;white-space:normal}
 #page4 .requirements-challenges{margin-top:43px;list-style:none;padding-left:37px}
 #page4 .requirements-challenges>li{position:relative;margin-bottom:18px;padding-left:4px}
 #page4 .requirements-challenges>li>div::before{content:'\25B8';position:absolute;left:-30px;font-size:25px;line-height:40.96px}
@@ -266,6 +267,8 @@ body.full #viewport{inset:0}body.full .controlbar{display:none}#stage{cursor:poi
 #page12 #p12-shape-23,#page13 .page13-morph-object[data-source-id="23"]{text-align:left;text-wrap:wrap;white-space:normal}
 #page12 .page12-item{position:absolute;opacity:0;visibility:hidden;transform-origin:0 0}
 #page12 .page12-item img{display:block;width:100%;height:100%}
+#page12 #p12-shape-22 img{position:relative;z-index:1}
+#page12 .page12-binder-focus{position:absolute;z-index:0;background:rgba(0,41,237,.1);box-shadow:0 0 0 5px rgba(0,41,237,.1);border-radius:2px;pointer-events:none}
 #page12 .page12-explanation{font-size:32px;line-height:1.28;font-weight:400;color:#000}
 #page12 .page12-explanation code{font-family:Consolas,monospace;font-size:1em}
 
@@ -402,7 +405,7 @@ body.full #viewport{inset:0}body.full .controlbar{display:none}#stage{cursor:poi
 #page20 li::before{content:"▸";position:absolute;left:0;font-size:25px;top:4px}
 
 /* P21: abstract representation and the timed interpretation routes. */
-#page21 .page21-opening{position:absolute;left:91px;top:175px;width:1419px;margin:0;font-size:32px;line-height:1.28;font-weight:400;color:#000}
+#page21 .page21-opening{position:absolute;left:91px;top:145px;width:1419px;margin:0;font-size:32px;line-height:1.28;font-weight:400;color:#000}
 #page21 .page21-body,#page21 .page21-scene{position:absolute;inset:0;pointer-events:none}
 #page21 .page21-item{position:absolute;opacity:0;visibility:hidden;transform-origin:0 0;font-size:32px;line-height:1.28;color:#000;font-weight:400}
 #page21 .page21-item>img{display:block;width:100%;height:100%}
@@ -1020,7 +1023,7 @@ notify();
  </form>
 </dialog>
 <aside id="notes-dialog"><button id="close-notes">Close</button><h2 id="notes-heading"></h2><p id="notes-text"></p></aside>
-<script>window.slideFactories={};window.deckManifest=[{"id": "page2", "title": "Embedded System Design", "source": "slides/page2.html", "controller": "slides/page2.js", "steps": 9, "displayNumber": 3}];window.deckNavigationCatalog=[{"id": "cover", "steps": 1}, {"id": "page1", "steps": 9}, {"id": "page2", "steps": 9}, {"id": "page4", "steps": 5}, {"id": "page5", "steps": 8}, {"id": "page6", "steps": 8}, {"id": "page7", "steps": 5}, {"id": "page8", "steps": 7}, {"id": "page9", "steps": 3}, {"id": "page10", "steps": 6}, {"id": "page11", "steps": 8}, {"id": "merged12", "steps": 10}, {"id": "merged13", "steps": 3}, {"id": "page17", "steps": 5}, {"id": "page18", "steps": 4}, {"id": "page19", "steps": 4}, {"id": "contracts", "steps": 8}, {"id": "language_boundary", "steps": 5}, {"id": "page20", "steps": 6}, {"id": "rv32i_process", "steps": 5}, {"id": "page21", "steps": 12}, {"id": "page22", "steps": 10}, {"id": "page23", "steps": 8}, {"id": "page24", "steps": 4}, {"id": "page25", "steps": 1}, {"id": "fm_model", "steps": 7}, {"id": "fm_validation", "steps": 3}, {"id": "aeic25", "steps": 3}, {"id": "normalisation", "steps": 6}, {"id": "aeic26_27", "steps": 14}, {"id": "aeic28", "steps": 2}, {"id": "aeic29", "steps": 8}, {"id": "aeic30", "steps": 1}, {"id": "product_elimination", "steps": 8}, {"id": "aeic31", "steps": 3}, {"id": "aeic32", "steps": 1}];</script>
+<script>window.slideFactories={};window.deckManifest=[{"id": "page2", "title": "Embedded System Design", "source": "slides/page2.html", "controller": "slides/page2.js", "steps": 9, "displayNumber": 3}];window.deckNavigationCatalog=[{"id": "cover", "steps": 1}, {"id": "page1", "steps": 9}, {"id": "page2", "steps": 9}, {"id": "page4", "steps": 6}, {"id": "page5", "steps": 8}, {"id": "page6", "steps": 8}, {"id": "page7", "steps": 5}, {"id": "page8", "steps": 7}, {"id": "page9", "steps": 3}, {"id": "page10", "steps": 6}, {"id": "page11", "steps": 8}, {"id": "merged12", "steps": 12}, {"id": "merged13", "steps": 3}, {"id": "page17", "steps": 5}, {"id": "page18", "steps": 4}, {"id": "page19", "steps": 4}, {"id": "contracts", "steps": 8}, {"id": "language_boundary", "steps": 5}, {"id": "page20", "steps": 6}, {"id": "rv32i_process", "steps": 5}, {"id": "page21", "steps": 12}, {"id": "page22", "steps": 10}, {"id": "page23", "steps": 8}, {"id": "page24", "steps": 4}, {"id": "page25", "steps": 1}, {"id": "fm_model", "steps": 7}, {"id": "fm_validation", "steps": 3}, {"id": "aeic25", "steps": 3}, {"id": "normalisation", "steps": 6}, {"id": "aeic26_27", "steps": 14}, {"id": "aeic28", "steps": 2}, {"id": "aeic29", "steps": 8}, {"id": "aeic30", "steps": 1}, {"id": "product_elimination", "steps": 8}, {"id": "aeic31", "steps": 3}, {"id": "aeic32", "steps": 1}];</script>
 <script>window.slideFactories.page2=()=>{
 const $=id=>document.getElementById(id),art=$('receiver-animation'),region=$('receiver-region');
 const states=[

@@ -7,7 +7,8 @@ const states=[
  {name:'Automation',note:'In the receiver example, we transformed a parallel filter into an architecture with shared arithmetic. We would like to express such a step as a reusable operation that a tool can apply to different models. Together with executable models, these operations provide a basis for design automation.\n\nPresenter guidance: Point to the transformation arrow when referring to resource sharing. Automation here means executing and reusing design operations; it does not imply automatically selecting an entire design flow.'},
  {name:'Correctness',note:'Being able to execute a design step is only part of the problem. A specification admits a set of acceptable models, represented here by this region. We need to establish that our chosen model satisfies the specification, and that subsequent transformations preserve the required properties. Refinement must also account for the implementation constraints.\n\nPresenter guidance: Point first to the specification point, then to the cone’s modelling region. Refer back to the multiplier-budget ellipse on the preceding page as the earlier example of an implementation constraint. The geometric placement illustrates the intended relationships; establishing them is precisely the challenge being motivated.'},
  {name:'Practical support',note:'To support automation, we need models that we can execute and design steps that we can apply and reuse.'},
- {name:'Formal support',note:'To support correctness, we need precise meanings for those models and a formal account of what each design step establishes or preserves.\n\nPresenter guidance: Formal support concerns both models and design steps. It includes reasoning about construction and property preservation throughout the process.\n\nTransition to page 5, A Key Challenge: Connecting Abstraction Levels:\nBoth forms of support must apply to the same models and design steps. We therefore need to connect executable design operations with formal reasoning about them.'}
+ {name:'Formal support',note:'To support correctness, we need precise meanings for those models and a formal account of what each design step establishes or preserves.\n\nPresenter guidance: Formal support concerns both models and design steps. It includes reasoning about construction and property preservation throughout the process.\n\nBoth forms of support must apply to the same models and design steps.'},
+ {name:'Supporting execution and formal reasoning together',note:'Both forms of support must apply to the same models and design steps. Executable design steps and formal reasoning must be supported together. Let us look at what makes this difficult across abstraction levels.'}
 ].map(state=>({...state,note:state.note+references}));
 let step=0,busy=false;
 const height=node=>parseFloat(getComputedStyle(node).height);
@@ -38,7 +39,9 @@ function layoutSupport(animate=false){
 function positionText(){
  const text=root.querySelector('.requirements-text'),list=root.querySelector('.requirements-challenges');
  const correctness=list.children[1],formal=correctness.querySelector('.requirements-support');
- // Measure the complete composition in local CSS units, independently of the
+ // Keep the accepted requirements anchor: the reserved closing statement fits
+ // below it, so its reveal must not move any of the first five states.
+ // Measure the requirements in local CSS units, independently of the
  // current reveal, the animated gap, and the stage's viewport scale.
  const fullHeight=height(text.querySelector('p'))+parseFloat(getComputedStyle(list).marginTop)
   +height(automation.querySelector('div'))+height(support.firstElementChild)+36
