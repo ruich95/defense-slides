@@ -1,10 +1,64 @@
 # HTML defence presentation
 
-## P4 closing statement — 2 November 2026
+## Current sequence and navigation
+
+The defence has **37 pages and 216 held states** as of 5 November 2026. P6 introduces dependently typed programming beyond interactive theorem proving. P7 uses the FIR model to motivate a general-purpose functional host. P8 opens with the thesis question, followed by O1, O2 and O3. P9 introduces SynQ. Objective reminders later in the talk refer to P8 and the conclusion at P36.
+
+Open the [full deck](index.html), [candidate foundation](index.html#7.1) or [research question](index.html#8.1). Press G and enter a page number to go to its last state. Use an explicit state such as 27.1 or 27.7 to choose a particular hold. Standalone previews run from `page1.html` to `page37.html`. See the [introduction plan](../defense-introduction-plan.md) and the [P7 specification](../slides-detail/candidate-foundation.md).
+
+The opening through P8 takes 6:35 in the rehearsal plan. P9 ends at 7:45. The full budget is 43:00 plus a 2:00 reserve. Technical sources keep their stable IDs, so the question uses `page7` at displayed P8 and the roadmap uses `page8` at displayed P9.
+
+## Current page/source mapping
+
+| Displayed page | Stable manifest / scene IDs | States |
+| --- | --- | ---: |
+| 1 | cover | 1 |
+| 2 | page1 | 9 |
+| 3 | page2 | 9 |
+| 4 | page4 | 6 |
+| 5 | page5 | 8 |
+| 6 | page6 | 8 |
+| 7 | candidate_foundation | 4 |
+| 8 | page7 | 4 |
+| 9 | page8 | 7 |
+| 10 | page9 | 3 |
+| 11 | page10 | 6 |
+| 12 | page11 | 8 |
+| 13 | merged12 (page12, page13) | 12 |
+| 14 | merged13 (page14, page15, page16) | 3 |
+| 15 | page17 | 5 |
+| 16 | page18 | 4 |
+| 17 | page19 | 4 |
+| 18 | contracts | 8 |
+| 19 | language_boundary | 5 |
+| 20 | page20 | 6 |
+| 21 | rv32i_process | 5 |
+| 22 | page21 | 12 |
+| 23 | page22 | 10 |
+| 24 | page23 | 8 |
+| 25 | page24 | 4 |
+| 26 | page25 | 1 |
+| 27 | fm_model | 7 |
+| 28 | fm_validation | 3 |
+| 29 | aeic25 | 3 |
+| 30 | normalisation | 6 |
+| 31 | aeic26_27 | 14 |
+| 32 | aeic28 | 2 |
+| 33 | aeic29 | 8 |
+| 34 | aeic30 | 1 |
+| 35 | product_elimination | 8 |
+| 36 | aeic31 | 3 |
+| 37 | aeic32 | 1 |
+
+## Earlier implementation records
+
+The following dated records use the displayed numbers in force when they were written. For current page numbers, state counts and live targets, use the map above. Source filenames and recorded QA paths identify their original material.
+
+### P4 closing statement — 2 November 2026
 
 P4 (`page4`) has six cumulative states: the existing opening, Automation, Correctness/cone, Practical support and Formal support, then a separate final closing statement: “Executable design steps and formal reasoning must be supported together.” It is 32 px bold black at x91/y705.296875/w888, naturally two lines ending y787.203125, with a 32 px gap below the completed requirements list. All earlier text coordinates and the native pyramid remain unchanged; hidden statement height is reserved, so state5→6 adds no layout jump. The intentional Practical-support expansion still occurs at state4. The former oral question is removed. State5 retains the formal explanation/guidance; state6 introduces the joint need, presents the statement and supplies the transition to P5. P5 remains eight states with its approved conclusion. The deck is36pages/213heldstates. Current baseline/final geometry and captures: `tmp/defense/p4-closing-statement-2026-11-02/`.
 
-## Approved wording corrections — 2 November 2026
+### Approved wording corrections — 2 November 2026
 
 The active deck remains **36 pages / 213 held states**. Approved wording is synchronized in source assets, controller notes and active page/prompt specifications for P12–15, P17, P21, P26–30 and P35. The item proposing a P18 signature change was withdrawn; P18 source, notes, explanation and planning documents remain unchanged. No unfinished thesis coverage is added. P10, P25 and P33 claims and P6/P8/P34 visuals retain their existing scope and layout.
 
@@ -21,25 +75,25 @@ The active deck remains **36 pages / 213 held states**. Approved wording is sync
 - P29 (`normalisation`), six states: The final bullet is “**Behaviour preservation:** per-model contracts support checked proofs on demand.” A contract states the particular preservation property; `auto` can construct and check a proof on demand. There is no general preservation theorem for this encoding and no claim that `auto` solves every instance. Result form and totality remain separate. Keep all six states and the fixed figure/rule; do not restore removed contract code. Thesis §5.1.2, printed pp. 135–138.
 - P35 (`aeic31`), three states: The conclusion is “SynQ demonstrates that a component-based framework for synchronous system design can be embedded in Idris2, supporting executable and formally accountable design processes.” Notes frame this as a positive answer to the research question within the demonstrated scope and a proof of concept. Preserve the objective/evidence bullets, dark-gray unfinished elaboration content, 32 px body text, future-work block y625 and quotation y635. Thesis Chapter 6, printed pp. 153–154.
 
-## P6 motivation — wording synchronized 1 November2026
+### P6 motivation — wording synchronized 1 November2026
 
 P6 (`page6`) keeps eight states/seven clicks and the original AEiC paper artwork. Its opening now states that advances in type-theory-based programming languages open opportunities for system design. The two bullets connect executable models/design-step functions with formal model semantics/accountable design steps, ending with a common foundation for modelling, execution and reasoning about both. This is general across the language examples; P8 introduces QTT/Idris2 specifically through SynQ. P7’s research question is unchanged. Notes retain thesis abstract/printed pp.3–4 and AEiC2026 slide3 provenance, differing language capabilities and the need for supplied definitions/proofs. The32px layout and225ms reveals remain. All P6 HTML text blocks are left-aligned and wrap naturally, without balance or forced line breaks; paper-image text is unchanged.
 
-## P8 synchronized scope cuts and centred focus — 2 November 2026
+### P8 synchronized scope cuts and centred focus — 2 November 2026
 
 P8 (`page8`) keeps seven states in the 36-page/213-held-state deck. First click now takes two contained native-geometry elliptical cuts: upper .35 within modelling and lower .65 within implementation. Both appear at0–150ms, share one gentle pulse150–450ms, and the upper excluded portion plus bottom implementation slice fade together450–700ms, without translation/deformation. A three-way namespaced partition holds the retained middle at its original size/position. Upper exposed rear edge becomes solid; the new lower rear rim stays dashed behind retained fills, with the front rim above them. Native side-stroke widths remain intact and obsolete old-base dash holes are excluded. The second click retains its500ms focus: upper-cut/middle/lower-cut source rows map to the exact existing shell top/OtherDSLsIRs/bottom rows by450ms, with the original450–500ms handoff. The old removed base cannot reappear in either direction. States3–7 keep the fixed x965/y201.179684/w570/h500.53125 frame centred at y450; source SVG, opening/capability wording, arcs and later225ms reveals are unchanged. The lower cut is an additional scope boundary, not a new abstraction level or universal end-to-end implementation claim. Current captures/reports: `tmp/defense/p8-dual-scope-cut-2026-11-02/`; previous `p8-centred-focus/` evidence is historical. Focused verification passed 46 navigation/geometry checks. States1/3/4 match decoded baseline pixels exactly; bounded Design steps term-color transients in captures5–7 are recorded separately and accepted by visual/source review. Native final framework, all existing wording/styles and protected P12/P18 sources remain unchanged.
 
-## P10 computational-use explanations —1 November2026
+### P10 computational-use explanations —1 November2026
 
 P10 (`page10`) keeps six states and the unchanged signature/symbols. Its explanations now read “No computational use; available in types”, “Exactly one computational use” and “Unrestricted computational use”, using natural left-aligned wrapping at the existing32px size. Zero/one widths are320px; compactzero alone moves35localpx left (offset145), and its guide follows. The400ms compaction/150ms takeaway reveal and all other annotations remain. Notes cite Atkey2018 and McBride2016, distinguish resource use from reduction/evaluation, retain erasure as an implementation consequence and separate design-step execution from target runtime. Evidence: `tmp/defense/p10-computational-use/`.
 
-## P12 resource arguments and accepted layout — 2 November 2026
+### P12 resource arguments and accepted layout — 2 November 2026
 
-P12 (`merged12`) now has 12 states: existing signature; full st binder/state circle; full xs binder/diamonds and input ellipsis; full fs binder/process blocks and process ellipsis; then the existing three reaction groups, unfolding sentence, recurring-process fold, delay, conditional conclusion and final conclusion. The highlight is one translucent filled annotation below native signature glyphs, only in states 2–4; state 5 clears it before motion. Complete binders include parentheses/multiplicity/name/colon/full type, with fs’s nested component function/wildcard/outer parenthesis. Native signature and existing diagram artwork/geometry remain unchanged. All prose stays x91; code stays at x281.004185/y245 with exact size 1037.99163×149.76. Unfolding +62.1875x/+55y and recurring +68.6292476654x/+65y placements remain. Source scene12 now has 8 states and scene13 retains 4; offsets [0,8]. New group durations are 1/1/1/1000/1250/2300/1 ms; the last four groups preserve their exact prior events/easing/paths. Internal 8↔9 is 750 ms; outgoing 12→P13.1 is 500 ms. Source inventories remain provenance; `assets/page12/argument-reveals.json` records adaptation. The deck remains 36 pages, now 213 held states. Earlier ten-state layout/alignment verification is historical. Current captures/reports: `tmp/defense/p12-argument-reveals-2026-11-02/`. Focused verification passed 94 checks with zero errors; the parent approved complete binder coverage and native resource accumulation.
+P12 (`merged12`) now has 12 states: existing signature; full st binder/state circle; full xs binder/diamonds and input ellipsis; full fs binder/process blocks and process ellipsis; then the existing three reaction groups, unfolding sentence, recurring-process fold, delay, conditional conclusion and final conclusion. The highlight is one translucent filled annotation below native signature glyphs, only in states 2–4; state 5 clears it before motion. Complete binders include parentheses/multiplicity/name/colon/full type, with fs’s nested component function/wildcard/outer parenthesis. Native signature and existing diagram artwork/geometry remain unchanged. All prose stays x91; code stays at x281.004185/y245 with exact size 1037.99163×149.76. Unfolding +62.1875x/+55y and recurring +68.6292476654x/+65y placements remain. Source scene12 now has 8 states and scene13 retains 4; offsets [0,8]. New group durations are 1/1/1/1000/1250/2300/1 ms; the last four groups preserve their exact prior events/easing/paths. Internal 8↔9 is 750 ms; outgoing 12→P13.1 is 500 ms. Source inventories remain provenance; `assets/page12/argument-reveals.json` records adaptation. At that revision the deck had 36 pages, now 213 held states. Earlier ten-state layout/alignment verification is historical. Current captures/reports: `tmp/defense/p12-argument-reveals-2026-11-02/`. Focused verification passed 94 checks with zero errors; the parent approved complete binder coverage and native resource accumulation.
 
-## Objective callbacks — approved 1 November 2026
+### Objective callbacks — approved 1 November 2026
 
-The deck remains **36 pages / 213 held states**. Plain **26 px bold Figtree** O1/O2/O3 labels reuse P7 exactly: O1 `#78001A`, O2 `#0029ED`, O3 `#A65900`. Labels mean **contributes to an objective**, not completion. P7 labels and P8 mapping are unchanged. They reveal with existing states, without additional clicks, and settle/reset with the existing controllers.
+At that revision the deck had **36 pages / 213 held states**. Plain **26 px bold Figtree** O1/O2/O3 labels reuse P7 exactly: O1 `#78001A`, O2 `#0029ED`, O3 `#A65900`. Labels mean **contributes to an objective**, not completion. P7 labels and P8 mapping are unchanged. They reveal with existing states, without additional clicks, and settle/reset with the existing controllers.
 
 | Displayed state | Claim-adjacent callback |
 | --- | --- |
@@ -60,62 +114,16 @@ P35 answers positively for the synchronous systems covered by SynQ. In the O3 ro
 
 Source callbacks use `.objective-tag[data-objective]`. Most sit in the left claim gutter without changing text flow; P18 is beside its return-arrow caption. FM labels follow actual heading/subpoint positions on every paint without changing the text’s clipping or CIC geometry. Historical review snapshots and the original handout are unchanged.
 
-## Objective explanation footnotes
+### Objective explanation footnotes
 
 P8/P16/P18/P20/P21/P22/P25/P26/P29/P30/P34 show the exact P7 definition once per visible objective, synchronized with the existing markers and their actual reveal opacity. P7/P35 remain unchanged. See the [shared footnote contract](../currentplan.md#objective-explanation-footnotes--approved-1-november-2026) for exact text, typography, fixed row positions and exclusions. The notes use 18 px normal Figtree in `#626973`, line height 1.25, with bold P7-colored labels. Main content and existing marker geometry remain fixed.
 
 P8’s original acronym note moves to y752, with O1/O3 on y782 and O2 on y808. Other notes normally use y808, with pairs on one row. P16 and P21 use y835, replacing the repeated event/name footer only while the objective note is visible and retaining the page number. `shared/objective-footnotes.js` mirrors marker ancestry and follows pending controller animations without polling at rest; `build.py` embeds it in full and standalone output. The manifest remains 36 pages / 213 states, including the latest eight-state P34. Existing controllers and navigation are unchanged.
 
-Open **index.html** in Edge or Chrome for the self-contained offline **36-page deck**. Cover counts as P1. Canonical standalone previews are **page1.html through page36.html**; `cover.html` is a cover alias. Planning 25B is active as **Building the FM Receiver in SynQ**, P26 (`fm_model`, seven states). Planning 25C is active as **FM Receiver: Simulation and Implementation**, P27 (`fm_validation`, three states). FIFO remains backup. Planning 16a remains the eight-state visual page **Specifying Component Behaviour**, P17 (`contracts`); its earlier code/memory version is archived. Normalisation is active as P29 (`normalisation`, six states), after the three-state P28 overview and before balancing at P30. Product elimination is P34 (`product_elimination`, eight states), after mapping results P33 and before conclusion P35. FIR application P31 leads directly to mapping experiment P32.
+Open **index.html** in Edge or Chrome for the self-contained offline **36-page deck**. Cover counts as P1. Canonical standalone previews are **page1.html through page37.html**; `cover.html` is a cover alias. Planning 25B is active as **Building the FM Receiver in SynQ**, P26 (`fm_model`, seven states). Planning 25C is active as **FM Receiver: Simulation and Implementation**, P27 (`fm_validation`, three states). FIFO remains backup. Planning 16a remains the eight-state visual page **Specifying Component Behaviour**, P17 (`contracts`); its earlier code/memory version is archived. Normalisation is active as P29 (`normalisation`, six states), after the three-state P28 overview and before balancing at P30. Product elimination is P34 (`product_elimination`, eight states), after mapping results P33 and before conclusion P35. FIR application P31 leads directly to mapping experiment P32.
 
-## Jump navigation
 
-Choose **Jump to…** in the bottom toolbar, or press **G** (also in full screen). Enter a slide number such as `26` to open its last state, or an explicit state such as `26.1` (first) or `26.7`; a leading `#` is optional. On a multi-state slide the dialog pre-fills the current explicit state, so submitting it unchanged keeps that state. **Enter/Go** submits; **Escape/Cancel** dismisses and restores focus. Invalid slide or state numbers show an inline error without changing the current view. Jumps settle directly, interrupting any active transition without replaying page entrances. Existing Next/Previous, notes and full-screen controls remain available.
-
-Standalone previews use the same displayed slide numbers. A destination on the current slide stays in that preview and preserves its existing step-only hash; another valid slide opens `index.html` at the requested destination. The dialog explains this behavior. The shared builder supplies a small slide/state catalog without embedding other slides in each preview. The toolbar hint hides on narrower windows so all controls and status fit at 1000 px.
-
-## Current page/source mapping
-
-| Displayed page | Stable manifest / scene IDs | States |
-| --- | --- | ---: |
-| 1 | cover | 1 |
-| 2 | page1 | 9 |
-| 3 | page2 | 9 |
-| 4 | page4 | 6 |
-| 5 | page5 | 8 |
-| 6 | page6 | 8 |
-| 7 | page7 | 5 |
-| 8 | page8 | 7 |
-| 9 | page9 | 3 |
-| 10 | page10 | 6 |
-| 11 | page11 | 8 |
-| 12 | merged12 (page12, page13) | 12 |
-| 13 | merged13 (page14, page15, page16) | 3 |
-| 14 | page17 | 5 |
-| 15 | page18 | 4 |
-| 16 | page19 | 4 |
-| 17 | contracts | 8 |
-| 18 | language_boundary | 5 |
-| 19 | page20 | 6 |
-| 20 | rv32i_process | 5 |
-| 21 | page21 | 12 |
-| 22 | page22 | 10 |
-| 23 | page23 | 8 |
-| 24 | page24 | 4 |
-| 25 | page25 | 1 |
-| 26 | fm_model | 7 |
-| 27 | fm_validation | 3 |
-| 28 | aeic25 | 3 |
-| 29 | normalisation | 6 |
-| 30 | aeic26_27 | 14 |
-| 31 | aeic28 | 2 |
-| 32 | aeic29 | 8 |
-| 33 | aeic30 | 1 |
-| 34 | product_elimination | 8 |
-| 35 | aeic31 | 3 |
-| 36 | aeic32 | 1 |
-
-## Authoring and animation
+### Authoring and animation
 
 Edit `slides.json`, source fragments/controllers in `slides/`, and shared styles/navigation; rebuild through `build.py`. Never hand-edit generated preview contents. Source IDs are stable technical identifiers, independent of displayed numbering. The builder resolves displayed footers from manifest order and retires leftover preview numbers when the manifest shrinks.
 
@@ -131,11 +139,11 @@ P28 `aeic25` now has three states/two clicks, cumulatively introducing abstract 
 
 P30 `aeic26_27` retains 14 states and its reversible 500 ms code-object move, with animation unchanged. Its final statement reports the Idris2 proof assuming associativity, and its notes distinguish general behaviour preservation under associativity from normalisation's per-model obligations. P31 `aeic28` reveals the transformed FIR expression in one click. P32 `aeic29` retains eight mapping-experiment states. P33 `aeic30` retains all three complete result plots. P34 `product_elimination` has eight states/seven clicks. Exact network blocks/ports/outlined labels/wires from the user’s `figures/svg/prod-elim-draft.svg` show bottom-up generation of the first addition, product-submodel tuple and then full projected-model IR with unusedx1. The alternative lower dead-code-elimination route first highlights unusedx1 coral at state5, keeping both original assignments visible; state4 has no coral. One continuous500ms reveal follows the upper product-elimination arrow, simplified network and downward code-generation arrow, retaining fixed code2. Complete Fig.5.8 and the32px method sentence/O2 below it appear together at state7 and remain fixed at state8, which replaces only the left example with the exact existing timing table/conditions. Native network centres align at(350,340)/(850,340), with centred arrows and equal160px codeboxes atx270/770,y558 with visible tuple overflow. Longer vertical arrows show four left dash segments. Both code blocks keep `state: !()` and code28px. States2–3 describe highlighted submodels; state4 first shows complete-model IR. O2 appears only at states7–8 beside the persistent method sentence below the right figure. The complete figure remains fixed x1065/y235/w400/h448.648649, preserving upper/lower artwork and High–Low legend, without caption. The source SVG is unchanged; build.py embeds extracted native objects offline. Direct/back/restart/reduced/cancel, ordered state6 route, standalone and P33/P35 boundaries are verified in `tmp/defense/product-elimination-eight-state/`. [page31a.md](../slides-detail/page31a.md) specifies all8 states; backupB16 retains the full source table. P35 `aeic31` has three conclusion/future-work states; P36 `aeic32` is static closing. Closing positions remain provisional. The order is FIR application P31 → mapping experiment P32 → mapping results P33 → product elimination P34 → conclusion P35. Adjacent notes now introduce the mapping results first, then distinguish IR-generation time as another design-process cost, and finish with the conclusion transition. No visible content or animation changes accompany the reorder.
 
-## P18 language boundary
+### P18 language boundary
 
 `language_boundary` follows `contracts` and precedes `page20`. Five states/four clicks introduce memory context, operation signatures/FFI, the required Idris2 property, C/ACSL translation, and justification of the interface assumption. The new memRead signature uses P14 output–state ordinary-pair presentation notation; notes distinguish it from the exact thesis representation. Original readElim, ACSL and C signature text remain exact 26 px excerpts. The SAME C signature/Operation-label group moves 230 px down over 400 ms before the 225 ms ACSL reveal, with reverse/direct/reduced/cancel support. Final statuses and persistent leftward “Justify the interface assumption” arrow remain alongside the forward translation arrow and static equality highlights. No pulses or automatic proof import. P18 numbering is unchanged in the 36-page deck.
 
-## P19 detector and P20 RV32-I summary
+### P19 detector and P20 RV32-I summary
 
 P19 `page20` retains six states and the 500 ms construction-to-compositions Morph. The 31 October refinement changes only final-state wrapper geometry: diagrams 20% larger, rows y500/630, label tops 520/650, with original code and construction states 1–5 unchanged. Removed limitation/SynQ callouts 463/466 and their groups are absent from active source data, with no empty clicks. Next from P19.6 enters P20.1; backward entry restores P19.6. Old #19.7/#19.8 links clamp to state 6.
 
@@ -143,7 +151,7 @@ P20 `rv32i_process` is the new five-state design in `../slides-detail/page16c.md
 
 Source and highlight provenance: `assets/rv32i_process/fig3-10-highlight-map.json`. Fine figure labels are supporting detail; point to named paths orally. Notes scope selected proofs, test evidence, manual mappings and pipeline behaviour changes, without claiming automatic compilation, universal processor verification or equivalence of all arrows.
 
-## P26 FM modelling
+### P26 FM modelling
 
 `fm_model` implements [25B](../slides-detail/page25b.md) as **seven held states/six clicks**, in the current 36-page deck. Hierarchy/DDC/CIC views map to child states [0,1,2,2,3,3,3]. State 3 expands CIC while retaining only the composition bullet; state 4 adds resource tracking over an identical held overview; state 5 shows configurable truncation and four integrators. In state 6 the first two headings remain context, while configurable truncation becomes the parent of indented type-configuration/inference subpoints. State 7 adds the second subpoint and aligned factual conclusion.
 
@@ -153,13 +161,13 @@ Earlier six-state/centred/left-right/compact evidence remains historical in `../
 
 Initial seven-state checks passed without errors: reveal thresholds/no leaked text, identical state 3/state 4 diagram with no child go, same CIC DOM node/size, signature after movement, exact reverse focus and resolving cancelled/direct-switched tween Promises. Current layout polish is recorded in `../tmp/defense/fm-model-seven-polish/`: states 6/7 and focus midpoint approved; 26 px exact source tokens, code/enclosure alignment within 0.005 px, 39.41 px painted figure-to-code gap, 25.5 px signature-to-body gap, actual Next/Back exact restoration, reduced motion and smaller state-7 fit passed without browser errors. All seven states share the ordinary introduction paragraph with normal left-aligned natural wrapping. Earlier 28 px/six-line evidence remains historical.
 
-## P27 FM simulation and implementation
+### P27 FM simulation and implementation
 
 `fm_validation` implements [25C](../slides-detail/page25c.md) as **three held states/two clicks**, after P26 and before P28 design transformations. The two-row layout opens with the introduction alone. Click 1 reveals the Software implementation bullet and full Fig. 4.3 response in the fixed lower-left slot. Click 2 retains both and adds the Generated Verilog HDL bullet and complete original Fig. 4.4 spectrum in the fixed lower-right slot. Both complete plots remain visible in the final state. The top row contains only the introduction and two bullets. The former route diagram and on-slide rate/sampling paragraphs are removed. Final speaker notes retain the 122.88 MHz input / 960 kHz demodulated baseband result, one output per 128 inputs with deterministic latency. Source provenance remains in notes. No new experiment or full receiver-correctness proof is implied.
 
 The introduction is one line at x91/y175/w1419. Both bullets use 32 px Figtree/1.28 at x128/w1382, y240 and y300, with triangular markers at x91 and only short prefixes bold. Plot slots are x91 and x850, y350/w690/h470 (centres x436/x1195), ending y820 above the footer. Full source plots are contained proportionally; intrinsic titles, axes, inset and legend remain. No captions are added. The first plot never rescales or moves when the second appears. Each click reveals its bullet/plot pair together over 225 ms. No extra state, automatic advance or cross-page Morph. Direct/back/restart/reduced-motion/cancellation settle deterministically. Current full/small endpoints and Edge navigation/asset checks are in `../tmp/defense/fm-validation-two-row/`; older `fm-validation-review` screenshots are historical.
 
-## Inactive insertions
+### Inactive insertions
 
 - Chapter 3: `rv32i_contracts` and the former `rv32i_process` layout; the withdrawn 16b plan/prompt is archived in `../slides-detail/archive-16b-rv32i-2026-10-30/`; the old 16c plan/prompt is in `../slides-detail/archive-before-16c-replan-2026-10-30/`. Current `page16c.md` implements active P20. The current `page16b.md` instead specifies active `language_boundary` (P18). The old `contracts` implementation is archived under `../tmp/defense/p16a-visual-redesign/before`; old 16a documents are in `../slides-detail/archive-16a-before-visual-redesign-2026-10-30`. The current 16a specifications authorise the newly active visual redesign at P17.
 - Section 4.4: `fifo_evidence` remains backup. Historical `fm_model` and `fm_validation` layouts were replaced by active P26 (seven states) and P27 (three states); current `../slides-detail/page25b.md`, `page25c.md` and their prompts describe the implementations.

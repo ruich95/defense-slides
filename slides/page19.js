@@ -4,7 +4,7 @@ window.slideFactories.page19=()=>{
  function color(a,b,t){if(a==='none'||b==='none')return t<.5?a:b;const rgb=c=>{if(c[0]==='#'){if(c.length===4)c='#'+[...c.slice(1)].map(v=>v+v).join('');return [1,3,5].map(i=>parseInt(c.slice(i,i+2),16))}return c.match(/[\d.]+/g).slice(0,3).map(Number)};const x=rgb(a),y=rgb(b);return 'rgb('+x.map((v,i)=>Math.round(mix(v,y[i],t))).join(',')+')'}
  const sceneNodes=Object.fromEntries(Object.entries(data.scenes).map(([name,scene])=>[name,new Map(scene.shapes.map(s=>[s.id,root.querySelector('#p19-'+name+'-'+s.id)]))]));
  const names=['The structural subset','Forward delays within the subset','The get/set construction','Feedback loops with multiple delays'];
- const states=names.map((name,i)=>({name,note:data.notes[i]+(i===3?'\n\nO1 callback at P16.4: these constructions make partial progress on stateful composition within the supported synchronous-network subset.':'')+'\n\nSemantic reference: thesis section3.3.3, Figure3.9 and Listing3.2, pp75–77. Source: AEiC slides15–16. Source-state mapping: assets/page19/effect-map.json.'}));
+ const states=names.map((name,i)=>({name,note:data.notes[i]+(i===3?'\n\nO1 callback at P17.4: these constructions make partial progress on stateful composition within the supported synchronous-network subset.':'')+'\n\nSemantic reference: thesis section3.3.3, Figure3.9 and Listing3.2, pp75–77. Source: AEiC slides15–16. Source-state mapping: assets/page19/effect-map.json.'}));
  let step=0,busy=false,generation=0,raf=0,resolveMotion=null;
  const diagnostics={exact:0,resampled:0};
  function sample(uri,bounds){

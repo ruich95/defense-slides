@@ -41,19 +41,27 @@
   },
   {
     "id": "page6",
-    "title": "Type Theory as a Programming Language",
+    "title": "Dependent Types Beyond Interactive Theorem Proving",
     "source": "slides/page6.html",
     "controller": "slides/page6.js",
     "steps": 8,
     "displayNumber": 6
   },
   {
+    "id": "candidate_foundation",
+    "title": "A Candidate Language Foundation",
+    "source": "slides/candidate_foundation.html",
+    "controller": "slides/candidate_foundation.js",
+    "steps": 4,
+    "displayNumber": 7
+  },
+  {
     "id": "page7",
     "title": "Research Question and Objectives",
     "source": "slides/page7.html",
     "controller": "slides/page7.js",
-    "steps": 5,
-    "displayNumber": 7
+    "steps": 4,
+    "displayNumber": 8
   },
   {
     "id": "page8",
@@ -61,7 +69,7 @@
     "source": "slides/page8.html",
     "controller": "slides/page8.js",
     "steps": 7,
-    "displayNumber": 8
+    "displayNumber": 9
   },
   {
     "id": "page9",
@@ -69,7 +77,7 @@
     "source": "slides/page9.html",
     "controller": "slides/page9.js",
     "steps": 3,
-    "displayNumber": 9
+    "displayNumber": 10
   },
   {
     "id": "page10",
@@ -77,7 +85,7 @@
     "source": "slides/page10.html",
     "controller": "slides/page10.js",
     "steps": 6,
-    "displayNumber": 10
+    "displayNumber": 11
   },
   {
     "id": "page11",
@@ -85,7 +93,7 @@
     "source": "slides/page11.html",
     "controller": "slides/page11.js",
     "steps": 8,
-    "displayNumber": 11
+    "displayNumber": 12
   },
   {
     "id": "merged12",
@@ -109,7 +117,7 @@
         "steps": 4
       }
     ],
-    "displayNumber": 12
+    "displayNumber": 13
   },
   {
     "id": "merged13",
@@ -140,7 +148,7 @@
         "steps": 1
       }
     ],
-    "displayNumber": 13
+    "displayNumber": 14
   },
   {
     "id": "page17",
@@ -148,7 +156,7 @@
     "source": "slides/page17.html",
     "controller": "slides/page17.js",
     "steps": 5,
-    "displayNumber": 14
+    "displayNumber": 15
   },
   {
     "id": "page18",
@@ -156,7 +164,7 @@
     "source": "slides/page18.html",
     "controller": "slides/page18.js",
     "steps": 4,
-    "displayNumber": 15
+    "displayNumber": 16
   },
   {
     "id": "page19",
@@ -164,7 +172,7 @@
     "source": "slides/page19.html",
     "controller": "slides/page19.js",
     "steps": 4,
-    "displayNumber": 16
+    "displayNumber": 17
   },
   {
     "id": "contracts",
@@ -172,7 +180,7 @@
     "source": "slides/contracts.html",
     "controller": "slides/contracts.js",
     "steps": 8,
-    "displayNumber": 17
+    "displayNumber": 18
   },
   {
     "id": "language_boundary",
@@ -180,7 +188,7 @@
     "source": "slides/language_boundary.html",
     "controller": "slides/language_boundary.js",
     "steps": 5,
-    "displayNumber": 18
+    "displayNumber": 19
   },
   {
     "id": "page20",
@@ -188,7 +196,7 @@
     "source": "slides/page20.html",
     "controller": "slides/page20.js",
     "steps": 6,
-    "displayNumber": 19
+    "displayNumber": 20
   },
   {
     "id": "rv32i_process",
@@ -196,7 +204,7 @@
     "source": "slides/rv32i_process.html",
     "controller": "slides/rv32i_process.js",
     "steps": 5,
-    "displayNumber": 20
+    "displayNumber": 21
   },
   {
     "id": "page21",
@@ -204,7 +212,7 @@
     "source": "slides/page21.html",
     "controller": "slides/page21.js",
     "steps": 12,
-    "displayNumber": 21
+    "displayNumber": 22
   },
   {
     "id": "page22",
@@ -212,7 +220,7 @@
     "source": "slides/page22.html",
     "controller": "slides/page22.js",
     "steps": 10,
-    "displayNumber": 22
+    "displayNumber": 23
   },
   {
     "id": "page23",
@@ -220,7 +228,7 @@
     "source": "slides/page23.html",
     "controller": "slides/page23.js",
     "steps": 8,
-    "displayNumber": 23
+    "displayNumber": 24
   },
   {
     "id": "page24",
@@ -228,7 +236,7 @@
     "source": "slides/page24.html",
     "controller": "slides/page24.js",
     "steps": 4,
-    "displayNumber": 24
+    "displayNumber": 25
   },
   {
     "id": "page25",
@@ -236,7 +244,7 @@
     "source": "slides/page25.html",
     "controller": "slides/page25.js",
     "steps": 1,
-    "displayNumber": 25
+    "displayNumber": 26
   },
   {
     "id": "fm_model",
@@ -244,7 +252,7 @@
     "source": "slides/fm_model.html",
     "controller": "slides/fm_model.js",
     "steps": 7,
-    "displayNumber": 26
+    "displayNumber": 27
   },
   {
     "id": "fm_validation",
@@ -252,7 +260,7 @@
     "source": "slides/fm_validation.html",
     "controller": "slides/fm_validation.js",
     "steps": 3,
-    "displayNumber": 27
+    "displayNumber": 28
   },
   {
     "id": "aeic25",
@@ -260,7 +268,7 @@
     "source": "slides/aeic25.html",
     "controller": "slides/aeic25.js",
     "steps": 3,
-    "displayNumber": 28
+    "displayNumber": 29
   },
   {
     "id": "normalisation",
@@ -268,7 +276,7 @@
     "source": "slides/normalisation.html",
     "controller": "slides/normalisation.js",
     "steps": 6,
-    "displayNumber": 29
+    "displayNumber": 30
   },
   {
     "id": "aeic26_27",
@@ -276,7 +284,7 @@
     "source": "slides/aeic26_27.html",
     "controller": "slides/aeic26_27.js",
     "steps": 14,
-    "displayNumber": 30
+    "displayNumber": 31
   },
   {
     "id": "aeic28",
@@ -284,7 +292,7 @@
     "source": "slides/aeic28.html",
     "controller": "slides/aeic28.js",
     "steps": 2,
-    "displayNumber": 31
+    "displayNumber": 32
   },
   {
     "id": "aeic29",
@@ -292,7 +300,7 @@
     "source": "slides/aeic29.html",
     "controller": "slides/aeic29.js",
     "steps": 8,
-    "displayNumber": 32
+    "displayNumber": 33
   },
   {
     "id": "aeic30",
@@ -300,7 +308,7 @@
     "source": "slides/aeic30.html",
     "controller": "slides/aeic30.js",
     "steps": 1,
-    "displayNumber": 33
+    "displayNumber": 34
   },
   {
     "id": "product_elimination",
@@ -308,7 +316,7 @@
     "source": "slides/product_elimination.html",
     "controller": "slides/product_elimination.js",
     "steps": 8,
-    "displayNumber": 34
+    "displayNumber": 35
   },
   {
     "id": "aeic31",
@@ -316,7 +324,7 @@
     "source": "slides/aeic31.html",
     "controller": "slides/aeic31.js",
     "steps": 3,
-    "displayNumber": 35
+    "displayNumber": 36
   },
   {
     "id": "aeic32",
@@ -324,6 +332,6 @@
     "source": "slides/aeic32.html",
     "controller": "slides/aeic32.js",
     "steps": 1,
-    "displayNumber": 36
+    "displayNumber": 37
   }
 ]

@@ -1,6 +1,6 @@
 window.slideFactories.page14=()=>{
  const data=@@PAGE14_DATA@@,root=document.getElementById('page14'),body=root.querySelector('.page14-body'),nodes=new Map(data.shapes.map(s=>[s.id,root.querySelector('#p14-shape-'+s.id)]));
- const states=[{name:'Three forms of synchronous composition',note:data.notes[0]+'\n\nSource: AEiC-26.pptx slide 9. Entry scene of displayed P13; two internal object Morph clicks follow. Native correspondence and limitations: assets/page14/morph-map.json.'}];
+ const states=[{name:'Three forms of synchronous composition',note:data.notes[0]+'\n\nSource: AEiC-26.pptx slide 9. Entry scene of displayed P14; two internal object Morph clicks follow. Native correspondence and limitations: assets/page14/morph-map.json.'}];
  const mixColor=(a,b,t)=>{const rgb=c=>{c=c||'#000000';if(c[0]==='#'){if(c.length===4)c='#'+[...c.slice(1)].map(v=>v+v).join('');return [1,3,5].map(i=>parseInt(c.slice(i,i+2),16))}return c.match(/[\d.]+/g).slice(0,3).map(Number)};const x=rgb(a),y=rgb(b);return 'rgb('+x.map((v,i)=>Math.round(v+(y[i]-v)*t)).join(',')+')'};
  let step=0,busy=false,generation=0,raf=0,resolveMotion=null;
  const overlay=document.createElement('div');overlay.className='page14-morph';overlay.hidden=true;root.append(overlay);

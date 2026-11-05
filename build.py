@@ -255,6 +255,53 @@ def prefix_svg(root, prefix, root_id):
     return root
 
 
+def candidate_foundation_fir():
+    """Reuse the native P5 FIR circuit, omitting only its outer panel."""
+    source = E.parse(ROOT / 'figures/svg/page5-draft.svg').getroot()
+    art = E.Element(SVG + 'svg', {'viewBox': '1128.699585 335.672546 480 211.859558',
+        'width': '480', 'height': '211.859558', 'id': 'candidate-native-fir',
+        'role': 'img', 'aria-label': 'Original four-tap FIR model with multipliers, adders and sample delays',
+        'fill': 'none', 'stroke': '#000'})
+    E.SubElement(art, SVG + 'title').text = 'Four-tap FIR component model'
+    art.append(copy.deepcopy(source.find(SVG + 'defs')))
+    group = copy.deepcopy(next(n for n in source if n.get('id') == 'g11'))
+    panel = next(n for n in group if n.get('id') == 'rect6-1')
+    assert panel.tag == SVG + 'rect'
+    group.remove(panel)
+    circuit = next(n for n in group.iter() if n.get('id') == 'g6')
+    circles = list(circuit.iter(SVG + 'circle'))
+    components = [n for n in circles if float(n.get('r')) > 5]
+    junctions = [n for n in circles if float(n.get('r')) < 5]
+    wires = [n for n in circuit.iter(SVG + 'path') if 'marker-' in n.get('style', '')]
+    adder_inputs = [('path27-2-7-7', 'path27-2-8-2'),
+                    ('path25-5-1-1', 'path27-2-72'),
+                    ('path25-5-1-16', 'path27-2-85-2')]
+    assert (len(components), len(junctions), len(wires)) == (10, 3, 18)
+    for node in components:
+        node.set('data-candidate-component', '')
+    for node in junctions:
+        node.set('data-candidate-junction', '')
+    for node in wires:
+        node.set('data-candidate-wire', '')
+    for adder, inputs in enumerate(adder_inputs, 1):
+        for ident in inputs:
+            node = next(n for n in wires if n.get('id') == ident)
+            node.set('data-candidate-addition-input', str(adder))
+    # The reduction cue includes every adder and its output, including the final arrow.
+    adder_symbols = ('path13-36-9-2-3', 'path13-36-9-4-8', 'path13-36-9-43')
+    adder_outputs = ('path25-5-1-1', 'path25-5-1-16', 'path30-9-4')
+    for adder, (symbol, output) in enumerate(zip(adder_symbols, adder_outputs), 1):
+        next(n for n in components if n.get('id') == symbol).set('data-candidate-adder', str(adder))
+        next(n for n in wires if n.get('id') == output).set('data-candidate-addition-output', str(adder))
+    art.append(group)
+    prefix_svg(art, 'candidate-fir-', 'candidate-native-fir')
+    payload = E.tostring(art, encoding='unicode')
+    target = HERE / 'assets/candidate_foundation/fir-model.svg'
+    target.parent.mkdir(exist_ok=True)
+    target.write_text(payload, encoding='utf8')
+    return payload
+
+
 def page5_start_pyramid():
     pyramid = E.fromstring(pyramid_art())
     omitted = {'pyramid-' + name for name in ['g2', 'g3', 'g1', 'g5', 'g6', 'g7', 'path2']}
@@ -633,6 +680,7 @@ def main():
         '@@PAGE8_START_PYRAMID@@': page8_start_pyramid(),
         '@@PAGE8_FRAMEWORK@@': page8_framework_art(),
         '@@PAGE6_PAPERS@@': page6_paper_art(),
+        '@@CANDIDATE_FOUNDATION_FIR@@': candidate_foundation_fir(),
         '@@PAGE9_SIGNALS@@': (HERE / 'assets/page9/signals.svg').read_text(encoding='utf-8-sig'),
         '@@ANIMATION@@': receiver_art(),
         '@@ES_CAR@@': data(HERE / 'assets/embedded-systems/braking-system.png', 'image/png'),
@@ -699,6 +747,8 @@ def main():
         if not entry.get('scenes'):
             continue
         slides[entry['id']] = (HERE / entry['source']).read_text(encoding='utf8').replace('@@MERGED_SCENES@@', '\n'.join(slides[scene['id']] for scene in entry['scenes']))
+        position = entries.index(entry) + 1
+        slides[entry['id']] = re.sub(r'aria-label="Slide \d+:', f'aria-label="Slide {position}:', slides[entry['id']])
         controllers[entry['id']] = '\n'.join(controllers[scene['id']] for scene in entry['scenes']) + '\n' + (HERE / entry['controller']).read_text(encoding='utf8')
     styles = (HERE / 'shared/styles.css').read_text(encoding='utf8')
     styles = styles.replace('../assets/Figtree.ttf', data(HERE / 'assets/Figtree.ttf', 'font/ttf'))

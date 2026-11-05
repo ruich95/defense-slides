@@ -792,3 +792,24 @@ body.full #viewport{inset:0}body.full .controlbar{display:none}#stage{cursor:poi
 
 #aeic26_27 .objective-tag{font-size:26px;line-height:31px;font-weight:700}
 #aeic26_27 .objective-tag[data-objective="O2"]{color:#0029ED}
+
+/* Candidate foundation: semantic list and native FIR circuit. */
+#candidate_foundation .candidate-text{position:absolute;left:91px;top:172px;width:775px;font-size:32px;line-height:1.28}
+#candidate_foundation .candidate-text .candidate-opening{position:static;margin:0;width:auto;font-size:inherit;line-height:inherit}
+#candidate_foundation .candidate-list{margin:24px 0 0;padding-left:37px;list-style-type:disclosure-closed}
+#candidate_foundation .candidate-list li{padding-left:4px;margin:0 0 15px}
+#candidate_foundation .candidate-list li:last-child{margin-bottom:0}
+#candidate_foundation .candidate-list li::marker{font-size:25px}
+#candidate_foundation .candidate-closing{margin:34px 0 0;font-weight:700}
+#candidate_foundation .candidate-figure{position:absolute;left:900px;top:351px;width:615px;height:285px}
+#candidate_foundation .candidate-figure svg{display:block;width:100%;height:100%}
+#candidate_foundation [data-candidate-reveal]{opacity:0;visibility:hidden}
+
+/* Figure emphasis follows the current candidate-foundation hold. */
+#candidate_foundation[data-figure-hold="0"] [data-candidate-component],#candidate_foundation[data-figure-hold="2"] [data-candidate-adder]{stroke:#0029ED!important;stroke-width:2.9!important}
+#candidate_foundation[data-figure-hold="1"] [data-candidate-wire],#candidate_foundation[data-figure-hold="2"] [data-candidate-addition-input],#candidate_foundation[data-figure-hold="2"] [data-candidate-addition-output]{stroke:#0029ED!important;stroke-width:2.1!important}
+#candidate_foundation[data-figure-hold="1"] [data-candidate-junction]{fill:#0029ED!important;stroke:#0029ED!important}
+
+/* Design terms and their functional-programming interpretations. */
+#candidate_foundation .candidate-list li strong:first-of-type{color:#0029ED}
+#candidate_foundation .candidate-list li strong:last-of-type{color:#0D4A21}

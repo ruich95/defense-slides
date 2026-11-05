@@ -2,15 +2,39 @@ window.slideFactories.page6=()=>{
  const root=document.getElementById('page6'),items=[...root.querySelectorAll('[data-page6-reveal]')];
  const references='\n\nSource and attribution:\nRui Chen and Ingo Sander. A Quantitative Type Based Framework for Synchronous System Design. AEiC 2026, slide 3 of final/AEiC-26.pptx: original paper images, red highlights, positions, crops, overlap and dual-capability motivation. Thesis abstract and Chapter 1, printed pp. 3–4 (PDF pp. 27–28), motivate type-theory-based proof assistants accommodating programming, general-purpose languages with advanced type systems, and reasoning about both models and design steps. No additional source attribution appears in the original slide notes. Paper titles and author information remain visible in the supplied images.\n\nPaper excerpts:\nA Brief Overview of Agda — A Functional Language with Dependent Types.\nIdris, a general-purpose dependently typed programming language: Design and implementation.\nThe Lean 4 Theorem Prover and Programming Language.\nIdris 2: Quantitative Type Theory in Practice.\n\nPresenter guidance:\nDistinguish the underlying language from its proof-assistant environment. These examples do not imply that every listed language originated as a theorem prover; Idris explicitly targets programming. Embedding a model or operation does not automatically prove its properties: definitions and proofs must still be supplied. Do not equate usage quantities directly with execution time or hardware-resource budgets.';
  const states=[
-  {name:'New opportunities for system design',note:'Advances in type-theory-based programming languages open new opportunities for system design. This follows page 5’s question about supporting executable design steps and formal reasoning together. It introduces an opportunity for a common foundation, rather than claiming that the integration problem has already been solved. The claim concerns the range of languages illustrated on the right, not QTT alone.'},
-  {name:'Agda',note:'Agda, for example, is presented as a functional language with dependent types. Type-theory-based proof-assistant environments increasingly support programming as well as specification and proofs.'},
-  {name:'Idris',note:'Idris explicitly targets general-purpose programming with advanced dependent types. Distinguish this programming-language motivation from the development of programming facilities in proof-assistant environments.'},
-  {name:'Lean 4',note:'Lean 4 describes itself as both a theorem prover and a programming language. This is another example of computation and reasoning supported within a language environment.'},
-  {name:'Idris2 among the language examples',note:'The final paper concerns Idris2 and Quantitative Type Theory in practice. Together these papers illustrate advances that connect programming and formal reasoning. Their type theories and capabilities differ; the Agda, Idris and Lean examples do not all use QTT. Point to the highlighted title without explaining the abstract line by line. The specific choice of QTT and Idris2 for SynQ is introduced on page 8.'},
-  {name:'Programming: models and design-step functions',note:'Programming: executable models and design steps expressed as functions. Models and the steps operating on them can both be language objects. The computational aspect then lets us execute models and apply those design-step functions, supporting practical design work and reuse.'},
-  {name:'Formal system: semantics and accountability',note:'Formal system: formal semantics of models and formally accountable design steps. The formal aspect provides a basis for defining model semantics and specifying and reasoning about properties of both models and the functions that operate on them. Formal accountability requires the relevant semantic definitions, assumptions and proofs; embedding an object in a language does not establish its properties automatically. The examples do not assert identical capabilities for every language.'},
-  {name:'A common foundation for models and design steps',note:'A common foundation for modelling, executing design steps, and reasoning about both. The opportunity is to represent models and design steps within a common language so that both can be executed and reasoned about. This is the general motivation illustrated by the papers, not yet a QTT-specific conclusion or a claim of automatic proofs. Page 8 introduces the specific QTT/Idris2 choice through SynQ.\n\nTransition to page 7:\nThe next question is how to realise a practical component-based design framework that exploits both the computational and logical aspects of its language. Page 7 states the research question and objectives.'}
- ].map(state=>({...state,note:state.note+references}));
+  {
+    "name": "Dependent types for programming and proof",
+    "note": "Languages with dependent types support general-purpose programming alongside interactive theorem proving. The FIR example raises both kinds of activity: executing a design step and establishing what it preserves. This is an opportunity for a common language foundation, rather than a claim that every integration or correctness problem has already been solved."
+  },
+  {
+    "name": "Agda",
+    "note": "Agda is described as a functional language with dependent types. It illustrates programming development within type-theory-based proof environments. Distinguish that environment and its emphasis on proof from the programming capabilities of the underlying language."
+  },
+  {
+    "name": "Idris",
+    "note": "Idris explicitly targets general-purpose programming with dependent types. That goal differs from adding programming facilities to an interactive proof environment. Point to the title, which makes the general-purpose programming goal explicit."
+  },
+  {
+    "name": "Lean 4",
+    "note": "Lean 4 describes itself as both a theorem prover and a programming language. Computation and interactive reasoning can share a language environment, although the languages shown here have different type theories and capabilities."
+  },
+  {
+    "name": "Idris2",
+    "note": "Idris2 continues the general-purpose programming goal and develops Quantitative Type Theory in practice. These papers are examples of the broader programming-and-proof opportunity; they do not all use QTT. The research question will name Idris2 as the specific host investigated in this thesis."
+  },
+  {
+    "name": "Executable models and reusable design steps",
+    "note": "Programming lets us define executable models and reusable design steps. Models are terms whose interpretation we can execute. Design steps can be reusable functions that take models to models. This lets the host language support practical operations on both the models and the design process."
+  },
+  {
+    "name": "Properties and checked proofs",
+    "note": "Formal reasoning lets us state properties of models and design steps. Dependent types provide a way to express those properties, and a proof supplies evidence for a stated property. The type checker checks that proof against its type. We still supply the semantic definitions and assumptions; simply stating a property does not establish it."
+  },
+  {
+    "name": "Define, apply and verify in one language",
+    "note": "One language lets us define executable models, apply design steps and verify properties of both. The models and the functions operating on them share the same general-purpose host. Verification relies on the relevant semantic definitions, assumptions and proofs. How can a component-based framework fit such a functional language? Let us return to the FIR model."
+  }
+].map(state=>({...state,note:state.note+references}));
  let step=0,busy=false,generation=0,raf=0,resolveMotion=null;
  const clamp=x=>Math.max(0,Math.min(1,x)),ease=x=>x*x*(3-2*x);
  function render(from,to,t){for(const item of items){const at=+item.dataset.page6Reveal,value=(from>=at?1:0)*(1-t)+(to>=at?1:0)*t;item.style.opacity=value;item.style.visibility=value>0?'visible':'hidden';item.setAttribute('aria-hidden',String(value===0))}}

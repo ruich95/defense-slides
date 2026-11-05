@@ -1,7 +1,7 @@
 window.slideFactories.page17=()=>{
  const data=@@PAGE17_DATA@@,root=document.getElementById('page17'),body=root.querySelector('.page17-body'),ns='http://www.w3.org/2000/svg',nodes=new Map(data.shapes.map(s=>[s.id,root.querySelector('#p17-shape-'+s.id)]));
  const names=['Behaviour, single step and type','First argument: g','Second argument: f','Composite result','Clean comparison'];
- const states=names.map((name,i)=>({name,note:data.notes[i]+'\n\nSource: AEiC-26.pptx slide 12. Entrance 750 ms from P16; four original highlight clicks. Mapping: assets/page17/morph-map.json.'}));
+ const states=names.map((name,i)=>({name,note:data.notes[i]+'\n\nSource: AEiC-26.pptx slide 12. Entrance 750 ms from the preceding composition overview; four original highlight clicks. Mapping: assets/page17/morph-map.json.'}));
  let step=0;
  let generation=0,busy=false,raf=0,resolveMotion=null;
  const overlay=document.createElement('div');overlay.className='page17-morph';overlay.hidden=true;root.append(overlay);

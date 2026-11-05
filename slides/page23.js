@@ -1,7 +1,7 @@
 window.slideFactories.page23=()=>{
  const data=@@PAGE23_DATA@@,root=document.getElementById('page23'),nodes=new Map(data.shapes.map(s=>[s.id,root.querySelector('#p23-shape-'+s.id)]));
  const names=['A rising-pair requirement','Arbitrary initial state','Arbitrary prefix and final inputs','Evidence of the rising premise','Output prefix and evidence','The software interpretation','The complete input sequence','Output ending in one'];
- const states=names.map((name,i)=>({name,note:data.notes[i]+'\n\nSource: AEiC slide22; original image79.svg, image80.png and image81.svg. Thesis Eq1.13–1.14 and Figure1.6(a), pp26–28. The displayed type encodes one implication, not the non-rising case or generated-hardware correctness. Source mapping: assets/page23/effect-map.json. Each click replaces the previous correspondence emphasis, matching displayed P18.'}));
+ const states=names.map((name,i)=>({name,note:data.notes[i]+'\n\nSource: AEiC slide22; original image79.svg, image80.png and image81.svg. Thesis Eq1.13–1.14 and Figure1.6(a), pp26–28. The displayed type encodes one implication, not the non-rising case or generated-hardware correctness. Source mapping: assets/page23/effect-map.json. Each click replaces the previous correspondence emphasis, matching displayed P19.'}));
  let step=0;
  function render(target=step){
   const visible=new Map(data.shapes.map(s=>[s.id,s.visible]));

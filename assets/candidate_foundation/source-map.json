@@ -1,0 +1,60 @@
+{
+  "source": "figures/svg/page5-draft.svg",
+  "nativeGroup": "g11",
+  "sourceViewBox": "0 0 1920 1080",
+  "croppedViewBox": "1128.699585 335.672546 480 211.859558",
+  "padding": 15,
+  "sourceGroupNodes": 83,
+  "noExternalResources": true,
+  "adaptation": "Only native outer panel rectangle rect6-1 is removed in this P7-local copy; the complete circuit subtree is unchanged. P5 and the original source keep the panel.",
+  "removedSourceElement": "rect6-1",
+  "removedCompiledElement": "candidate-fir-rect6-1",
+  "adaptedGroupNodes": 82,
+  "circuitSubtreePreserved": true,
+  "cropAndAspectRatioUnchanged": true,
+  "directHighlights": {
+    "representation": "One inline P7 SVG, native geometry unchanged; semantic attributes assigned during extraction.",
+    "blue": "#0029ED",
+    "componentOutlines": 10,
+    "componentNativeWidth": 2.9,
+    "wires": 18,
+    "junctions": 3,
+    "wireNativeWidth": 2.1,
+    "adderInputs": [
+      [
+        "candidate-fir-path27-2-7-7",
+        "candidate-fir-path27-2-8-2"
+      ],
+      [
+        "candidate-fir-path25-5-1-1",
+        "candidate-fir-path27-2-72"
+      ],
+      [
+        "candidate-fir-path25-5-1-16",
+        "candidate-fir-path27-2-85-2"
+      ]
+    ],
+    "holds": [
+      "Component outlines only",
+      "All wires and junctions",
+      "Three adder outlines, six incoming paths and all three adder outputs (seven distinct wires)",
+      "Neutral circuit"
+    ],
+    "adderSymbols": [
+      "candidate-fir-path13-36-9-2-3",
+      "candidate-fir-path13-36-9-4-8",
+      "candidate-fir-path13-36-9-43"
+    ],
+    "adderOutputs": [
+      "candidate-fir-path25-5-1-1",
+      "candidate-fir-path25-5-1-16",
+      "candidate-fir-path30-9-4"
+    ],
+    "reductionDistinctWires": 7
+  },
+  "termColours": {
+    "design": "#0029ED",
+    "functionalProgramming": "#0D4A21",
+    "as": "black"
+  }
+}
