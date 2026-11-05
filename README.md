@@ -70,7 +70,7 @@ Open **index.html** in Edge or Chrome for the self-contained offline **36-page d
 
 ## Jump navigation
 
-Choose **Jump to…** in the bottom toolbar, or press **G** (also in full screen). Enter a slide number such as `26` to open its first state, or `26.7` to open a particular state; a leading `#` is optional. **Enter/Go** submits; **Escape/Cancel** dismisses and restores focus. Invalid slide or state numbers show an inline error without changing the current view. Jumps settle directly, interrupting any active transition without replaying page entrances. Existing Next/Previous, notes and full-screen controls remain available.
+Choose **Jump to…** in the bottom toolbar, or press **G** (also in full screen). Enter a slide number such as `26` to open its last state, or an explicit state such as `26.1` (first) or `26.7`; a leading `#` is optional. On a multi-state slide the dialog pre-fills the current explicit state, so submitting it unchanged keeps that state. **Enter/Go** submits; **Escape/Cancel** dismisses and restores focus. Invalid slide or state numbers show an inline error without changing the current view. Jumps settle directly, interrupting any active transition without replaying page entrances. Existing Next/Previous, notes and full-screen controls remain available.
 
 Standalone previews use the same displayed slide numbers. A destination on the current slide stays in that preview and preserves its existing step-only hash; another valid slide opens `index.html` at the requested destination. The dialog explains this behavior. The shared builder supplies a small slide/state catalog without embedding other slides in each preview. The toolbar hint hides on narrower windows so all controls and status fit at 1000 px.
 
