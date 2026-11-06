@@ -782,11 +782,14 @@ body.full #viewport{inset:0}body.full .controlbar{display:none}#stage{cursor:poi
 #language_boundary .lb-justification .lb-objective{position:static;padding:0 0 0 10px;background:transparent}
 #rv32i_process .rv-needs-o2::after{content:"";position:absolute;left:47px;top:-3px;width:12px;height:var(--needs-group-height);border-left:1.5px solid currentColor;border-top:1.5px solid currentColor;border-bottom:1.5px solid currentColor}
 #product_elimination .pe-results-heading{position:relative}
-#aeic31 .aeic31-conclusion li{padding-left:60px;margin-bottom:12px}
+#aeic31 .aeic31-conclusion li{padding-left:60px;margin-bottom:24px}
 #aeic31 .aeic31-conclusion li::before{content:none}
 #aeic31 .aeic31-conclusion .objective-tag{left:0;top:5px}
 #aeic31 .aeic31-not-presented{color:#626973}
-#aeic31 .aeic31-answer{margin:16px 0 0;font-size:32px;line-height:1.28}
+#aeic31 .aeic31-conclusion>ul{margin:0}
+#aeic31 .aeic31-goal{display:block}
+#aeic31 .aeic31-how{margin:0}
+#aeic31 .aeic31-answer{margin:24px 0 0;font-size:32px;line-height:1.28}
 #aeic31 .aeic31-future{top:625px}
 #aeic31 .aeic31-quotation{top:635px}
 
@@ -813,3 +816,28 @@ body.full #viewport{inset:0}body.full .controlbar{display:none}#stage{cursor:poi
 /* Design terms and their functional-programming interpretations. */
 #candidate_foundation .candidate-list li strong:first-of-type{color:#0029ED}
 #candidate_foundation .candidate-list li strong:last-of-type{color:#0D4A21}
+
+/* Future Work: the original two closing blocks, centred on their own page. */
+#future_work .future-work-text{position:absolute;left:91px;top:450px;width:680px;transform:translateY(-50%);font-size:32px;line-height:1.28}
+#future_work ul{list-style:none;margin:0;padding:0}
+#future_work li{position:relative;padding-left:37px;margin:0 0 18px;font-weight:400;color:#000}
+#future_work li:last-child{margin-bottom:0}
+#future_work li::before{content:"▸";position:absolute;left:0;top:4px;font-size:25px}
+#future_work .future-work-quotation{position:absolute;left:850px;top:450px;width:660px;transform:translateY(-50%);margin:0;padding-left:24px;border-left:3px solid #1C434C;color:#000;opacity:0;visibility:hidden}
+#future_work blockquote{margin:0;font-size:30px;line-height:1.28;font-weight:400}
+#future_work figcaption{margin-top:20px;font-size:24px;line-height:1.28;font-weight:400}
+#future_work cite{font-style:italic}
+
+/* P32: native vector correspondence and contour-fitted code emphasis. */
+#aeic28 .aeic28-diagram svg{display:block;width:100%;height:auto}
+#aeic28 .aeic28-code-focus{position:absolute;left:0;top:0;width:1600px;height:900px;pointer-events:none}
+#aeic28 [data-code-focus]{fill:#0029ED;fill-opacity:.25;opacity:0;visibility:hidden}
+#aeic28 [data-fir-annotation]{opacity:0;visibility:hidden}
+#aeic28 .fir-active-component{stroke:#0029ED!important;stroke-width:2.9!important}
+#aeic28 .fir-active-wire{stroke:#0029ED!important;stroke-width:1.6!important}
+
+#aeic28 [data-fir-guide]{stroke:#626973!important}
+
+#aeic28 [data-code-focus="balance"]{fill:#78001A}
+
+#aeic28[data-state="6"] .fir-active-wire[data-fir-wire~="weighted"]{stroke:#78001A!important}

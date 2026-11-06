@@ -498,8 +498,56 @@ def page6_paper_art():
     return E.tostring(art, encoding='unicode')
 
 
+def add_speaker_notes(entries):
+    # Rehearsal rows are authoritative; portable packages keep them beside this deck.
+    candidates = [ROOT / 'review-page-data.json',
+                  ROOT / 'defense-review-2026-11-02/review-page-data.json']
+    source = next((path for path in candidates if path.exists()), None)
+    if source is None:
+        raise FileNotFoundError('Speaker notes require review-page-data.json: ' +
+                                ' or '.join(str(path) for path in candidates))
+    pages = json.loads(source.read_text(encoding='utf8'))
+    if not isinstance(pages, list) or len(pages) != len(entries):
+        raise ValueError(f'{source}: rehearsal page count must match {len(entries)} slides')
+    for number, (entry, page) in enumerate(zip(entries, pages), 1):
+        if (entry.get('displayNumber') != number or not isinstance(page, dict) or
+                type(page.get('n')) is not int or page['n'] != number):
+            raise ValueError(f'{source}: expected displayed page {number} in order')
+        rows = page.get('rows')
+        steps = entry.get('steps', 1)
+        if not isinstance(rows, list) or len(rows) != steps:
+            raise ValueError(f'{source}: P{number} must have exactly {steps} rehearsal rows')
+        notes = []
+        for state, row in enumerate(rows, 1):
+            for field in ('speech', 'cue', 'evidence'):
+                value = row.get(field) if isinstance(row, dict) else None
+                if not isinstance(value, str) or not value.strip():
+                    raise ValueError(f'{source}: P{number}.{state} requires nonempty {field}')
+            notes.append(f"Spoken text\n{row['speech']}\n\nPointing cue\n{row['cue']}"
+                         f"\n\nSource\n{row['evidence']}")
+        entry['speakerNotes'] = notes
+
+
+def aeic28_fir_art():
+    art = E.parse(HERE / 'assets/aeic28/fir-native.svg').getroot()
+    prefix_svg(art, 'p32-fir-', 'aeic28-native-fir')
+    return E.tostring(art, encoding='unicode')
+
+
+def aeic28_code_focus():
+    data = json.loads((HERE / 'assets/aeic28/animation.json').read_text(encoding='utf8'))
+    art = E.Element(SVG + 'svg', {'id': 'aeic28-code-focus', 'class': 'aeic28-code-focus',
+        'viewBox': '0 0 1600 900', 'aria-hidden': 'true', 'focusable': 'false'})
+    for target in data['codeTargets']:
+        E.SubElement(art, SVG + 'rect', {'id': 'p32-focus-' + target['id'],
+            'data-code-focus': target['id'], 'rx': '3',
+            **{key: str(value) for key, value in target['rect'].items()}})
+    return E.tostring(art, encoding='unicode')
+
+
 def main():
     entries = json.loads((HERE / 'slides.json').read_text(encoding='utf8'))
+    add_speaker_notes(entries)
     fm_hierarchy, fm_controller, fm_stage = fm_model_assets()
     p11 = json.loads((HERE / 'assets/page11/animation.json').read_text(encoding='utf8'))
     p11_content = []
@@ -633,7 +681,8 @@ def main():
         '@@AEIC29_CONTENT@@': (HERE / 'assets/aeic29/content.html').read_text(encoding='utf8'),
         '@@AEIC29_DATA@@': (HERE / 'assets/aeic29/animation.json').read_text(encoding='utf8').replace('</', '<\\/'),
         '@@AEIC28_MODEL@@': data(HERE / 'assets/aeic28/image91.svg', 'image/svg+xml'),
-        '@@AEIC28_DIAGRAM@@': data(HERE / 'assets/aeic28/image90.png', 'image/png'),
+        '@@AEIC28_DIAGRAM@@': aeic28_fir_art(),
+        '@@AEIC28_CODE_FOCUS@@': aeic28_code_focus(),
         '@@AEIC28_SUM@@': data(HERE / 'assets/aeic28/image92.svg', 'image/svg+xml'),
         '@@AEIC28_BALANCED@@': data(HERE / 'assets/aeic28/image93.svg', 'image/svg+xml'),
         '@@AEIC28_ARROW@@': data(HERE / 'assets/aeic28/arrow21.svg', 'image/svg+xml'),

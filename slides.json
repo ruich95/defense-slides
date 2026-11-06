@@ -291,7 +291,7 @@
     "title": "Balance-Tree Transformation: FIR Filter",
     "source": "slides/aeic28.html",
     "controller": "slides/aeic28.js",
-    "steps": 2,
+    "steps": 6,
     "displayNumber": 32
   },
   {
@@ -320,11 +320,19 @@
   },
   {
     "id": "aeic31",
-    "title": "Conclusion and Future Work",
+    "title": "Conclusion",
     "source": "slides/aeic31.html",
     "controller": "slides/aeic31.js",
-    "steps": 3,
+    "steps": 1,
     "displayNumber": 36
+  },
+  {
+    "id": "future_work",
+    "title": "Future Work",
+    "source": "slides/future_work.html",
+    "controller": "slides/future_work.js",
+    "steps": 2,
+    "displayNumber": 37
   },
   {
     "id": "aeic32",
@@ -332,6 +340,6 @@
     "source": "slides/aeic32.html",
     "controller": "slides/aeic32.js",
     "steps": 1,
-    "displayNumber": 37
+    "displayNumber": 38
   }
 ]

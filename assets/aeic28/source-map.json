@@ -2,10 +2,10 @@
   "source": "final/AEiC-26.pptx",
   "sourceSlide": 28,
   "stableId": "aeic28",
-  "displayNumber": 25,
-  "states": 2,
+  "displayNumber": 32,
+  "states": 6,
   "assets": {
-    "9": "image90.png",
+    "9": "fir-native.svg",
     "16": "image91.svg",
     "18": "image92.svg",
     "20": "image93.svg",
@@ -64,7 +64,7 @@
       "x": 810,
       "y": 275,
       "w": 700,
-      "h": 301.875
+      "h": 311.1900559719556
     },
     "arrow": {
       "x": 417,
@@ -73,5 +73,23 @@
       "h": 35.833333333333336
     }
   },
-  "adaptation": "Original media unchanged and uncropped. Equal code scale across all three vectors. Arrow and transformed code appear together; original model/sum/diagram remain stationary. No balancing, sequentialisation or page-entry animation."
+  "adaptation": "Six explicit code/figure correspondence states with native-node outlines and wire traces, no background bands or tap annotation. In state 6, weighted wires are dark red #78001A with balance x; adder outlines, other sum/output wires and reduce add remain blue #0029ED. The presentation SVG omits original g104/text1/rect1 only; source drawings remain untouched. Exact code overlays, fixed viewBox, retained component colours, cumulative cur/weighted/nxt annotations and 225/450ms motion are preserved. The original chain remains; no sample-flow/scheduling simulation or new proof/run is claimed.",
+  "originalRaster": "image90.png",
+  "nativeVector": {
+    "source": "AEiC-26/drawing.svg",
+    "sourceSHA256": "cf8f98b3a4b7aacfa95ccc4dc48bbaad3a03568750b8b66cfcbcf7d92db1f37a",
+    "nativeIds": [
+      "g208"
+    ],
+    "prefix": "p32-fir-",
+    "viewBox": "433.788045 491.024362 309.216103 137.464252",
+    "guidePresentationStroke": "#626973",
+    "remainingGeometryAndComponentColoursPreserved": true,
+    "presentationOmissions": {
+      "g104": "original background bands and coloured route fills",
+      "text1": "tap label",
+      "rect1": "dashed tap bracket"
+    }
+  },
+  "codeFocus": "animation.json: native path-contour unions plus2px padding, behind unchanged code SVGs"
 }

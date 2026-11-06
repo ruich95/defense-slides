@@ -2,11 +2,15 @@
 
 ## Current sequence and navigation
 
-The defence has **37 pages and 216 held states** as of 5 November 2026. P6 introduces dependently typed programming beyond interactive theorem proving. P7 uses the FIR model to motivate a general-purpose functional host. P8 opens with the thesis question, followed by O1, O2 and O3. P9 introduces SynQ. Objective reminders later in the talk refer to P8 and the conclusion at P36.
+The defence has **38 pages and 220 held states** as of 6 November 2026. P6 introduces dependently typed programming beyond interactive theorem proving. P7 uses the FIR model to motivate a general-purpose functional host. P8 opens with the thesis question, followed by O1, O2 and O3. P9 introduces SynQ. Objective reminders later in the talk refer to P8 and the conclusion at P36.
 
-Open the [full deck](index.html), [candidate foundation](index.html#7.1) or [research question](index.html#8.1). Press G and enter a page number to go to its last state. Use an explicit state such as 27.1 or 27.7 to choose a particular hold. Standalone previews run from `page1.html` to `page37.html`. See the [introduction plan](../defense-introduction-plan.md) and the [P7 specification](../slides-detail/candidate-foundation.md).
+Open the [full deck](index.html), [candidate foundation](index.html#7.1) or [research question](index.html#8.1). Press G and enter a page number to go to its last state. Use an explicit state such as 27.1 or 27.7 to choose a particular hold. Standalone previews run from `page1.html` to `page38.html`. See the [introduction plan](../defense-introduction-plan.md) and the [P7 specification](../slides-detail/candidate-foundation.md).
 
 The opening through P8 takes 6:35 in the rehearsal plan. P9 ends at 7:45. The full budget is 43:00 plus a 2:00 reserve. Technical sources keep their stable IDs, so the question uses `page7` at displayed P8 and the roadmap uses `page8` at displayed P9.
+
+Press S to open the spoken text, pointing cue and source reference for the current state. These come from the same rehearsal rows as the review outline. Update `defense-review-2026-11-02/review-page-data.json` beside the live deck and rebuild to refresh the full presentation and every standalone page. In an extracted review package, the builder reads `review-page-data.json` from the package root. The build checks page numbering and state counts before generating the notes.
+
+P36 is Conclusion (one 65-second state), P37 is Future Work (25/5-second states) and P38 is Thank You (20 seconds). The closing split adds a page without adding held states or time. The current deck has 220 held states and the same 43-minute budget, including the six-state P32 walkthrough. `future_work` uses `slides/future_work.html` and `slides/future_work.js`; existing stable IDs and automatic navigation remain intact.
 
 ## Current page/source mapping
 
@@ -43,12 +47,13 @@ The opening through P8 takes 6:35 in the rehearsal plan. P9 ends at 7:45. The fu
 | 29 | aeic25 | 3 |
 | 30 | normalisation | 6 |
 | 31 | aeic26_27 | 14 |
-| 32 | aeic28 | 2 |
+| 32 | aeic28 | 6 |
 | 33 | aeic29 | 8 |
 | 34 | aeic30 | 1 |
 | 35 | product_elimination | 8 |
-| 36 | aeic31 | 3 |
-| 37 | aeic32 | 1 |
+| 36 | aeic31 | 1 |
+| 37 | future_work | 2 |
+| 38 | aeic32 | 1 |
 
 ## Earlier implementation records
 

@@ -4,11 +4,11 @@
 <p class="fm-validation-opening">The same SynQ receiver model was simulated in software and deployed on an FPGA.</p>
 <div class="fm-validation-response fm-validation-scene">
  <div class="fm-validation-plot"><img src="@@FM_DDC_RESPONSE@@" alt="Complete DDC frequency response, with full-band response, passband inset and original axes"></div>
- <p class="fm-validation-explanation"><strong>Software implementation:</strong> simulation validates channel selectivity and passband flatness.</p>
+ <p class="fm-validation-explanation">Software simulation via <strong>Idris2 or LLVM IR</strong> checks channel selectivity and passband flatness.</p>
 </div>
 <div class="fm-validation-measurement fm-validation-scene">
  <div class="fm-validation-plot"><img src="@@FM_SPECTRUM@@" alt="Complete reported demodulated spectrum, including pilot 19 kHz, stereo subcarrier 38 kHz and RDS subcarrier 57 kHz legend"></div>
- <p class="fm-validation-explanation"><strong>Generated Verilog HDL:</strong> FPGA deployment produces the demodulated broadcast signal.</p>
+ <p class="fm-validation-explanation">The FPGA receiver generated from <strong>Verilog HDL</strong> demodulates the broadcast signal.</p>
 </div>
 <footer><span class="footer-event">PhD Defence - 9 November 2026 - Stockholm</span><span class="footer-name">Rui Chen</span><span class="footer-page">27</span></footer>
 </section>

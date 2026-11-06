@@ -1,0 +1,324 @@
+{
+  "states": 6,
+  "durationsSeconds": [
+    5,
+    7,
+    7,
+    7,
+    6,
+    13
+  ],
+  "transitionMs": 225,
+  "finalTransitionMs": 450,
+  "codeTargets": [
+    {
+      "id": "history-get",
+      "label": "cur <- get",
+      "source": "image91.svg",
+      "pathIds": [
+        "path15-1",
+        "path16-13",
+        "path17-2"
+      ],
+      "glyphBounds": {
+        "x": 247.39992712409796,
+        "y": 330.4971933976447,
+        "width": 146.04554206311414,
+        "height": 22.494420438199484
+      },
+      "rect": {
+        "x": 245.39992712409796,
+        "y": 328.4971933976447,
+        "width": 150.04554206311414,
+        "height": 26.494420438199484
+      },
+      "padding": 2
+    },
+    {
+      "id": "history-prod",
+      "label": "cur′ = prod xin cur",
+      "source": "image91.svg",
+      "pathIds": [
+        "path19-3",
+        "path20-5",
+        "path21-1",
+        "path22-2",
+        "path23-2"
+      ],
+      "glyphBounds": {
+        "x": 307.517155562476,
+        "y": 362.25210334022876,
+        "width": 342.51058160804644,
+        "height": 24.178140265734612
+      },
+      "rect": {
+        "x": 305.517155562476,
+        "y": 360.25210334022876,
+        "width": 346.51058160804644,
+        "height": 28.178140265734612
+      },
+      "padding": 2
+    },
+    {
+      "id": "weighted",
+      "label": "weighted = multKs coefs cur′",
+      "source": "image91.svg",
+      "pathIds": [
+        "path24-2",
+        "path25-6",
+        "path26-4",
+        "path27-0",
+        "path28-7"
+      ],
+      "glyphBounds": {
+        "x": 305.9007358293727,
+        "y": 395.88438202599025,
+        "width": 414.09553791221936,
+        "height": 24.380148827266908
+      },
+      "rect": {
+        "x": 303.9007358293727,
+        "y": 393.88438202599025,
+        "width": 418.09553791221936,
+        "height": 28.380148827266908
+      },
+      "padding": 2
+    },
+    {
+      "id": "output",
+      "label": "o = sum << weighted",
+      "source": "image91.svg",
+      "pathIds": [
+        "path29-0",
+        "path30-34",
+        "path31-0",
+        "path32-0",
+        "path33-53"
+      ],
+      "glyphBounds": {
+        "x": 307.04565906908124,
+        "y": 429.82812157842886,
+        "width": 388.778831215129,
+        "height": 24.07708186170794
+      },
+      "rect": {
+        "x": 305.04565906908124,
+        "y": 427.82812157842886,
+        "width": 392.778831215129,
+        "height": 28.07708186170794
+      },
+      "padding": 2
+    },
+    {
+      "id": "next-drop",
+      "label": "nxt = dropLast cur′",
+      "source": "image91.svg",
+      "pathIds": [
+        "path34-1",
+        "path35-0",
+        "path36-6",
+        "path37-7"
+      ],
+      "glyphBounds": {
+        "x": 305.76603872702503,
+        "y": 463.1650612764864,
+        "width": 354.111684491427,
+        "height": 24.178114231761242
+      },
+      "rect": {
+        "x": 303.76603872702503,
+        "y": 461.1650612764864,
+        "width": 358.111684491427,
+        "height": 28.178114231761242
+      },
+      "padding": 2
+    },
+    {
+      "id": "next-set",
+      "label": "_ <- set nxt",
+      "source": "image91.svg",
+      "pathIds": [
+        "path38-5",
+        "path39-0",
+        "path40-0",
+        "path41-45"
+      ],
+      "glyphBounds": {
+        "x": 246.92854829318225,
+        "y": 498.68306835131534,
+        "width": 176.57053556001938,
+        "height": 18.655538923122435
+      },
+      "rect": {
+        "x": 244.92854829318225,
+        "y": 496.68306835131534,
+        "width": 180.57053556001938,
+        "height": 22.655538923122435
+      },
+      "padding": 2
+    },
+    {
+      "id": "reduce-original",
+      "label": "reduce add",
+      "source": "image92.svg",
+      "pathIds": [
+        "path53-4",
+        "path54-84"
+      ],
+      "glyphBounds": {
+        "x": 454.40923613771383,
+        "y": 610.3890858234029,
+        "width": 148.9491004573929,
+        "height": 17.638429451000775
+      },
+      "rect": {
+        "x": 452.40923613771383,
+        "y": 608.3890858234029,
+        "width": 152.9491004573929,
+        "height": 21.638429451000775
+      },
+      "padding": 2
+    },
+    {
+      "id": "balance",
+      "label": "balance x",
+      "source": "image93.svg",
+      "pathIds": [
+        "path74-4",
+        "path75-5"
+      ],
+      "glyphBounds": {
+        "x": 754.3780757580989,
+        "y": 714.390277791244,
+        "width": 134.08464022659257,
+        "height": 17.64101663334918
+      },
+      "rect": {
+        "x": 752.3780757580989,
+        "y": 712.390277791244,
+        "width": 138.08464022659257,
+        "height": 21.64101663334918
+      },
+      "padding": 2
+    },
+    {
+      "id": "reduce-balanced",
+      "label": "reduce add",
+      "source": "image93.svg",
+      "pathIds": [
+        "path78-8",
+        "path79-3"
+      ],
+      "glyphBounds": {
+        "x": 499.5080344456941,
+        "y": 748.014347185987,
+        "width": 148.97311188122274,
+        "height": 17.64099334547882
+      },
+      "rect": {
+        "x": 497.5080344456941,
+        "y": 746.014347185987,
+        "width": 152.97311188122274,
+        "height": 21.64099334547882
+      },
+      "padding": 2
+    }
+  ],
+  "annotations": {
+    "cur": [
+      "g205"
+    ],
+    "weighted": [
+      "g204"
+    ],
+    "nxt": [
+      "g206"
+    ]
+  },
+  "components": {
+    "delay": [
+      "circle14",
+      "path13-2-2",
+      "path13-7-1"
+    ],
+    "multiplier": [
+      "path13-36-8-5-6",
+      "path13-36-8-8-5",
+      "path13-36-8-2-3",
+      "path13-36-8-84"
+    ],
+    "adder": [
+      "path13-36-9-43",
+      "path13-36-9-2-3",
+      "path13-36-9-4-8"
+    ]
+  },
+  "wires": {
+    "cur": [
+      "path23-4",
+      "path27-0",
+      "path27-1-4",
+      "path27-4-87",
+      "path27-4-8-1"
+    ],
+    "weighted": [
+      "path27-2-85-2",
+      "path27-2-8-2",
+      "path27-2-72",
+      "path27-2-7-7"
+    ],
+    "sum": [
+      "path30-9-4",
+      "path30-8-9",
+      "path30-5",
+      "path30-5-8",
+      "path27-2-85-2",
+      "path27-2-8-2",
+      "path27-2-72",
+      "path27-2-7-7"
+    ],
+    "nxt": [
+      "path23-4",
+      "path24-9",
+      "path25-5",
+      "path24-9-9"
+    ]
+  },
+  "nativePrefix": "p32-fir-",
+  "sourceSVG": "AEiC-26/drawing.svg",
+  "sourceSHA256": "cf8f98b3a4b7aacfa95ccc4dc48bbaad3a03568750b8b66cfcbcf7d92db1f37a",
+  "sourceNativeIds": [
+    "g208"
+  ],
+  "interpretation": "Explanatory code/diagram correspondence; original chain is never rearranged and no sample-flow or scheduling simulation is claimed.",
+  "guideIds": [
+    "path163-9-4-6",
+    "path163-3-1-2",
+    "path163-6-0-4",
+    "path199-5-0-5",
+    "path199-0-4-9",
+    "path199-1-6-7",
+    "path202",
+    "path163-9-4",
+    "path163-3-1",
+    "path163-6-0",
+    "path199-5-0",
+    "path199-0-4",
+    "path199-1-6",
+    "path203",
+    "circle168",
+    "path163-9",
+    "path163-3",
+    "path163-6",
+    "path201",
+    "path199-5",
+    "path199-0",
+    "path199-1",
+    "path204"
+  ],
+  "guidePresentationStroke": "#626973",
+  "finalTransitionPhases": [
+    "0–225 ms: balance x and weighted input wires only; outgoing next-history code focus fades",
+    "225–450 ms: reduce add and adder outlines join the weighted inputs"
+  ]
+}
