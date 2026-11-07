@@ -705,6 +705,7 @@ def main():
         '@@PAGE19_CONTENT@@': '\n'.join(p19_content),
         '@@PAGE19_DATA@@': json.dumps(p19, ensure_ascii=False).replace('</', '<\\/'),
         '@@COVER@@': data(HERE / 'assets/cover.svg', 'image/svg+xml'),
+        '@@VINNOVA_LOGO@@': data(HERE / 'assets/publications/vinnova.svg', 'image/svg+xml'),
         '@@LOGO@@': data(HERE / 'assets/kth-logo.svg', 'image/svg+xml'),
         '@@PAGE18_CONTENT@@': '\n'.join(p18_content),
         '@@PAGE18_DATA@@': json.dumps(p18, ensure_ascii=False).replace('</', '<\\/'),

@@ -1,0 +1,13 @@
+{
+  "file": "vinnova.svg",
+  "source": "final/AEiC-26.pptx",
+  "slide": 1,
+  "shape": "Graphic 6",
+  "media": "ppt/media/image21.svg",
+  "sha256": "fa77c7a583efa6d9bdac25c47e6f7d08361acbc0db27208eb845721ab7242d1a",
+  "viewBox": "0 0 217 24",
+  "publication_source": "Thesis §1.4, printed pp.30–31 (PDF pp.54–55).",
+  "funding_text": "The research was supported by",
+  "funding_logo_word": "Vinnova",
+  "funding_layout": "Original logo immediately follows the funding text inline on the same baseline."
+}

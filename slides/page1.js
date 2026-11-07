@@ -7,7 +7,7 @@ const states=[
  {name:'Robot controller',note:'Coordinating an industrial robot.'},
  {name:'Aircraft attitude control',note:'Or controlling the attitude of an aircraft.'},
  {name:'What characterises embedded systems?',note:'What characterises embedded systems?'},
- {name:'Computational systems',note:'They are computational systems, but not merely small computers. Their role within the application shapes how they are designed.'},
+ {name:'Computational systems',note:'They are computational systems, distinct from general-purpose computers. Their role within the application shapes how they are designed.'},
  {name:'Specialised role',note:'They are dedicated to a specialised role within a larger system. A braking controller, for example, has a specific role within the car. That intended role typically remains stable throughout its life cycle, even as its implementation and functionality evolve.'},
  {name:'Reactive behaviour',note:'They are often reactive, continually responding to inputs and events from their environment.'},
  {name:'Requirements beyond functionality',note:'They are also subject to requirements beyond functionality: responding within a required time, for example, or operating within limited memory, energy, or hardware resources.\n\nTransition:\nDesigning these systems therefore means obtaining an implementation that provides the required functionality while meeting these constraints. Let us look at how that design process proceeds.'}

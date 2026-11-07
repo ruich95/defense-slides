@@ -331,8 +331,16 @@
     "title": "Future Work",
     "source": "slides/future_work.html",
     "controller": "slides/future_work.js",
-    "steps": 2,
+    "steps": 1,
     "displayNumber": 37
+  },
+  {
+    "id": "publications",
+    "title": "Publications and Research Support",
+    "source": "slides/publications.html",
+    "controller": "slides/publications.js",
+    "steps": 1,
+    "displayNumber": 38
   },
   {
     "id": "aeic32",
@@ -340,6 +348,6 @@
     "source": "slides/aeic32.html",
     "controller": "slides/aeic32.js",
     "steps": 1,
-    "displayNumber": 38
+    "displayNumber": 39
   }
 ]
