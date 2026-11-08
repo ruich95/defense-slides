@@ -7,30 +7,8 @@ window.slideFactories.page20=()=>{
  const states=names.map((name,i)=>({name,note:data.notes[i]+'\n\nSemantic reference: thesis section3.3.2, Listing3.2; Chapter4 opening and section4.1, printed pp95–97. Source: AEiC slides17–18. Source-state mapping: assets/page20/effect-map.json.'}));
  let step=0,busy=false,generation=0,raf=0,resolveMotion=null;
  const diagnostics={exact:0,resampled:0};
- function sample(uri,bounds){
-  const svg=new DOMParser().parseFromString(atob(uri.split(',')[1]),'image/svg+xml').documentElement;
-  svg.style.cssText='position:absolute;opacity:0;pointer-events:none';root.append(svg);
-  const width=+svg.getAttribute('width'),height=+svg.getAttribute('height'),items=[];
-  for(const shape of svg.querySelectorAll('path,rect,circle,ellipse,polygon,polyline')){
-   if(shape.closest('defs'))continue;
-   const style=getComputedStyle(shape),matrix=shape.getCTM(),parts=[];
-   const segments=shape.tagName==='path'?shape.getAttribute('d').split(/(?=[Mm])/).filter(Boolean):[null];
-   for(const segment of segments){
-    let probe=shape;if(segment){probe=document.createElementNS(ns,'path');probe.setAttribute('d',segment);shape.parentNode.append(probe)}
-    const length=probe.getTotalLength(),points=[];
-    for(let i=0;i<192;i++){const p=probe.getPointAtLength(length*i/191).matrixTransform(matrix);points.push([p.x/width,p.y/height])}
-    const centerline=[];for(let i=0;i<192;i++){const u=length*i/191/2,a=probe.getPointAtLength(u).matrixTransform(matrix),b=probe.getPointAtLength(length-u).matrixTransform(matrix);centerline.push([(a.x+b.x)/2/width,(a.y+b.y)/2/height])}
-    parts.push({points,centerline,closed:segment?/[zZ]\s*$/.test(segment):!['line','polyline'].includes(shape.tagName)});if(segment)probe.remove();
-   }
-   items.push({kind:shape.tagName,parts,fill:style.fill,stroke:style.stroke,fillOpacity:+style.fillOpacity,strokeOpacity:+style.strokeOpacity,strokeWidth:parseFloat(style.strokeWidth)*bounds.width/width});
-  }
-  svg.remove();return items;
- }
- function align(a,b,closed){
-  if(!closed)return b;let best=Infinity,offset=0,direction=1;const n=191;
-  for(const dir of [1,-1])for(let k=0;k<n;k++){let score=0;for(let j=0;j<n;j+=4){const q=b[(k+dir*j+n)%n];score+=(a[j][0]-q[0])**2+(a[j][1]-q[1])**2}if(score<best){best=score;offset=k;direction=dir}}
-  const points=Array.from({length:n},(_,j)=>b[(offset+direction*j+n)%n]);points.push(points[0]);return points;
- }
+ @@MORPH_DECODER@@
+ const geometry = decodeMorphGeometry(@@MORPH_GEOMETRY@@);
  function exactSvg(aUri,bUri,key){
   const parse=uri=>new DOMParser().parseFromString(atob(uri.split(',')[1]),'image/svg+xml').documentElement;
   const a=parse(aUri),b=parse(bUri),aa=[a,...a.querySelectorAll('*')],bb=[b,...b.querySelectorAll('*')],changes=[];
@@ -63,17 +41,22 @@ window.slideFactories.page20=()=>{
   if(m.vectorMorph)exact=exactSvg(source.uri,targetNodes.get(dest.id).querySelector('img').src,label+'-'+m.sourceId);
   if(exact){node.append(exact.svg);diagnostics.exact++}
   else if(m.vectorMorph){diagnostics.resampled++;
-   const from=sample(source.uri,m.box),to=sample(targetNodes.get(dest.id).querySelector('img').src,box(dest)),svg=document.createElementNS(ns,'svg');node.append(svg);vectors=[];
-   // Match native primitives by kind, paint and relative location. Additional
-   // interface ports are new primitives, not a resize of an existing port.
-   const used=new Set();
-   for(const a of from){let index=-1,best=Infinity;for(let j=0;j<to.length;j++){if(used.has(j))continue;const b=to[j];let cost=(a.kind===b.kind?0:3)+(a.fill===b.fill?0:1)+Math.hypot(a.parts[0].points[0][0]-b.parts[0].points[0][0],a.parts[0].points[0][1]-b.parts[0].points[0][1]);if(cost<best){best=cost;index=j}}
-    const b=index<0?null:to[index];if(b)used.add(index);vectors.push({a,b});
-   }
-   for(let j=0;j<to.length;j++)if(!used.has(j))vectors.push({a:null,b:to[j]});
-   for(const v of vectors){v.ribbon=/^!!(?:Get|Set)/.test(m.sourceName)&&!!v.a&&!!v.b;if(v.ribbon){v.line=document.createElementNS(ns,'path');v.line.setAttribute('fill','none');v.line.setAttribute('stroke-linejoin','round');v.line.setAttribute('stroke-linecap','butt');svg.append(v.line)}v.node=document.createElementNS(ns,'path');v.node.setAttribute('stroke-linejoin','round');v.node.setAttribute('stroke-linecap','square');svg.append(v.node);v.parts=[];
-    const a=v.a||v.b,b=v.b||v.a;
-    for(let i=0;i<Math.max(a.parts.length,b.parts.length);i++){const aa=a.parts[i],bb=b.parts[i],collapsed=p=>({points:Array.from({length:192},()=>p.points[0]),closed:p.closed});const x=aa||collapsed(bb),y=bb||collapsed(aa);v.parts.push(v.ribbon&&i===0?{a:a.stroke!=='none'?x.points:x.centerline,b:b.stroke!=='none'?y.points:y.centerline,closed:false,ribbon:true}:{a:x.points,b:align(x.points,y.points,x.closed&&y.closed),closed:x.closed||y.closed})}
+   vectors = geometry[m.sourceId];
+   if (!vectors) throw new Error('Missing prepared geometry for page20 object ' + m.sourceId);
+   const svg = document.createElementNS(ns, 'svg');
+   node.append(svg);
+   for (const vector of vectors) {
+    if (vector.ribbon) {
+     vector.line = document.createElementNS(ns, 'path');
+     vector.line.setAttribute('fill', 'none');
+     vector.line.setAttribute('stroke-linejoin', 'round');
+     vector.line.setAttribute('stroke-linecap', 'butt');
+     svg.append(vector.line);
+    }
+    vector.node = document.createElementNS(ns, 'path');
+    vector.node.setAttribute('stroke-linejoin', 'round');
+    vector.node.setAttribute('stroke-linecap', 'square');
+    svg.append(vector.node);
    }
    node._svg=svg;node._source=document.createElement('img');node._source.src=source.uri;node._source.alt='';node._source.style.cssText='position:absolute;inset:0';node._target=document.createElement('img');node._target.src=targetNodes.get(dest.id).querySelector('img').src;node._target.alt='';node._target.style.cssText='position:absolute;inset:0';node.append(node._source,node._target);
   }else if(source.uri){const img=document.createElement('img');img.src=source.uri;img.alt='';node.append(img)}else{node.innerHTML=source.html;node.classList.add('page20-explanation');if(source.role==='label')node.classList.add('page20-label')}

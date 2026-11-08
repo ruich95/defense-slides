@@ -1,7 +1,9 @@
 window.slideFactories.page13=()=>{
  const data=@@PAGE13_DATA@@,root=document.getElementById('page13'),body=root.querySelector('.page13-body'),nodes=new Map(data.shapes.map(s=>[s.id,root.querySelector('#p13-shape-'+s.id)]));
+ // Native paint-order fronts: process 150, output 115, input 116, right loop 50, left loop 58.
+ const foldedUnderlayers=new Set([182,172,162,19,48,70,20,55,71,54,53,56,57]);
  const names=['Recurring process','State between reactions','Mealy-machine behaviour','Composition through single steps'];
- const states=names.map((name,i)=>({name,note:data.notes[i]+'\n\nSource: AEiC-26.pptx slide 8; 750 ms internal object Morph from the unfolding scene. run remains the schematic conference signature. The type alone does not enforce one input per iteration.'}));
+ const states=names.map((name,i)=>({name,note:data.notes[i]+'\n\nSource: AEiC-26.pptx slide 8; 750 ms internal object Morph from the unfolding scene. At the folded endpoint, only the front copy of each stacked process, arrow and feedback route remains; unique sequence and state/delay objects are retained. run remains the schematic conference signature. The type alone does not enforce one input per iteration.'}));
  let step=0,busy=false,generation=0,raf=0,resolveMotion=null;
  const overlay=document.createElement('div');overlay.className='page13-morph';overlay.hidden=true;root.append(overlay);
  const records=[],ns='http://www.w3.org/2000/svg';
@@ -59,7 +61,7 @@ window.slideFactories.page13=()=>{
   body.style.opacity='0';overlay.hidden=false;
   const q=t*t*(3-2*t);
   for(const r of records){const {match,dest,n,paths}=r;
-   n.style.visibility='visible';
+   n.style.visibility=t===1&&foldedUnderlayers.has(dest?.id)?'hidden':'visible';
    if(match&&dest){const a=match.box,b=box(dest),v={};for(const key of ['x','y','width','height'])v[key]=a[key]+(b[key]-a[key])*q;layout(n,v);n.style.opacity=1;
     if(paths)for(const p of paths)p.node.setAttribute('d',p.a.map((a,i)=>(i?'L':'M')+(a[0]+(p.b[i][0]-a[0])*q)+','+(a[1]+(p.b[i][1]-a[1])*q)).join(' ')+' Z');
    }else if(match){layout(n,match.box);n.style.opacity=1-q}else{layout(n,box(dest));n.style.opacity=q}
@@ -68,7 +70,7 @@ window.slideFactories.page13=()=>{
  function render(target){
   overlay.hidden=true;body.style.opacity='';const visible=new Map(data.shapes.map(s=>[s.id,s.visible]));
   for(let i=0;i<target;i++)for(const e of data.groups[i].events)visible.set(e.id,e.kind==='entr');
-  for(const [id,n] of nodes){const v=visible.get(id);n.style.opacity=v?1:0;n.style.visibility=v?'visible':'hidden';n.setAttribute('aria-hidden',String(!v))}
+  for(const [id,n] of nodes){const v=visible.get(id)&&!foldedUnderlayers.has(id);n.style.opacity=v?1:0;n.style.visibility=v?'visible':'hidden';n.setAttribute('aria-hidden',String(!v))}
  }
  function cancel(){generation++;if(raf)cancelAnimationFrame(raf);raf=0;if(resolveMotion){const done=resolveMotion;resolveMotion=null;done()}busy=false;overlay.hidden=true;body.style.visibility=''}
  async function go(target){cancel();step=Math.max(0,Math.min(3,Math.round(target)));render(step)}

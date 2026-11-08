@@ -28,7 +28,10 @@ window.slideFactories.page14=()=>{
   }
   svg.remove();return result;
  }
+ // The previous folded endpoint shows only the front copy of each stack.
+ const foldedUnderlayers=new Set([182,172,162,19,48,70,20,55,71,54,53,56,57]);
  for(const match of data.morph.matches){
+  if(foldedUnderlayers.has(match.sourceId))continue;
   const dest=data.shapes.find(s=>s.id===match.targetId),n=document.createElement('div');n.className='page14-morph-object';n.dataset.sourceId=match.sourceId;n.dataset.targetId=match.targetId??'';
   const source=match.source;n.classList.toggle('page14-explanation',source.role==='explanation');let paths=null,paints=null;
   if(match.pathMorph){

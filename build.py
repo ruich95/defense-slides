@@ -3,6 +3,7 @@ from pathlib import Path
 from base64 import b64encode
 import xml.etree.ElementTree as E
 import json
+import hashlib
 import html
 import re
 import struct
@@ -14,6 +15,22 @@ ROOT = HERE.parent
 SVG = '{http://www.w3.org/2000/svg}'
 E.register_namespace('', 'http://www.w3.org/2000/svg')
 E.register_namespace('xlink', 'http://www.w3.org/1999/xlink')
+
+
+def morph_geometry(scene):
+    """Load author-time native samples; reject stale geometry rather than resample live."""
+    folder = HERE / 'assets' / scene
+    cache = json.loads((folder / 'morph-geometry.json').read_text(encoding='utf8'))
+    compiler = HERE / 'tools/precompute-morph-geometry.cjs'
+    digest = lambda path: hashlib.sha256(
+        path.read_bytes().replace(b'\r\n', b'\n').replace(b'\r', b'\n')).hexdigest()
+    if (cache.get('schema') != 1
+            or cache.get('inputSha256') != digest(folder / 'animation.json')
+            or cache.get('compilerSha256') != digest(compiler)):
+        raise ValueError(f'Stale {scene} morph geometry: run node tools/precompute-morph-geometry.cjs')
+    return json.dumps({key: cache[key] for key in ['coordinates', 'matches']},
+                      separators=(',', ':')).replace('</', '<\\/')
+
 
 def data(path, mime):
     return f'data:{mime};base64,' + b64encode(path.read_bytes()).decode()
@@ -97,12 +114,53 @@ def pyramid_art():
     return E.tostring(pyramid, encoding='unicode')
 
 def receiver_art():
-    animation = E.parse(ROOT / 'figures/radio-to-fm/radio-to-fm.svg').getroot()
+    source = ROOT / 'figures/radio-to-fm/radio-to-fm.svg'
+    cache = json.loads((HERE / 'assets/receiver/morph-geometry.json').read_text(encoding='utf8'))
+    normalized_digest = lambda path: hashlib.sha256(
+        path.read_bytes().replace(b'\r\n', b'\n').replace(b'\r', b'\n')).hexdigest()
+    if (cache.get('schema') != 1
+            or cache.get('sourceSha256') != normalized_digest(source)
+            or cache.get('compilerSha256') != normalized_digest(HERE / 'tools/precompute-receiver-morph.cjs')
+            or cache.get('fontSha256') != hashlib.sha256((HERE / 'assets/Figtree.ttf').read_bytes()).hexdigest()):
+        raise ValueError('Stale receiver geometry: run node tools/precompute-receiver-morph.cjs')
+    animation = E.parse(source).getroot()
+    by_id = {node.get('id'): node for node in animation.iter() if node.get('id')}
+    # These overlay objects are the original setup output, prepared with native SVG
+    # geometry ahead of playback. The source artwork and rendering functions stay intact.
+    namespace_attributes = ' '.join(
+        'xmlns' + (':' + prefix if prefix else '') + '="' + html.escape(uri, quote=True) + '"'
+        for prefix, uri in dict(binding for _, binding in E.iterparse(source, events=['start-ns'])).items())
+    for parent_id, markup in cache['overlays'].items():
+        parent = by_id[parent_id]
+        wrapper = E.fromstring('<g ' + namespace_attributes + '>' + markup + '</g>')
+        parent.extend(list(wrapper))
     controller = animation.find(SVG + 'script')
     js = controller.text
     start = js.index("root.addEventListener('click',next);")
     end = js.index('notify();', start)
-    controller.text = js[:start] + js[end:]
+    js = js[:start] + js[end:]
+    prepared = json.dumps({key: cache[key] for key in ['coordinates', 'graph']},
+                          separators=(',', ':')).replace('</', '<\\/')
+    setup = """function setup(){
+ if(records)return;
+ const cache=@@RECEIVER_GEOMETRY@@,binary=atob(cache.coordinates),bytes=new Uint8Array(binary.length);
+ for(let i=0;i<binary.length;i++)bytes[i]=binary.charCodeAt(i);
+ const values=new DataView(bytes.buffer);
+ function restore(value){
+  if(!value||typeof value!=='object')return value;
+  if(value.$node)return $(value.$node);
+  if(value.$map)return new Map(value.$map.map(([key,item])=>[key,restore(item)]));
+  if(value.$points){const [offset,count]=value.$points;return Array.from({length:count},(_,i)=>[values.getFloat64((offset+2*i)*8,true),values.getFloat64((offset+2*i+1)*8,true)])}
+  if(Array.isArray(value))return value.map(restore);
+  return Object.fromEntries(Object.entries(value).map(([key,item])=>[key,restore(item)]));
+ }
+ ({records,expansion,sourceBox,finalBox,expandingFrame,sourceRadius,finalRadius,refinement,sequential}=restore(cache.graph));
+}
+""".replace('@@RECEIVER_GEOMETRY@@', prepared)
+    start = js.index('function setup(){')
+    end = js.index('function notify(){', start)
+    js = js[:start] + setup + js[end:]
+    controller.text = js
     animation.set('id', 'receiver-animation')
     animation.set('aria-label', 'FM receiver development, including FIR register insertion and folding')
     for attr in ['width', 'height', 'tabindex']:
@@ -132,6 +190,7 @@ def fm_model_assets():
     # The deck-only focus moves this same complete lower CIC group upward.
     # Remove only the redundant white canvas so overflow cannot cover text.
     embedded_by_id = {n.get('id'): n for n in art.iter() if n.get('id')}
+    embedded_by_id['cic-wedge'].set('fill', '#b0b4b9')
     # Deck-only numeric emphasis; standalone art, components and wiring stay native.
     for node in embedded_by_id['cic-widths']:
         node.set('font-size', '2.2')
@@ -759,6 +818,11 @@ def main():
         slides[entry['id']] = content
         if entry.get('controller'):
             controllers[entry['id']] = (HERE / entry['controller']).read_text(encoding='utf8')
+            if '@@MORPH_GEOMETRY@@' in controllers[entry['id']]:
+                decoder = (HERE / 'shared/morph-geometry.js').read_text(encoding='utf8')
+                controllers[entry['id']] = (controllers[entry['id']]
+                    .replace('@@MORPH_DECODER@@', decoder)
+                    .replace('@@MORPH_GEOMETRY@@', morph_geometry(entry['id'])))
             if entry['id'] == 'fm_model':
                 controllers[entry['id']] = controllers[entry['id']].replace('@@FM_MODEL_HIERARCHY_CONTROLLER@@', fm_controller)
             if entry['id'] == 'aeic29':
