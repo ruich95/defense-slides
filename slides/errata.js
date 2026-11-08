@@ -1,0 +1,5 @@
+window.slideFactories.errata=()=>{
+ const root=document.getElementById('errata'),states=[{name:'Thesis errata',note:"Reference only, outside the main-talk timing. On page 78, regBad names the term, so the sentence should say “the term regBad”. On page 103, the Delayed function type uses a +> b; the outer Idris function arrows remain ->. On page 105, pure returns the state before the value, as (st, x).\n\nPointing cue\nOn p. 78, the bad setter keeps the old value. The equality holds when the stored and supplied values coincide, but the specification requires it for all values. On p. 103, a +> b means Delayed a -> Delayed b in the call-by-name interpretation. On p. 105, State s a returns a pair (s, a), so the state comes first.\n\nSource\nThesis printed pp. 78, 103 and 105 (PDF pp. 102, 127 and 129); user-supplied corrections verified against the printed statements and listings. The source prints app:; this reference page uses the requested app : spacing consistently."}];
+ function go(){return Promise.resolve()}function cancel(){}
+ const api={go,cancel,leave:cancel,states,getState:()=>({step:0,busy:false,count:1})};root.errataController=api;return api;
+};

@@ -349,5 +349,13 @@
     "controller": "slides/aeic32.js",
     "steps": 1,
     "displayNumber": 39
+  },
+  {
+    "id": "errata",
+    "title": "Errata",
+    "source": "slides/errata.html",
+    "controller": "slides/errata.js",
+    "steps": 1,
+    "displayNumber": 40
   }
 ]

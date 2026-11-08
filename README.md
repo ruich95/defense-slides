@@ -2,9 +2,11 @@
 
 ## Current sequence and navigation
 
-The defence has **39 pages and 221 held states** as of 8 November 2026. P6 introduces type theory beyond interactive theorem proving. P7 uses the FIR model to motivate a general-purpose functional host. P8 opens with the thesis question, followed by O1, O2 and O3. P9 introduces SynQ. Objective reminders later in the talk refer to P8 and the conclusion at P36.
+The defence has **40 pages and 222 held states** as of 8 November 2026. P6 introduces type theory beyond interactive theorem proving. P7 uses the FIR model to motivate a general-purpose functional host. P8 opens with the thesis question, followed by O1, O2 and O3. P9 introduces SynQ. Objective reminders later in the talk refer to P8 and the conclusion at P36.
 
-Open the [full deck](index.html), [candidate foundation](index.html#7.1) or [research question](index.html#8.1). Press G and enter a page number to go to its last state. Use an explicit state such as 27.1 or 27.7 to choose a particular hold. Standalone previews run from `page1.html` to `page39.html`. See the [introduction plan](../defense-introduction-plan.md) and the [P7 specification](../slides-detail/candidate-foundation.md).
+Open the [full deck](index.html), [candidate foundation](index.html#7.1) or [research question](index.html#8.1). Press G and enter a page number to go to its last state. Use an explicit state such as 27.1 or 27.7 to choose a particular hold. Standalone previews run from `page1.html` to `page40.html`. See the [introduction plan](../defense-introduction-plan.md) and the [P7 specification](../slides-detail/candidate-foundation.md).
+
+P39 Thank You closes the timed presentation. [P40 Errata](index.html#40.1) is a static reference for the discussion, with corrections to printed thesis pages 78, 103 and 105.
 
 The opening through P8 takes 6:35 in the rehearsal plan. P9 ends at 7:45. The full budget is 43:00 plus a 2:00 reserve. Technical sources keep their stable IDs, so the question uses `page7` at displayed P8 and the roadmap uses `page8` at displayed P9.
 
@@ -59,6 +61,7 @@ P6 ends with the embedding takeaway: “This opens the possibility of embedding 
 | 37 | future_work | 1 |
 | 38 | publications | 1 |
 | 39 | aeic32 | 1 |
+| 40 | errata | 1 |
 
 ## Earlier implementation records
 

@@ -1,0 +1,43 @@
+<section class="slide" id="errata" aria-label="Slide 40: Errata">
+<style>
+#errata .errata-content{position:absolute;left:91px;top:175px;width:1419px}
+#errata .errata-section{margin:0 0 28px}
+#errata .errata-section:last-child{margin-bottom:0}
+#errata h2{margin:0 0 12px;font-size:28px;line-height:1.28;font-weight:700;color:#000061}
+#errata .errata-comparison{display:grid;grid-template-columns:135px minmax(0,1fr);column-gap:24px;row-gap:10px;align-items:start}
+#errata .errata-label{padding-top:5px;font-size:24px;line-height:1.28;color:#626973}
+#errata p{margin:0;font-size:32px;line-height:1.28}
+#errata pre{margin:0;font:30px/1.28 Consolas,monospace;white-space:pre}
+#errata code{font-family:Consolas,monospace;font-size:.96em}
+#errata pre code{font-size:1em}
+#errata strong{font-weight:700;color:#78001A}
+</style>
+<img class="kth-logo" alt="KTH Royal Institute of Technology" src="@@LOGO@@">
+<h1>Errata</h1>
+<div class="errata-content">
+<section class="errata-section" aria-labelledby="errata-p78">
+<h2 id="errata-p78">p. 78 · first sentence</h2>
+<div class="errata-comparison">
+<span class="errata-label">Printed</span><p>On the other hand, <strong>a term of <code>regBad</code></strong> cannot be constructed…</p>
+<span class="errata-label">Corrected</span><p>On the other hand, <strong>the term <code>regBad</code></strong> cannot be constructed…</p>
+</div>
+</section>
+<section class="errata-section" aria-labelledby="errata-p103">
+<h2 id="errata-p103">p. 103 · second code block</h2>
+<div class="errata-comparison">
+<span class="errata-label">Printed</span><pre><code>lam: (Delayed a -&gt; Delayed b) -&gt; Delayed (a <strong>-&gt;</strong> b)
+app : Delayed (a <strong>-&gt;</strong> b) -&gt; Delayed a -&gt; Delayed b</code></pre>
+<span class="errata-label">Corrected</span><pre><code>lam: (Delayed a -&gt; Delayed b) -&gt; Delayed (a <strong>+&gt;</strong> b)
+app : Delayed (a <strong>+&gt;</strong> b) -&gt; Delayed a -&gt; Delayed b</code></pre>
+</div>
+</section>
+<section class="errata-section" aria-labelledby="errata-p105">
+<h2 id="errata-p105">p. 105 · third code block</h2>
+<div class="errata-comparison">
+<span class="errata-label">Printed</span><pre><code>pure x = \st =&gt; (<strong>x</strong>, <strong>st</strong>)</code></pre>
+<span class="errata-label">Corrected</span><pre><code>pure x = \st =&gt; (<strong>st</strong>, <strong>x</strong>)</code></pre>
+</div>
+</section>
+</div>
+<footer><span class="footer-event">PhD Defence - 9 November 2026 - Stockholm</span><span class="footer-name">Rui Chen</span><span class="footer-page">40</span></footer>
+</section>
