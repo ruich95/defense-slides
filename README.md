@@ -2,7 +2,7 @@
 
 ## Current sequence and navigation
 
-The defence has **39 pages and 220 held states** as of 7 November 2026. P6 introduces dependently typed programming beyond interactive theorem proving. P7 uses the FIR model to motivate a general-purpose functional host. P8 opens with the thesis question, followed by O1, O2 and O3. P9 introduces SynQ. Objective reminders later in the talk refer to P8 and the conclusion at P36.
+The defence has **39 pages and 221 held states** as of 8 November 2026. P6 introduces type theory beyond interactive theorem proving. P7 uses the FIR model to motivate a general-purpose functional host. P8 opens with the thesis question, followed by O1, O2 and O3. P9 introduces SynQ. Objective reminders later in the talk refer to P8 and the conclusion at P36.
 
 Open the [full deck](index.html), [candidate foundation](index.html#7.1) or [research question](index.html#8.1). Press G and enter a page number to go to its last state. Use an explicit state such as 27.1 or 27.7 to choose a particular hold. Standalone previews run from `page1.html` to `page39.html`. See the [introduction plan](../defense-introduction-plan.md) and the [P7 specification](../slides-detail/candidate-foundation.md).
 
@@ -10,7 +10,11 @@ The opening through P8 takes 6:35 in the rehearsal plan. P9 ends at 7:45. The fu
 
 Press S to open the spoken text, pointing cue and source reference for the current state. These come from the same rehearsal rows as the review outline. Update `defense-review-2026-11-02/review-page-data.json` beside the live deck and rebuild to refresh the full presentation and every standalone page. In an extracted review package, the builder reads `review-page-data.json` from the package root. The build checks page numbering and state counts before generating the notes.
 
-P36 is Conclusion (one 65-second state), P37 is Future Work (one static 30-second state containing four accepted bullets in thesis §6.1 order I, II, III and V), P38 is Publications and Research Support (one static 15-second state) and P39 is Thank You (5 seconds). P37 has no internal click. The current deck has 220 held states and the same 43-minute budget, including the six-state P32 walkthrough. `future_work` and `publications` use their matching HTML sources and single-state controllers. The publications page lists the five thesis §1.4 papers with authors in each entry, only Rui Chen bold. The exact text “The research was supported by” is followed immediately by the original proportional Vinnova logo on the same baseline, embedded offline.
+P36 is Conclusion (one 65-second state), P37 is Future Work (one static 30-second state containing four accepted bullets in thesis §6.1 order I, II, III and V), P38 is Publications and Research Support (one static 15-second state) and P39 is Thank You (5 seconds). P37 has no internal click. The current deck has 221 held states and the same 43-minute budget, including the six-state P32 walkthrough. `future_work` and `publications` use their matching HTML sources and single-state controllers. The publications page lists the five thesis §1.4 papers with authors in each entry, only Rui Chen bold. The exact text “The research was supported by” is followed immediately by the original proportional Vinnova logo on the same baseline, embedded offline.
+
+## P6/P7 embedding transition, 8 November 2026
+
+P6 ends with the embedding takeaway: “This opens the possibility of embedding a component-based design framework in the same language we use to reason about its models and design steps.” P7 then opens with only its unchanged introductory prose and the complete neutral FIR figure. The question “What would such an embedding look like for our FIR filter?” is spoken only at 7.1. Existing component, wire, transformation and final states move to 7.2, 7.3, 7.4 and 7.5 without changing their wording or figures. P6 remains eight states / 45 seconds; P7 is five states at 4/7/8/10/11 seconds / 40 seconds, keeping the 43-minute total.
 
 ## Current page/source mapping
 
@@ -22,7 +26,7 @@ P36 is Conclusion (one 65-second state), P37 is Future Work (one static 30-secon
 | 4 | page4 | 6 |
 | 5 | page5 | 8 |
 | 6 | page6 | 8 |
-| 7 | candidate_foundation | 4 |
+| 7 | candidate_foundation | 5 |
 | 8 | page7 | 4 |
 | 9 | page8 | 7 |
 | 10 | page9 | 3 |

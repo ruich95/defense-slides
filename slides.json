@@ -41,7 +41,7 @@
   },
   {
     "id": "page6",
-    "title": "Dependent Types Beyond Interactive Theorem Proving",
+    "title": "Type Theory Beyond Interactive Theorem Proving",
     "source": "slides/page6.html",
     "controller": "slides/page6.js",
     "steps": 8,
@@ -52,7 +52,7 @@
     "title": "A Candidate Language Foundation",
     "source": "slides/candidate_foundation.html",
     "controller": "slides/candidate_foundation.js",
-    "steps": 4,
+    "steps": 5,
     "displayNumber": 7
   },
   {

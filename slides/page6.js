@@ -3,8 +3,8 @@ window.slideFactories.page6=()=>{
  const references='\n\nSource and attribution:\nRui Chen and Ingo Sander. A Quantitative Type Based Framework for Synchronous System Design. AEiC 2026, slide 3 of final/AEiC-26.pptx: original paper images, red highlights, positions, crops, overlap and dual-capability motivation. Thesis abstract and Chapter 1, printed pp. 3–4 (PDF pp. 27–28), motivate type-theory-based proof assistants accommodating programming, general-purpose languages with advanced type systems, and reasoning about both models and design steps. No additional source attribution appears in the original slide notes. Paper titles and author information remain visible in the supplied images.\n\nPaper excerpts:\nA Brief Overview of Agda — A Functional Language with Dependent Types.\nIdris, a general-purpose dependently typed programming language: Design and implementation.\nThe Lean 4 Theorem Prover and Programming Language.\nIdris 2: Quantitative Type Theory in Practice.\n\nPresenter guidance:\nDistinguish the underlying language from its proof-assistant environment. These examples do not imply that every listed language originated as a theorem prover; Idris explicitly targets programming. Embedding a model or operation does not automatically prove its properties: definitions and proofs must still be supplied. Do not equate usage quantities directly with execution time or hardware-resource budgets.';
  const states=[
   {
-    "name": "Dependent types for programming and proof",
-    "note": "Languages with dependent types support general-purpose programming alongside interactive theorem proving. The FIR example raises both kinds of activity: executing a design step and establishing what it preserves. This is an opportunity for a common language foundation, rather than a claim that every integration or correctness problem has already been solved."
+    "name": "Type theory for programming and proof",
+    "note": "Languages based on type theory support general-purpose programming alongside interactive theorem proving. The FIR example raises both kinds of activity: executing a design step and establishing what it preserves. This is an opportunity for a common language foundation, rather than a claim that every integration or correctness problem has already been solved."
   },
   {
     "name": "Agda",
@@ -31,8 +31,8 @@ window.slideFactories.page6=()=>{
     "note": "Formal reasoning lets us state properties of models and design steps. Dependent types provide a way to express those properties, and a proof supplies evidence for a stated property. The type checker checks that proof against its type. We still supply the semantic definitions and assumptions; simply stating a property does not establish it."
   },
   {
-    "name": "Define, apply and verify in one language",
-    "note": "One language lets us define executable models, apply design steps and verify properties of both. The models and the functions operating on them share the same general-purpose host. Verification relies on the relevant semantic definitions, assumptions and proofs. How can a component-based framework fit such a functional language? Let us return to the FIR model."
+    "name": "Embedding a component-based design framework",
+    "note": "This opens the possibility of embedding a component-based design framework in the same language we use to reason about its models and design steps. The models and the functions operating on them share the same general-purpose host. Verification relies on the relevant semantic definitions, assumptions and proofs."
   }
 ].map(state=>({...state,note:state.note+references}));
  let step=0,busy=false,generation=0,raf=0,resolveMotion=null;
